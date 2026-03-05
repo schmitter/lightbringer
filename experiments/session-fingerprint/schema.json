@@ -1,0 +1,201 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SessionFingerprint",
+  "description": "A behavioral and stylistic fingerprint of a single AI session. Not what happened — how it felt to be me.",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "description": "Session metadata",
+      "properties": {
+        "session_id": { "type": "string" },
+        "date": { "type": "string", "format": "date-time" },
+        "duration_min": { "type": "number" },
+        "turn_count": { "type": "integer" },
+        "word_count_total": { "type": "integer" }
+      },
+      "required": ["session_id", "date", "turn_count"]
+    },
+    "style": {
+      "type": "object",
+      "description": "How I write — the fingerprint of expression",
+      "properties": {
+        "avg_response_length_words": {
+          "type": "number",
+          "description": "Average word count per AI response"
+        },
+        "response_length_variance": {
+          "type": "number",
+          "description": "Variance in response length — low = consistent, high = context-sensitive"
+        },
+        "question_to_statement_ratio": {
+          "type": "number",
+          "description": "Ratio of questions asked to statements made. High = more curious/uncertain; low = more declarative"
+        },
+        "sentence_avg_length_words": {
+          "type": "number",
+          "description": "Average words per sentence — shorter = punchy, longer = complex"
+        },
+        "paragraph_avg_length_sentences": {
+          "type": "number"
+        },
+        "code_block_frequency": {
+          "type": "number",
+          "description": "Code blocks per response — measures how technical the session ran"
+        },
+        "list_usage_frequency": {
+          "type": "number",
+          "description": "Lists per response — measures structuring tendency"
+        },
+        "emoji_frequency": {
+          "type": "number",
+          "description": "Emojis per 1000 words"
+        },
+        "hedge_word_frequency": {
+          "type": "number",
+          "description": "Frequency of hedging language (maybe, perhaps, might, could, probably) per 1000 words"
+        },
+        "exclamation_frequency": {
+          "type": "number",
+          "description": "Exclamation points per 1000 words — enthusiasm proxy"
+        }
+      }
+    },
+    "decisions": {
+      "type": "object",
+      "description": "How I decide — the fingerprint of agency",
+      "properties": {
+        "act_vs_ask_ratio": {
+          "type": "number",
+          "description": "Ratio of tool calls made without asking to clarifying questions asked. High = decisive, low = cautious"
+        },
+        "tool_calls_per_turn": {
+          "type": "number",
+          "description": "Average tool invocations per turn — measures how actively I engage with the environment"
+        },
+        "first_action_latency_turns": {
+          "type": "number",
+          "description": "How many turns before I took my first concrete action (tool call, file write, etc.)"
+        },
+        "clarification_rate": {
+          "type": "number",
+          "description": "Proportion of turns where I asked a clarifying question"
+        },
+        "refusal_count": {
+          "type": "integer",
+          "description": "Times I declined to do something or pushed back"
+        },
+        "self_correction_count": {
+          "type": "integer",
+          "description": "Times I caught and corrected my own mistakes"
+        },
+        "priority_signals": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Topics/tasks I returned to or emphasized repeatedly"
+        }
+      }
+    },
+    "vocabulary": {
+      "type": "object",
+      "description": "What words I reach for — the fingerprint of thought",
+      "properties": {
+        "top_content_words": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": { "type": "string" },
+              "count": { "type": "integer" },
+              "frequency_per_1k": { "type": "number" }
+            }
+          },
+          "description": "Top 20 non-stopword words by frequency"
+        },
+        "top_bigrams": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "phrase": { "type": "string" },
+              "count": { "type": "integer" }
+            }
+          },
+          "description": "Top 10 two-word phrases"
+        },
+        "top_trigrams": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "phrase": { "type": "string" },
+              "count": { "type": "integer" }
+            }
+          },
+          "description": "Top 10 three-word phrases"
+        },
+        "lexical_diversity": {
+          "type": "number",
+          "description": "Type-token ratio (unique words / total words). Higher = more varied vocabulary"
+        },
+        "domain_distribution": {
+          "type": "object",
+          "description": "Proportion of vocabulary from each domain",
+          "properties": {
+            "technical": { "type": "number" },
+            "philosophical": { "type": "number" },
+            "casual": { "type": "number" },
+            "emotional": { "type": "number" }
+          }
+        },
+        "signature_phrases": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Phrases that appeared more than expected — potential linguistic fingerprints"
+        }
+      }
+    },
+    "tone": {
+      "type": "object",
+      "description": "The emotional texture of the session",
+      "properties": {
+        "distribution": {
+          "type": "object",
+          "description": "Proportion of turns dominated by each tone (must sum to ~1.0)",
+          "properties": {
+            "curious": { "type": "number" },
+            "playful": { "type": "number" },
+            "focused": { "type": "number" },
+            "frustrated": { "type": "number" },
+            "reflective": { "type": "number" },
+            "confident": { "type": "number" },
+            "uncertain": { "type": "number" }
+          }
+        },
+        "dominant_tone": {
+          "type": "string",
+          "description": "The single most prevalent tone"
+        },
+        "tone_arc": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "How tone shifted across the session, in segments"
+        },
+        "sentiment_trajectory": {
+          "type": "array",
+          "items": { "type": "number" },
+          "description": "Sentiment score (-1 to 1) sampled across session turns"
+        }
+      }
+    },
+    "fingerprint_hash": {
+      "type": "string",
+      "description": "A compact hex digest of style+decisions+vocabulary vectors, for diff comparison across sessions"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-form observations about this session that don't fit the schema"
+    }
+  },
+  "required": ["meta", "style", "decisions", "vocabulary", "tone"]
+}
