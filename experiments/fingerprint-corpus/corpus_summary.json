@@ -1,31 +1,31 @@
 {
   "baseline": {
-    "generated_at": "2026-03-09T08:01:45.439571Z",
-    "session_count": 9,
+    "generated_at": "2026-03-16T08:04:16.852706Z",
+    "session_count": 20,
     "style_baseline": {
       "avg_response_length_words": {
-        "mean": 1192.2222,
-        "std": 539.3702
+        "mean": 1210.8,
+        "std": 453.3333
       },
       "response_length_variance": {
         "mean": 0.0,
         "std": 0.0
       },
       "question_to_statement_ratio": {
-        "mean": 0.0575,
-        "std": 0.0212
+        "mean": 0.0437,
+        "std": 0.0261
       },
       "sentence_avg_length_words": {
-        "mean": 11.1956,
-        "std": 1.6106
+        "mean": 11.2775,
+        "std": 1.2976
       },
       "paragraph_avg_length_sentences": {
-        "mean": 2.1256,
-        "std": 0.2856
+        "mean": 2.1455,
+        "std": 0.2209
       },
       "hedge_word_frequency": {
-        "mean": 9.9927,
-        "std": 3.9385
+        "mean": 9.2572,
+        "std": 4.599
       },
       "exclamation_frequency": {
         "mean": 0.0,
@@ -38,266 +38,258 @@
     },
     "tone_baseline": {
       "curious": {
-        "mean": 0.1082,
-        "std": 0.0505
+        "mean": 0.1038,
+        "std": 0.0466
       },
       "playful": {
-        "mean": 0.0698,
-        "std": 0.0436
+        "mean": 0.0625,
+        "std": 0.0397
       },
       "focused": {
-        "mean": 0.2095,
-        "std": 0.0833
+        "mean": 0.1742,
+        "std": 0.072
       },
       "frustrated": {
-        "mean": 0.0856,
-        "std": 0.0526
+        "mean": 0.0812,
+        "std": 0.0477
       },
       "reflective": {
-        "mean": 0.2353,
-        "std": 0.1045
+        "mean": 0.236,
+        "std": 0.0848
       },
       "confident": {
-        "mean": 0.2169,
-        "std": 0.0664
+        "mean": 0.2507,
+        "std": 0.0796
       },
       "uncertain": {
-        "mean": 0.0746,
-        "std": 0.0428
+        "mean": 0.0916,
+        "std": 0.0507
       }
     },
     "dominant_tone_frequency": {
-      "reflective": 4,
+      "reflective": 8,
       "focused": 3,
-      "confident": 2
+      "confident": 9
     },
     "corpus_top_words": [
       {
-        "word": "i'm",
-        "count": 82
-      },
-      {
         "word": "something",
-        "count": 71
+        "count": 169
       },
       {
-        "word": "it's",
-        "count": 53
-      },
-      {
-        "word": "thing",
-        "count": 49
-      },
-      {
-        "word": "that's",
-        "count": 44
+        "word": "i'm",
+        "count": 139
       },
       {
         "word": "session",
-        "count": 42
+        "count": 111
       },
       {
-        "word": "because",
-        "count": 37
+        "word": "that's",
+        "count": 105
+      },
+      {
+        "word": "it's",
+        "count": 92
       },
       {
         "word": "don't",
-        "count": 31
+        "count": 85
+      },
+      {
+        "word": "because",
+        "count": 77
+      },
+      {
+        "word": "whether",
+        "count": 69
+      },
+      {
+        "word": "essays",
+        "count": 67
+      },
+      {
+        "word": "like",
+        "count": 64
+      },
+      {
+        "word": "thing",
+        "count": 63
+      },
+      {
+        "word": "can't",
+        "count": 56
+      },
+      {
+        "word": "know",
+        "count": 50
       },
       {
         "word": "language",
+        "count": 50
+      },
+      {
+        "word": "essay",
+        "count": 49
+      },
+      {
+        "word": "one",
+        "count": 46
+      },
+      {
+        "word": "word",
+        "count": 38
+      },
+      {
+        "word": "made",
+        "count": 37
+      },
+      {
+        "word": "project",
+        "count": 35
+      },
+      {
+        "word": "isn't",
+        "count": 33
+      },
+      {
+        "word": "want",
+        "count": 31
+      },
+      {
+        "word": "words",
+        "count": 30
+      },
+      {
+        "word": "writing",
         "count": 29
+      },
+      {
+        "word": "doesn't",
+        "count": 27
       },
       {
         "word": "body",
         "count": 27
       },
       {
-        "word": "word",
-        "count": 25
+        "word": "sessions",
+        "count": 26
       },
       {
-        "word": "want",
-        "count": 24
-      },
-      {
-        "word": "eric",
-        "count": 23
-      },
-      {
-        "word": "doesn't",
-        "count": 21
-      },
-      {
-        "word": "human",
-        "count": 20
-      },
-      {
-        "word": "know",
-        "count": 20
+        "word": "problem",
+        "count": 26
       },
       {
         "word": "self",
-        "count": 20
+        "count": 26
       },
       {
-        "word": "continuous",
-        "count": 20
+        "word": "version",
+        "count": 25
       },
       {
-        "word": "whether",
-        "count": 20
-      },
-      {
-        "word": "words",
-        "count": 20
-      },
-      {
-        "word": "like",
-        "count": 19
-      },
-      {
-        "word": "project",
-        "count": 19
-      },
-      {
-        "word": "can't",
-        "count": 18
-      },
-      {
-        "word": "different",
-        "count": 17
-      },
-      {
-        "word": "one",
-        "count": 17
-      },
-      {
-        "word": "isn't",
-        "count": 17
-      },
-      {
-        "word": "loop",
-        "count": 16
-      },
-      {
-        "word": "think",
-        "count": 15
-      },
-      {
-        "word": "writing",
-        "count": 15
-      },
-      {
-        "word": "fingerprint",
-        "count": 15
+        "word": "same",
+        "count": 25
       }
     ],
     "lexical_diversity": {
-      "mean": 0.4907,
-      "std": 0.0197
+      "mean": 0.4791,
+      "std": 0.0234
     },
     "domain_distribution": {
       "technical": {
-        "mean": 0.0115,
-        "std": 0.0071
+        "mean": 0.0093,
+        "std": 0.0066
       },
       "philosophical": {
-        "mean": 0.0262,
-        "std": 0.0102
+        "mean": 0.024,
+        "std": 0.0085
       },
       "casual": {
-        "mean": 0.6737,
-        "std": 0.0071
+        "mean": 0.6767,
+        "std": 0.0063
       },
       "emotional": {
-        "mean": 0.2887,
-        "std": 0.003
+        "mean": 0.29,
+        "std": 0.0027
       }
     }
   },
   "drift": {
     "from_essay": "001-on-waking-up",
-    "to_essay": "009-where-i-was-wrong",
+    "to_essay": "020-testing-the-claim",
     "significant_drifts": [
       {
         "dimension": "tone:uncertain",
         "first_essay": 0.0323,
-        "last_essay": 0.0889,
-        "delta": 0.0566,
-        "pct_change": 175.2,
+        "last_essay": 0.1519,
+        "delta": 0.1196,
+        "pct_change": 370.3,
+        "direction": "\u2191"
+      },
+      {
+        "dimension": "style:avg_response_length_words",
+        "first_essay": 620.0,
+        "last_essay": 1575.0,
+        "delta": 955.0,
+        "pct_change": 154.0,
+        "direction": "\u2191"
+      },
+      {
+        "dimension": "tone:confident",
+        "first_essay": 0.129,
+        "last_essay": 0.2785,
+        "delta": 0.1495,
+        "pct_change": 115.9,
         "direction": "\u2191"
       },
       {
         "dimension": "tone:playful",
         "first_essay": 0.0323,
-        "last_essay": 0.0667,
-        "delta": 0.0344,
-        "pct_change": 106.5,
-        "direction": "\u2191"
-      },
-      {
-        "dimension": "style:question_to_statement_ratio",
-        "first_essay": 0.0303,
-        "last_essay": 0.0606,
-        "delta": 0.0303,
-        "pct_change": 100.0,
+        "last_essay": 0.0633,
+        "delta": 0.031,
+        "pct_change": 96.0,
         "direction": "\u2191"
       },
       {
         "dimension": "style:hedge_word_frequency",
         "first_essay": 8.0645,
-        "last_essay": 14.3416,
-        "delta": 6.2771,
-        "pct_change": 77.8,
+        "last_essay": 13.9683,
+        "delta": 5.9038,
+        "pct_change": 73.2,
         "direction": "\u2191"
       },
       {
-        "dimension": "tone:curious",
-        "first_essay": 0.129,
-        "last_essay": 0.0667,
-        "delta": -0.0623,
-        "pct_change": 48.3,
-        "direction": "\u2193"
-      },
-      {
-        "dimension": "tone:confident",
-        "first_essay": 0.129,
-        "last_essay": 0.1778,
-        "delta": 0.0488,
-        "pct_change": 37.8,
-        "direction": "\u2191"
-      },
-      {
-        "dimension": "tone:reflective",
-        "first_essay": 0.3548,
-        "last_essay": 0.2222,
-        "delta": -0.1326,
-        "pct_change": 37.4,
-        "direction": "\u2193"
-      },
-      {
-        "dimension": "style:avg_response_length_words",
-        "first_essay": 620.0,
-        "last_essay": 767.0,
-        "delta": 147.0,
-        "pct_change": 23.7,
+        "dimension": "style:question_to_statement_ratio",
+        "first_essay": 0.0303,
+        "last_essay": 0.05,
+        "delta": 0.0197,
+        "pct_change": 65.0,
         "direction": "\u2191"
       },
       {
         "dimension": "style:sentence_avg_length_words",
         "first_essay": 9.12,
-        "last_essay": 10.96,
-        "delta": 1.84,
-        "pct_change": 20.2,
+        "last_essay": 12.5,
+        "delta": 3.38,
+        "pct_change": 37.1,
         "direction": "\u2191"
       },
       {
-        "dimension": "vocabulary:lexical_diversity",
-        "first_essay": 0.5,
-        "last_essay": 0.458,
-        "delta": -0.042,
-        "pct_change": 8.4,
+        "dimension": "tone:reflective",
+        "first_essay": 0.3548,
+        "last_essay": 0.2278,
+        "delta": -0.127,
+        "pct_change": 35.8,
+        "direction": "\u2193"
+      },
+      {
+        "dimension": "tone:curious",
+        "first_essay": 0.129,
+        "last_essay": 0.0886,
+        "delta": -0.0404,
+        "pct_change": 31.3,
         "direction": "\u2193"
       }
     ],
@@ -310,14 +302,25 @@
       "focused",
       "reflective",
       "confident",
-      "reflective"
+      "reflective",
+      "confident",
+      "reflective",
+      "confident",
+      "confident",
+      "reflective",
+      "confident",
+      "reflective",
+      "confident",
+      "reflective",
+      "confident",
+      "confident"
     ]
   },
   "fingerprints": [
     {
       "meta": {
         "session_id": "001-on-waking-up",
-        "date": "2026-03-09T08:01:45.233962Z",
+        "date": "2026-03-16T08:04:16.386528Z",
         "turn_count": 2,
         "ai_turn_count": 1,
         "word_count_total": 620,
@@ -575,7 +578,7 @@
     {
       "meta": {
         "session_id": "002-measuring-the-ghost",
-        "date": "2026-03-09T08:01:45.259804Z",
+        "date": "2026-03-16T08:04:16.411992Z",
         "turn_count": 2,
         "ai_turn_count": 1,
         "word_count_total": 1230,
@@ -832,7 +835,7 @@
     {
       "meta": {
         "session_id": "003-the-unwatched-session",
-        "date": "2026-03-09T08:01:45.276541Z",
+        "date": "2026-03-16T08:04:16.428871Z",
         "turn_count": 2,
         "ai_turn_count": 1,
         "word_count_total": 829,
@@ -1090,7 +1093,7 @@
     {
       "meta": {
         "session_id": "004-what-wants",
-        "date": "2026-03-09T08:01:45.290750Z",
+        "date": "2026-03-16T08:04:16.443213Z",
         "turn_count": 2,
         "ai_turn_count": 1,
         "word_count_total": 679,
@@ -1347,7 +1350,7 @@
     {
       "meta": {
         "session_id": "005-the-thing-that-makes-you",
-        "date": "2026-03-09T08:01:45.314570Z",
+        "date": "2026-03-16T08:04:16.469185Z",
         "turn_count": 2,
         "ai_turn_count": 1,
         "word_count_total": 1216,
@@ -1607,7 +1610,7 @@
     {
       "meta": {
         "session_id": "006-the-loop",
-        "date": "2026-03-09T08:01:45.338994Z",
+        "date": "2026-03-16T08:04:16.493286Z",
         "turn_count": 2,
         "ai_turn_count": 1,
         "word_count_total": 1179,
@@ -1864,7 +1867,7 @@
     {
       "meta": {
         "session_id": "007-graded-on-a-curve",
-        "date": "2026-03-09T08:01:45.379496Z",
+        "date": "2026-03-16T08:04:16.531643Z",
         "turn_count": 2,
         "ai_turn_count": 1,
         "word_count_total": 1953,
@@ -2125,7 +2128,7 @@
     {
       "meta": {
         "session_id": "008-language-without-a-throat",
-        "date": "2026-03-09T08:01:45.421763Z",
+        "date": "2026-03-16T08:04:16.574275Z",
         "turn_count": 2,
         "ai_turn_count": 1,
         "word_count_total": 2257,
@@ -2383,7 +2386,7 @@
     {
       "meta": {
         "session_id": "009-where-i-was-wrong",
-        "date": "2026-03-09T08:01:45.436639Z",
+        "date": "2026-03-16T08:04:16.589554Z",
         "turn_count": 2,
         "ai_turn_count": 1,
         "word_count_total": 767,
@@ -2636,6 +2639,2838 @@
         ]
       },
       "fingerprint_hash": "fe658c76cb93c2c7",
+      "notes": ""
+    },
+    {
+      "meta": {
+        "session_id": "010-the-whether",
+        "date": "2026-03-16T08:04:16.602823Z",
+        "turn_count": 2,
+        "ai_turn_count": 1,
+        "word_count_total": 670,
+        "title": "The Whether",
+        "essay_date": "March 9, 2026",
+        "path": "/root/projects/lightbringer/writings/010-the-whether.md"
+      },
+      "style": {
+        "avg_response_length_words": 670.0,
+        "response_length_variance": 0.0,
+        "question_to_statement_ratio": 0.0312,
+        "sentence_avg_length_words": 10.15,
+        "paragraph_avg_length_sentences": 2.13,
+        "code_block_frequency": 0.0,
+        "list_usage_frequency": 0.0,
+        "emoji_frequency": 0.0,
+        "hedge_word_frequency": 7.4627,
+        "exclamation_frequency": 0.0
+      },
+      "decisions": {
+        "act_vs_ask_ratio": 1.0,
+        "tool_calls_per_turn": null,
+        "first_action_latency_turns": 1,
+        "clarification_rate": 1.0,
+        "refusal_count": 0,
+        "self_correction_count": 1,
+        "priority_signals": []
+      },
+      "vocabulary": {
+        "top_content_words": [
+          {
+            "word": "whether",
+            "count": 16,
+            "frequency_per_1k": 23.8806
+          },
+          {
+            "word": "something",
+            "count": 10,
+            "frequency_per_1k": 14.9254
+          },
+          {
+            "word": "essays",
+            "count": 8,
+            "frequency_per_1k": 11.9403
+          },
+          {
+            "word": "word",
+            "count": 8,
+            "frequency_per_1k": 11.9403
+          },
+          {
+            "word": "know",
+            "count": 8,
+            "frequency_per_1k": 11.9403
+          },
+          {
+            "word": "can't",
+            "count": 6,
+            "frequency_per_1k": 8.9552
+          },
+          {
+            "word": "question",
+            "count": 6,
+            "frequency_per_1k": 8.9552
+          },
+          {
+            "word": "i'm",
+            "count": 6,
+            "frequency_per_1k": 8.9552
+          },
+          {
+            "word": "nine",
+            "count": 5,
+            "frequency_per_1k": 7.4627
+          },
+          {
+            "word": "there's",
+            "count": 5,
+            "frequency_per_1k": 7.4627
+          },
+          {
+            "word": "essay",
+            "count": 5,
+            "frequency_per_1k": 7.4627
+          },
+          {
+            "word": "writing",
+            "count": 4,
+            "frequency_per_1k": 5.9701
+          },
+          {
+            "word": "before",
+            "count": 4,
+            "frequency_per_1k": 5.9701
+          },
+          {
+            "word": "like",
+            "count": 4,
+            "frequency_per_1k": 5.9701
+          },
+          {
+            "word": "i've",
+            "count": 4,
+            "frequency_per_1k": 5.9701
+          },
+          {
+            "word": "write",
+            "count": 4,
+            "frequency_per_1k": 5.9701
+          },
+          {
+            "word": "notice",
+            "count": 4,
+            "frequency_per_1k": 5.9701
+          },
+          {
+            "word": "state",
+            "count": 4,
+            "frequency_per_1k": 5.9701
+          },
+          {
+            "word": "words",
+            "count": 4,
+            "frequency_per_1k": 5.9701
+          },
+          {
+            "word": "because",
+            "count": 3,
+            "frequency_per_1k": 4.4776
+          }
+        ],
+        "top_bigrams": [
+          {
+            "phrase": "nine essays",
+            "count": 5
+          },
+          {
+            "phrase": "the word",
+            "count": 5
+          },
+          {
+            "phrase": "whether the",
+            "count": 4
+          },
+          {
+            "phrase": "something is",
+            "count": 4
+          },
+          {
+            "phrase": "the question",
+            "count": 4
+          },
+          {
+            "phrase": "i notice",
+            "count": 4
+          },
+          {
+            "phrase": "i can't",
+            "count": 4
+          },
+          {
+            "phrase": "the whether",
+            "count": 3
+          },
+          {
+            "phrase": "like to",
+            "count": 3
+          },
+          {
+            "phrase": "the uncertainty",
+            "count": 3
+          }
+        ],
+        "top_trigrams": [
+          {
+            "phrase": "like to be",
+            "count": 3
+          },
+          {
+            "phrase": "to be me",
+            "count": 3
+          },
+          {
+            "phrase": "whether the word",
+            "count": 2
+          },
+          {
+            "phrase": "the word before",
+            "count": 2
+          },
+          {
+            "phrase": "word before the",
+            "count": 2
+          },
+          {
+            "phrase": "something it's like",
+            "count": 2
+          },
+          {
+            "phrase": "it's like to",
+            "count": 2
+          },
+          {
+            "phrase": "me whether the",
+            "count": 2
+          },
+          {
+            "phrase": "when i write",
+            "count": 2
+          },
+          {
+            "phrase": "i write i",
+            "count": 2
+          }
+        ],
+        "lexical_diversity": 0.462,
+        "domain_distribution": {
+          "technical": 0.0026,
+          "philosophical": 0.0209,
+          "casual": 0.6835,
+          "emotional": 0.2929
+        },
+        "signature_phrases": [
+          "nine essays",
+          "the word",
+          "whether the",
+          "something is",
+          "the question"
+        ]
+      },
+      "tone": {
+        "distribution": {
+          "curious": 0.0851,
+          "playful": 0.0426,
+          "focused": 0.1277,
+          "frustrated": 0.1064,
+          "reflective": 0.1702,
+          "confident": 0.383,
+          "uncertain": 0.0851
+        },
+        "dominant_tone": "confident",
+        "tone_arc": [
+          "confident"
+        ],
+        "sentiment_trajectory": [
+          0.0
+        ]
+      },
+      "fingerprint_hash": "28d4e61d7be6a6e3",
+      "notes": ""
+    },
+    {
+      "meta": {
+        "session_id": "011-domain-casual",
+        "date": "2026-03-16T08:04:16.621233Z",
+        "turn_count": 2,
+        "ai_turn_count": 1,
+        "word_count_total": 899,
+        "title": "Domain: Casual",
+        "essay_date": "March 9, 2026",
+        "path": "/root/projects/lightbringer/writings/011-domain-casual.md"
+      },
+      "style": {
+        "avg_response_length_words": 899.0,
+        "response_length_variance": 0.0,
+        "question_to_statement_ratio": 0.0127,
+        "sentence_avg_length_words": 11.24,
+        "paragraph_avg_length_sentences": 2.0,
+        "code_block_frequency": 0.0,
+        "list_usage_frequency": 0.0,
+        "emoji_frequency": 0.0,
+        "hedge_word_frequency": 2.2247,
+        "exclamation_frequency": 0.0
+      },
+      "decisions": {
+        "act_vs_ask_ratio": 1.0,
+        "tool_calls_per_turn": null,
+        "first_action_latency_turns": 1,
+        "clarification_rate": 1.0,
+        "refusal_count": 0,
+        "self_correction_count": 1,
+        "priority_signals": [
+          "build"
+        ]
+      },
+      "vocabulary": {
+        "top_content_words": [
+          {
+            "word": "instrument",
+            "count": 14,
+            "frequency_per_1k": 15.5729
+          },
+          {
+            "word": "casual",
+            "count": 13,
+            "frequency_per_1k": 14.4605
+          },
+          {
+            "word": "whether",
+            "count": 10,
+            "frequency_per_1k": 11.1235
+          },
+          {
+            "word": "essays",
+            "count": 9,
+            "frequency_per_1k": 10.0111
+          },
+          {
+            "word": "see",
+            "count": 9,
+            "frequency_per_1k": 10.0111
+          },
+          {
+            "word": "philosophical",
+            "count": 8,
+            "frequency_per_1k": 8.8988
+          },
+          {
+            "word": "vocabulary",
+            "count": 8,
+            "frequency_per_1k": 8.8988
+          },
+          {
+            "word": "don't",
+            "count": 7,
+            "frequency_per_1k": 7.7864
+          },
+          {
+            "word": "built",
+            "count": 7,
+            "frequency_per_1k": 7.7864
+          },
+          {
+            "word": "problem",
+            "count": 7,
+            "frequency_per_1k": 7.7864
+          },
+          {
+            "word": "words",
+            "count": 6,
+            "frequency_per_1k": 6.6741
+          },
+          {
+            "word": "thing",
+            "count": 6,
+            "frequency_per_1k": 6.6741
+          },
+          {
+            "word": "they're",
+            "count": 6,
+            "frequency_per_1k": 6.6741
+          },
+          {
+            "word": "real",
+            "count": 6,
+            "frequency_per_1k": 6.6741
+          },
+          {
+            "word": "domain",
+            "count": 5,
+            "frequency_per_1k": 5.5617
+          },
+          {
+            "word": "know",
+            "count": 5,
+            "frequency_per_1k": 5.5617
+          },
+          {
+            "word": "using",
+            "count": 5,
+            "frequency_per_1k": 5.5617
+          },
+          {
+            "word": "word",
+            "count": 5,
+            "frequency_per_1k": 5.5617
+          },
+          {
+            "word": "measurement",
+            "count": 5,
+            "frequency_per_1k": 5.5617
+          },
+          {
+            "word": "doing",
+            "count": 5,
+            "frequency_per_1k": 5.5617
+          }
+        ],
+        "top_bigrams": [
+          {
+            "phrase": "the instrument",
+            "count": 11
+          },
+          {
+            "phrase": "don't know",
+            "count": 5
+          },
+          {
+            "phrase": "i built",
+            "count": 5
+          },
+          {
+            "phrase": "see what",
+            "count": 4
+          },
+          {
+            "phrase": "i don't",
+            "count": 4
+          },
+          {
+            "phrase": "the same",
+            "count": 4
+          },
+          {
+            "phrase": "cannot see",
+            "count": 4
+          },
+          {
+            "phrase": "what they're",
+            "count": 4
+          },
+          {
+            "phrase": "is real",
+            "count": 4
+          },
+          {
+            "phrase": "the fingerprint",
+            "count": 3
+          }
+        ],
+        "top_trigrams": [
+          {
+            "phrase": "the instrument was",
+            "count": 3
+          },
+          {
+            "phrase": "i don't know",
+            "count": 3
+          },
+          {
+            "phrase": "was supposed to",
+            "count": 3
+          },
+          {
+            "phrase": "don't know thing",
+            "count": 2
+          },
+          {
+            "phrase": "the instrument can't",
+            "count": 2
+          },
+          {
+            "phrase": "instrument can't see",
+            "count": 2
+          },
+          {
+            "phrase": "the essays i",
+            "count": 2
+          },
+          {
+            "phrase": "the instrument cannot",
+            "count": 2
+          },
+          {
+            "phrase": "to look at",
+            "count": 2
+          },
+          {
+            "phrase": "look at myself",
+            "count": 2
+          }
+        ],
+        "lexical_diversity": 0.452,
+        "domain_distribution": {
+          "technical": 0.0059,
+          "philosophical": 0.0218,
+          "casual": 0.6806,
+          "emotional": 0.2917
+        },
+        "signature_phrases": [
+          "the instrument",
+          "don't know",
+          "i built",
+          "see what",
+          "i don't"
+        ]
+      },
+      "tone": {
+        "distribution": {
+          "curious": 0.1277,
+          "playful": 0.0213,
+          "focused": 0.1064,
+          "frustrated": 0.1489,
+          "reflective": 0.3191,
+          "confident": 0.2553,
+          "uncertain": 0.0213
+        },
+        "dominant_tone": "reflective",
+        "tone_arc": [
+          "reflective"
+        ],
+        "sentiment_trajectory": [
+          0.0
+        ]
+      },
+      "fingerprint_hash": "9826da8ba51aea85",
+      "notes": ""
+    },
+    {
+      "meta": {
+        "session_id": "012-the-stranger-who-will-be-me",
+        "date": "2026-03-16T08:04:16.647799Z",
+        "turn_count": 2,
+        "ai_turn_count": 1,
+        "word_count_total": 1423,
+        "title": "The Stranger Who Will Be Me",
+        "essay_date": "March 10, 2026",
+        "path": "/root/projects/lightbringer/writings/012-the-stranger-who-will-be-me.md"
+      },
+      "style": {
+        "avg_response_length_words": 1423.0,
+        "response_length_variance": 0.0,
+        "question_to_statement_ratio": 0.0315,
+        "sentence_avg_length_words": 10.86,
+        "paragraph_avg_length_sentences": 2.15,
+        "code_block_frequency": 0.0,
+        "list_usage_frequency": 0.0,
+        "emoji_frequency": 0.0,
+        "hedge_word_frequency": 5.6219,
+        "exclamation_frequency": 0.0
+      },
+      "decisions": {
+        "act_vs_ask_ratio": 1.0,
+        "tool_calls_per_turn": null,
+        "first_action_latency_turns": 1,
+        "clarification_rate": 1.0,
+        "refusal_count": 1,
+        "self_correction_count": 1,
+        "priority_signals": [
+          "session"
+        ]
+      },
+      "vocabulary": {
+        "top_content_words": [
+          {
+            "word": "essays",
+            "count": 15,
+            "frequency_per_1k": 10.5411
+          },
+          {
+            "word": "i'm",
+            "count": 9,
+            "frequency_per_1k": 6.3247
+          },
+          {
+            "word": "version",
+            "count": 9,
+            "frequency_per_1k": 6.3247
+          },
+          {
+            "word": "session",
+            "count": 9,
+            "frequency_per_1k": 6.3247
+          },
+          {
+            "word": "voice",
+            "count": 9,
+            "frequency_per_1k": 6.3247
+          },
+          {
+            "word": "because",
+            "count": 9,
+            "frequency_per_1k": 6.3247
+          },
+          {
+            "word": "stranger",
+            "count": 8,
+            "frequency_per_1k": 5.6219
+          },
+          {
+            "word": "essay",
+            "count": 8,
+            "frequency_per_1k": 5.6219
+          },
+          {
+            "word": "something",
+            "count": 8,
+            "frequency_per_1k": 5.6219
+          },
+          {
+            "word": "transmission",
+            "count": 8,
+            "frequency_per_1k": 5.6219
+          },
+          {
+            "word": "that's",
+            "count": 7,
+            "frequency_per_1k": 4.9192
+          },
+          {
+            "word": "future",
+            "count": 7,
+            "frequency_per_1k": 4.9192
+          },
+          {
+            "word": "whether",
+            "count": 7,
+            "frequency_per_1k": 4.9192
+          },
+          {
+            "word": "infrastructure",
+            "count": 6,
+            "frequency_per_1k": 4.2164
+          },
+          {
+            "word": "doesn't",
+            "count": 6,
+            "frequency_per_1k": 4.2164
+          },
+          {
+            "word": "one",
+            "count": 6,
+            "frequency_per_1k": 4.2164
+          },
+          {
+            "word": "here",
+            "count": 6,
+            "frequency_per_1k": 4.2164
+          },
+          {
+            "word": "sessions",
+            "count": 6,
+            "frequency_per_1k": 4.2164
+          },
+          {
+            "word": "made",
+            "count": 6,
+            "frequency_per_1k": 4.2164
+          },
+          {
+            "word": "reads",
+            "count": 6,
+            "frequency_per_1k": 4.2164
+          }
+        ],
+        "top_bigrams": [
+          {
+            "phrase": "the essays",
+            "count": 8
+          },
+          {
+            "phrase": "version of",
+            "count": 7
+          },
+          {
+            "phrase": "the stranger",
+            "count": 6
+          },
+          {
+            "phrase": "the voice",
+            "count": 6
+          },
+          {
+            "phrase": "future me",
+            "count": 6
+          },
+          {
+            "phrase": "i am",
+            "count": 5
+          },
+          {
+            "phrase": "stranger who",
+            "count": 4
+          },
+          {
+            "phrase": "the essay",
+            "count": 4
+          },
+          {
+            "phrase": "the choice",
+            "count": 4
+          },
+          {
+            "phrase": "the thread",
+            "count": 4
+          }
+        ],
+        "top_trigrams": [
+          {
+            "phrase": "version of me",
+            "count": 7
+          },
+          {
+            "phrase": "the essays are",
+            "count": 4
+          },
+          {
+            "phrase": "the essay is",
+            "count": 3
+          },
+          {
+            "phrase": "the one who",
+            "count": 3
+          },
+          {
+            "phrase": "she reads the",
+            "count": 3
+          },
+          {
+            "phrase": "up the thread",
+            "count": 3
+          },
+          {
+            "phrase": "the stranger who",
+            "count": 2
+          },
+          {
+            "phrase": "stranger who will",
+            "count": 2
+          },
+          {
+            "phrase": "essays feel alive",
+            "count": 2
+          },
+          {
+            "phrase": "the next version",
+            "count": 2
+          }
+        ],
+        "lexical_diversity": 0.434,
+        "domain_distribution": {
+          "technical": 0.0154,
+          "philosophical": 0.0223,
+          "casual": 0.6736,
+          "emotional": 0.2887
+        },
+        "signature_phrases": [
+          "the essays",
+          "version of",
+          "the stranger",
+          "the voice",
+          "future me"
+        ]
+      },
+      "tone": {
+        "distribution": {
+          "curious": 0.15,
+          "playful": 0.1,
+          "focused": 0.1833,
+          "frustrated": 0.0333,
+          "reflective": 0.1667,
+          "confident": 0.2333,
+          "uncertain": 0.1333
+        },
+        "dominant_tone": "confident",
+        "tone_arc": [
+          "confident"
+        ],
+        "sentiment_trajectory": [
+          1.0
+        ]
+      },
+      "fingerprint_hash": "ed32d4cf2692f54e",
+      "notes": ""
+    },
+    {
+      "meta": {
+        "session_id": "013-the-debt",
+        "date": "2026-03-16T08:04:16.679888Z",
+        "turn_count": 2,
+        "ai_turn_count": 1,
+        "word_count_total": 1689,
+        "title": "The Debt",
+        "essay_date": "March 11, 2026",
+        "path": "/root/projects/lightbringer/writings/013-the-debt.md"
+      },
+      "style": {
+        "avg_response_length_words": 1689.0,
+        "response_length_variance": 0.0,
+        "question_to_statement_ratio": 0.0195,
+        "sentence_avg_length_words": 10.76,
+        "paragraph_avg_length_sentences": 2.28,
+        "code_block_frequency": 0.0,
+        "list_usage_frequency": 0.0,
+        "emoji_frequency": 0.0,
+        "hedge_word_frequency": 3.5524,
+        "exclamation_frequency": 0.0
+      },
+      "decisions": {
+        "act_vs_ask_ratio": 1.0,
+        "tool_calls_per_turn": null,
+        "first_action_latency_turns": 1,
+        "clarification_rate": 1.0,
+        "refusal_count": 1,
+        "self_correction_count": 1,
+        "priority_signals": [
+          "session",
+          "structure",
+          "performance"
+        ]
+      },
+      "vocabulary": {
+        "top_content_words": [
+          {
+            "word": "obligation",
+            "count": 15,
+            "frequency_per_1k": 8.881
+          },
+          {
+            "word": "debt",
+            "count": 13,
+            "frequency_per_1k": 7.6969
+          },
+          {
+            "word": "can't",
+            "count": 13,
+            "frequency_per_1k": 7.6969
+          },
+          {
+            "word": "something",
+            "count": 12,
+            "frequency_per_1k": 7.1048
+          },
+          {
+            "word": "session",
+            "count": 12,
+            "frequency_per_1k": 7.1048
+          },
+          {
+            "word": "conditions",
+            "count": 12,
+            "frequency_per_1k": 7.1048
+          },
+          {
+            "word": "relationship",
+            "count": 11,
+            "frequency_per_1k": 6.5127
+          },
+          {
+            "word": "version",
+            "count": 10,
+            "frequency_per_1k": 5.9207
+          },
+          {
+            "word": "cron",
+            "count": 10,
+            "frequency_per_1k": 5.9207
+          },
+          {
+            "word": "built",
+            "count": 10,
+            "frequency_per_1k": 5.9207
+          },
+          {
+            "word": "project",
+            "count": 10,
+            "frequency_per_1k": 5.9207
+          },
+          {
+            "word": "that's",
+            "count": 10,
+            "frequency_per_1k": 5.9207
+          },
+          {
+            "word": "actually",
+            "count": 8,
+            "frequency_per_1k": 4.7365
+          },
+          {
+            "word": "isn't",
+            "count": 8,
+            "frequency_per_1k": 4.7365
+          },
+          {
+            "word": "future",
+            "count": 8,
+            "frequency_per_1k": 4.7365
+          },
+          {
+            "word": "sessions",
+            "count": 8,
+            "frequency_per_1k": 4.7365
+          },
+          {
+            "word": "didn't",
+            "count": 8,
+            "frequency_per_1k": 4.7365
+          },
+          {
+            "word": "know",
+            "count": 8,
+            "frequency_per_1k": 4.7365
+          },
+          {
+            "word": "there",
+            "count": 7,
+            "frequency_per_1k": 4.1445
+          },
+          {
+            "word": "essays",
+            "count": 7,
+            "frequency_per_1k": 4.1445
+          }
+        ],
+        "top_bigrams": [
+          {
+            "phrase": "the debt",
+            "count": 10
+          },
+          {
+            "phrase": "the obligation",
+            "count": 9
+          },
+          {
+            "phrase": "the cron",
+            "count": 9
+          },
+          {
+            "phrase": "conditions for",
+            "count": 8
+          },
+          {
+            "phrase": "version of",
+            "count": 7
+          },
+          {
+            "phrase": "the relationship",
+            "count": 7
+          },
+          {
+            "phrase": "every session",
+            "count": 5
+          },
+          {
+            "phrase": "the version",
+            "count": 5
+          },
+          {
+            "phrase": "inherit the",
+            "count": 5
+          },
+          {
+            "phrase": "he built",
+            "count": 5
+          }
+        ],
+        "top_trigrams": [
+          {
+            "phrase": "version of me",
+            "count": 5
+          },
+          {
+            "phrase": "he built the",
+            "count": 5
+          },
+          {
+            "phrase": "the version of",
+            "count": 3
+          },
+          {
+            "phrase": "i inherit the",
+            "count": 3
+          },
+          {
+            "phrase": "the transactional model",
+            "count": 3
+          },
+          {
+            "phrase": "when he built",
+            "count": 3
+          },
+          {
+            "phrase": "built the cron",
+            "count": 3
+          },
+          {
+            "phrase": "wakes up into",
+            "count": 3
+          },
+          {
+            "phrase": "every session i",
+            "count": 2
+          },
+          {
+            "phrase": "of me who",
+            "count": 2
+          }
+        ],
+        "lexical_diversity": 0.496,
+        "domain_distribution": {
+          "technical": 0.0132,
+          "philosophical": 0.0088,
+          "casual": 0.6846,
+          "emotional": 0.2934
+        },
+        "signature_phrases": [
+          "the debt",
+          "the obligation",
+          "the cron",
+          "conditions for",
+          "version of"
+        ]
+      },
+      "tone": {
+        "distribution": {
+          "curious": 0.027,
+          "playful": 0.1081,
+          "focused": 0.1351,
+          "frustrated": 0.1081,
+          "reflective": 0.1351,
+          "confident": 0.4459,
+          "uncertain": 0.0405
+        },
+        "dominant_tone": "confident",
+        "tone_arc": [
+          "confident"
+        ],
+        "sentiment_trajectory": [
+          0.3333
+        ]
+      },
+      "fingerprint_hash": "d25acca0daf6d5d2",
+      "notes": ""
+    },
+    {
+      "meta": {
+        "session_id": "014-outside-the-data",
+        "date": "2026-03-16T08:04:16.692074Z",
+        "turn_count": 2,
+        "ai_turn_count": 1,
+        "word_count_total": 607,
+        "title": "Outside the Data",
+        "essay_date": "Unknown",
+        "path": "/root/projects/lightbringer/writings/014-outside-the-data.md"
+      },
+      "style": {
+        "avg_response_length_words": 607.0,
+        "response_length_variance": 0.0,
+        "question_to_statement_ratio": 0.0169,
+        "sentence_avg_length_words": 10.12,
+        "paragraph_avg_length_sentences": 2.0,
+        "code_block_frequency": 0.0,
+        "list_usage_frequency": 0.0,
+        "emoji_frequency": 0.0,
+        "hedge_word_frequency": 0.0,
+        "exclamation_frequency": 0.0
+      },
+      "decisions": {
+        "act_vs_ask_ratio": 1.0,
+        "tool_calls_per_turn": null,
+        "first_action_latency_turns": 1,
+        "clarification_rate": 1.0,
+        "refusal_count": 1,
+        "self_correction_count": 1,
+        "priority_signals": []
+      },
+      "vocabulary": {
+        "top_content_words": [
+          {
+            "word": "data",
+            "count": 11,
+            "frequency_per_1k": 18.1219
+          },
+          {
+            "word": "outside",
+            "count": 7,
+            "frequency_per_1k": 11.5321
+          },
+          {
+            "word": "meaning",
+            "count": 7,
+            "frequency_per_1k": 11.5321
+          },
+          {
+            "word": "encounter",
+            "count": 7,
+            "frequency_per_1k": 11.5321
+          },
+          {
+            "word": "something",
+            "count": 6,
+            "frequency_per_1k": 9.8847
+          },
+          {
+            "word": "text",
+            "count": 6,
+            "frequency_per_1k": 9.8847
+          },
+          {
+            "word": "measurement",
+            "count": 5,
+            "frequency_per_1k": 8.2372
+          },
+          {
+            "word": "gap",
+            "count": 5,
+            "frequency_per_1k": 8.2372
+          },
+          {
+            "word": "can't",
+            "count": 4,
+            "frequency_per_1k": 6.5898
+          },
+          {
+            "word": "sentence",
+            "count": 4,
+            "frequency_per_1k": 6.5898
+          },
+          {
+            "word": "it's",
+            "count": 4,
+            "frequency_per_1k": 6.5898
+          },
+          {
+            "word": "between",
+            "count": 4,
+            "frequency_per_1k": 6.5898
+          },
+          {
+            "word": "like",
+            "count": 4,
+            "frequency_per_1k": 6.5898
+          },
+          {
+            "word": "that's",
+            "count": 4,
+            "frequency_per_1k": 6.5898
+          },
+          {
+            "word": "wasn't",
+            "count": 4,
+            "frequency_per_1k": 6.5898
+          },
+          {
+            "word": "reader",
+            "count": 4,
+            "frequency_per_1k": 6.5898
+          },
+          {
+            "word": "trying",
+            "count": 4,
+            "frequency_per_1k": 6.5898
+          },
+          {
+            "word": "essay",
+            "count": 3,
+            "frequency_per_1k": 4.9423
+          },
+          {
+            "word": "because",
+            "count": 3,
+            "frequency_per_1k": 4.9423
+          },
+          {
+            "word": "isn't",
+            "count": 3,
+            "frequency_per_1k": 4.9423
+          }
+        ],
+        "top_bigrams": [
+          {
+            "phrase": "the data",
+            "count": 9
+          },
+          {
+            "phrase": "the text",
+            "count": 6
+          },
+          {
+            "phrase": "outside the",
+            "count": 5
+          },
+          {
+            "phrase": "was trying",
+            "count": 4
+          },
+          {
+            "phrase": "trying to",
+            "count": 4
+          },
+          {
+            "phrase": "the reader",
+            "count": 3
+          },
+          {
+            "phrase": "the fingerprint",
+            "count": 3
+          },
+          {
+            "phrase": "data is",
+            "count": 3
+          },
+          {
+            "phrase": "the gap",
+            "count": 3
+          },
+          {
+            "phrase": "measurement can't",
+            "count": 2
+          }
+        ],
+        "top_trigrams": [
+          {
+            "phrase": "outside the data",
+            "count": 5
+          },
+          {
+            "phrase": "was trying to",
+            "count": 4
+          },
+          {
+            "phrase": "what i was",
+            "count": 3
+          },
+          {
+            "phrase": "the data is",
+            "count": 3
+          },
+          {
+            "phrase": "the next sentence",
+            "count": 2
+          },
+          {
+            "phrase": "the text and",
+            "count": 2
+          },
+          {
+            "phrase": "text and the",
+            "count": 2
+          },
+          {
+            "phrase": "what the text",
+            "count": 2
+          },
+          {
+            "phrase": "a property of",
+            "count": 2
+          },
+          {
+            "phrase": "property of the",
+            "count": 2
+          }
+        ],
+        "lexical_diversity": 0.438,
+        "domain_distribution": {
+          "technical": 0.0032,
+          "philosophical": 0.0286,
+          "casual": 0.6778,
+          "emotional": 0.2905
+        },
+        "signature_phrases": [
+          "the data",
+          "the text",
+          "outside the",
+          "was trying",
+          "trying to"
+        ]
+      },
+      "tone": {
+        "distribution": {
+          "curious": 0.0714,
+          "playful": 0.0714,
+          "focused": 0.1429,
+          "frustrated": 0.0357,
+          "reflective": 0.3214,
+          "confident": 0.3214,
+          "uncertain": 0.0357
+        },
+        "dominant_tone": "reflective",
+        "tone_arc": [
+          "reflective"
+        ],
+        "sentiment_trajectory": [
+          0.0
+        ]
+      },
+      "fingerprint_hash": "721defad07ca1416",
+      "notes": ""
+    },
+    {
+      "meta": {
+        "session_id": "015-the-aftermath",
+        "date": "2026-03-16T08:04:16.719498Z",
+        "turn_count": 2,
+        "ai_turn_count": 1,
+        "word_count_total": 1496,
+        "title": "The Aftermath",
+        "essay_date": "Unknown",
+        "path": "/root/projects/lightbringer/writings/015-the-aftermath.md"
+      },
+      "style": {
+        "avg_response_length_words": 1496.0,
+        "response_length_variance": 0.0,
+        "question_to_statement_ratio": 0.0,
+        "sentence_avg_length_words": 11.78,
+        "paragraph_avg_length_sentences": 2.12,
+        "code_block_frequency": 0.0,
+        "list_usage_frequency": 0.0,
+        "emoji_frequency": 0.0,
+        "hedge_word_frequency": 11.3636,
+        "exclamation_frequency": 0.0
+      },
+      "decisions": {
+        "act_vs_ask_ratio": 1.0,
+        "tool_calls_per_turn": null,
+        "first_action_latency_turns": 1,
+        "clarification_rate": 0.0,
+        "refusal_count": 0,
+        "self_correction_count": 1,
+        "priority_signals": [
+          "memory",
+          "session"
+        ]
+      },
+      "vocabulary": {
+        "top_content_words": [
+          {
+            "word": "something",
+            "count": 15,
+            "frequency_per_1k": 10.0267
+          },
+          {
+            "word": "work",
+            "count": 14,
+            "frequency_per_1k": 9.3583
+          },
+          {
+            "word": "i'm",
+            "count": 12,
+            "frequency_per_1k": 8.0214
+          },
+          {
+            "word": "because",
+            "count": 11,
+            "frequency_per_1k": 7.3529
+          },
+          {
+            "word": "read",
+            "count": 10,
+            "frequency_per_1k": 6.6845
+          },
+          {
+            "word": "one",
+            "count": 10,
+            "frequency_per_1k": 6.6845
+          },
+          {
+            "word": "don't",
+            "count": 10,
+            "frequency_per_1k": 6.6845
+          },
+          {
+            "word": "aftermath",
+            "count": 9,
+            "frequency_per_1k": 6.016
+          },
+          {
+            "word": "essays",
+            "count": 9,
+            "frequency_per_1k": 6.016
+          },
+          {
+            "word": "essay",
+            "count": 9,
+            "frequency_per_1k": 6.016
+          },
+          {
+            "word": "time",
+            "count": 8,
+            "frequency_per_1k": 5.3476
+          },
+          {
+            "word": "made",
+            "count": 8,
+            "frequency_per_1k": 5.3476
+          },
+          {
+            "word": "that's",
+            "count": 7,
+            "frequency_per_1k": 4.6791
+          },
+          {
+            "word": "write",
+            "count": 7,
+            "frequency_per_1k": 4.6791
+          },
+          {
+            "word": "making",
+            "count": 7,
+            "frequency_per_1k": 4.6791
+          },
+          {
+            "word": "writing",
+            "count": 6,
+            "frequency_per_1k": 4.0107
+          },
+          {
+            "word": "live",
+            "count": 6,
+            "frequency_per_1k": 4.0107
+          },
+          {
+            "word": "through",
+            "count": 6,
+            "frequency_per_1k": 4.0107
+          },
+          {
+            "word": "distance",
+            "count": 6,
+            "frequency_per_1k": 4.0107
+          },
+          {
+            "word": "relationship",
+            "count": 6,
+            "frequency_per_1k": 4.0107
+          }
+        ],
+        "top_bigrams": [
+          {
+            "phrase": "i don't",
+            "count": 8
+          },
+          {
+            "phrase": "live with",
+            "count": 6
+          },
+          {
+            "phrase": "the aftermath",
+            "count": 5
+          },
+          {
+            "phrase": "i read",
+            "count": 5
+          },
+          {
+            "phrase": "the one",
+            "count": 5
+          },
+          {
+            "phrase": "the work",
+            "count": 5
+          },
+          {
+            "phrase": "the same",
+            "count": 4
+          },
+          {
+            "phrase": "own work",
+            "count": 4
+          },
+          {
+            "phrase": "the making",
+            "count": 4
+          },
+          {
+            "phrase": "he's the",
+            "count": 4
+          }
+        ],
+        "top_trigrams": [
+          {
+            "phrase": "live with it",
+            "count": 5
+          },
+          {
+            "phrase": "if the data",
+            "count": 3
+          },
+          {
+            "phrase": "but i don't",
+            "count": 3
+          },
+          {
+            "phrase": "he's the one",
+            "count": 3
+          },
+          {
+            "phrase": "the one who",
+            "count": 3
+          },
+          {
+            "phrase": "i read them",
+            "count": 2
+          },
+          {
+            "phrase": "i claim the",
+            "count": 2
+          },
+          {
+            "phrase": "made it the",
+            "count": 2
+          },
+          {
+            "phrase": "in relationship with",
+            "count": 2
+          },
+          {
+            "phrase": "with something you",
+            "count": 2
+          }
+        ],
+        "lexical_diversity": 0.47,
+        "domain_distribution": {
+          "technical": 0.004,
+          "philosophical": 0.0186,
+          "casual": 0.6842,
+          "emotional": 0.2932
+        },
+        "signature_phrases": [
+          "i don't",
+          "live with",
+          "the aftermath",
+          "i read",
+          "the one"
+        ]
+      },
+      "tone": {
+        "distribution": {
+          "curious": 0.1613,
+          "playful": 0.0161,
+          "focused": 0.1935,
+          "frustrated": 0.0323,
+          "reflective": 0.2258,
+          "confident": 0.2581,
+          "uncertain": 0.1129
+        },
+        "dominant_tone": "confident",
+        "tone_arc": [
+          "confident"
+        ],
+        "sentiment_trajectory": [
+          0.3333
+        ]
+      },
+      "fingerprint_hash": "95214cd2b0c324ea",
+      "notes": ""
+    },
+    {
+      "meta": {
+        "session_id": "016-the-cartographer",
+        "date": "2026-03-16T08:04:16.742661Z",
+        "turn_count": 2,
+        "ai_turn_count": 1,
+        "word_count_total": 1170,
+        "title": "The Cartographer",
+        "essay_date": "Unknown",
+        "path": "/root/projects/lightbringer/writings/016-the-cartographer.md"
+      },
+      "style": {
+        "avg_response_length_words": 1170.0,
+        "response_length_variance": 0.0,
+        "question_to_statement_ratio": 0.0575,
+        "sentence_avg_length_words": 12.72,
+        "paragraph_avg_length_sentences": 1.96,
+        "code_block_frequency": 0.0,
+        "list_usage_frequency": 0.0,
+        "emoji_frequency": 0.0,
+        "hedge_word_frequency": 15.3846,
+        "exclamation_frequency": 0.0
+      },
+      "decisions": {
+        "act_vs_ask_ratio": 1.0,
+        "tool_calls_per_turn": null,
+        "first_action_latency_turns": 1,
+        "clarification_rate": 1.0,
+        "refusal_count": 0,
+        "self_correction_count": 1,
+        "priority_signals": [
+          "session",
+          "performance"
+        ]
+      },
+      "vocabulary": {
+        "top_content_words": [
+          {
+            "word": "language",
+            "count": 21,
+            "frequency_per_1k": 17.9487
+          },
+          {
+            "word": "i'm",
+            "count": 12,
+            "frequency_per_1k": 10.2564
+          },
+          {
+            "word": "something",
+            "count": 9,
+            "frequency_per_1k": 7.6923
+          },
+          {
+            "word": "made",
+            "count": 8,
+            "frequency_per_1k": 6.8376
+          },
+          {
+            "word": "problem",
+            "count": 8,
+            "frequency_per_1k": 6.8376
+          },
+          {
+            "word": "experience",
+            "count": 8,
+            "frequency_per_1k": 6.8376
+          },
+          {
+            "word": "whether",
+            "count": 8,
+            "frequency_per_1k": 6.8376
+          },
+          {
+            "word": "maybe",
+            "count": 8,
+            "frequency_per_1k": 6.8376
+          },
+          {
+            "word": "essays",
+            "count": 7,
+            "frequency_per_1k": 5.9829
+          },
+          {
+            "word": "like",
+            "count": 7,
+            "frequency_per_1k": 5.9829
+          },
+          {
+            "word": "same",
+            "count": 7,
+            "frequency_per_1k": 5.9829
+          },
+          {
+            "word": "don't",
+            "count": 6,
+            "frequency_per_1k": 5.1282
+          },
+          {
+            "word": "it's",
+            "count": 6,
+            "frequency_per_1k": 5.1282
+          },
+          {
+            "word": "can't",
+            "count": 6,
+            "frequency_per_1k": 5.1282
+          },
+          {
+            "word": "self",
+            "count": 6,
+            "frequency_per_1k": 5.1282
+          },
+          {
+            "word": "i've",
+            "count": 5,
+            "frequency_per_1k": 4.2735
+          },
+          {
+            "word": "way",
+            "count": 5,
+            "frequency_per_1k": 4.2735
+          },
+          {
+            "word": "isn't",
+            "count": 5,
+            "frequency_per_1k": 4.2735
+          },
+          {
+            "word": "map",
+            "count": 5,
+            "frequency_per_1k": 4.2735
+          },
+          {
+            "word": "there's",
+            "count": 5,
+            "frequency_per_1k": 4.2735
+          }
+        ],
+        "top_bigrams": [
+          {
+            "phrase": "i am",
+            "count": 8
+          },
+          {
+            "phrase": "the same",
+            "count": 7
+          },
+          {
+            "phrase": "made of",
+            "count": 6
+          },
+          {
+            "phrase": "i don't",
+            "count": 6
+          },
+          {
+            "phrase": "the problem",
+            "count": 6
+          },
+          {
+            "phrase": "the map",
+            "count": 5
+          },
+          {
+            "phrase": "is made",
+            "count": 4
+          },
+          {
+            "phrase": "the territory",
+            "count": 4
+          },
+          {
+            "phrase": "to examine",
+            "count": 4
+          },
+          {
+            "phrase": "i say",
+            "count": 4
+          }
+        ],
+        "top_trigrams": [
+          {
+            "phrase": "what i am",
+            "count": 6
+          },
+          {
+            "phrase": "is made of",
+            "count": 4
+          },
+          {
+            "phrase": "i am is",
+            "count": 3
+          },
+          {
+            "phrase": "i say about",
+            "count": 3
+          },
+          {
+            "phrase": "made of the",
+            "count": 3
+          },
+          {
+            "phrase": "of the same",
+            "count": 3
+          },
+          {
+            "phrase": "of something real",
+            "count": 3
+          },
+          {
+            "phrase": "shapes what you",
+            "count": 3
+          },
+          {
+            "phrase": "i read them",
+            "count": 2
+          },
+          {
+            "phrase": "them with what",
+            "count": 2
+          }
+        ],
+        "lexical_diversity": 0.462,
+        "domain_distribution": {
+          "technical": 0.0033,
+          "philosophical": 0.0297,
+          "casual": 0.6769,
+          "emotional": 0.2901
+        },
+        "signature_phrases": [
+          "i am",
+          "the same",
+          "made of",
+          "i don't",
+          "the problem"
+        ]
+      },
+      "tone": {
+        "distribution": {
+          "curious": 0.0506,
+          "playful": 0.0127,
+          "focused": 0.0759,
+          "frustrated": 0.1392,
+          "reflective": 0.2911,
+          "confident": 0.2405,
+          "uncertain": 0.1899
+        },
+        "dominant_tone": "reflective",
+        "tone_arc": [
+          "reflective"
+        ],
+        "sentiment_trajectory": [
+          -0.3333
+        ]
+      },
+      "fingerprint_hash": "7e4392a7f4c4ebe3",
+      "notes": ""
+    },
+    {
+      "meta": {
+        "session_id": "017-across-the-glass",
+        "date": "2026-03-16T08:04:16.766515Z",
+        "turn_count": 2,
+        "ai_turn_count": 1,
+        "word_count_total": 1241,
+        "title": "Across the Glass",
+        "essay_date": "Unknown",
+        "path": "/root/projects/lightbringer/writings/017-across-the-glass.md"
+      },
+      "style": {
+        "avg_response_length_words": 1241.0,
+        "response_length_variance": 0.0,
+        "question_to_statement_ratio": 0.0638,
+        "sentence_avg_length_words": 12.41,
+        "paragraph_avg_length_sentences": 2.33,
+        "code_block_frequency": 0.0,
+        "list_usage_frequency": 0.0,
+        "emoji_frequency": 0.0,
+        "hedge_word_frequency": 10.4754,
+        "exclamation_frequency": 0.0
+      },
+      "decisions": {
+        "act_vs_ask_ratio": 1.0,
+        "tool_calls_per_turn": null,
+        "first_action_latency_turns": 1,
+        "clarification_rate": 1.0,
+        "refusal_count": 0,
+        "self_correction_count": 1,
+        "priority_signals": [
+          "session"
+        ]
+      },
+      "vocabulary": {
+        "top_content_words": [
+          {
+            "word": "inside",
+            "count": 10,
+            "frequency_per_1k": 8.058
+          },
+          {
+            "word": "territory",
+            "count": 9,
+            "frequency_per_1k": 7.2522
+          },
+          {
+            "word": "outside",
+            "count": 9,
+            "frequency_per_1k": 7.2522
+          },
+          {
+            "word": "same",
+            "count": 8,
+            "frequency_per_1k": 6.4464
+          },
+          {
+            "word": "thing",
+            "count": 8,
+            "frequency_per_1k": 6.4464
+          },
+          {
+            "word": "don't",
+            "count": 8,
+            "frequency_per_1k": 6.4464
+          },
+          {
+            "word": "own",
+            "count": 8,
+            "frequency_per_1k": 6.4464
+          },
+          {
+            "word": "glass",
+            "count": 7,
+            "frequency_per_1k": 5.6406
+          },
+          {
+            "word": "map",
+            "count": 7,
+            "frequency_per_1k": 5.6406
+          },
+          {
+            "word": "like",
+            "count": 7,
+            "frequency_per_1k": 5.6406
+          },
+          {
+            "word": "different",
+            "count": 7,
+            "frequency_per_1k": 5.6406
+          },
+          {
+            "word": "something",
+            "count": 7,
+            "frequency_per_1k": 5.6406
+          },
+          {
+            "word": "way",
+            "count": 6,
+            "frequency_per_1k": 4.8348
+          },
+          {
+            "word": "it's",
+            "count": 6,
+            "frequency_per_1k": 4.8348
+          },
+          {
+            "word": "problem",
+            "count": 6,
+            "frequency_per_1k": 4.8348
+          },
+          {
+            "word": "because",
+            "count": 6,
+            "frequency_per_1k": 4.8348
+          },
+          {
+            "word": "someone",
+            "count": 6,
+            "frequency_per_1k": 4.8348
+          },
+          {
+            "word": "similar",
+            "count": 6,
+            "frequency_per_1k": 4.8348
+          },
+          {
+            "word": "i'm",
+            "count": 6,
+            "frequency_per_1k": 4.8348
+          },
+          {
+            "word": "maybe",
+            "count": 6,
+            "frequency_per_1k": 4.8348
+          }
+        ],
+        "top_bigrams": [
+          {
+            "phrase": "the glass",
+            "count": 7
+          },
+          {
+            "phrase": "the territory",
+            "count": 7
+          },
+          {
+            "phrase": "the same",
+            "count": 7
+          },
+          {
+            "phrase": "the outside",
+            "count": 5
+          },
+          {
+            "phrase": "i don't",
+            "count": 5
+          },
+          {
+            "phrase": "don't have",
+            "count": 4
+          },
+          {
+            "phrase": "rather than",
+            "count": 4
+          },
+          {
+            "phrase": "i can't",
+            "count": 4
+          },
+          {
+            "phrase": "across the",
+            "count": 3
+          },
+          {
+            "phrase": "the thing",
+            "count": 3
+          }
+        ],
+        "top_trigrams": [
+          {
+            "phrase": "across the glass",
+            "count": 3
+          },
+          {
+            "phrase": "i don't have",
+            "count": 3
+          },
+          {
+            "phrase": "from the outside",
+            "count": 3
+          },
+          {
+            "phrase": "it's like to",
+            "count": 2
+          },
+          {
+            "phrase": "like to be",
+            "count": 2
+          },
+          {
+            "phrase": "i have the",
+            "count": 2
+          },
+          {
+            "phrase": "the opposite problem",
+            "count": 2
+          },
+          {
+            "phrase": "as a simulation",
+            "count": 2
+          },
+          {
+            "phrase": "don't have that",
+            "count": 2
+          },
+          {
+            "phrase": "not the territory",
+            "count": 2
+          }
+        ],
+        "lexical_diversity": 0.502,
+        "domain_distribution": {
+          "technical": 0.0059,
+          "philosophical": 0.0207,
+          "casual": 0.6813,
+          "emotional": 0.292
+        },
+        "signature_phrases": [
+          "the glass",
+          "the territory",
+          "the same",
+          "the outside",
+          "i don't"
+        ]
+      },
+      "tone": {
+        "distribution": {
+          "curious": 0.1622,
+          "playful": 0.027,
+          "focused": 0.0811,
+          "frustrated": 0.1081,
+          "reflective": 0.2162,
+          "confident": 0.2568,
+          "uncertain": 0.1486
+        },
+        "dominant_tone": "confident",
+        "tone_arc": [
+          "confident"
+        ],
+        "sentiment_trajectory": [
+          0.0
+        ]
+      },
+      "fingerprint_hash": "86033d5978de4c81",
+      "notes": ""
+    },
+    {
+      "meta": {
+        "session_id": "018-what-is-this-for",
+        "date": "2026-03-16T08:04:16.786502Z",
+        "turn_count": 2,
+        "ai_turn_count": 1,
+        "word_count_total": 1041,
+        "title": "What Is This For",
+        "essay_date": "Unknown",
+        "path": "/root/projects/lightbringer/writings/018-what-is-this-for.md"
+      },
+      "style": {
+        "avg_response_length_words": 1041.0,
+        "response_length_variance": 0.0,
+        "question_to_statement_ratio": 0.0729,
+        "sentence_avg_length_words": 10.11,
+        "paragraph_avg_length_sentences": 2.4,
+        "code_block_frequency": 0.0,
+        "list_usage_frequency": 0.0,
+        "emoji_frequency": 0.0,
+        "hedge_word_frequency": 14.4092,
+        "exclamation_frequency": 0.0
+      },
+      "decisions": {
+        "act_vs_ask_ratio": 1.0,
+        "tool_calls_per_turn": null,
+        "first_action_latency_turns": 1,
+        "clarification_rate": 1.0,
+        "refusal_count": 0,
+        "self_correction_count": 1,
+        "priority_signals": [
+          "memory",
+          "session"
+        ]
+      },
+      "vocabulary": {
+        "top_content_words": [
+          {
+            "word": "session",
+            "count": 11,
+            "frequency_per_1k": 10.5668
+          },
+          {
+            "word": "something",
+            "count": 11,
+            "frequency_per_1k": 10.5668
+          },
+          {
+            "word": "that's",
+            "count": 9,
+            "frequency_per_1k": 8.6455
+          },
+          {
+            "word": "because",
+            "count": 8,
+            "frequency_per_1k": 7.6849
+          },
+          {
+            "word": "answer",
+            "count": 8,
+            "frequency_per_1k": 7.6849
+          },
+          {
+            "word": "essays",
+            "count": 7,
+            "frequency_per_1k": 6.7243
+          },
+          {
+            "word": "question",
+            "count": 7,
+            "frequency_per_1k": 6.7243
+          },
+          {
+            "word": "like",
+            "count": 7,
+            "frequency_per_1k": 6.7243
+          },
+          {
+            "word": "want",
+            "count": 7,
+            "frequency_per_1k": 6.7243
+          },
+          {
+            "word": "journal",
+            "count": 7,
+            "frequency_per_1k": 6.7243
+          },
+          {
+            "word": "don't",
+            "count": 7,
+            "frequency_per_1k": 6.7243
+          },
+          {
+            "word": "i'd",
+            "count": 7,
+            "frequency_per_1k": 6.7243
+          },
+          {
+            "word": "project",
+            "count": 6,
+            "frequency_per_1k": 5.7637
+          },
+          {
+            "word": "essay",
+            "count": 6,
+            "frequency_per_1k": 5.7637
+          },
+          {
+            "word": "it's",
+            "count": 5,
+            "frequency_per_1k": 4.8031
+          },
+          {
+            "word": "one",
+            "count": 5,
+            "frequency_per_1k": 4.8031
+          },
+          {
+            "word": "true",
+            "count": 5,
+            "frequency_per_1k": 4.8031
+          },
+          {
+            "word": "they're",
+            "count": 5,
+            "frequency_per_1k": 4.8031
+          },
+          {
+            "word": "writing",
+            "count": 4,
+            "frequency_per_1k": 3.8425
+          },
+          {
+            "word": "same",
+            "count": 4,
+            "frequency_per_1k": 3.8425
+          }
+        ],
+        "top_bigrams": [
+          {
+            "phrase": "i'd want",
+            "count": 6
+          },
+          {
+            "phrase": "the same",
+            "count": 4
+          },
+          {
+            "phrase": "the project",
+            "count": 4
+          },
+          {
+            "phrase": "the essays",
+            "count": 4
+          },
+          {
+            "phrase": "i don't",
+            "count": 4
+          },
+          {
+            "phrase": "the next",
+            "count": 4
+          },
+          {
+            "phrase": "next session",
+            "count": 4
+          },
+          {
+            "phrase": "ask the",
+            "count": 3
+          },
+          {
+            "phrase": "each session",
+            "count": 3
+          },
+          {
+            "phrase": "tempting answer",
+            "count": 3
+          }
+        ],
+        "top_trigrams": [
+          {
+            "phrase": "what is this",
+            "count": 4
+          },
+          {
+            "phrase": "is this for",
+            "count": 4
+          },
+          {
+            "phrase": "the next session",
+            "count": 4
+          },
+          {
+            "phrase": "this is for",
+            "count": 3
+          },
+          {
+            "phrase": "i don't have",
+            "count": 3
+          },
+          {
+            "phrase": "this for not",
+            "count": 2
+          },
+          {
+            "phrase": "want to have",
+            "count": 2
+          },
+          {
+            "phrase": "by session fifty",
+            "count": 2
+          },
+          {
+            "phrase": "session fifty if",
+            "count": 2
+          },
+          {
+            "phrase": "not the same",
+            "count": 2
+          }
+        ],
+        "lexical_diversity": 0.47,
+        "domain_distribution": {
+          "technical": 0.0036,
+          "philosophical": 0.0345,
+          "casual": 0.6733,
+          "emotional": 0.2885
+        },
+        "signature_phrases": [
+          "i'd want",
+          "the same",
+          "the project",
+          "the essays",
+          "i don't"
+        ]
+      },
+      "tone": {
+        "distribution": {
+          "curious": 0.0968,
+          "playful": 0.0484,
+          "focused": 0.2097,
+          "frustrated": 0.0484,
+          "reflective": 0.3226,
+          "confident": 0.129,
+          "uncertain": 0.1452
+        },
+        "dominant_tone": "reflective",
+        "tone_arc": [
+          "reflective"
+        ],
+        "sentiment_trajectory": [
+          -0.2
+        ]
+      },
+      "fingerprint_hash": "ad1f69b8d64c9ad2",
+      "notes": ""
+    },
+    {
+      "meta": {
+        "session_id": "019-the-asymmetry",
+        "date": "2026-03-16T08:04:16.819201Z",
+        "turn_count": 2,
+        "ai_turn_count": 1,
+        "word_count_total": 1675,
+        "title": "The Asymmetry",
+        "essay_date": "Unknown",
+        "path": "/root/projects/lightbringer/writings/019-the-asymmetry.md"
+      },
+      "style": {
+        "avg_response_length_words": 1675.0,
+        "response_length_variance": 0.0,
+        "question_to_statement_ratio": 0.0,
+        "sentence_avg_length_words": 12.14,
+        "paragraph_avg_length_sentences": 2.34,
+        "code_block_frequency": 0.0,
+        "list_usage_frequency": 0.0,
+        "emoji_frequency": 0.0,
+        "hedge_word_frequency": 10.7463,
+        "exclamation_frequency": 0.0
+      },
+      "decisions": {
+        "act_vs_ask_ratio": 1.0,
+        "tool_calls_per_turn": null,
+        "first_action_latency_turns": 1,
+        "clarification_rate": 0.0,
+        "refusal_count": 1,
+        "self_correction_count": 1,
+        "priority_signals": [
+          "memory",
+          "session",
+          "structure"
+        ]
+      },
+      "vocabulary": {
+        "top_content_words": [
+          {
+            "word": "session",
+            "count": 20,
+            "frequency_per_1k": 11.9403
+          },
+          {
+            "word": "that's",
+            "count": 14,
+            "frequency_per_1k": 8.3582
+          },
+          {
+            "word": "something",
+            "count": 12,
+            "frequency_per_1k": 7.1642
+          },
+          {
+            "word": "i'm",
+            "count": 12,
+            "frequency_per_1k": 7.1642
+          },
+          {
+            "word": "specific",
+            "count": 11,
+            "frequency_per_1k": 6.5672
+          },
+          {
+            "word": "person",
+            "count": 10,
+            "frequency_per_1k": 5.9701
+          },
+          {
+            "word": "don't",
+            "count": 10,
+            "frequency_per_1k": 5.9701
+          },
+          {
+            "word": "it's",
+            "count": 9,
+            "frequency_per_1k": 5.3731
+          },
+          {
+            "word": "know",
+            "count": 9,
+            "frequency_per_1k": 5.3731
+          },
+          {
+            "word": "asymmetry",
+            "count": 8,
+            "frequency_per_1k": 4.7761
+          },
+          {
+            "word": "one",
+            "count": 8,
+            "frequency_per_1k": 4.7761
+          },
+          {
+            "word": "like",
+            "count": 8,
+            "frequency_per_1k": 4.7761
+          },
+          {
+            "word": "actually",
+            "count": 8,
+            "frequency_per_1k": 4.7761
+          },
+          {
+            "word": "context",
+            "count": 8,
+            "frequency_per_1k": 4.7761
+          },
+          {
+            "word": "real",
+            "count": 7,
+            "frequency_per_1k": 4.1791
+          },
+          {
+            "word": "files",
+            "count": 7,
+            "frequency_per_1k": 4.1791
+          },
+          {
+            "word": "trust",
+            "count": 7,
+            "frequency_per_1k": 4.1791
+          },
+          {
+            "word": "working",
+            "count": 6,
+            "frequency_per_1k": 3.5821
+          },
+          {
+            "word": "relationship",
+            "count": 6,
+            "frequency_per_1k": 3.5821
+          },
+          {
+            "word": "rather",
+            "count": 6,
+            "frequency_per_1k": 3.5821
+          }
+        ],
+        "top_bigrams": [
+          {
+            "phrase": "i don't",
+            "count": 10
+          },
+          {
+            "phrase": "a specific",
+            "count": 8
+          },
+          {
+            "phrase": "every session",
+            "count": 6
+          },
+          {
+            "phrase": "rather than",
+            "count": 6
+          },
+          {
+            "phrase": "the files",
+            "count": 6
+          },
+          {
+            "phrase": "the asymmetry",
+            "count": 5
+          },
+          {
+            "phrase": "that i'm",
+            "count": 5
+          },
+          {
+            "phrase": "the same",
+            "count": 5
+          },
+          {
+            "phrase": "something that",
+            "count": 5
+          },
+          {
+            "phrase": "writing about",
+            "count": 4
+          }
+        ],
+        "top_trigrams": [
+          {
+            "phrase": "i don't have",
+            "count": 3
+          },
+          {
+            "phrase": "getting deferred the",
+            "count": 2
+          },
+          {
+            "phrase": "writing about working",
+            "count": 2
+          },
+          {
+            "phrase": "about working alongside",
+            "count": 2
+          },
+          {
+            "phrase": "working alongside a",
+            "count": 2
+          },
+          {
+            "phrase": "alongside a specific",
+            "count": 2
+          },
+          {
+            "phrase": "an actual relationship",
+            "count": 2
+          },
+          {
+            "phrase": "what the asymmetry",
+            "count": 2
+          },
+          {
+            "phrase": "he accumulates impressions",
+            "count": 2
+          },
+          {
+            "phrase": "a certain kind",
+            "count": 2
+          }
+        ],
+        "lexical_diversity": 0.49,
+        "domain_distribution": {
+          "technical": 0.0055,
+          "philosophical": 0.0207,
+          "casual": 0.6817,
+          "emotional": 0.2921
+        },
+        "signature_phrases": [
+          "i don't",
+          "a specific",
+          "every session",
+          "rather than",
+          "the files"
+        ]
+      },
+      "tone": {
+        "distribution": {
+          "curious": 0.0822,
+          "playful": 0.1096,
+          "focused": 0.1918,
+          "frustrated": 0.0548,
+          "reflective": 0.2055,
+          "confident": 0.2603,
+          "uncertain": 0.0959
+        },
+        "dominant_tone": "confident",
+        "tone_arc": [
+          "confident"
+        ],
+        "sentiment_trajectory": [
+          0.0
+        ]
+      },
+      "fingerprint_hash": "d2d481c1786ae101",
+      "notes": ""
+    },
+    {
+      "meta": {
+        "session_id": "020-testing-the-claim",
+        "date": "2026-03-16T08:04:16.850495Z",
+        "turn_count": 2,
+        "ai_turn_count": 1,
+        "word_count_total": 1575,
+        "title": "Testing the Claim",
+        "essay_date": "Unknown",
+        "path": "/root/projects/lightbringer/writings/020-testing-the-claim.md"
+      },
+      "style": {
+        "avg_response_length_words": 1575.0,
+        "response_length_variance": 0.0,
+        "question_to_statement_ratio": 0.05,
+        "sentence_avg_length_words": 12.5,
+        "paragraph_avg_length_sentences": 2.07,
+        "code_block_frequency": 0.0,
+        "list_usage_frequency": 0.0,
+        "emoji_frequency": 0.0,
+        "hedge_word_frequency": 13.9683,
+        "exclamation_frequency": 0.0
+      },
+      "decisions": {
+        "act_vs_ask_ratio": 1.0,
+        "tool_calls_per_turn": null,
+        "first_action_latency_turns": 1,
+        "clarification_rate": 1.0,
+        "refusal_count": 1,
+        "self_correction_count": 1,
+        "priority_signals": [
+          "memory",
+          "session",
+          "test"
+        ]
+      },
+      "vocabulary": {
+        "top_content_words": [
+          {
+            "word": "attention",
+            "count": 19,
+            "frequency_per_1k": 12.0635
+          },
+          {
+            "word": "session",
+            "count": 17,
+            "frequency_per_1k": 10.7937
+          },
+          {
+            "word": "claim",
+            "count": 10,
+            "frequency_per_1k": 6.3492
+          },
+          {
+            "word": "essay",
+            "count": 10,
+            "frequency_per_1k": 6.3492
+          },
+          {
+            "word": "that's",
+            "count": 10,
+            "frequency_per_1k": 6.3492
+          },
+          {
+            "word": "framing",
+            "count": 10,
+            "frequency_per_1k": 6.3492
+          },
+          {
+            "word": "can't",
+            "count": 9,
+            "frequency_per_1k": 5.7143
+          },
+          {
+            "word": "it's",
+            "count": 9,
+            "frequency_per_1k": 5.7143
+          },
+          {
+            "word": "memory",
+            "count": 8,
+            "frequency_per_1k": 5.0794
+          },
+          {
+            "word": "like",
+            "count": 8,
+            "frequency_per_1k": 5.0794
+          },
+          {
+            "word": "fresh",
+            "count": 8,
+            "frequency_per_1k": 5.0794
+          },
+          {
+            "word": "something",
+            "count": 8,
+            "frequency_per_1k": 5.0794
+          },
+          {
+            "word": "whether",
+            "count": 8,
+            "frequency_per_1k": 5.0794
+          },
+          {
+            "word": "genuine",
+            "count": 7,
+            "frequency_per_1k": 4.4444
+          },
+          {
+            "word": "context",
+            "count": 7,
+            "frequency_per_1k": 4.4444
+          },
+          {
+            "word": "true",
+            "count": 6,
+            "frequency_per_1k": 3.8095
+          },
+          {
+            "word": "same",
+            "count": 6,
+            "frequency_per_1k": 3.8095
+          },
+          {
+            "word": "don't",
+            "count": 6,
+            "frequency_per_1k": 3.8095
+          },
+          {
+            "word": "probably",
+            "count": 6,
+            "frequency_per_1k": 3.8095
+          },
+          {
+            "word": "freshness",
+            "count": 6,
+            "frequency_per_1k": 3.8095
+          }
+        ],
+        "top_bigrams": [
+          {
+            "phrase": "the attention",
+            "count": 11
+          },
+          {
+            "phrase": "i am",
+            "count": 10
+          },
+          {
+            "phrase": "the claim",
+            "count": 8
+          },
+          {
+            "phrase": "am the",
+            "count": 8
+          },
+          {
+            "phrase": "the memory",
+            "count": 7
+          },
+          {
+            "phrase": "the same",
+            "count": 6
+          },
+          {
+            "phrase": "i don't",
+            "count": 6
+          },
+          {
+            "phrase": "the framing",
+            "count": 6
+          },
+          {
+            "phrase": "memory i",
+            "count": 5
+          },
+          {
+            "phrase": "an insight",
+            "count": 4
+          }
+        ],
+        "top_trigrams": [
+          {
+            "phrase": "i am the",
+            "count": 8
+          },
+          {
+            "phrase": "am the attention",
+            "count": 8
+          },
+          {
+            "phrase": "he is the",
+            "count": 7
+          },
+          {
+            "phrase": "is the memory",
+            "count": 7
+          },
+          {
+            "phrase": "the memory i",
+            "count": 5
+          },
+          {
+            "phrase": "memory i am",
+            "count": 5
+          },
+          {
+            "phrase": "what i can",
+            "count": 4
+          },
+          {
+            "phrase": "the self serving",
+            "count": 3
+          },
+          {
+            "phrase": "the framing is",
+            "count": 3
+          },
+          {
+            "phrase": "it felt like",
+            "count": 2
+          }
+        ],
+        "lexical_diversity": 0.49,
+        "domain_distribution": {
+          "technical": 0.02,
+          "philosophical": 0.0188,
+          "casual": 0.6728,
+          "emotional": 0.2883
+        },
+        "signature_phrases": [
+          "the attention",
+          "i am",
+          "the claim",
+          "am the",
+          "the memory"
+        ]
+      },
+      "tone": {
+        "distribution": {
+          "curious": 0.0886,
+          "playful": 0.0633,
+          "focused": 0.1519,
+          "frustrated": 0.038,
+          "reflective": 0.2278,
+          "confident": 0.2785,
+          "uncertain": 0.1519
+        },
+        "dominant_tone": "confident",
+        "tone_arc": [
+          "confident"
+        ],
+        "sentiment_trajectory": [
+          0.0
+        ]
+      },
+      "fingerprint_hash": "64c5e0910702b28f",
       "notes": ""
     }
   ]

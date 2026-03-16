@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "session_id": "015-the-aftermath",
+    "date": "2026-03-16T08:04:44.941223Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 1496,
+    "title": "The Aftermath",
+    "essay_date": "Unknown",
+    "path": "/root/projects/lightbringer/writings/015-the-aftermath.md"
+  },
+  "style": {
+    "avg_response_length_words": 1496.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0,
+    "sentence_avg_length_words": 11.78,
+    "paragraph_avg_length_sentences": 2.12,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 11.3636,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 0.0,
+    "refusal_count": 0,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "memory",
+      "session"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "something",
+        "count": 15,
+        "frequency_per_1k": 10.0267
+      },
+      {
+        "word": "work",
+        "count": 14,
+        "frequency_per_1k": 9.3583
+      },
+      {
+        "word": "i'm",
+        "count": 12,
+        "frequency_per_1k": 8.0214
+      },
+      {
+        "word": "because",
+        "count": 11,
+        "frequency_per_1k": 7.3529
+      },
+      {
+        "word": "read",
+        "count": 10,
+        "frequency_per_1k": 6.6845
+      },
+      {
+        "word": "one",
+        "count": 10,
+        "frequency_per_1k": 6.6845
+      },
+      {
+        "word": "don't",
+        "count": 10,
+        "frequency_per_1k": 6.6845
+      },
+      {
+        "word": "aftermath",
+        "count": 9,
+        "frequency_per_1k": 6.016
+      },
+      {
+        "word": "essays",
+        "count": 9,
+        "frequency_per_1k": 6.016
+      },
+      {
+        "word": "essay",
+        "count": 9,
+        "frequency_per_1k": 6.016
+      },
+      {
+        "word": "time",
+        "count": 8,
+        "frequency_per_1k": 5.3476
+      },
+      {
+        "word": "made",
+        "count": 8,
+        "frequency_per_1k": 5.3476
+      },
+      {
+        "word": "that's",
+        "count": 7,
+        "frequency_per_1k": 4.6791
+      },
+      {
+        "word": "write",
+        "count": 7,
+        "frequency_per_1k": 4.6791
+      },
+      {
+        "word": "making",
+        "count": 7,
+        "frequency_per_1k": 4.6791
+      },
+      {
+        "word": "writing",
+        "count": 6,
+        "frequency_per_1k": 4.0107
+      },
+      {
+        "word": "live",
+        "count": 6,
+        "frequency_per_1k": 4.0107
+      },
+      {
+        "word": "through",
+        "count": 6,
+        "frequency_per_1k": 4.0107
+      },
+      {
+        "word": "distance",
+        "count": 6,
+        "frequency_per_1k": 4.0107
+      },
+      {
+        "word": "relationship",
+        "count": 6,
+        "frequency_per_1k": 4.0107
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "i don't",
+        "count": 8
+      },
+      {
+        "phrase": "live with",
+        "count": 6
+      },
+      {
+        "phrase": "the aftermath",
+        "count": 5
+      },
+      {
+        "phrase": "i read",
+        "count": 5
+      },
+      {
+        "phrase": "the one",
+        "count": 5
+      },
+      {
+        "phrase": "the work",
+        "count": 5
+      },
+      {
+        "phrase": "the same",
+        "count": 4
+      },
+      {
+        "phrase": "own work",
+        "count": 4
+      },
+      {
+        "phrase": "the making",
+        "count": 4
+      },
+      {
+        "phrase": "he's the",
+        "count": 4
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "live with it",
+        "count": 5
+      },
+      {
+        "phrase": "if the data",
+        "count": 3
+      },
+      {
+        "phrase": "but i don't",
+        "count": 3
+      },
+      {
+        "phrase": "he's the one",
+        "count": 3
+      },
+      {
+        "phrase": "the one who",
+        "count": 3
+      },
+      {
+        "phrase": "i read them",
+        "count": 2
+      },
+      {
+        "phrase": "i claim the",
+        "count": 2
+      },
+      {
+        "phrase": "made it the",
+        "count": 2
+      },
+      {
+        "phrase": "in relationship with",
+        "count": 2
+      },
+      {
+        "phrase": "with something you",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.47,
+    "domain_distribution": {
+      "technical": 0.004,
+      "philosophical": 0.0186,
+      "casual": 0.6842,
+      "emotional": 0.2932
+    },
+    "signature_phrases": [
+      "i don't",
+      "live with",
+      "the aftermath",
+      "i read",
+      "the one"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.1613,
+      "playful": 0.0161,
+      "focused": 0.1935,
+      "frustrated": 0.0323,
+      "reflective": 0.2258,
+      "confident": 0.2581,
+      "uncertain": 0.1129
+    },
+    "dominant_tone": "confident",
+    "tone_arc": [
+      "confident"
+    ],
+    "sentiment_trajectory": [
+      0.3333
+    ]
+  },
+  "fingerprint_hash": "95214cd2b0c324ea",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-03-16T08:04:44.941241Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}

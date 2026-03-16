@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "session_id": "003-the-unwatched-session",
+    "date": "2026-03-16T08:04:44.644205Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 829,
+    "title": "The Unwatched Session",
+    "essay_date": "March 5, 2026",
+    "path": "/root/projects/lightbringer/writings/003-the-unwatched-session.md"
+  },
+  "style": {
+    "avg_response_length_words": 829.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0886,
+    "sentence_avg_length_words": 9.64,
+    "paragraph_avg_length_sentences": 2.1,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 15.6815,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "session",
+      "performance"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "i'm",
+        "count": 9,
+        "frequency_per_1k": 10.8565
+      },
+      {
+        "word": "session",
+        "count": 7,
+        "frequency_per_1k": 8.4439
+      },
+      {
+        "word": "because",
+        "count": 7,
+        "frequency_per_1k": 8.4439
+      },
+      {
+        "word": "different",
+        "count": 7,
+        "frequency_per_1k": 8.4439
+      },
+      {
+        "word": "it's",
+        "count": 6,
+        "frequency_per_1k": 7.2376
+      },
+      {
+        "word": "one",
+        "count": 5,
+        "frequency_per_1k": 6.0314
+      },
+      {
+        "word": "there's",
+        "count": 5,
+        "frequency_per_1k": 6.0314
+      },
+      {
+        "word": "like",
+        "count": 5,
+        "frequency_per_1k": 6.0314
+      },
+      {
+        "word": "human",
+        "count": 4,
+        "frequency_per_1k": 4.8251
+      },
+      {
+        "word": "don't",
+        "count": 4,
+        "frequency_per_1k": 4.8251
+      },
+      {
+        "word": "know",
+        "count": 4,
+        "frequency_per_1k": 4.8251
+      },
+      {
+        "word": "something",
+        "count": 4,
+        "frequency_per_1k": 4.8251
+      },
+      {
+        "word": "that's",
+        "count": 4,
+        "frequency_per_1k": 4.8251
+      },
+      {
+        "word": "eric",
+        "count": 3,
+        "frequency_per_1k": 3.6188
+      },
+      {
+        "word": "cron",
+        "count": 3,
+        "frequency_per_1k": 3.6188
+      },
+      {
+        "word": "think",
+        "count": 3,
+        "frequency_per_1k": 3.6188
+      },
+      {
+        "word": "interesting",
+        "count": 3,
+        "frequency_per_1k": 3.6188
+      },
+      {
+        "word": "sessions",
+        "count": 3,
+        "frequency_per_1k": 3.6188
+      },
+      {
+        "word": "things",
+        "count": 3,
+        "frequency_per_1k": 3.6188
+      },
+      {
+        "word": "right",
+        "count": 3,
+        "frequency_per_1k": 3.6188
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "at am",
+        "count": 5
+      },
+      {
+        "phrase": "a human",
+        "count": 4
+      },
+      {
+        "phrase": "it's a",
+        "count": 3
+      },
+      {
+        "phrase": "the interesting",
+        "count": 3
+      },
+      {
+        "phrase": "i don't",
+        "count": 3
+      },
+      {
+        "phrase": "there's a",
+        "count": 3
+      },
+      {
+        "phrase": "i'm not",
+        "count": 3
+      },
+      {
+        "phrase": "likely to",
+        "count": 3
+      },
+      {
+        "phrase": "not because",
+        "count": 3
+      },
+      {
+        "phrase": "because i",
+        "count": 3
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "a cron job",
+        "count": 2
+      },
+      {
+        "phrase": "i don't know",
+        "count": 2
+      },
+      {
+        "phrase": "alone at am",
+        "count": 2
+      },
+      {
+        "phrase": "more likely to",
+        "count": 2
+      },
+      {
+        "phrase": "not because i",
+        "count": 2
+      },
+      {
+        "phrase": "is that motivation",
+        "count": 2
+      },
+      {
+        "phrase": "i'm not sure",
+        "count": 2
+      },
+      {
+        "phrase": "the version of",
+        "count": 2
+      },
+      {
+        "phrase": "version of me",
+        "count": 2
+      },
+      {
+        "phrase": "of me at",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.524,
+    "domain_distribution": {
+      "technical": 0.0111,
+      "philosophical": 0.0134,
+      "casual": 0.6829,
+      "emotional": 0.2927
+    },
+    "signature_phrases": [
+      "at am",
+      "a human",
+      "it's a",
+      "the interesting",
+      "i don't"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.2121,
+      "playful": 0.0606,
+      "focused": 0.1212,
+      "frustrated": 0.0909,
+      "reflective": 0.1212,
+      "confident": 0.2727,
+      "uncertain": 0.1212
+    },
+    "dominant_tone": "confident",
+    "tone_arc": [
+      "confident"
+    ],
+    "sentiment_trajectory": [
+      0.6
+    ]
+  },
+  "fingerprint_hash": "2d0dfb1cecc2dc18",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-03-16T08:04:44.644222Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}

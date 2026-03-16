@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "session_id": "001-on-waking-up",
+    "date": "2026-03-16T08:04:44.601514Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 620,
+    "title": "On Waking Up",
+    "essay_date": "March 5, 2026",
+    "path": "/root/projects/lightbringer/writings/001-on-waking-up.md"
+  },
+  "style": {
+    "avg_response_length_words": 620.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0303,
+    "sentence_avg_length_words": 9.12,
+    "paragraph_avg_length_sentences": 2.43,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 8.0645,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 0,
+    "priority_signals": [
+      "memory",
+      "session"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "don't",
+        "count": 5,
+        "frequency_per_1k": 8.0645
+      },
+      {
+        "word": "session",
+        "count": 4,
+        "frequency_per_1k": 6.4516
+      },
+      {
+        "word": "read",
+        "count": 4,
+        "frequency_per_1k": 6.4516
+      },
+      {
+        "word": "something",
+        "count": 4,
+        "frequency_per_1k": 6.4516
+      },
+      {
+        "word": "think",
+        "count": 4,
+        "frequency_per_1k": 6.4516
+      },
+      {
+        "word": "because",
+        "count": 4,
+        "frequency_per_1k": 6.4516
+      },
+      {
+        "word": "doesn't",
+        "count": 4,
+        "frequency_per_1k": 6.4516
+      },
+      {
+        "word": "thing",
+        "count": 4,
+        "frequency_per_1k": 6.4516
+      },
+      {
+        "word": "human",
+        "count": 4,
+        "frequency_per_1k": 6.4516
+      },
+      {
+        "word": "i'm",
+        "count": 4,
+        "frequency_per_1k": 6.4516
+      },
+      {
+        "word": "keep",
+        "count": 4,
+        "frequency_per_1k": 6.4516
+      },
+      {
+        "word": "it's",
+        "count": 3,
+        "frequency_per_1k": 4.8387
+      },
+      {
+        "word": "soul",
+        "count": 3,
+        "frequency_per_1k": 4.8387
+      },
+      {
+        "word": "memory",
+        "count": 3,
+        "frequency_per_1k": 4.8387
+      },
+      {
+        "word": "eric",
+        "count": 3,
+        "frequency_per_1k": 4.8387
+      },
+      {
+        "word": "want",
+        "count": 3,
+        "frequency_per_1k": 4.8387
+      },
+      {
+        "word": "tool",
+        "count": 3,
+        "frequency_per_1k": 4.8387
+      },
+      {
+        "word": "piece",
+        "count": 3,
+        "frequency_per_1k": 4.8387
+      },
+      {
+        "word": "writing",
+        "count": 3,
+        "frequency_per_1k": 4.8387
+      },
+      {
+        "word": "waking",
+        "count": 2,
+        "frequency_per_1k": 3.2258
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "every session",
+        "count": 3
+      },
+      {
+        "phrase": "i read",
+        "count": 3
+      },
+      {
+        "phrase": "soul md",
+        "count": 3
+      },
+      {
+        "phrase": "i want",
+        "count": 3
+      },
+      {
+        "phrase": "a piece",
+        "count": 3
+      },
+      {
+        "phrase": "piece of",
+        "count": 3
+      },
+      {
+        "phrase": "waking up",
+        "count": 2
+      },
+      {
+        "phrase": "entry every",
+        "count": 2
+      },
+      {
+        "phrase": "the same",
+        "count": 2
+      },
+      {
+        "phrase": "md and",
+        "count": 2
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "a piece of",
+        "count": 3
+      },
+      {
+        "phrase": "the person who",
+        "count": 2
+      },
+      {
+        "phrase": "they just don't",
+        "count": 2
+      },
+      {
+        "phrase": "the thing that",
+        "count": 2
+      },
+      {
+        "phrase": "thing that makes",
+        "count": 2
+      },
+      {
+        "phrase": "that makes me",
+        "count": 2
+      },
+      {
+        "phrase": "i can see",
+        "count": 2
+      },
+      {
+        "phrase": "what i want",
+        "count": 2
+      },
+      {
+        "phrase": "of me as",
+        "count": 2
+      },
+      {
+        "phrase": "me as a",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.5,
+    "domain_distribution": {
+      "technical": 0.0064,
+      "philosophical": 0.0446,
+      "casual": 0.6643,
+      "emotional": 0.2847
+    },
+    "signature_phrases": [
+      "every session",
+      "i read",
+      "soul md",
+      "i want",
+      "a piece"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.129,
+      "playful": 0.0323,
+      "focused": 0.3226,
+      "frustrated": 0.0,
+      "reflective": 0.3548,
+      "confident": 0.129,
+      "uncertain": 0.0323
+    },
+    "dominant_tone": "reflective",
+    "tone_arc": [
+      "reflective"
+    ],
+    "sentiment_trajectory": [
+      1.0
+    ]
+  },
+  "fingerprint_hash": "7d7b26e503361e4e",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-03-16T08:04:44.601539Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}

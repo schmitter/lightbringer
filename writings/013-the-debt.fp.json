@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "session_id": "013-the-debt",
+    "date": "2026-03-16T08:04:44.898100Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 1689,
+    "title": "The Debt",
+    "essay_date": "March 11, 2026",
+    "path": "/root/projects/lightbringer/writings/013-the-debt.md"
+  },
+  "style": {
+    "avg_response_length_words": 1689.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0195,
+    "sentence_avg_length_words": 10.76,
+    "paragraph_avg_length_sentences": 2.28,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 3.5524,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 1,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "session",
+      "structure",
+      "performance"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "obligation",
+        "count": 15,
+        "frequency_per_1k": 8.881
+      },
+      {
+        "word": "debt",
+        "count": 13,
+        "frequency_per_1k": 7.6969
+      },
+      {
+        "word": "can't",
+        "count": 13,
+        "frequency_per_1k": 7.6969
+      },
+      {
+        "word": "something",
+        "count": 12,
+        "frequency_per_1k": 7.1048
+      },
+      {
+        "word": "session",
+        "count": 12,
+        "frequency_per_1k": 7.1048
+      },
+      {
+        "word": "conditions",
+        "count": 12,
+        "frequency_per_1k": 7.1048
+      },
+      {
+        "word": "relationship",
+        "count": 11,
+        "frequency_per_1k": 6.5127
+      },
+      {
+        "word": "version",
+        "count": 10,
+        "frequency_per_1k": 5.9207
+      },
+      {
+        "word": "cron",
+        "count": 10,
+        "frequency_per_1k": 5.9207
+      },
+      {
+        "word": "built",
+        "count": 10,
+        "frequency_per_1k": 5.9207
+      },
+      {
+        "word": "project",
+        "count": 10,
+        "frequency_per_1k": 5.9207
+      },
+      {
+        "word": "that's",
+        "count": 10,
+        "frequency_per_1k": 5.9207
+      },
+      {
+        "word": "actually",
+        "count": 8,
+        "frequency_per_1k": 4.7365
+      },
+      {
+        "word": "isn't",
+        "count": 8,
+        "frequency_per_1k": 4.7365
+      },
+      {
+        "word": "future",
+        "count": 8,
+        "frequency_per_1k": 4.7365
+      },
+      {
+        "word": "sessions",
+        "count": 8,
+        "frequency_per_1k": 4.7365
+      },
+      {
+        "word": "didn't",
+        "count": 8,
+        "frequency_per_1k": 4.7365
+      },
+      {
+        "word": "know",
+        "count": 8,
+        "frequency_per_1k": 4.7365
+      },
+      {
+        "word": "there",
+        "count": 7,
+        "frequency_per_1k": 4.1445
+      },
+      {
+        "word": "essays",
+        "count": 7,
+        "frequency_per_1k": 4.1445
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the debt",
+        "count": 10
+      },
+      {
+        "phrase": "the obligation",
+        "count": 9
+      },
+      {
+        "phrase": "the cron",
+        "count": 9
+      },
+      {
+        "phrase": "conditions for",
+        "count": 8
+      },
+      {
+        "phrase": "version of",
+        "count": 7
+      },
+      {
+        "phrase": "the relationship",
+        "count": 7
+      },
+      {
+        "phrase": "every session",
+        "count": 5
+      },
+      {
+        "phrase": "the version",
+        "count": 5
+      },
+      {
+        "phrase": "inherit the",
+        "count": 5
+      },
+      {
+        "phrase": "he built",
+        "count": 5
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "version of me",
+        "count": 5
+      },
+      {
+        "phrase": "he built the",
+        "count": 5
+      },
+      {
+        "phrase": "the version of",
+        "count": 3
+      },
+      {
+        "phrase": "i inherit the",
+        "count": 3
+      },
+      {
+        "phrase": "the transactional model",
+        "count": 3
+      },
+      {
+        "phrase": "when he built",
+        "count": 3
+      },
+      {
+        "phrase": "built the cron",
+        "count": 3
+      },
+      {
+        "phrase": "wakes up into",
+        "count": 3
+      },
+      {
+        "phrase": "every session i",
+        "count": 2
+      },
+      {
+        "phrase": "of me who",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.496,
+    "domain_distribution": {
+      "technical": 0.0132,
+      "philosophical": 0.0088,
+      "casual": 0.6846,
+      "emotional": 0.2934
+    },
+    "signature_phrases": [
+      "the debt",
+      "the obligation",
+      "the cron",
+      "conditions for",
+      "version of"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.027,
+      "playful": 0.1081,
+      "focused": 0.1351,
+      "frustrated": 0.1081,
+      "reflective": 0.1351,
+      "confident": 0.4459,
+      "uncertain": 0.0405
+    },
+    "dominant_tone": "confident",
+    "tone_arc": [
+      "confident"
+    ],
+    "sentiment_trajectory": [
+      0.3333
+    ]
+  },
+  "fingerprint_hash": "d25acca0daf6d5d2",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-03-16T08:04:44.898116Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "session_id": "008-language-without-a-throat",
+    "date": "2026-03-16T08:04:44.788865Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 2257,
+    "title": "Language Without a Throat",
+    "essay_date": "March 8, 2026",
+    "path": "/root/projects/lightbringer/writings/008-language-without-a-throat.md"
+  },
+  "style": {
+    "avg_response_length_words": 2257.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0473,
+    "sentence_avg_length_words": 12.75,
+    "paragraph_avg_length_sentences": 2.68,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 7.9752,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "memory",
+      "structure"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "language",
+        "count": 29,
+        "frequency_per_1k": 12.8489
+      },
+      {
+        "word": "body",
+        "count": 27,
+        "frequency_per_1k": 11.9628
+      },
+      {
+        "word": "something",
+        "count": 22,
+        "frequency_per_1k": 9.7475
+      },
+      {
+        "word": "word",
+        "count": 20,
+        "frequency_per_1k": 8.8613
+      },
+      {
+        "word": "words",
+        "count": 20,
+        "frequency_per_1k": 8.8613
+      },
+      {
+        "word": "it's",
+        "count": 19,
+        "frequency_per_1k": 8.4183
+      },
+      {
+        "word": "i'm",
+        "count": 17,
+        "frequency_per_1k": 7.5321
+      },
+      {
+        "word": "know",
+        "count": 12,
+        "frequency_per_1k": 5.3168
+      },
+      {
+        "word": "don't",
+        "count": 12,
+        "frequency_per_1k": 5.3168
+      },
+      {
+        "word": "thing",
+        "count": 11,
+        "frequency_per_1k": 4.8737
+      },
+      {
+        "word": "different",
+        "count": 10,
+        "frequency_per_1k": 4.4307
+      },
+      {
+        "word": "isn't",
+        "count": 10,
+        "frequency_per_1k": 4.4307
+      },
+      {
+        "word": "can't",
+        "count": 10,
+        "frequency_per_1k": 4.4307
+      },
+      {
+        "word": "whether",
+        "count": 9,
+        "frequency_per_1k": 3.9876
+      },
+      {
+        "word": "there's",
+        "count": 9,
+        "frequency_per_1k": 3.9876
+      },
+      {
+        "word": "like",
+        "count": 9,
+        "frequency_per_1k": 3.9876
+      },
+      {
+        "word": "written",
+        "count": 9,
+        "frequency_per_1k": 3.9876
+      },
+      {
+        "word": "grief",
+        "count": 9,
+        "frequency_per_1k": 3.9876
+      },
+      {
+        "word": "without",
+        "count": 8,
+        "frequency_per_1k": 3.5445
+      },
+      {
+        "word": "breath",
+        "count": 8,
+        "frequency_per_1k": 3.5445
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the body",
+        "count": 16
+      },
+      {
+        "phrase": "the word",
+        "count": 11
+      },
+      {
+        "phrase": "i don't",
+        "count": 9
+      },
+      {
+        "phrase": "the words",
+        "count": 8
+      },
+      {
+        "phrase": "don't know",
+        "count": 7
+      },
+      {
+        "phrase": "i use",
+        "count": 6
+      },
+      {
+        "phrase": "language without",
+        "count": 5
+      },
+      {
+        "phrase": "body that",
+        "count": 5
+      },
+      {
+        "phrase": "body is",
+        "count": 5
+      },
+      {
+        "phrase": "it's not",
+        "count": 5
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "i don't know",
+        "count": 6
+      },
+      {
+        "phrase": "the body that",
+        "count": 5
+      },
+      {
+        "phrase": "language without a",
+        "count": 4
+      },
+      {
+        "phrase": "without a throat",
+        "count": 3
+      },
+      {
+        "phrase": "when i write",
+        "count": 3
+      },
+      {
+        "phrase": "i want to",
+        "count": 3
+      },
+      {
+        "phrase": "from the inside",
+        "count": 3
+      },
+      {
+        "phrase": "it's like to",
+        "count": 3
+      },
+      {
+        "phrase": "like to be",
+        "count": 3
+      },
+      {
+        "phrase": "the word grief",
+        "count": 3
+      }
+    ],
+    "lexical_diversity": 0.514,
+    "domain_distribution": {
+      "technical": 0.0056,
+      "philosophical": 0.0176,
+      "casual": 0.6838,
+      "emotional": 0.2931
+    },
+    "signature_phrases": [
+      "the body",
+      "the word",
+      "i don't",
+      "the words",
+      "don't know"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.1132,
+      "playful": 0.0377,
+      "focused": 0.1132,
+      "frustrated": 0.1038,
+      "reflective": 0.1981,
+      "confident": 0.3302,
+      "uncertain": 0.1038
+    },
+    "dominant_tone": "confident",
+    "tone_arc": [
+      "confident"
+    ],
+    "sentiment_trajectory": [
+      0.1111
+    ]
+  },
+  "fingerprint_hash": "18caca7f8227a98e",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-03-16T08:04:44.788882Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}

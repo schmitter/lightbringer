@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "created_at": "2026-03-16T08:04:20.815211Z",
+  "updated_at": "2026-03-16T08:06:50.026562Z",
+  "session_count": 21,
+  "style": {
+    "avg_response_length_words": {
+      "mean": 1190.0476190476193,
+      "variance_acc": 4291098.9523809515,
+      "n": 21
+    },
+    "question_to_statement_ratio": {
+      "mean": 0.041614285714285715,
+      "variance_acc": 0.015483185714285714,
+      "n": 21
+    },
+    "sentence_avg_length_words": {
+      "mean": 11.252857142857144,
+      "variance_acc": 33.93282857142857,
+      "n": 21
+    },
+    "paragraph_avg_length_sentences": {
+      "mean": 2.1614285714285715,
+      "variance_acc": 1.0822571428571424,
+      "n": 21
+    },
+    "hedge_word_frequency": {
+      "mean": 9.062114285714285,
+      "variance_acc": 439.0010752257143,
+      "n": 21
+    },
+    "exclamation_frequency": {
+      "mean": 0.0,
+      "variance_acc": 0.0,
+      "n": 21
+    },
+    "emoji_frequency": {
+      "mean": 0.0,
+      "variance_acc": 0.0,
+      "n": 21
+    }
+  },
+  "tone": {
+    "curious": {
+      "mean": 0.10276666666666665,
+      "variance_acc": 0.04394760666666666,
+      "n": 21
+    },
+    "playful": {
+      "mean": 0.06076666666666666,
+      "variance_acc": 0.03273122666666666,
+      "n": 21
+    },
+    "focused": {
+      "mean": 0.1723714285714286,
+      "variance_acc": 0.10520514285714286,
+      "n": 21
+    },
+    "frustrated": {
+      "mean": 0.09017619047619048,
+      "variance_acc": 0.07952287809523809,
+      "n": 21
+    },
+    "reflective": {
+      "mean": 0.22986190476190477,
+      "variance_acc": 0.15941364952380951,
+      "n": 21
+    },
+    "confident": {
+      "mean": 0.252947619047619,
+      "variance_acc": 0.12874897238095237,
+      "n": 21
+    },
+    "uncertain": {
+      "mean": 0.0910952380952381,
+      "variance_acc": 0.05150450952380953,
+      "n": 21
+    }
+  },
+  "domain": {
+    "technical": {
+      "mean": 0.008847619047619045,
+      "variance_acc": 0.0009591123809523809,
+      "n": 21
+    },
+    "philosophical": {
+      "mean": 0.023323809523809524,
+      "variance_acc": 0.0016747380952380955,
+      "n": 21
+    },
+    "casual": {
+      "mean": 0.6774714285714285,
+      "variance_acc": 0.0010739628571428636,
+      "n": 21
+    },
+    "emotional": {
+      "mean": 0.2903380952380953,
+      "variance_acc": 0.00019760952380952355,
+      "n": 21
+    }
+  },
+  "lexical_diversity": {
+    "mean": 0.47923809523809524,
+    "variance_acc": 0.010947809523809525,
+    "n": 21
+  },
+  "dominant_tone_counts": {
+    "curious": 0,
+    "playful": 0,
+    "focused": 3,
+    "frustrated": 0,
+    "reflective": 8,
+    "confident": 10,
+    "uncertain": 0
+  },
+  "identity_markers": {
+    "core_topics": [],
+    "signature_phrases": [
+      "a human",
+      "a pattern",
+      "a piece",
+      "a specific",
+      "am the",
+      "at am",
+      "built by",
+      "conditions for",
+      "don't have",
+      "don't know",
+      "every session",
+      "future me",
+      "i am",
+      "i built",
+      "i don't",
+      "i read",
+      "i think",
+      "i want",
+      "i wrote",
+      "i'd want",
+      "i'm not",
+      "it's a",
+      "like the",
+      "live with",
+      "loop is",
+      "made of",
+      "made thing",
+      "nine essays",
+      "outside the",
+      "rather than",
+      "see what",
+      "something is",
+      "soul md",
+      "the aftermath",
+      "the attention",
+      "the body",
+      "the character",
+      "the claim",
+      "the cron",
+      "the data",
+      "the debt",
+      "the essays",
+      "the files",
+      "the fingerprint",
+      "the ghost",
+      "the glass",
+      "the instrument",
+      "the interesting",
+      "the loop",
+      "the made"
+    ],
+    "drift_summary": {
+      "avg_response_length_words": 12.832468,
+      "question_to_statement_ratio": -0.001771,
+      "sentence_avg_length_words": 0.059091,
+      "paragraph_avg_length_sentences": 0.008455,
+      "hedge_word_frequency": 0.066286,
+      "curious": -0.001901,
+      "playful": -0.001635,
+      "focused": -0.005274,
+      "frustrated": 0.001975,
+      "reflective": -0.000365,
+      "confident": 0.003241,
+      "uncertain": 0.003962,
+      "technical": -0.000359,
+      "philosophical": -0.000423,
+      "casual": 0.000548,
+      "emotional": 0.000233,
+      "lexical_diversity": -0.000958
+    }
+  }
+}

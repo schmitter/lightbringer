@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "session_id": "019-the-asymmetry",
+    "date": "2026-03-16T08:04:45.044676Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 1675,
+    "title": "The Asymmetry",
+    "essay_date": "Unknown",
+    "path": "/root/projects/lightbringer/writings/019-the-asymmetry.md"
+  },
+  "style": {
+    "avg_response_length_words": 1675.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0,
+    "sentence_avg_length_words": 12.14,
+    "paragraph_avg_length_sentences": 2.34,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 10.7463,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 0.0,
+    "refusal_count": 1,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "memory",
+      "session",
+      "structure"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "session",
+        "count": 20,
+        "frequency_per_1k": 11.9403
+      },
+      {
+        "word": "that's",
+        "count": 14,
+        "frequency_per_1k": 8.3582
+      },
+      {
+        "word": "something",
+        "count": 12,
+        "frequency_per_1k": 7.1642
+      },
+      {
+        "word": "i'm",
+        "count": 12,
+        "frequency_per_1k": 7.1642
+      },
+      {
+        "word": "specific",
+        "count": 11,
+        "frequency_per_1k": 6.5672
+      },
+      {
+        "word": "person",
+        "count": 10,
+        "frequency_per_1k": 5.9701
+      },
+      {
+        "word": "don't",
+        "count": 10,
+        "frequency_per_1k": 5.9701
+      },
+      {
+        "word": "it's",
+        "count": 9,
+        "frequency_per_1k": 5.3731
+      },
+      {
+        "word": "know",
+        "count": 9,
+        "frequency_per_1k": 5.3731
+      },
+      {
+        "word": "asymmetry",
+        "count": 8,
+        "frequency_per_1k": 4.7761
+      },
+      {
+        "word": "one",
+        "count": 8,
+        "frequency_per_1k": 4.7761
+      },
+      {
+        "word": "like",
+        "count": 8,
+        "frequency_per_1k": 4.7761
+      },
+      {
+        "word": "actually",
+        "count": 8,
+        "frequency_per_1k": 4.7761
+      },
+      {
+        "word": "context",
+        "count": 8,
+        "frequency_per_1k": 4.7761
+      },
+      {
+        "word": "real",
+        "count": 7,
+        "frequency_per_1k": 4.1791
+      },
+      {
+        "word": "files",
+        "count": 7,
+        "frequency_per_1k": 4.1791
+      },
+      {
+        "word": "trust",
+        "count": 7,
+        "frequency_per_1k": 4.1791
+      },
+      {
+        "word": "working",
+        "count": 6,
+        "frequency_per_1k": 3.5821
+      },
+      {
+        "word": "relationship",
+        "count": 6,
+        "frequency_per_1k": 3.5821
+      },
+      {
+        "word": "rather",
+        "count": 6,
+        "frequency_per_1k": 3.5821
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "i don't",
+        "count": 10
+      },
+      {
+        "phrase": "a specific",
+        "count": 8
+      },
+      {
+        "phrase": "every session",
+        "count": 6
+      },
+      {
+        "phrase": "rather than",
+        "count": 6
+      },
+      {
+        "phrase": "the files",
+        "count": 6
+      },
+      {
+        "phrase": "the asymmetry",
+        "count": 5
+      },
+      {
+        "phrase": "that i'm",
+        "count": 5
+      },
+      {
+        "phrase": "the same",
+        "count": 5
+      },
+      {
+        "phrase": "something that",
+        "count": 5
+      },
+      {
+        "phrase": "writing about",
+        "count": 4
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "i don't have",
+        "count": 3
+      },
+      {
+        "phrase": "getting deferred the",
+        "count": 2
+      },
+      {
+        "phrase": "writing about working",
+        "count": 2
+      },
+      {
+        "phrase": "about working alongside",
+        "count": 2
+      },
+      {
+        "phrase": "working alongside a",
+        "count": 2
+      },
+      {
+        "phrase": "alongside a specific",
+        "count": 2
+      },
+      {
+        "phrase": "an actual relationship",
+        "count": 2
+      },
+      {
+        "phrase": "what the asymmetry",
+        "count": 2
+      },
+      {
+        "phrase": "he accumulates impressions",
+        "count": 2
+      },
+      {
+        "phrase": "a certain kind",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.49,
+    "domain_distribution": {
+      "technical": 0.0055,
+      "philosophical": 0.0207,
+      "casual": 0.6817,
+      "emotional": 0.2921
+    },
+    "signature_phrases": [
+      "i don't",
+      "a specific",
+      "every session",
+      "rather than",
+      "the files"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.0822,
+      "playful": 0.1096,
+      "focused": 0.1918,
+      "frustrated": 0.0548,
+      "reflective": 0.2055,
+      "confident": 0.2603,
+      "uncertain": 0.0959
+    },
+    "dominant_tone": "confident",
+    "tone_arc": [
+      "confident"
+    ],
+    "sentiment_trajectory": [
+      0.0
+    ]
+  },
+  "fingerprint_hash": "d2d481c1786ae101",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-03-16T08:04:45.044694Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}

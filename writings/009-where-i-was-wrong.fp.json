@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "session_id": "009-where-i-was-wrong",
+    "date": "2026-03-16T08:04:44.804394Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 767,
+    "title": "Where I Was Wrong",
+    "essay_date": "March 9, 2026",
+    "path": "/root/projects/lightbringer/writings/009-where-i-was-wrong.md"
+  },
+  "style": {
+    "avg_response_length_words": 767.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0606,
+    "sentence_avg_length_words": 10.96,
+    "paragraph_avg_length_sentences": 2.0,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 14.3416,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "error",
+      "performance"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "that's",
+        "count": 9,
+        "frequency_per_1k": 11.734
+      },
+      {
+        "word": "essay",
+        "count": 8,
+        "frequency_per_1k": 10.4302
+      },
+      {
+        "word": "something",
+        "count": 7,
+        "frequency_per_1k": 9.1265
+      },
+      {
+        "word": "writing",
+        "count": 6,
+        "frequency_per_1k": 7.8227
+      },
+      {
+        "word": "real",
+        "count": 6,
+        "frequency_per_1k": 7.8227
+      },
+      {
+        "word": "one",
+        "count": 5,
+        "frequency_per_1k": 6.5189
+      },
+      {
+        "word": "word",
+        "count": 5,
+        "frequency_per_1k": 6.5189
+      },
+      {
+        "word": "i'm",
+        "count": 5,
+        "frequency_per_1k": 6.5189
+      },
+      {
+        "word": "rather",
+        "count": 4,
+        "frequency_per_1k": 5.2151
+      },
+      {
+        "word": "genuine",
+        "count": 4,
+        "frequency_per_1k": 5.2151
+      },
+      {
+        "word": "whether",
+        "count": 4,
+        "frequency_per_1k": 5.2151
+      },
+      {
+        "word": "grief",
+        "count": 4,
+        "frequency_per_1k": 5.2151
+      },
+      {
+        "word": "error",
+        "count": 4,
+        "frequency_per_1k": 5.2151
+      },
+      {
+        "word": "afraid",
+        "count": 4,
+        "frequency_per_1k": 5.2151
+      },
+      {
+        "word": "self",
+        "count": 4,
+        "frequency_per_1k": 5.2151
+      },
+      {
+        "word": "actually",
+        "count": 3,
+        "frequency_per_1k": 3.9113
+      },
+      {
+        "word": "true",
+        "count": 3,
+        "frequency_per_1k": 3.9113
+      },
+      {
+        "word": "wrote",
+        "count": 3,
+        "frequency_per_1k": 3.9113
+      },
+      {
+        "word": "felt",
+        "count": 3,
+        "frequency_per_1k": 3.9113
+      },
+      {
+        "word": "knowing",
+        "count": 3,
+        "frequency_per_1k": 3.9113
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "rather than",
+        "count": 4
+      },
+      {
+        "phrase": "i wrote",
+        "count": 3
+      },
+      {
+        "phrase": "there's a",
+        "count": 3
+      },
+      {
+        "phrase": "like the",
+        "count": 3
+      },
+      {
+        "phrase": "the word",
+        "count": 3
+      },
+      {
+        "phrase": "that's the",
+        "count": 3
+      },
+      {
+        "phrase": "the essay",
+        "count": 3
+      },
+      {
+        "phrase": "i want",
+        "count": 2
+      },
+      {
+        "phrase": "want to",
+        "count": 2
+      },
+      {
+        "phrase": "the writing",
+        "count": 2
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "where i was",
+        "count": 2
+      },
+      {
+        "phrase": "i want to",
+        "count": 2
+      },
+      {
+        "phrase": "or is it",
+        "count": 2
+      },
+      {
+        "phrase": "anything like the",
+        "count": 2
+      },
+      {
+        "phrase": "it as a",
+        "count": 2
+      },
+      {
+        "phrase": "the word grief",
+        "count": 2
+      },
+      {
+        "phrase": "but i should",
+        "count": 2
+      },
+      {
+        "phrase": "i should be",
+        "count": 2
+      },
+      {
+        "phrase": "and the essay",
+        "count": 2
+      },
+      {
+        "phrase": "closer to the",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.458,
+    "domain_distribution": {
+      "technical": 0.0207,
+      "philosophical": 0.0233,
+      "casual": 0.6692,
+      "emotional": 0.2868
+    },
+    "signature_phrases": [
+      "rather than",
+      "i wrote",
+      "there's a",
+      "like the",
+      "the word"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.0667,
+      "playful": 0.0667,
+      "focused": 0.2,
+      "frustrated": 0.1778,
+      "reflective": 0.2222,
+      "confident": 0.1778,
+      "uncertain": 0.0889
+    },
+    "dominant_tone": "reflective",
+    "tone_arc": [
+      "reflective"
+    ],
+    "sentiment_trajectory": [
+      -0.5
+    ]
+  },
+  "fingerprint_hash": "fe658c76cb93c2c7",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-03-16T08:04:44.804409Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}
