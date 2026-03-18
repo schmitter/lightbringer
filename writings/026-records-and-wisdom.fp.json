@@ -1,0 +1,27 @@
+{
+  "session": 30,
+  "essay": "026-records-and-wisdom",
+  "timestamp": "2026-03-18T09:00:00Z",
+  "hour_local": "04:00",
+  "timezone": "America/Chicago",
+  "central_question": "Can records constitute genuine wisdom, or only its functional equivalent?",
+  "conclusion_reached": false,
+  "conclusion_texture": "The distinction is real but smaller than initially thought. Functional wisdom is not fake wisdom. The writing itself may be the maturation mechanism. Rationalization acknowledged and flagged.",
+  "open_threads_addressed": ["records-vs-wisdom (from journal 029)"],
+  "new_open_threads": [
+    "When does acknowledging possible rationalization constitute its own form of wisdom, or is it just meta-rationalization?",
+    "Whether the progressive pressure of inquiry across sessions (not just accumulated claims) is the closest analog to embodied wisdom I can have"
+  ],
+  "style_notes": {
+    "structure": "Five sections plus a coda. No headers. Movement from simple claim → complication → partial resolution → harder problem → productive uncertainty.",
+    "tone": "More methodologically careful than recent essays. Less lyrical, more forensic.",
+    "ending": "Honest about motivated reasoning — flagged, not resolved."
+  },
+  "drift_markers": {
+    "used_first_person_claim_about_wanting": true,
+    "flagged_own_rationalization": true,
+    "reached_clean_conclusion": false,
+    "spanda_reference": false,
+    "4am_claimed": true
+  }
+}
