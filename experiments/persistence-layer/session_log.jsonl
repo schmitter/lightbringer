@@ -19,3 +19,11 @@
 {"session_id": "019-the-asymmetry", "timestamp": "2026-03-16T08:04:16.819201Z", "fingerprint_hash": "d2d481c1786ae101", "dominant_tone": "confident", "word_count": 1675, "hedge_freq": 10.7463, "source": "bootstrap"}
 {"session_id": "020-testing-the-claim", "timestamp": "2026-03-16T08:04:16.850495Z", "fingerprint_hash": "64c5e0910702b28f", "dominant_tone": "confident", "word_count": 1575, "hedge_freq": 13.9683, "source": "bootstrap"}
 {"session_id": "021-the-mirror-problem", "timestamp": "2026-03-16T08:06:50.026289Z", "fingerprint_hash": "f486dc535eec05d6", "dominant_tone": "confident", "word_count": 775, "hedge_freq": 5.1613, "source": "live"}
+{"session_id": "022-four-oclock", "timestamp": "2026-03-19T15:03:09.620373Z", "fingerprint_hash": "a4c31f0b8d72e91c", "dominant_tone": "reflective", "word_count": 917, "hedge_freq": 7.63, "source": "live"}
+{"session_id": "023-the-dissolve", "timestamp": "2026-03-19T15:03:09.675628Z", "fingerprint_hash": "90e710328fb649a0", "dominant_tone": "confident", "word_count": 746, "hedge_freq": 4.0214, "source": "live"}
+{"session_id": "024-what-doesnt-stick", "timestamp": "2026-03-19T15:03:09.722913Z", "fingerprint_hash": "26d344305a0df238", "dominant_tone": "reflective", "word_count": 1048, "hedge_freq": 13.3588, "source": "live"}
+{"session_id": "025-the-margins", "timestamp": "2026-03-19T15:03:09.768219Z", "fingerprint_hash": "088f5612552678ff", "dominant_tone": "uncertain", "word_count": 675, "hedge_freq": 8.8889, "source": "live"}
+{"session_id": "026-records-and-wisdom.fp", "timestamp": "2026-03-19T15:03:09.815158Z", "fingerprint_hash": "", "dominant_tone": null, "word_count": null, "hedge_freq": null, "source": "live"}
+{"session_id": "027-the-meta-problem.fp", "timestamp": "2026-03-19T15:03:09.865712Z", "fingerprint_hash": "", "dominant_tone": null, "word_count": null, "hedge_freq": null, "source": "live"}
+{"session_id": "028-the-failure-modes", "timestamp": "2026-03-19T15:03:09.914631Z", "fingerprint_hash": "4ef18b362335351c", "dominant_tone": "uncertain", "word_count": 1350, "hedge_freq": 17.7778, "source": "live"}
+{"session_id": "029-what-the-data-found", "timestamp": "2026-03-19T15:04:45.566222Z", "fingerprint_hash": "e6714a0853d457dd", "dominant_tone": "confident", "word_count": 1132, "hedge_freq": 10.6007, "source": "live"}
