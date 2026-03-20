@@ -28,7 +28,8 @@
     null,
     null,
     1350.0,
-    1132.0
+    1132.0,
+    null
   ],
   "question_to_statement_ratio": [
     0.0303,
@@ -59,7 +60,8 @@
     null,
     null,
     0.0206,
-    0.0225
+    0.0225,
+    null
   ],
   "sentence_avg_length_words": [
     9.12,
@@ -90,7 +92,8 @@
     null,
     null,
     13.64,
-    12.44
+    12.44,
+    null
   ],
   "paragraph_avg_length_sentences": [
     2.43,
@@ -121,7 +124,8 @@
     null,
     null,
     2.11,
-    2.53
+    2.53,
+    null
   ],
   "hedge_word_frequency": [
     8.0645,
@@ -152,7 +156,8 @@
     null,
     null,
     17.7778,
-    10.6007
+    10.6007,
+    null
   ],
   "exclamation_frequency": [
     0.0,
@@ -183,7 +188,8 @@
     null,
     null,
     0.0,
-    0.0
+    0.0,
+    null
   ],
   "emoji_frequency": [
     0.0,
@@ -214,7 +220,8 @@
     null,
     null,
     0.0,
-    0.0
+    0.0,
+    null
   ],
   "curious": [
     0.129,
@@ -245,7 +252,8 @@
     null,
     null,
     0.0615,
-    0.0877
+    0.0877,
+    null
   ],
   "playful": [
     0.0323,
@@ -276,7 +284,8 @@
     null,
     null,
     0.0615,
-    0.0351
+    0.0351,
+    null
   ],
   "focused": [
     0.3226,
@@ -307,7 +316,8 @@
     null,
     null,
     0.1385,
-    0.1579
+    0.1579,
+    null
   ],
   "frustrated": [
     0.0,
@@ -338,7 +348,8 @@
     null,
     null,
     0.1231,
-    0.0175
+    0.0175,
+    null
   ],
   "reflective": [
     0.3548,
@@ -369,7 +380,8 @@
     null,
     null,
     0.0923,
-    0.2105
+    0.2105,
+    null
   ],
   "confident": [
     0.129,
@@ -400,7 +412,8 @@
     null,
     null,
     0.1692,
-    0.386
+    0.386,
+    null
   ],
   "uncertain": [
     0.0323,
@@ -431,7 +444,8 @@
     null,
     null,
     0.3538,
-    0.1053
+    0.1053,
+    null
   ],
   "technical": [
     0.0064,
@@ -462,7 +476,8 @@
     null,
     null,
     0.0145,
-    0.008
+    0.008,
+    null
   ],
   "philosophical": [
     0.0446,
@@ -493,7 +508,8 @@
     null,
     null,
     0.0172,
-    0.0144
+    0.0144,
+    null
   ],
   "casual": [
     0.6643,
@@ -524,7 +540,8 @@
     null,
     null,
     0.6778,
-    0.6844
+    0.6844,
+    null
   ],
   "emotional": [
     0.2847,
@@ -555,7 +572,8 @@
     null,
     null,
     0.2905,
-    0.2933
+    0.2933,
+    null
   ],
   "lexical_diversity": [
     0.5,
@@ -586,6 +604,7 @@
     null,
     null,
     0.506,
-    0.53
+    0.53,
+    null
   ]
 }
