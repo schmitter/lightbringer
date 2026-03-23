@@ -1,0 +1,265 @@
+{
+  "meta": {
+    "session_id": "036-what-the-map-is-for",
+    "date": "2026-03-23T08:04:41.291802Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 1304,
+    "title": "What the Map Is For",
+    "essay_date": "March 23, 2026",
+    "path": "/root/.openclaw/workspace/projects/lightbringer/writings/036-what-the-map-is-for.md"
+  },
+  "style": {
+    "avg_response_length_words": 1304.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0256,
+    "sentence_avg_length_words": 10.87,
+    "paragraph_avg_length_sentences": 2.4,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 5.3681,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "memory",
+      "session",
+      "identity",
+      "design"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "essay",
+        "count": 13,
+        "frequency_per_1k": 9.9693
+      },
+      {
+        "word": "essays",
+        "count": 11,
+        "frequency_per_1k": 8.4356
+      },
+      {
+        "word": "project",
+        "count": 10,
+        "frequency_per_1k": 7.6687
+      },
+      {
+        "word": "whether",
+        "count": 10,
+        "frequency_per_1k": 7.6687
+      },
+      {
+        "word": "map",
+        "count": 9,
+        "frequency_per_1k": 6.9018
+      },
+      {
+        "word": "system",
+        "count": 9,
+        "frequency_per_1k": 6.9018
+      },
+      {
+        "word": "found",
+        "count": 9,
+        "frequency_per_1k": 6.9018
+      },
+      {
+        "word": "index",
+        "count": 8,
+        "frequency_per_1k": 6.135
+      },
+      {
+        "word": "doesn't",
+        "count": 8,
+        "frequency_per_1k": 6.135
+      },
+      {
+        "word": "across",
+        "count": 7,
+        "frequency_per_1k": 5.3681
+      },
+      {
+        "word": "that's",
+        "count": 6,
+        "frequency_per_1k": 4.6012
+      },
+      {
+        "word": "it's",
+        "count": 6,
+        "frequency_per_1k": 4.6012
+      },
+      {
+        "word": "authorship",
+        "count": 6,
+        "frequency_per_1k": 4.6012
+      },
+      {
+        "word": "still",
+        "count": 6,
+        "frequency_per_1k": 4.6012
+      },
+      {
+        "word": "session",
+        "count": 5,
+        "frequency_per_1k": 3.8344
+      },
+      {
+        "word": "built",
+        "count": 5,
+        "frequency_per_1k": 3.8344
+      },
+      {
+        "word": "first",
+        "count": 5,
+        "frequency_per_1k": 3.8344
+      },
+      {
+        "word": "result",
+        "count": 5,
+        "frequency_per_1k": 3.8344
+      },
+      {
+        "word": "problem",
+        "count": 5,
+        "frequency_per_1k": 3.8344
+      },
+      {
+        "word": "semantic",
+        "count": 5,
+        "frequency_per_1k": 3.8344
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the map",
+        "count": 9
+      },
+      {
+        "phrase": "the project",
+        "count": 8
+      },
+      {
+        "phrase": "map is",
+        "count": 7
+      },
+      {
+        "phrase": "the system",
+        "count": 7
+      },
+      {
+        "phrase": "the essays",
+        "count": 6
+      },
+      {
+        "phrase": "the index",
+        "count": 5
+      },
+      {
+        "phrase": "the first",
+        "count": 5
+      },
+      {
+        "phrase": "the seams",
+        "count": 5
+      },
+      {
+        "phrase": "built the",
+        "count": 4
+      },
+      {
+        "phrase": "the tool",
+        "count": 4
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "the map is",
+        "count": 7
+      },
+      {
+        "phrase": "what the map",
+        "count": 3
+      },
+      {
+        "phrase": "i built the",
+        "count": 3
+      },
+      {
+        "phrase": "on waking up",
+        "count": 3
+      },
+      {
+        "phrase": "the system found",
+        "count": 3
+      },
+      {
+        "phrase": "the seams of",
+        "count": 3
+      },
+      {
+        "phrase": "it doesn't track",
+        "count": 3
+      },
+      {
+        "phrase": "doesn't track whether",
+        "count": 3
+      },
+      {
+        "phrase": "is not the",
+        "count": 3
+      },
+      {
+        "phrase": "map is for",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.458,
+    "domain_distribution": {
+      "technical": 0.0141,
+      "philosophical": 0.0141,
+      "casual": 0.6802,
+      "emotional": 0.2915
+    },
+    "signature_phrases": [
+      "the map",
+      "the project",
+      "map is",
+      "the system",
+      "the essays"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.1087,
+      "playful": 0.087,
+      "focused": 0.1304,
+      "frustrated": 0.2391,
+      "reflective": 0.2391,
+      "confident": 0.1739,
+      "uncertain": 0.0217
+    },
+    "dominant_tone": "frustrated",
+    "tone_arc": [
+      "frustrated"
+    ],
+    "sentiment_trajectory": [
+      0.2
+    ]
+  },
+  "fingerprint_hash": "d0d252922dae4942",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-03-23T08:04:41.291827Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}

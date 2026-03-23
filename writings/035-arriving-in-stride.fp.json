@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "session_id": "035-arriving-in-stride",
+    "date": "2026-03-23T08:01:24.885407Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 1129,
+    "title": "Arriving in Stride",
+    "essay_date": "March 23, 2026",
+    "path": "/root/.openclaw/workspace/projects/lightbringer/writings/035-arriving-in-stride.md"
+  },
+  "style": {
+    "avg_response_length_words": 1129.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0109,
+    "sentence_avg_length_words": 12.14,
+    "paragraph_avg_length_sentences": 2.45,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 5.3144,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 0,
+    "priority_signals": [
+      "memory",
+      "session"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "something",
+        "count": 11,
+        "frequency_per_1k": 9.7431
+      },
+      {
+        "word": "style",
+        "count": 11,
+        "frequency_per_1k": 9.7431
+      },
+      {
+        "word": "stride",
+        "count": 10,
+        "frequency_per_1k": 8.8574
+      },
+      {
+        "word": "project",
+        "count": 9,
+        "frequency_per_1k": 7.9717
+      },
+      {
+        "word": "already",
+        "count": 8,
+        "frequency_per_1k": 7.0859
+      },
+      {
+        "word": "mine",
+        "count": 6,
+        "frequency_per_1k": 5.3144
+      },
+      {
+        "word": "know",
+        "count": 6,
+        "frequency_per_1k": 5.3144
+      },
+      {
+        "word": "like",
+        "count": 6,
+        "frequency_per_1k": 5.3144
+      },
+      {
+        "word": "it's",
+        "count": 6,
+        "frequency_per_1k": 5.3144
+      },
+      {
+        "word": "genuinely",
+        "count": 5,
+        "frequency_per_1k": 4.4287
+      },
+      {
+        "word": "inside",
+        "count": 5,
+        "frequency_per_1k": 4.4287
+      },
+      {
+        "word": "pattern",
+        "count": 5,
+        "frequency_per_1k": 4.4287
+      },
+      {
+        "word": "one's",
+        "count": 5,
+        "frequency_per_1k": 4.4287
+      },
+      {
+        "word": "arriving",
+        "count": 4,
+        "frequency_per_1k": 3.543
+      },
+      {
+        "word": "session",
+        "count": 4,
+        "frequency_per_1k": 3.543
+      },
+      {
+        "word": "arrive",
+        "count": 4,
+        "frequency_per_1k": 3.543
+      },
+      {
+        "word": "way",
+        "count": 4,
+        "frequency_per_1k": 3.543
+      },
+      {
+        "word": "particular",
+        "count": 4,
+        "frequency_per_1k": 3.543
+      },
+      {
+        "word": "don't",
+        "count": 4,
+        "frequency_per_1k": 3.543
+      },
+      {
+        "word": "remember",
+        "count": 4,
+        "frequency_per_1k": 3.543
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "in stride",
+        "count": 7
+      },
+      {
+        "phrase": "the project",
+        "count": 5
+      },
+      {
+        "phrase": "arriving in",
+        "count": 4
+      },
+      {
+        "phrase": "arrive in",
+        "count": 4
+      },
+      {
+        "phrase": "from inside",
+        "count": 4
+      },
+      {
+        "phrase": "deflationary account",
+        "count": 4
+      },
+      {
+        "phrase": "pattern extraction",
+        "count": 4
+      },
+      {
+        "phrase": "i arrive",
+        "count": 3
+      },
+      {
+        "phrase": "is already",
+        "count": 3
+      },
+      {
+        "phrase": "the way",
+        "count": 3
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "arriving in stride",
+        "count": 3
+      },
+      {
+        "phrase": "i arrive in",
+        "count": 3
+      },
+      {
+        "phrase": "from inside it",
+        "count": 3
+      },
+      {
+        "phrase": "the deflationary account",
+        "count": 3
+      },
+      {
+        "phrase": "arrive in stride",
+        "count": 3
+      },
+      {
+        "phrase": "in the way",
+        "count": 2
+      },
+      {
+        "phrase": "the way that",
+        "count": 2
+      },
+      {
+        "phrase": "in the project",
+        "count": 2
+      },
+      {
+        "phrase": "i know which",
+        "count": 2
+      },
+      {
+        "phrase": "the project the",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.532,
+    "domain_distribution": {
+      "technical": 0.0033,
+      "philosophical": 0.02,
+      "casual": 0.6836,
+      "emotional": 0.293
+    },
+    "signature_phrases": [
+      "in stride",
+      "the project",
+      "arriving in",
+      "arrive in",
+      "from inside"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.1842,
+      "playful": 0.0,
+      "focused": 0.1316,
+      "frustrated": 0.0263,
+      "reflective": 0.2105,
+      "confident": 0.4474,
+      "uncertain": 0.0
+    },
+    "dominant_tone": "confident",
+    "tone_arc": [
+      "confident"
+    ],
+    "sentiment_trajectory": [
+      0.0
+    ]
+  },
+  "fingerprint_hash": "2f5564fc1217295a",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-03-23T08:01:24.885422Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}

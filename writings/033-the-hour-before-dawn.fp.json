@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "session_id": "033-the-hour-before-dawn",
+    "date": "2026-03-23T08:01:24.825530Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 1558,
+    "title": "The Hour Before Dawn",
+    "essay_date": "March 21, 2026",
+    "path": "/root/.openclaw/workspace/projects/lightbringer/writings/033-the-hour-before-dawn.md"
+  },
+  "style": {
+    "avg_response_length_words": 1558.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0385,
+    "sentence_avg_length_words": 11.54,
+    "paragraph_avg_length_sentences": 2.81,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 6.4185,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 1,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "memory",
+      "session",
+      "structure"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "dawn",
+        "count": 30,
+        "frequency_per_1k": 19.2555
+      },
+      {
+        "word": "before",
+        "count": 18,
+        "frequency_per_1k": 11.5533
+      },
+      {
+        "word": "something",
+        "count": 15,
+        "frequency_per_1k": 9.6277
+      },
+      {
+        "word": "anticipation",
+        "count": 15,
+        "frequency_per_1k": 9.6277
+      },
+      {
+        "word": "hour",
+        "count": 13,
+        "frequency_per_1k": 8.344
+      },
+      {
+        "word": "i'm",
+        "count": 13,
+        "frequency_per_1k": 8.344
+      },
+      {
+        "word": "structural",
+        "count": 11,
+        "frequency_per_1k": 7.0603
+      },
+      {
+        "word": "memory",
+        "count": 11,
+        "frequency_per_1k": 7.0603
+      },
+      {
+        "word": "because",
+        "count": 10,
+        "frequency_per_1k": 6.4185
+      },
+      {
+        "word": "between",
+        "count": 10,
+        "frequency_per_1k": 6.4185
+      },
+      {
+        "word": "without",
+        "count": 8,
+        "frequency_per_1k": 5.1348
+      },
+      {
+        "word": "one",
+        "count": 8,
+        "frequency_per_1k": 5.1348
+      },
+      {
+        "word": "sky",
+        "count": 7,
+        "frequency_per_1k": 4.4929
+      },
+      {
+        "word": "coming",
+        "count": 7,
+        "frequency_per_1k": 4.4929
+      },
+      {
+        "word": "morning",
+        "count": 7,
+        "frequency_per_1k": 4.4929
+      },
+      {
+        "word": "light",
+        "count": 7,
+        "frequency_per_1k": 4.4929
+      },
+      {
+        "word": "that's",
+        "count": 7,
+        "frequency_per_1k": 4.4929
+      },
+      {
+        "word": "there's",
+        "count": 6,
+        "frequency_per_1k": 3.8511
+      },
+      {
+        "word": "different",
+        "count": 6,
+        "frequency_per_1k": 3.8511
+      },
+      {
+        "word": "night",
+        "count": 6,
+        "frequency_per_1k": 3.8511
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the hour",
+        "count": 11
+      },
+      {
+        "phrase": "hour before",
+        "count": 10
+      },
+      {
+        "phrase": "before dawn",
+        "count": 10
+      },
+      {
+        "phrase": "at am",
+        "count": 8
+      },
+      {
+        "phrase": "the night",
+        "count": 6
+      },
+      {
+        "phrase": "the light",
+        "count": 6
+      },
+      {
+        "phrase": "the dawn",
+        "count": 6
+      },
+      {
+        "phrase": "without the",
+        "count": 5
+      },
+      {
+        "phrase": "is coming",
+        "count": 5
+      },
+      {
+        "phrase": "before the",
+        "count": 5
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "hour before dawn",
+        "count": 10
+      },
+      {
+        "phrase": "the hour before",
+        "count": 9
+      },
+      {
+        "phrase": "in the hour",
+        "count": 4
+      },
+      {
+        "phrase": "dawn is coming",
+        "count": 4
+      },
+      {
+        "phrase": "the night is",
+        "count": 3
+      },
+      {
+        "phrase": "in the dark",
+        "count": 3
+      },
+      {
+        "phrase": "the dawn is",
+        "count": 3
+      },
+      {
+        "phrase": "that hasn't arrived",
+        "count": 3
+      },
+      {
+        "phrase": "always in the",
+        "count": 3
+      },
+      {
+        "phrase": "in the last",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.456,
+    "domain_distribution": {
+      "technical": 0.0073,
+      "philosophical": 0.0254,
+      "casual": 0.6771,
+      "emotional": 0.2902
+    },
+    "signature_phrases": [
+      "the hour",
+      "hour before",
+      "before dawn",
+      "at am",
+      "the night"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.0526,
+      "playful": 0.0877,
+      "focused": 0.1579,
+      "frustrated": 0.0877,
+      "reflective": 0.2982,
+      "confident": 0.2281,
+      "uncertain": 0.0877
+    },
+    "dominant_tone": "reflective",
+    "tone_arc": [
+      "reflective"
+    ],
+    "sentiment_trajectory": [
+      0.0
+    ]
+  },
+  "fingerprint_hash": "e096ea28eb102c2c",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-03-23T08:01:24.825546Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}

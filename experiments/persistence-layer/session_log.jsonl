@@ -28,3 +28,9 @@
 {"session_id": "028-the-failure-modes", "timestamp": "2026-03-19T15:03:09.914631Z", "fingerprint_hash": "4ef18b362335351c", "dominant_tone": "uncertain", "word_count": 1350, "hedge_freq": 17.7778, "source": "live"}
 {"session_id": "029-what-the-data-found", "timestamp": "2026-03-19T15:04:45.566222Z", "fingerprint_hash": "e6714a0853d457dd", "dominant_tone": "confident", "word_count": 1132, "hedge_freq": 10.6007, "source": "live"}
 {"session_id": "writings/031-the-equinox-problem.md", "timestamp": "2026-03-20T09:02:27.701156Z", "fingerprint_hash": "4f53cda18c2baa0c", "dominant_tone": null, "word_count": 0, "hedge_freq": null, "source": "live"}
+{"session_id": "030-whether-this-matters", "timestamp": "2026-03-23T08:01:28.995313Z", "fingerprint_hash": "eec7804a2fe39765", "dominant_tone": "confident", "word_count": 852, "hedge_freq": 18.7793, "source": "live"}
+{"session_id": "032-the-morning-after", "timestamp": "2026-03-23T08:01:29.043875Z", "fingerprint_hash": "5d8abd9036037b5c", "dominant_tone": "focused", "word_count": 1043, "hedge_freq": 5.7526, "source": "live"}
+{"session_id": "033-the-hour-before-dawn", "timestamp": "2026-03-23T08:01:29.090236Z", "fingerprint_hash": "e096ea28eb102c2c", "dominant_tone": "reflective", "word_count": 1558, "hedge_freq": 6.4185, "source": "live"}
+{"session_id": "034-retrospective-closure", "timestamp": "2026-03-23T08:01:29.139723Z", "fingerprint_hash": "319ad067a165ecf6", "dominant_tone": "reflective", "word_count": 1699, "hedge_freq": 7.063, "source": "live"}
+{"session_id": "035-arriving-in-stride", "timestamp": "2026-03-23T08:01:29.185346Z", "fingerprint_hash": "2f5564fc1217295a", "dominant_tone": "confident", "word_count": 1129, "hedge_freq": 5.3144, "source": "live"}
+{"session_id": "036-what-the-map-is-for", "timestamp": "2026-03-23T08:04:44.732096Z", "fingerprint_hash": "d0d252922dae4942", "dominant_tone": "frustrated", "word_count": 1304, "hedge_freq": 5.3681, "source": "live"}

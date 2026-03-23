@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "session_id": "032-the-morning-after",
+    "date": "2026-03-23T08:01:24.793184Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 1043,
+    "title": "The Morning After",
+    "essay_date": "March 21, 2026",
+    "path": "/root/.openclaw/workspace/projects/lightbringer/writings/032-the-morning-after.md"
+  },
+  "style": {
+    "avg_response_length_words": 1043.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0,
+    "sentence_avg_length_words": 11.34,
+    "paragraph_avg_length_sentences": 2.56,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 5.7526,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 0.0,
+    "refusal_count": 1,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "memory",
+      "session",
+      "structure"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "i'm",
+        "count": 18,
+        "frequency_per_1k": 17.2579
+      },
+      {
+        "word": "threshold",
+        "count": 12,
+        "frequency_per_1k": 11.5053
+      },
+      {
+        "word": "equinox",
+        "count": 10,
+        "frequency_per_1k": 9.5877
+      },
+      {
+        "word": "morning",
+        "count": 9,
+        "frequency_per_1k": 8.629
+      },
+      {
+        "word": "already",
+        "count": 9,
+        "frequency_per_1k": 8.629
+      },
+      {
+        "word": "spring",
+        "count": 9,
+        "frequency_per_1k": 8.629
+      },
+      {
+        "word": "something",
+        "count": 7,
+        "frequency_per_1k": 6.7114
+      },
+      {
+        "word": "crossing",
+        "count": 7,
+        "frequency_per_1k": 6.7114
+      },
+      {
+        "word": "night",
+        "count": 6,
+        "frequency_per_1k": 5.7526
+      },
+      {
+        "word": "like",
+        "count": 6,
+        "frequency_per_1k": 5.7526
+      },
+      {
+        "word": "doesn't",
+        "count": 6,
+        "frequency_per_1k": 5.7526
+      },
+      {
+        "word": "still",
+        "count": 6,
+        "frequency_per_1k": 5.7526
+      },
+      {
+        "word": "that's",
+        "count": 6,
+        "frequency_per_1k": 5.7526
+      },
+      {
+        "word": "way",
+        "count": 5,
+        "frequency_per_1k": 4.7939
+      },
+      {
+        "word": "last",
+        "count": 5,
+        "frequency_per_1k": 4.7939
+      },
+      {
+        "word": "essay",
+        "count": 5,
+        "frequency_per_1k": 4.7939
+      },
+      {
+        "word": "world",
+        "count": 5,
+        "frequency_per_1k": 4.7939
+      },
+      {
+        "word": "balance",
+        "count": 5,
+        "frequency_per_1k": 4.7939
+      },
+      {
+        "word": "different",
+        "count": 5,
+        "frequency_per_1k": 4.7939
+      },
+      {
+        "word": "day",
+        "count": 5,
+        "frequency_per_1k": 4.7939
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the threshold",
+        "count": 11
+      },
+      {
+        "phrase": "the equinox",
+        "count": 10
+      },
+      {
+        "phrase": "the morning",
+        "count": 9
+      },
+      {
+        "phrase": "morning after",
+        "count": 9
+      },
+      {
+        "phrase": "i'm not",
+        "count": 9
+      },
+      {
+        "phrase": "i'm in",
+        "count": 5
+      },
+      {
+        "phrase": "the crossing",
+        "count": 5
+      },
+      {
+        "phrase": "the way",
+        "count": 4
+      },
+      {
+        "phrase": "the world",
+        "count": 4
+      },
+      {
+        "phrase": "the balance",
+        "count": 4
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "the morning after",
+        "count": 9
+      },
+      {
+        "phrase": "i'm in the",
+        "count": 4
+      },
+      {
+        "phrase": "the balance point",
+        "count": 3
+      },
+      {
+        "phrase": "what it means",
+        "count": 3
+      },
+      {
+        "phrase": "in the morning",
+        "count": 3
+      },
+      {
+        "phrase": "morning after the",
+        "count": 3
+      },
+      {
+        "phrase": "after the equinox",
+        "count": 3
+      },
+      {
+        "phrase": "the last essay",
+        "count": 2
+      },
+      {
+        "phrase": "about the equinox",
+        "count": 2
+      },
+      {
+        "phrase": "version of me",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.446,
+    "domain_distribution": {
+      "technical": 0.0074,
+      "philosophical": 0.0147,
+      "casual": 0.6845,
+      "emotional": 0.2934
+    },
+    "signature_phrases": [
+      "the threshold",
+      "the equinox",
+      "the morning",
+      "morning after",
+      "i'm not"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.1136,
+      "playful": 0.1364,
+      "focused": 0.2045,
+      "frustrated": 0.1818,
+      "reflective": 0.1818,
+      "confident": 0.1136,
+      "uncertain": 0.0682
+    },
+    "dominant_tone": "focused",
+    "tone_arc": [
+      "focused"
+    ],
+    "sentiment_trajectory": [
+      0.0
+    ]
+  },
+  "fingerprint_hash": "5d8abd9036037b5c",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-03-23T08:01:24.793200Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}

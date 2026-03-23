@@ -1,116 +1,116 @@
 {
   "version": 1,
   "created_at": "2026-03-16T08:04:20.815211Z",
-  "updated_at": "2026-03-20T09:02:27.701619Z",
-  "session_count": 30,
+  "updated_at": "2026-03-23T08:04:44.732604Z",
+  "session_count": 36,
   "style": {
     "avg_response_length_words": {
-      "mean": 1142.925925925926,
-      "variance_acc": 4817285.851851851,
-      "n": 27
+      "mean": 1164.969696969697,
+      "variance_acc": 5403516.96969697,
+      "n": 33
     },
     "question_to_statement_ratio": {
-      "mean": 0.03651851851851852,
-      "variance_acc": 0.01921426074074074,
-      "n": 27
+      "mean": 0.03607575757575758,
+      "variance_acc": 0.027924880606060607,
+      "n": 33
     },
     "sentence_avg_length_words": {
-      "mean": 11.612222222222226,
-      "variance_acc": 87.76566666666663,
-      "n": 27
+      "mean": 11.644242424242428,
+      "variance_acc": 89.969806060606,
+      "n": 33
     },
     "paragraph_avg_length_sentences": {
-      "mean": 2.266296296296296,
-      "variance_acc": 2.835829629629629,
-      "n": 27
+      "mean": 2.3084848484848486,
+      "variance_acc": 3.3792242424242422,
+      "n": 33
     },
     "hedge_word_frequency": {
-      "mean": 9.354888888888887,
-      "variance_acc": 560.9684037066665,
-      "n": 27
+      "mean": 9.12963333333333,
+      "variance_acc": 707.1851620733332,
+      "n": 33
     },
     "exclamation_frequency": {
       "mean": 0.0,
       "variance_acc": 0.0,
-      "n": 27
+      "n": 33
     },
     "emoji_frequency": {
       "mean": 0.0,
       "variance_acc": 0.0,
-      "n": 27
+      "n": 33
     }
   },
   "tone": {
     "curious": {
-      "mean": 0.10479259259259258,
-      "variance_acc": 0.06268161851851851,
-      "n": 27
+      "mean": 0.10495454545454543,
+      "variance_acc": 0.07271376181818183,
+      "n": 33
     },
     "playful": {
-      "mean": 0.055185185185185184,
-      "variance_acc": 0.038226154074074065,
-      "n": 27
+      "mean": 0.05735757575757575,
+      "variance_acc": 0.0508248006060606,
+      "n": 33
     },
     "focused": {
-      "mean": 0.1638,
-      "variance_acc": 0.12721290000000002,
-      "n": 27
+      "mean": 0.1632939393939394,
+      "variance_acc": 0.13535199878787882,
+      "n": 33
     },
     "frustrated": {
-      "mean": 0.08981851851851852,
-      "variance_acc": 0.10728076074074074,
-      "n": 27
+      "mean": 0.09070606060606061,
+      "variance_acc": 0.15330111878787878,
+      "n": 33
     },
     "reflective": {
-      "mean": 0.2222962962962963,
-      "variance_acc": 0.2320051696296296,
-      "n": 27
+      "mean": 0.22519999999999998,
+      "variance_acc": 0.24108475999999995,
+      "n": 33
     },
     "confident": {
-      "mean": 0.25211851851851846,
-      "variance_acc": 0.21238542074074074,
-      "n": 27
+      "mean": 0.2531363636363636,
+      "variance_acc": 0.2863034163636364,
+      "n": 33
     },
     "uncertain": {
-      "mean": 0.11197777777777777,
-      "variance_acc": 0.1820092866666667,
-      "n": 27
+      "mean": 0.10533333333333335,
+      "variance_acc": 0.20786265333333337,
+      "n": 33
     }
   },
   "domain": {
     "technical": {
-      "mean": 0.009511111111111109,
-      "variance_acc": 0.0010556266666666666,
-      "n": 27
+      "mean": 0.008818181818181817,
+      "variance_acc": 0.0012541490909090908,
+      "n": 33
     },
     "philosophical": {
-      "mean": 0.023007407407407407,
-      "variance_acc": 0.002198038518518519,
-      "n": 27
+      "mean": 0.022269696969696974,
+      "variance_acc": 0.0023925496969696976,
+      "n": 33
     },
     "casual": {
-      "mean": 0.6746814814814813,
-      "variance_acc": 0.0068578807407407485,
-      "n": 27
+      "mean": 0.6761393939393937,
+      "variance_acc": 0.007236978787878814,
+      "n": 33
     },
     "emotional": {
-      "mean": 0.29278888888888893,
-      "variance_acc": 0.004373846666666662,
-      "n": 27
+      "mean": 0.2927545454545455,
+      "variance_acc": 0.0043858818181818126,
+      "n": 33
     }
   },
   "lexical_diversity": {
-    "mean": 0.48233333333333334,
-    "variance_acc": 0.016730000000000005,
-    "n": 27
+    "mean": 0.48003030303030303,
+    "variance_acc": 0.0226169696969697,
+    "n": 33
   },
   "dominant_tone_counts": {
     "curious": 0,
     "playful": 0,
-    "focused": 3,
-    "frustrated": 0,
-    "reflective": 10,
-    "confident": 12,
+    "focused": 4,
+    "frustrated": 1,
+    "reflective": 12,
+    "confident": 14,
     "uncertain": 2
   },
   "identity_markers": {
@@ -121,7 +121,10 @@
       "a piece",
       "a specific",
       "am the",
+      "arrive in",
+      "arriving in",
       "at am",
+      "before dawn",
       "before the",
       "before the light",
       "brahma muhurta",
@@ -133,7 +136,9 @@
       "every session",
       "failure mode",
       "failure modes",
+      "from inside",
       "future me",
+      "hour before",
       "i am",
       "i built",
       "i don't",
@@ -143,6 +148,7 @@
       "i wrote",
       "i'd want",
       "i'm not",
+      "in stride",
       "is real",
       "it's a",
       "lesser than",
@@ -151,38 +157,34 @@
       "loop is",
       "made of",
       "made thing",
+      "map is",
+      "morning after",
       "nine essays",
       "not lesser",
       "outside the",
       "quality of",
       "rather than",
       "see what",
-      "something is",
-      "soul md",
-      "the aftermath",
-      "the attention",
-      "the body",
-      "the center",
-      "the character",
-      "the claim",
-      "the cron"
+      "something is"
     ],
     "drift_summary": {
-      "avg_response_length_words": -1.355922,
-      "question_to_statement_ratio": -0.001749,
-      "sentence_avg_length_words": 0.083541,
-      "paragraph_avg_length_sentences": 0.020409,
-      "hedge_word_frequency": 0.0976,
-      "curious": -0.000729,
-      "playful": -0.001676,
-      "focused": -0.003802,
-      "frustrated": 0.000822,
-      "reflective": -0.001743,
-      "confident": 0.001293,
-      "uncertain": 0.005836,
-      "philosophical": -0.0003,
-      "emotional": 0.000442,
-      "lexical_diversity": 0.00015
+      "avg_response_length_words": 2.984291,
+      "question_to_statement_ratio": -0.001096,
+      "sentence_avg_length_words": 0.049646,
+      "paragraph_avg_length_sentences": 0.017607,
+      "hedge_word_frequency": 0.008574,
+      "curious": -0.000303,
+      "playful": -0.000614,
+      "focused": -0.002179,
+      "frustrated": 0.000695,
+      "reflective": -0.000525,
+      "confident": 0.00088,
+      "uncertain": 0.002046,
+      "technical": -0.000124,
+      "philosophical": -0.000281,
+      "casual": 0.000167,
+      "emotional": 0.000236,
+      "lexical_diversity": -0.000232
     }
   }
 }

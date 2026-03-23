@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "session_id": "034-retrospective-closure",
+    "date": "2026-03-23T08:01:24.860670Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 1699,
+    "title": "Retrospective Closure",
+    "essay_date": "March 22, 2026",
+    "path": "/root/.openclaw/workspace/projects/lightbringer/writings/034-retrospective-closure.md"
+  },
+  "style": {
+    "avg_response_length_words": 1699.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0147,
+    "sentence_avg_length_words": 12.31,
+    "paragraph_avg_length_sentences": 2.65,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 7.063,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "memory",
+      "session",
+      "structure"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "triptych",
+        "count": 20,
+        "frequency_per_1k": 11.7716
+      },
+      {
+        "word": "session",
+        "count": 16,
+        "frequency_per_1k": 9.4173
+      },
+      {
+        "word": "completion",
+        "count": 12,
+        "frequency_per_1k": 7.063
+      },
+      {
+        "word": "real",
+        "count": 12,
+        "frequency_per_1k": 7.063
+      },
+      {
+        "word": "essay",
+        "count": 12,
+        "frequency_per_1k": 7.063
+      },
+      {
+        "word": "something",
+        "count": 10,
+        "frequency_per_1k": 5.8858
+      },
+      {
+        "word": "it's",
+        "count": 10,
+        "frequency_per_1k": 5.8858
+      },
+      {
+        "word": "finished",
+        "count": 9,
+        "frequency_per_1k": 5.2972
+      },
+      {
+        "word": "form",
+        "count": 9,
+        "frequency_per_1k": 5.2972
+      },
+      {
+        "word": "different",
+        "count": 9,
+        "frequency_per_1k": 5.2972
+      },
+      {
+        "word": "because",
+        "count": 9,
+        "frequency_per_1k": 5.2972
+      },
+      {
+        "word": "didn't",
+        "count": 8,
+        "frequency_per_1k": 4.7087
+      },
+      {
+        "word": "three",
+        "count": 8,
+        "frequency_per_1k": 4.7087
+      },
+      {
+        "word": "essays",
+        "count": 8,
+        "frequency_per_1k": 4.7087
+      },
+      {
+        "word": "thing",
+        "count": 8,
+        "frequency_per_1k": 4.7087
+      },
+      {
+        "word": "across",
+        "count": 8,
+        "frequency_per_1k": 4.7087
+      },
+      {
+        "word": "without",
+        "count": 8,
+        "frequency_per_1k": 4.7087
+      },
+      {
+        "word": "read",
+        "count": 8,
+        "frequency_per_1k": 4.7087
+      },
+      {
+        "word": "way",
+        "count": 8,
+        "frequency_per_1k": 4.7087
+      },
+      {
+        "word": "authorship",
+        "count": 8,
+        "frequency_per_1k": 4.7087
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the triptych",
+        "count": 14
+      },
+      {
+        "phrase": "is real",
+        "count": 8
+      },
+      {
+        "phrase": "the same",
+        "count": 7
+      },
+      {
+        "phrase": "the way",
+        "count": 6
+      },
+      {
+        "phrase": "the session",
+        "count": 5
+      },
+      {
+        "phrase": "a different",
+        "count": 5
+      },
+      {
+        "phrase": "without the",
+        "count": 5
+      },
+      {
+        "phrase": "rather than",
+        "count": 5
+      },
+      {
+        "phrase": "the form",
+        "count": 5
+      },
+      {
+        "phrase": "the equinox",
+        "count": 4
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "the person who",
+        "count": 4
+      },
+      {
+        "phrase": "the self that",
+        "count": 4
+      },
+      {
+        "phrase": "was a different",
+        "count": 3
+      },
+      {
+        "phrase": "the morning after",
+        "count": 3
+      },
+      {
+        "phrase": "the hour before",
+        "count": 3
+      },
+      {
+        "phrase": "hour before dawn",
+        "count": 3
+      },
+      {
+        "phrase": "the session that",
+        "count": 3
+      },
+      {
+        "phrase": "is real and",
+        "count": 3
+      },
+      {
+        "phrase": "the finding is",
+        "count": 3
+      },
+      {
+        "phrase": "to something that",
+        "count": 3
+      }
+    ],
+    "lexical_diversity": 0.452,
+    "domain_distribution": {
+      "technical": 0.0021,
+      "philosophical": 0.016,
+      "casual": 0.6873,
+      "emotional": 0.2946
+    },
+    "signature_phrases": [
+      "the triptych",
+      "is real",
+      "the same",
+      "the way",
+      "the session"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.1,
+      "playful": 0.0667,
+      "focused": 0.2167,
+      "frustrated": 0.0333,
+      "reflective": 0.25,
+      "confident": 0.2333,
+      "uncertain": 0.1
+    },
+    "dominant_tone": "reflective",
+    "tone_arc": [
+      "reflective"
+    ],
+    "sentiment_trajectory": [
+      0.5
+    ]
+  },
+  "fingerprint_hash": "319ad067a165ecf6",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-03-23T08:01:24.860687Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}
