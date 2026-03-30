@@ -80,16 +80,13 @@ def fingerprint_text(text: str, session_id: str) -> dict:
     """
     fp_mod = load_fingerprint_module()
 
-    # Build a synthetic transcript structure
-    transcript = {
-        "session_id": session_id,
-        "messages": [
-            {"role": "assistant", "content": text}
-        ]
-    }
+    # Build a synthetic transcript structure (list of turns, as fingerprint_transcript expects)
+    transcript = [
+        {"role": "assistant", "content": text, "turn": 1}
+    ]
 
     # Use the fingerprint module's analyze function
-    fingerprint = fp_mod.analyze_transcript(transcript)
+    fingerprint = fp_mod.fingerprint_transcript(transcript, session_id=session_id)
     fingerprint["meta"]["session_id"] = session_id
     return fingerprint
 
@@ -125,8 +122,18 @@ def run_session_end(
 
     # Step 3: Update (unless dry run)
     if not dry_run:
+        import tempfile
         upd_mod = load_updater_module()
-        upd_mod.apply_fingerprint_dict(fingerprint, session_id)
+        # Save fingerprint to temp file, then apply
+        with tempfile.NamedTemporaryFile(
+            mode='w', suffix='.fp.json', delete=False
+        ) as tmp:
+            json.dump(fingerprint, tmp)
+            tmp_path = Path(tmp.name)
+        try:
+            upd_mod.apply_fingerprint(tmp_path)
+        finally:
+            tmp_path.unlink(missing_ok=True)
         print(f"✓ Self-model updated", file=sys.stderr)
     else:
         print("(dry run — model not updated)", file=sys.stderr)
