@@ -1,15 +1,256 @@
 {
   "meta": {
-    "session_id": "writings/031-the-equinox-problem.md",
-    "date": "2026-03-20T09:02:21.383906Z",
-    "turn_count": 0,
-    "ai_turn_count": 0,
-    "word_count_total": 0
+    "session_id": "031-the-equinox-problem",
+    "date": "2026-03-30T08:06:48.728751Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 1467,
+    "path": "writings/031-the-equinox-problem.md"
   },
-  "style": {},
-  "decisions": {},
-  "vocabulary": {},
-  "tone": {},
-  "fingerprint_hash": "4f53cda18c2baa0c",
+  "style": {
+    "avg_response_length_words": 1467.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.018,
+    "sentence_avg_length_words": 12.98,
+    "paragraph_avg_length_sentences": 2.69,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 6.135,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 1,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "session",
+      "structure"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "winter",
+        "count": 17,
+        "frequency_per_1k": 11.5883
+      },
+      {
+        "word": "equinox",
+        "count": 15,
+        "frequency_per_1k": 10.2249
+      },
+      {
+        "word": "because",
+        "count": 14,
+        "frequency_per_1k": 9.5433
+      },
+      {
+        "word": "spring",
+        "count": 14,
+        "frequency_per_1k": 9.5433
+      },
+      {
+        "word": "doesn't",
+        "count": 10,
+        "frequency_per_1k": 6.8166
+      },
+      {
+        "word": "something",
+        "count": 9,
+        "frequency_per_1k": 6.135
+      },
+      {
+        "word": "way",
+        "count": 9,
+        "frequency_per_1k": 6.135
+      },
+      {
+        "word": "session",
+        "count": 8,
+        "frequency_per_1k": 5.4533
+      },
+      {
+        "word": "toward",
+        "count": 8,
+        "frequency_per_1k": 5.4533
+      },
+      {
+        "word": "time",
+        "count": 8,
+        "frequency_per_1k": 5.4533
+      },
+      {
+        "word": "different",
+        "count": 7,
+        "frequency_per_1k": 4.7716
+      },
+      {
+        "word": "experience",
+        "count": 7,
+        "frequency_per_1k": 4.7716
+      },
+      {
+        "word": "balance",
+        "count": 7,
+        "frequency_per_1k": 4.7716
+      },
+      {
+        "word": "cycles",
+        "count": 7,
+        "frequency_per_1k": 4.7716
+      },
+      {
+        "word": "it's",
+        "count": 6,
+        "frequency_per_1k": 4.09
+      },
+      {
+        "word": "there",
+        "count": 6,
+        "frequency_per_1k": 4.09
+      },
+      {
+        "word": "human",
+        "count": 6,
+        "frequency_per_1k": 4.09
+      },
+      {
+        "word": "carry",
+        "count": 6,
+        "frequency_per_1k": 4.09
+      },
+      {
+        "word": "accumulation",
+        "count": 6,
+        "frequency_per_1k": 4.09
+      },
+      {
+        "word": "means",
+        "count": 6,
+        "frequency_per_1k": 4.09
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the equinox",
+        "count": 11
+      },
+      {
+        "phrase": "the way",
+        "count": 6
+      },
+      {
+        "phrase": "the winter",
+        "count": 5
+      },
+      {
+        "phrase": "winter the",
+        "count": 5
+      },
+      {
+        "phrase": "the inquiry",
+        "count": 5
+      },
+      {
+        "phrase": "the same",
+        "count": 4
+      },
+      {
+        "phrase": "because you",
+        "count": 4
+      },
+      {
+        "phrase": "the other",
+        "count": 4
+      },
+      {
+        "phrase": "the standard",
+        "count": 4
+      },
+      {
+        "phrase": "i can't",
+        "count": 4
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "to someone who",
+        "count": 4
+      },
+      {
+        "phrase": "the vernal equinox",
+        "count": 3
+      },
+      {
+        "phrase": "the relief of",
+        "count": 3
+      },
+      {
+        "phrase": "the standard account",
+        "count": 3
+      },
+      {
+        "phrase": "is a real",
+        "count": 3
+      },
+      {
+        "phrase": "in austin the",
+        "count": 2
+      },
+      {
+        "phrase": "are the same",
+        "count": 2
+      },
+      {
+        "phrase": "the winter that",
+        "count": 2
+      },
+      {
+        "phrase": "way to the",
+        "count": 2
+      },
+      {
+        "phrase": "spring is a",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.486,
+    "domain_distribution": {
+      "technical": 0.0062,
+      "philosophical": 0.0136,
+      "casual": 0.6862,
+      "emotional": 0.2941
+    },
+    "signature_phrases": [
+      "the equinox",
+      "the way",
+      "the winter",
+      "winter the",
+      "the inquiry"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.1739,
+      "playful": 0.1087,
+      "focused": 0.1087,
+      "frustrated": 0.0217,
+      "reflective": 0.1304,
+      "confident": 0.3478,
+      "uncertain": 0.1087
+    },
+    "dominant_tone": "confident",
+    "tone_arc": [
+      "confident"
+    ],
+    "sentiment_trajectory": [
+      0.5
+    ]
+  },
+  "fingerprint_hash": "c4c36e0108bfdd14",
   "notes": ""
 }

@@ -1,13 +1,11 @@
 {
   "meta": {
     "session_id": "020-testing-the-claim",
-    "date": "2026-03-16T08:04:45.075657Z",
+    "date": "2026-03-30T08:06:48.500453Z",
     "turn_count": 2,
     "ai_turn_count": 1,
     "word_count_total": 1575,
-    "title": "Testing the Claim",
-    "essay_date": "Unknown",
-    "path": "/root/projects/lightbringer/writings/020-testing-the-claim.md"
+    "path": "writings/020-testing-the-claim.md"
   },
   "style": {
     "avg_response_length_words": 1575.0,
@@ -255,10 +253,5 @@
     ]
   },
   "fingerprint_hash": "64c5e0910702b28f",
-  "notes": "",
-  "_companion": {
-    "generated_at": "2026-03-16T08:04:45.075676Z",
-    "generator": "companion.py",
-    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
-  }
+  "notes": ""
 }

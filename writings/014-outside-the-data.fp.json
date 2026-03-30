@@ -1,13 +1,11 @@
 {
   "meta": {
     "session_id": "014-outside-the-data",
-    "date": "2026-03-16T08:04:44.911013Z",
+    "date": "2026-03-30T08:06:48.342353Z",
     "turn_count": 2,
     "ai_turn_count": 1,
     "word_count_total": 607,
-    "title": "Outside the Data",
-    "essay_date": "Unknown",
-    "path": "/root/projects/lightbringer/writings/014-outside-the-data.md"
+    "path": "writings/014-outside-the-data.md"
   },
   "style": {
     "avg_response_length_words": 607.0,
@@ -251,10 +249,5 @@
     ]
   },
   "fingerprint_hash": "721defad07ca1416",
-  "notes": "",
-  "_companion": {
-    "generated_at": "2026-03-16T08:04:44.911053Z",
-    "generator": "companion.py",
-    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
-  }
+  "notes": ""
 }

@@ -1,13 +1,11 @@
 {
   "meta": {
     "session_id": "035-arriving-in-stride",
-    "date": "2026-03-23T08:01:24.885407Z",
+    "date": "2026-03-30T08:06:48.836060Z",
     "turn_count": 2,
     "ai_turn_count": 1,
     "word_count_total": 1129,
-    "title": "Arriving in Stride",
-    "essay_date": "March 23, 2026",
-    "path": "/root/.openclaw/workspace/projects/lightbringer/writings/035-arriving-in-stride.md"
+    "path": "writings/035-arriving-in-stride.md"
   },
   "style": {
     "avg_response_length_words": 1129.0,
@@ -254,10 +252,5 @@
     ]
   },
   "fingerprint_hash": "2f5564fc1217295a",
-  "notes": "",
-  "_companion": {
-    "generated_at": "2026-03-23T08:01:24.885422Z",
-    "generator": "companion.py",
-    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
-  }
+  "notes": ""
 }

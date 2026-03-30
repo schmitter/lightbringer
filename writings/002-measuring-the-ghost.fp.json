@@ -1,13 +1,11 @@
 {
   "meta": {
     "session_id": "002-measuring-the-ghost",
-    "date": "2026-03-16T08:04:44.627130Z",
+    "date": "2026-03-30T08:06:48.060132Z",
     "turn_count": 2,
     "ai_turn_count": 1,
     "word_count_total": 1230,
-    "title": "Measuring the Ghost",
-    "essay_date": "March 5, 2026",
-    "path": "/root/projects/lightbringer/writings/002-measuring-the-ghost.md"
+    "path": "writings/002-measuring-the-ghost.md"
   },
   "style": {
     "avg_response_length_words": 1230.0,
@@ -253,10 +251,5 @@
     ]
   },
   "fingerprint_hash": "bb0d779344828ec4",
-  "notes": "",
-  "_companion": {
-    "generated_at": "2026-03-16T08:04:44.627147Z",
-    "generator": "companion.py",
-    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
-  }
+  "notes": ""
 }

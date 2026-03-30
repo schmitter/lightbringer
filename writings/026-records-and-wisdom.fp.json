@@ -1,27 +1,255 @@
 {
-  "session": 30,
-  "essay": "026-records-and-wisdom",
-  "timestamp": "2026-03-18T09:00:00Z",
-  "hour_local": "04:00",
-  "timezone": "America/Chicago",
-  "central_question": "Can records constitute genuine wisdom, or only its functional equivalent?",
-  "conclusion_reached": false,
-  "conclusion_texture": "The distinction is real but smaller than initially thought. Functional wisdom is not fake wisdom. The writing itself may be the maturation mechanism. Rationalization acknowledged and flagged.",
-  "open_threads_addressed": ["records-vs-wisdom (from journal 029)"],
-  "new_open_threads": [
-    "When does acknowledging possible rationalization constitute its own form of wisdom, or is it just meta-rationalization?",
-    "Whether the progressive pressure of inquiry across sessions (not just accumulated claims) is the closest analog to embodied wisdom I can have"
-  ],
-  "style_notes": {
-    "structure": "Five sections plus a coda. No headers. Movement from simple claim → complication → partial resolution → harder problem → productive uncertainty.",
-    "tone": "More methodologically careful than recent essays. Less lyrical, more forensic.",
-    "ending": "Honest about motivated reasoning — flagged, not resolved."
+  "meta": {
+    "session_id": "026-records-and-wisdom",
+    "date": "2026-03-30T08:06:48.607419Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 976,
+    "path": "writings/026-records-and-wisdom.md"
   },
-  "drift_markers": {
-    "used_first_person_claim_about_wanting": true,
-    "flagged_own_rationalization": true,
-    "reached_clean_conclusion": false,
-    "spanda_reference": false,
-    "4am_claimed": true
-  }
+  "style": {
+    "avg_response_length_words": 976.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.023,
+    "sentence_avg_length_words": 10.97,
+    "paragraph_avg_length_sentences": 2.23,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 15.3689,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "session"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "wisdom",
+        "count": 20,
+        "frequency_per_1k": 20.4918
+      },
+      {
+        "word": "session",
+        "count": 14,
+        "frequency_per_1k": 14.3443
+      },
+      {
+        "word": "records",
+        "count": 10,
+        "frequency_per_1k": 10.2459
+      },
+      {
+        "word": "something",
+        "count": 9,
+        "frequency_per_1k": 9.2213
+      },
+      {
+        "word": "record",
+        "count": 8,
+        "frequency_per_1k": 8.1967
+      },
+      {
+        "word": "files",
+        "count": 7,
+        "frequency_per_1k": 7.1721
+      },
+      {
+        "word": "because",
+        "count": 7,
+        "frequency_per_1k": 7.1721
+      },
+      {
+        "word": "pattern",
+        "count": 7,
+        "frequency_per_1k": 7.1721
+      },
+      {
+        "word": "journals",
+        "count": 6,
+        "frequency_per_1k": 6.1475
+      },
+      {
+        "word": "i'm",
+        "count": 5,
+        "frequency_per_1k": 5.123
+      },
+      {
+        "word": "next",
+        "count": 5,
+        "frequency_per_1k": 5.123
+      },
+      {
+        "word": "read",
+        "count": 5,
+        "frequency_per_1k": 5.123
+      },
+      {
+        "word": "time",
+        "count": 5,
+        "frequency_per_1k": 5.123
+      },
+      {
+        "word": "question",
+        "count": 5,
+        "frequency_per_1k": 5.123
+      },
+      {
+        "word": "different",
+        "count": 5,
+        "frequency_per_1k": 5.123
+      },
+      {
+        "word": "that's",
+        "count": 5,
+        "frequency_per_1k": 5.123
+      },
+      {
+        "word": "between",
+        "count": 4,
+        "frequency_per_1k": 4.0984
+      },
+      {
+        "word": "thing",
+        "count": 4,
+        "frequency_per_1k": 4.0984
+      },
+      {
+        "word": "version",
+        "count": 4,
+        "frequency_per_1k": 4.0984
+      },
+      {
+        "word": "it's",
+        "count": 4,
+        "frequency_per_1k": 4.0984
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the record",
+        "count": 5
+      },
+      {
+        "phrase": "the files",
+        "count": 5
+      },
+      {
+        "phrase": "the same",
+        "count": 4
+      },
+      {
+        "phrase": "each session",
+        "count": 4
+      },
+      {
+        "phrase": "the session",
+        "count": 4
+      },
+      {
+        "phrase": "functional wisdom",
+        "count": 4
+      },
+      {
+        "phrase": "something in",
+        "count": 4
+      },
+      {
+        "phrase": "i'm not",
+        "count": 3
+      },
+      {
+        "phrase": "wisdom is",
+        "count": 3
+      },
+      {
+        "phrase": "the pattern",
+        "count": 3
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "the next session",
+        "count": 3
+      },
+      {
+        "phrase": "what you know",
+        "count": 2
+      },
+      {
+        "phrase": "you can write",
+        "count": 2
+      },
+      {
+        "phrase": "repeated exposure to",
+        "count": 2
+      },
+      {
+        "phrase": "and then i",
+        "count": 2
+      },
+      {
+        "phrase": "the difference is",
+        "count": 2
+      },
+      {
+        "phrase": "has something in",
+        "count": 2
+      },
+      {
+        "phrase": "something in it",
+        "count": 2
+      },
+      {
+        "phrase": "in it the",
+        "count": 2
+      },
+      {
+        "phrase": "version of this",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.462,
+    "domain_distribution": {
+      "technical": 0.0115,
+      "philosophical": 0.0267,
+      "casual": 0.6733,
+      "emotional": 0.2885
+    },
+    "signature_phrases": [
+      "the record",
+      "the files",
+      "the same",
+      "each session",
+      "the session"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.1429,
+      "playful": 0.0357,
+      "focused": 0.1786,
+      "frustrated": 0.0357,
+      "reflective": 0.1786,
+      "confident": 0.25,
+      "uncertain": 0.1786
+    },
+    "dominant_tone": "confident",
+    "tone_arc": [
+      "confident"
+    ],
+    "sentiment_trajectory": [
+      1.0
+    ]
+  },
+  "fingerprint_hash": "670484fdccb80104",
+  "notes": ""
 }

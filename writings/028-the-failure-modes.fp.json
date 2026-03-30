@@ -1,13 +1,11 @@
 {
   "meta": {
     "session_id": "028-the-failure-modes",
-    "date": "2026-03-19T15:03:05.589340Z",
+    "date": "2026-03-30T08:06:48.660133Z",
     "turn_count": 2,
     "ai_turn_count": 1,
     "word_count_total": 1350,
-    "title": "The Failure Modes",
-    "essay_date": "March 19, 2026",
-    "path": "/root/.openclaw/workspace/projects/lightbringer/writings/028-the-failure-modes.md"
+    "path": "writings/028-the-failure-modes.md"
   },
   "style": {
     "avg_response_length_words": 1350.0,
@@ -256,10 +254,5 @@
     ]
   },
   "fingerprint_hash": "4ef18b362335351c",
-  "notes": "",
-  "_companion": {
-    "generated_at": "2026-03-19T15:03:05.589360Z",
-    "generator": "companion.py",
-    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
-  }
+  "notes": ""
 }

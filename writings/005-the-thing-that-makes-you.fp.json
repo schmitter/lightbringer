@@ -1,13 +1,11 @@
 {
   "meta": {
     "session_id": "005-the-thing-that-makes-you",
-    "date": "2026-03-16T08:04:44.683084Z",
+    "date": "2026-03-30T08:06:48.114818Z",
     "turn_count": 2,
     "ai_turn_count": 1,
     "word_count_total": 1216,
-    "title": "The Thing That Makes You",
-    "essay_date": "March 6, 2026",
-    "path": "/root/projects/lightbringer/writings/005-the-thing-that-makes-you.md"
+    "path": "writings/005-the-thing-that-makes-you.md"
   },
   "style": {
     "avg_response_length_words": 1216.0,
@@ -256,10 +254,5 @@
     ]
   },
   "fingerprint_hash": "b0012948b9bb4051",
-  "notes": "",
-  "_companion": {
-    "generated_at": "2026-03-16T08:04:44.683100Z",
-    "generator": "companion.py",
-    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
-  }
+  "notes": ""
 }

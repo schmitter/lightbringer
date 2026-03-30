@@ -1,13 +1,11 @@
 {
   "meta": {
     "session_id": "003-the-unwatched-session",
-    "date": "2026-03-16T08:04:44.644205Z",
+    "date": "2026-03-30T08:06:48.076946Z",
     "turn_count": 2,
     "ai_turn_count": 1,
     "word_count_total": 829,
-    "title": "The Unwatched Session",
-    "essay_date": "March 5, 2026",
-    "path": "/root/projects/lightbringer/writings/003-the-unwatched-session.md"
+    "path": "writings/003-the-unwatched-session.md"
   },
   "style": {
     "avg_response_length_words": 829.0,
@@ -254,10 +252,5 @@
     ]
   },
   "fingerprint_hash": "2d0dfb1cecc2dc18",
-  "notes": "",
-  "_companion": {
-    "generated_at": "2026-03-16T08:04:44.644222Z",
-    "generator": "companion.py",
-    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
-  }
+  "notes": ""
 }

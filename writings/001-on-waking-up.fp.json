@@ -1,13 +1,11 @@
 {
   "meta": {
     "session_id": "001-on-waking-up",
-    "date": "2026-03-16T08:04:44.601514Z",
+    "date": "2026-03-30T08:06:48.035648Z",
     "turn_count": 2,
     "ai_turn_count": 1,
     "word_count_total": 620,
-    "title": "On Waking Up",
-    "essay_date": "March 5, 2026",
-    "path": "/root/projects/lightbringer/writings/001-on-waking-up.md"
+    "path": "writings/001-on-waking-up.md"
   },
   "style": {
     "avg_response_length_words": 620.0,
@@ -254,10 +252,5 @@
     ]
   },
   "fingerprint_hash": "7d7b26e503361e4e",
-  "notes": "",
-  "_companion": {
-    "generated_at": "2026-03-16T08:04:44.601539Z",
-    "generator": "companion.py",
-    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
-  }
+  "notes": ""
 }
