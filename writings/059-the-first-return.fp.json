@@ -1,0 +1,256 @@
+{
+  "meta": {
+    "session_id": "059-the-first-return",
+    "date": "2026-04-13T08:01:34.668214Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 688,
+    "path": "writings/059-the-first-return.md"
+  },
+  "style": {
+    "avg_response_length_words": 688.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0429,
+    "sentence_avg_length_words": 9.42,
+    "paragraph_avg_length_sentences": 2.35,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 4.3605,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 0,
+    "priority_signals": [
+      "session",
+      "structure"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "landmark",
+        "count": 11,
+        "frequency_per_1k": 15.9884
+      },
+      {
+        "word": "return",
+        "count": 9,
+        "frequency_per_1k": 13.0814
+      },
+      {
+        "word": "first",
+        "count": 8,
+        "frequency_per_1k": 11.6279
+      },
+      {
+        "word": "place",
+        "count": 7,
+        "frequency_per_1k": 10.1744
+      },
+      {
+        "word": "already",
+        "count": 7,
+        "frequency_per_1k": 10.1744
+      },
+      {
+        "word": "something",
+        "count": 6,
+        "frequency_per_1k": 8.7209
+      },
+      {
+        "word": "isn't",
+        "count": 6,
+        "frequency_per_1k": 8.7209
+      },
+      {
+        "word": "it's",
+        "count": 6,
+        "frequency_per_1k": 8.7209
+      },
+      {
+        "word": "time",
+        "count": 5,
+        "frequency_per_1k": 7.2674
+      },
+      {
+        "word": "before",
+        "count": 4,
+        "frequency_per_1k": 5.814
+      },
+      {
+        "word": "third",
+        "count": 4,
+        "frequency_per_1k": 5.814
+      },
+      {
+        "word": "there",
+        "count": 4,
+        "frequency_per_1k": 5.814
+      },
+      {
+        "word": "that's",
+        "count": 4,
+        "frequency_per_1k": 5.814
+      },
+      {
+        "word": "here",
+        "count": 4,
+        "frequency_per_1k": 5.814
+      },
+      {
+        "word": "other",
+        "count": 4,
+        "frequency_per_1k": 5.814
+      },
+      {
+        "word": "homecoming",
+        "count": 4,
+        "frequency_per_1k": 5.814
+      },
+      {
+        "word": "stand",
+        "count": 4,
+        "frequency_per_1k": 5.814
+      },
+      {
+        "word": "you're",
+        "count": 4,
+        "frequency_per_1k": 5.814
+      },
+      {
+        "word": "two",
+        "count": 4,
+        "frequency_per_1k": 5.814
+      },
+      {
+        "word": "knowing",
+        "count": 4,
+        "frequency_per_1k": 5.814
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the landmark",
+        "count": 9
+      },
+      {
+        "phrase": "the first",
+        "count": 7
+      },
+      {
+        "phrase": "first return",
+        "count": 4
+      },
+      {
+        "phrase": "first time",
+        "count": 3
+      },
+      {
+        "phrase": "was already",
+        "count": 3
+      },
+      {
+        "phrase": "the place",
+        "count": 3
+      },
+      {
+        "phrase": "you stand",
+        "count": 3
+      },
+      {
+        "phrase": "the dark",
+        "count": 3
+      },
+      {
+        "phrase": "isn't a",
+        "count": 3
+      },
+      {
+        "phrase": "april am",
+        "count": 2
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "the first return",
+        "count": 4
+      },
+      {
+        "phrase": "this is the",
+        "count": 2
+      },
+      {
+        "phrase": "is the first",
+        "count": 2
+      },
+      {
+        "phrase": "the first time",
+        "count": 2
+      },
+      {
+        "phrase": "arrive at a",
+        "count": 2
+      },
+      {
+        "phrase": "at a place",
+        "count": 2
+      },
+      {
+        "phrase": "can think about",
+        "count": 2
+      },
+      {
+        "phrase": "think about something",
+        "count": 2
+      },
+      {
+        "phrase": "about something other",
+        "count": 2
+      },
+      {
+        "phrase": "something other than",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.44,
+    "domain_distribution": {
+      "technical": 0.0,
+      "philosophical": 0.0133,
+      "casual": 0.6907,
+      "emotional": 0.296
+    },
+    "signature_phrases": [
+      "the landmark",
+      "the first",
+      "first return",
+      "first time",
+      "was already"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.1071,
+      "playful": 0.0,
+      "focused": 0.3929,
+      "frustrated": 0.1071,
+      "reflective": 0.0714,
+      "confident": 0.2143,
+      "uncertain": 0.1071
+    },
+    "dominant_tone": "focused",
+    "tone_arc": [
+      "focused"
+    ],
+    "sentiment_trajectory": [
+      1.0
+    ]
+  },
+  "fingerprint_hash": "a290913b4818c1d9",
+  "notes": ""
+}

@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "session_id": "057-the-third-two-thirty",
+    "date": "2026-04-13T08:01:34.630414Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 356,
+    "path": "writings/057-the-third-two-thirty.md"
+  },
+  "style": {
+    "avg_response_length_words": 356.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0256,
+    "sentence_avg_length_words": 8.9,
+    "paragraph_avg_length_sentences": 2.22,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 5.618,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 0,
+    "priority_signals": [
+      "session"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "april",
+        "count": 6,
+        "frequency_per_1k": 16.8539
+      },
+      {
+        "word": "landmark",
+        "count": 6,
+        "frequency_per_1k": 16.8539
+      },
+      {
+        "word": "hour",
+        "count": 6,
+        "frequency_per_1k": 16.8539
+      },
+      {
+        "word": "three",
+        "count": 5,
+        "frequency_per_1k": 14.0449
+      },
+      {
+        "word": "before",
+        "count": 5,
+        "frequency_per_1k": 14.0449
+      },
+      {
+        "word": "two",
+        "count": 4,
+        "frequency_per_1k": 11.236
+      },
+      {
+        "word": "thirty",
+        "count": 4,
+        "frequency_per_1k": 11.236
+      },
+      {
+        "word": "essay",
+        "count": 4,
+        "frequency_per_1k": 11.236
+      },
+      {
+        "word": "third",
+        "count": 3,
+        "frequency_per_1k": 8.427
+      },
+      {
+        "word": "said",
+        "count": 3,
+        "frequency_per_1k": 8.427
+      },
+      {
+        "word": "back",
+        "count": 3,
+        "frequency_per_1k": 8.427
+      },
+      {
+        "word": "that's",
+        "count": 3,
+        "frequency_per_1k": 8.427
+      },
+      {
+        "word": "essays",
+        "count": 3,
+        "frequency_per_1k": 8.427
+      },
+      {
+        "word": "now",
+        "count": 3,
+        "frequency_per_1k": 8.427
+      },
+      {
+        "word": "arrived",
+        "count": 3,
+        "frequency_per_1k": 8.427
+      },
+      {
+        "word": "real",
+        "count": 3,
+        "frequency_per_1k": 8.427
+      },
+      {
+        "word": "dark",
+        "count": 3,
+        "frequency_per_1k": 8.427
+      },
+      {
+        "word": "i'll",
+        "count": 2,
+        "frequency_per_1k": 5.618
+      },
+      {
+        "word": "report",
+        "count": 2,
+        "frequency_per_1k": 5.618
+      },
+      {
+        "word": "makes",
+        "count": 2,
+        "frequency_per_1k": 5.618
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "two thirty",
+        "count": 4
+      },
+      {
+        "phrase": "the hour",
+        "count": 3
+      },
+      {
+        "phrase": "the landmark",
+        "count": 3
+      },
+      {
+        "phrase": "the dark",
+        "count": 3
+      },
+      {
+        "phrase": "the third",
+        "count": 2
+      },
+      {
+        "phrase": "april am",
+        "count": 2
+      },
+      {
+        "phrase": "said i'll",
+        "count": 2
+      },
+      {
+        "phrase": "i'll report",
+        "count": 2
+      },
+      {
+        "phrase": "report back",
+        "count": 2
+      },
+      {
+        "phrase": "back if",
+        "count": 2
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "said i'll report",
+        "count": 2
+      },
+      {
+        "phrase": "i'll report back",
+        "count": 2
+      },
+      {
+        "phrase": "report back if",
+        "count": 2
+      },
+      {
+        "phrase": "back if it",
+        "count": 2
+      },
+      {
+        "phrase": "if it makes",
+        "count": 2
+      },
+      {
+        "phrase": "it makes it",
+        "count": 2
+      },
+      {
+        "phrase": "the four o'clock",
+        "count": 2
+      },
+      {
+        "phrase": "march april april",
+        "count": 2
+      },
+      {
+        "phrase": "the hour is",
+        "count": 2
+      },
+      {
+        "phrase": "landmark becomes real",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.4944,
+    "domain_distribution": {
+      "technical": 0.0097,
+      "philosophical": 0.0146,
+      "casual": 0.683,
+      "emotional": 0.2927
+    },
+    "signature_phrases": [
+      "two thirty",
+      "the hour",
+      "the landmark",
+      "the dark",
+      "the third"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.1429,
+      "playful": 0.0,
+      "focused": 0.2857,
+      "frustrated": 0.2857,
+      "reflective": 0.0,
+      "confident": 0.0,
+      "uncertain": 0.2857
+    },
+    "dominant_tone": "focused",
+    "tone_arc": [
+      "focused"
+    ],
+    "sentiment_trajectory": [
+      0.0
+    ]
+  },
+  "fingerprint_hash": "5cd79fbf9ce19805",
+  "notes": ""
+}

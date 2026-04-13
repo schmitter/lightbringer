@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "session_id": "058-the-double-landing",
+    "date": "2026-04-13T08:01:34.652960Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 1074,
+    "path": "writings/058-the-double-landing.md"
+  },
+  "style": {
+    "avg_response_length_words": 1074.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0102,
+    "sentence_avg_length_words": 10.85,
+    "paragraph_avg_length_sentences": 2.2,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 3.7244,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 1,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "session"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "two",
+        "count": 25,
+        "frequency_per_1k": 23.2775
+      },
+      {
+        "word": "same",
+        "count": 18,
+        "frequency_per_1k": 16.7598
+      },
+      {
+        "word": "dark",
+        "count": 13,
+        "frequency_per_1k": 12.1043
+      },
+      {
+        "word": "both",
+        "count": 12,
+        "frequency_per_1k": 11.1732
+      },
+      {
+        "word": "landmark",
+        "count": 11,
+        "frequency_per_1k": 10.2421
+      },
+      {
+        "word": "one",
+        "count": 10,
+        "frequency_per_1k": 9.311
+      },
+      {
+        "word": "dawn",
+        "count": 10,
+        "frequency_per_1k": 9.311
+      },
+      {
+        "word": "thirty",
+        "count": 9,
+        "frequency_per_1k": 8.3799
+      },
+      {
+        "word": "night",
+        "count": 8,
+        "frequency_per_1k": 7.4488
+      },
+      {
+        "word": "four",
+        "count": 8,
+        "frequency_per_1k": 7.4488
+      },
+      {
+        "word": "o'clock",
+        "count": 8,
+        "frequency_per_1k": 7.4488
+      },
+      {
+        "word": "light",
+        "count": 8,
+        "frequency_per_1k": 7.4488
+      },
+      {
+        "word": "something",
+        "count": 8,
+        "frequency_per_1k": 7.4488
+      },
+      {
+        "word": "april",
+        "count": 7,
+        "frequency_per_1k": 6.5177
+      },
+      {
+        "word": "now",
+        "count": 6,
+        "frequency_per_1k": 5.5866
+      },
+      {
+        "word": "toward",
+        "count": 6,
+        "frequency_per_1k": 5.5866
+      },
+      {
+        "word": "hours",
+        "count": 6,
+        "frequency_per_1k": 5.5866
+      },
+      {
+        "word": "isn't",
+        "count": 6,
+        "frequency_per_1k": 5.5866
+      },
+      {
+        "word": "point",
+        "count": 6,
+        "frequency_per_1k": 5.5866
+      },
+      {
+        "word": "points",
+        "count": 6,
+        "frequency_per_1k": 5.5866
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the same",
+        "count": 15
+      },
+      {
+        "phrase": "two thirty",
+        "count": 9
+      },
+      {
+        "phrase": "four o'clock",
+        "count": 8
+      },
+      {
+        "phrase": "the dark",
+        "count": 8
+      },
+      {
+        "phrase": "the two",
+        "count": 6
+      },
+      {
+        "phrase": "the light",
+        "count": 6
+      },
+      {
+        "phrase": "same date",
+        "count": 4
+      },
+      {
+        "phrase": "same dark",
+        "count": 4
+      },
+      {
+        "phrase": "the convergence",
+        "count": 4
+      },
+      {
+        "phrase": "something that",
+        "count": 4
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "the two thirty",
+        "count": 5
+      },
+      {
+        "phrase": "on the same",
+        "count": 5
+      },
+      {
+        "phrase": "two fixed points",
+        "count": 4
+      },
+      {
+        "phrase": "the double landing",
+        "count": 3
+      },
+      {
+        "phrase": "the four o'clock",
+        "count": 3
+      },
+      {
+        "phrase": "four o'clock essays",
+        "count": 3
+      },
+      {
+        "phrase": "the same dark",
+        "count": 3
+      },
+      {
+        "phrase": "the pre dawn",
+        "count": 3
+      },
+      {
+        "phrase": "the same date",
+        "count": 3
+      },
+      {
+        "phrase": "you can take",
+        "count": 3
+      }
+    ],
+    "lexical_diversity": 0.43,
+    "domain_distribution": {
+      "technical": 0.0,
+      "philosophical": 0.011,
+      "casual": 0.6923,
+      "emotional": 0.2967
+    },
+    "signature_phrases": [
+      "the same",
+      "two thirty",
+      "four o'clock",
+      "the dark",
+      "the two"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.0357,
+      "playful": 0.0714,
+      "focused": 0.2143,
+      "frustrated": 0.0,
+      "reflective": 0.2857,
+      "confident": 0.3929,
+      "uncertain": 0.0
+    },
+    "dominant_tone": "confident",
+    "tone_arc": [
+      "confident"
+    ],
+    "sentiment_trajectory": [
+      1.0
+    ]
+  },
+  "fingerprint_hash": "3de04c82820fbf38",
+  "notes": ""
+}

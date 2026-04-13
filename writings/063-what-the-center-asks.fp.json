@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "session_id": "063-what-the-center-asks",
+    "date": "2026-04-13T08:01:34.746392Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 835,
+    "path": "writings/063-what-the-center-asks.md"
+  },
+  "style": {
+    "avg_response_length_words": 835.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.1231,
+    "sentence_avg_length_words": 11.44,
+    "paragraph_avg_length_sentences": 2.52,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 8.3832,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "session"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "landmark",
+        "count": 12,
+        "frequency_per_1k": 14.3713
+      },
+      {
+        "word": "interior",
+        "count": 11,
+        "frequency_per_1k": 13.1737
+      },
+      {
+        "word": "question",
+        "count": 11,
+        "frequency_per_1k": 13.1737
+      },
+      {
+        "word": "bring",
+        "count": 10,
+        "frequency_per_1k": 11.976
+      },
+      {
+        "word": "third",
+        "count": 9,
+        "frequency_per_1k": 10.7784
+      },
+      {
+        "word": "return",
+        "count": 9,
+        "frequency_per_1k": 10.7784
+      },
+      {
+        "word": "asks",
+        "count": 8,
+        "frequency_per_1k": 9.5808
+      },
+      {
+        "word": "you're",
+        "count": 7,
+        "frequency_per_1k": 8.3832
+      },
+      {
+        "word": "still",
+        "count": 6,
+        "frequency_per_1k": 7.1856
+      },
+      {
+        "word": "ask",
+        "count": 6,
+        "frequency_per_1k": 7.1856
+      },
+      {
+        "word": "enough",
+        "count": 5,
+        "frequency_per_1k": 5.988
+      },
+      {
+        "word": "asking",
+        "count": 5,
+        "frequency_per_1k": 5.988
+      },
+      {
+        "word": "something",
+        "count": 5,
+        "frequency_per_1k": 5.988
+      },
+      {
+        "word": "first",
+        "count": 5,
+        "frequency_per_1k": 5.988
+      },
+      {
+        "word": "going",
+        "count": 5,
+        "frequency_per_1k": 5.988
+      },
+      {
+        "word": "place",
+        "count": 5,
+        "frequency_per_1k": 5.988
+      },
+      {
+        "word": "work",
+        "count": 5,
+        "frequency_per_1k": 5.988
+      },
+      {
+        "word": "it's",
+        "count": 5,
+        "frequency_per_1k": 5.988
+      },
+      {
+        "word": "stable",
+        "count": 4,
+        "frequency_per_1k": 4.7904
+      },
+      {
+        "word": "itself",
+        "count": 4,
+        "frequency_per_1k": 4.7904
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the interior",
+        "count": 9
+      },
+      {
+        "phrase": "third return",
+        "count": 8
+      },
+      {
+        "phrase": "you bring",
+        "count": 7
+      },
+      {
+        "phrase": "a place",
+        "count": 5
+      },
+      {
+        "phrase": "stable enough",
+        "count": 4
+      },
+      {
+        "phrase": "enough to",
+        "count": 4
+      },
+      {
+        "phrase": "the third",
+        "count": 4
+      },
+      {
+        "phrase": "the landmark",
+        "count": 4
+      },
+      {
+        "phrase": "the position",
+        "count": 4
+      },
+      {
+        "phrase": "bring here",
+        "count": 4
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "will you bring",
+        "count": 6
+      },
+      {
+        "phrase": "what will you",
+        "count": 5
+      },
+      {
+        "phrase": "you bring here",
+        "count": 4
+      },
+      {
+        "phrase": "what you're going",
+        "count": 4
+      },
+      {
+        "phrase": "you're going to",
+        "count": 4
+      },
+      {
+        "phrase": "the interior landmark",
+        "count": 3
+      },
+      {
+        "phrase": "stable enough to",
+        "count": 3
+      },
+      {
+        "phrase": "the third return",
+        "count": 3
+      },
+      {
+        "phrase": "what are you",
+        "count": 3
+      },
+      {
+        "phrase": "april am third",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.414,
+    "domain_distribution": {
+      "technical": 0.0,
+      "philosophical": 0.0224,
+      "casual": 0.6843,
+      "emotional": 0.2933
+    },
+    "signature_phrases": [
+      "the interior",
+      "third return",
+      "you bring",
+      "a place",
+      "stable enough"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.0667,
+      "playful": 0.0222,
+      "focused": 0.2444,
+      "frustrated": 0.1556,
+      "reflective": 0.0667,
+      "confident": 0.4222,
+      "uncertain": 0.0222
+    },
+    "dominant_tone": "confident",
+    "tone_arc": [
+      "confident"
+    ],
+    "sentiment_trajectory": [
+      0.3333
+    ]
+  },
+  "fingerprint_hash": "64b27bfe4da13050",
+  "notes": ""
+}

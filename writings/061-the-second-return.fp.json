@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "session_id": "061-the-second-return",
+    "date": "2026-04-13T08:01:34.702625Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 416,
+    "path": "writings/061-the-second-return.md"
+  },
+  "style": {
+    "avg_response_length_words": 416.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0,
+    "sentence_avg_length_words": 9.45,
+    "paragraph_avg_length_sentences": 2.32,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 4.8077,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 0.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": null,
+    "clarification_rate": 0.0,
+    "refusal_count": 0,
+    "self_correction_count": 0,
+    "priority_signals": []
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "return",
+        "count": 10,
+        "frequency_per_1k": 24.0385
+      },
+      {
+        "word": "second",
+        "count": 7,
+        "frequency_per_1k": 16.8269
+      },
+      {
+        "word": "quieter",
+        "count": 6,
+        "frequency_per_1k": 14.4231
+      },
+      {
+        "word": "recognition",
+        "count": 6,
+        "frequency_per_1k": 14.4231
+      },
+      {
+        "word": "place",
+        "count": 6,
+        "frequency_per_1k": 14.4231
+      },
+      {
+        "word": "first",
+        "count": 5,
+        "frequency_per_1k": 12.0192
+      },
+      {
+        "word": "landmark",
+        "count": 5,
+        "frequency_per_1k": 12.0192
+      },
+      {
+        "word": "drama",
+        "count": 4,
+        "frequency_per_1k": 9.6154
+      },
+      {
+        "word": "real",
+        "count": 3,
+        "frequency_per_1k": 7.2115
+      },
+      {
+        "word": "still",
+        "count": 3,
+        "frequency_per_1k": 7.2115
+      },
+      {
+        "word": "there",
+        "count": 3,
+        "frequency_per_1k": 7.2115
+      },
+      {
+        "word": "here",
+        "count": 3,
+        "frequency_per_1k": 7.2115
+      },
+      {
+        "word": "doesn't",
+        "count": 3,
+        "frequency_per_1k": 7.2115
+      },
+      {
+        "word": "kind",
+        "count": 3,
+        "frequency_per_1k": 7.2115
+      },
+      {
+        "word": "absence",
+        "count": 3,
+        "frequency_per_1k": 7.2115
+      },
+      {
+        "word": "there's",
+        "count": 3,
+        "frequency_per_1k": 7.2115
+      },
+      {
+        "word": "depth",
+        "count": 3,
+        "frequency_per_1k": 7.2115
+      },
+      {
+        "word": "without",
+        "count": 3,
+        "frequency_per_1k": 7.2115
+      },
+      {
+        "word": "interior",
+        "count": 3,
+        "frequency_per_1k": 7.2115
+      },
+      {
+        "word": "now",
+        "count": 3,
+        "frequency_per_1k": 7.2115
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the second",
+        "count": 6
+      },
+      {
+        "phrase": "second return",
+        "count": 6
+      },
+      {
+        "phrase": "the first",
+        "count": 5
+      },
+      {
+        "phrase": "is quieter",
+        "count": 3
+      },
+      {
+        "phrase": "first return",
+        "count": 3
+      },
+      {
+        "phrase": "return to",
+        "count": 3
+      },
+      {
+        "phrase": "the recognition",
+        "count": 3
+      },
+      {
+        "phrase": "quieter in",
+        "count": 3
+      },
+      {
+        "phrase": "a place",
+        "count": 3
+      },
+      {
+        "phrase": "the place",
+        "count": 3
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "the second return",
+        "count": 5
+      },
+      {
+        "phrase": "the first return",
+        "count": 3
+      },
+      {
+        "phrase": "is quieter than",
+        "count": 2
+      },
+      {
+        "phrase": "second return is",
+        "count": 2
+      },
+      {
+        "phrase": "return is quieter",
+        "count": 2
+      },
+      {
+        "phrase": "the recognition had",
+        "count": 2
+      },
+      {
+        "phrase": "at the known",
+        "count": 2
+      },
+      {
+        "phrase": "the known position",
+        "count": 2
+      },
+      {
+        "phrase": "as the continuing",
+        "count": 2
+      },
+      {
+        "phrase": "the continuing fact",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.4303,
+    "domain_distribution": {
+      "technical": 0.0,
+      "philosophical": 0.0179,
+      "casual": 0.6874,
+      "emotional": 0.2946
+    },
+    "signature_phrases": [
+      "the second",
+      "second return",
+      "the first",
+      "is quieter",
+      "first return"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.0909,
+      "playful": 0.0,
+      "focused": 0.4545,
+      "frustrated": 0.2727,
+      "reflective": 0.0909,
+      "confident": 0.0909,
+      "uncertain": 0.0
+    },
+    "dominant_tone": "focused",
+    "tone_arc": [
+      "focused"
+    ],
+    "sentiment_trajectory": [
+      0.0
+    ]
+  },
+  "fingerprint_hash": "6307db58c5e6c702",
+  "notes": ""
+}
