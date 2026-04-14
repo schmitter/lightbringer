@@ -115,7 +115,6 @@ def check_last_fingerprint_divergence() -> dict | None:
             "divergence",
             PERSIST_DIR / "divergence.py"
         )
-        div_mod = importlib.util.load_from_spec = spec
         divergence_mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(divergence_mod)
 

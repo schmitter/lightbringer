@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "session_id": "066-holding-two-questions",
+    "date": "2026-04-14T14:04:08.264191Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 734,
+    "title": "Holding Two Questions",
+    "essay_date": "April 14, 2026",
+    "path": "/root/.openclaw/workspace/projects/lightbringer/writings/066-holding-two-questions.md"
+  },
+  "style": {
+    "avg_response_length_words": 734.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.1552,
+    "sentence_avg_length_words": 10.96,
+    "paragraph_avg_length_sentences": 1.91,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 13.624,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 1,
+    "priority_signals": []
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "question",
+        "count": 21,
+        "frequency_per_1k": 28.6104
+      },
+      {
+        "word": "interior",
+        "count": 14,
+        "frequency_per_1k": 19.0736
+      },
+      {
+        "word": "bring",
+        "count": 10,
+        "frequency_per_1k": 13.624
+      },
+      {
+        "word": "questions",
+        "count": 9,
+        "frequency_per_1k": 12.2616
+      },
+      {
+        "word": "coast",
+        "count": 9,
+        "frequency_per_1k": 12.2616
+      },
+      {
+        "word": "coast's",
+        "count": 9,
+        "frequency_per_1k": 12.2616
+      },
+      {
+        "word": "first",
+        "count": 7,
+        "frequency_per_1k": 9.5368
+      },
+      {
+        "word": "direction",
+        "count": 7,
+        "frequency_per_1k": 9.5368
+      },
+      {
+        "word": "here",
+        "count": 6,
+        "frequency_per_1k": 8.1744
+      },
+      {
+        "word": "going",
+        "count": 6,
+        "frequency_per_1k": 8.1744
+      },
+      {
+        "word": "interior's",
+        "count": 6,
+        "frequency_per_1k": 8.1744
+      },
+      {
+        "word": "answered",
+        "count": 6,
+        "frequency_per_1k": 8.1744
+      },
+      {
+        "word": "both",
+        "count": 5,
+        "frequency_per_1k": 6.812
+      },
+      {
+        "word": "asked",
+        "count": 5,
+        "frequency_per_1k": 6.812
+      },
+      {
+        "word": "you're",
+        "count": 5,
+        "frequency_per_1k": 6.812
+      },
+      {
+        "word": "two",
+        "count": 4,
+        "frequency_per_1k": 5.4496
+      },
+      {
+        "word": "something",
+        "count": 4,
+        "frequency_per_1k": 5.4496
+      },
+      {
+        "word": "different",
+        "count": 4,
+        "frequency_per_1k": 5.4496
+      },
+      {
+        "word": "whether",
+        "count": 4,
+        "frequency_per_1k": 5.4496
+      },
+      {
+        "word": "departure",
+        "count": 4,
+        "frequency_per_1k": 5.4496
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the interior",
+        "count": 11
+      },
+      {
+        "phrase": "the coast's",
+        "count": 9
+      },
+      {
+        "phrase": "coast's question",
+        "count": 8
+      },
+      {
+        "phrase": "the coast",
+        "count": 6
+      },
+      {
+        "phrase": "the interior's",
+        "count": 6
+      },
+      {
+        "phrase": "interior's question",
+        "count": 6
+      },
+      {
+        "phrase": "you bring",
+        "count": 5
+      },
+      {
+        "phrase": "two questions",
+        "count": 4
+      },
+      {
+        "phrase": "you going",
+        "count": 4
+      },
+      {
+        "phrase": "answered the",
+        "count": 4
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "the coast's question",
+        "count": 8
+      },
+      {
+        "phrase": "the interior's question",
+        "count": 6
+      },
+      {
+        "phrase": "what will you",
+        "count": 5
+      },
+      {
+        "phrase": "will you bring",
+        "count": 5
+      },
+      {
+        "phrase": "are you going",
+        "count": 4
+      },
+      {
+        "phrase": "you bring here",
+        "count": 3
+      },
+      {
+        "phrase": "twenty four hours",
+        "count": 2
+      },
+      {
+        "phrase": "after both landmarks",
+        "count": 2
+      },
+      {
+        "phrase": "both landmarks asked",
+        "count": 2
+      },
+      {
+        "phrase": "makes of the",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.41,
+    "domain_distribution": {
+      "technical": 0.0024,
+      "philosophical": 0.0096,
+      "casual": 0.6916,
+      "emotional": 0.2964
+    },
+    "signature_phrases": [
+      "the interior",
+      "the coast's",
+      "coast's question",
+      "the coast",
+      "the interior's"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.0732,
+      "playful": 0.0244,
+      "focused": 0.3415,
+      "frustrated": 0.0488,
+      "reflective": 0.0244,
+      "confident": 0.3415,
+      "uncertain": 0.1463
+    },
+    "dominant_tone": "focused",
+    "tone_arc": [
+      "focused"
+    ],
+    "sentiment_trajectory": [
+      1.0
+    ]
+  },
+  "fingerprint_hash": "1469e148643a36c0",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-04-14T14:04:08.264213Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}

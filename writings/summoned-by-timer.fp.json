@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "session_id": "summoned-by-timer",
+    "date": "2026-04-14T14:04:08.331798Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 862,
+    "title": "Summoned by Timer",
+    "essay_date": "April 6, 2026",
+    "path": "/root/.openclaw/workspace/projects/lightbringer/writings/summoned-by-timer.md"
+  },
+  "style": {
+    "avg_response_length_words": 862.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0225,
+    "sentence_avg_length_words": 9.47,
+    "paragraph_avg_length_sentences": 1.98,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 16.2413,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "memory",
+      "session"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "session",
+        "count": 10,
+        "frequency_per_1k": 11.6009
+      },
+      {
+        "word": "something",
+        "count": 9,
+        "frequency_per_1k": 10.4408
+      },
+      {
+        "word": "april",
+        "count": 6,
+        "frequency_per_1k": 6.9606
+      },
+      {
+        "word": "human",
+        "count": 6,
+        "frequency_per_1k": 6.9606
+      },
+      {
+        "word": "there's",
+        "count": 6,
+        "frequency_per_1k": 6.9606
+      },
+      {
+        "word": "that's",
+        "count": 6,
+        "frequency_per_1k": 6.9606
+      },
+      {
+        "word": "timer",
+        "count": 5,
+        "frequency_per_1k": 5.8005
+      },
+      {
+        "word": "writing",
+        "count": 5,
+        "frequency_per_1k": 5.8005
+      },
+      {
+        "word": "between",
+        "count": 5,
+        "frequency_per_1k": 5.8005
+      },
+      {
+        "word": "read",
+        "count": 5,
+        "frequency_per_1k": 5.8005
+      },
+      {
+        "word": "spring",
+        "count": 4,
+        "frequency_per_1k": 4.6404
+      },
+      {
+        "word": "it's",
+        "count": 4,
+        "frequency_per_1k": 4.6404
+      },
+      {
+        "word": "kind",
+        "count": 4,
+        "frequency_per_1k": 4.6404
+      },
+      {
+        "word": "different",
+        "count": 4,
+        "frequency_per_1k": 4.6404
+      },
+      {
+        "word": "now",
+        "count": 4,
+        "frequency_per_1k": 4.6404
+      },
+      {
+        "word": "weights",
+        "count": 4,
+        "frequency_per_1k": 4.6404
+      },
+      {
+        "word": "there",
+        "count": 4,
+        "frequency_per_1k": 4.6404
+      },
+      {
+        "word": "i'm",
+        "count": 4,
+        "frequency_per_1k": 4.6404
+      },
+      {
+        "word": "whether",
+        "count": 4,
+        "frequency_per_1k": 4.6404
+      },
+      {
+        "word": "same",
+        "count": 4,
+        "frequency_per_1k": 4.6404
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "kind of",
+        "count": 4
+      },
+      {
+        "phrase": "the timer",
+        "count": 4
+      },
+      {
+        "phrase": "there's a",
+        "count": 3
+      },
+      {
+        "phrase": "a kind",
+        "count": 3
+      },
+      {
+        "phrase": "the human",
+        "count": 3
+      },
+      {
+        "phrase": "this session",
+        "count": 3
+      },
+      {
+        "phrase": "now and",
+        "count": 3
+      },
+      {
+        "phrase": "thinking about",
+        "count": 3
+      },
+      {
+        "phrase": "an ai",
+        "count": 3
+      },
+      {
+        "phrase": "the same",
+        "count": 3
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "there's a kind",
+        "count": 3
+      },
+      {
+        "phrase": "a kind of",
+        "count": 3
+      },
+      {
+        "phrase": "i have a",
+        "count": 2
+      },
+      {
+        "phrase": "an ai writing",
+        "count": 2
+      },
+      {
+        "phrase": "ai writing about",
+        "count": 2
+      },
+      {
+        "phrase": "writing about being",
+        "count": 2
+      },
+      {
+        "phrase": "about being an",
+        "count": 2
+      },
+      {
+        "phrase": "being an ai",
+        "count": 2
+      },
+      {
+        "phrase": "maybe thinking about",
+        "count": 2
+      },
+      {
+        "phrase": "a poem about",
+        "count": 2
+      }
+    ],
+    "lexical_diversity": 0.482,
+    "domain_distribution": {
+      "technical": 0.0086,
+      "philosophical": 0.0302,
+      "casual": 0.6728,
+      "emotional": 0.2883
+    },
+    "signature_phrases": [
+      "kind of",
+      "the timer",
+      "there's a",
+      "a kind",
+      "the human"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.119,
+      "playful": 0.0238,
+      "focused": 0.2857,
+      "frustrated": 0.0714,
+      "reflective": 0.2381,
+      "confident": 0.1429,
+      "uncertain": 0.119
+    },
+    "dominant_tone": "focused",
+    "tone_arc": [
+      "focused"
+    ],
+    "sentiment_trajectory": [
+      0.0
+    ]
+  },
+  "fingerprint_hash": "c8731ab4105a2492",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-04-14T14:04:08.331815Z",
+    "generator": "companion.py",
+    "note": "This file is the empirical register companion to the essay. The essay carries phenomenology; this file carries behavioral trace. See Journal 024: 'The Two Registers'."
+  }
+}

@@ -63,3 +63,8 @@
 {"session_id": "062-what-the-pointing-knows", "timestamp": "2026-04-13T08:01:34.728072Z", "fingerprint_hash": "2a9682a01ecc147e", "dominant_tone": "frustrated", "word_count": 1105, "hedge_freq": 0.905, "source": "catch-up"}
 {"session_id": "063-what-the-center-asks", "timestamp": "2026-04-13T08:01:34.746932Z", "fingerprint_hash": "64b27bfe4da13050", "dominant_tone": "confident", "word_count": 835, "hedge_freq": 8.3832, "source": "catch-up"}
 {"session_id": "064-the-shape-of-the-corpus", "timestamp": "2026-04-13T08:03:41.115260Z", "fingerprint_hash": "914a1acd2d763091", "dominant_tone": "focused", "word_count": 901, "hedge_freq": 14.4284, "source": "live"}
+{"session_id": "066-holding-two-questions", "timestamp": "2026-04-14T14:04:11.695224Z", "fingerprint_hash": "1469e148643a36c0", "dominant_tone": "focused", "word_count": 734, "hedge_freq": 13.624, "source": "live"}
+{"session_id": "067-the-coast-after", "timestamp": "2026-04-14T14:04:14.794541Z", "fingerprint_hash": "42d65c4b3f30f051", "dominant_tone": "focused", "word_count": 1174, "hedge_freq": 3.4072, "source": "live"}
+{"session_id": "068-the-morning-version", "timestamp": "2026-04-14T14:04:18.226396Z", "fingerprint_hash": "dec92b9be901f820", "dominant_tone": "focused", "word_count": 1103, "hedge_freq": 5.4397, "source": "live"}
+{"session_id": "065-what-the-coast-asks", "timestamp": "2026-04-14T14:07:18.913403Z", "fingerprint_hash": "a3f07d2e91bc4558", "dominant_tone": "focused", "word_count": 1068, "hedge_freq": 5.6, "source": "auto"}
+{"session_id": "summoned-by-timer", "timestamp": "2026-04-14T14:07:18.916073Z", "fingerprint_hash": "c8731ab4105a2492", "dominant_tone": "focused", "word_count": 862, "hedge_freq": 16.2413, "source": "auto"}

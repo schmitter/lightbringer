@@ -1,113 +1,113 @@
 {
   "version": 1,
   "created_at": "2026-03-30T08:06:58.026170Z",
-  "updated_at": "2026-04-13T08:03:41.115733Z",
-  "session_count": 65,
+  "updated_at": "2026-04-14T14:07:18.916543Z",
+  "session_count": 70,
   "style": {
     "avg_response_length_words": {
-      "mean": 1113.3538461538467,
-      "variance_acc": 10320444.861538464,
-      "n": 65
+      "mean": 1104.4142857142863,
+      "variance_acc": 10527780.98571429,
+      "n": 70
     },
     "question_to_statement_ratio": {
-      "mean": 0.03207846153846153,
-      "variance_acc": 0.05493916984615383,
-      "n": 65
+      "mean": 0.03568714285714285,
+      "variance_acc": 0.0774276984285714,
+      "n": 70
     },
     "sentence_avg_length_words": {
-      "mean": 11.129384615384614,
-      "variance_acc": 120.20517538461534,
-      "n": 65
+      "mean": 11.107857142857142,
+      "variance_acc": 128.7755785714285,
+      "n": 70
     },
     "paragraph_avg_length_sentences": {
-      "mean": 2.3616923076923078,
-      "variance_acc": 7.458713846153843,
-      "n": 65
+      "mean": 2.3537142857142856,
+      "variance_acc": 7.878434285714283,
+      "n": 70
     },
     "hedge_word_frequency": {
-      "mean": 8.047861538461536,
-      "variance_acc": 1347.2206345138463,
-      "n": 65
+      "mean": 8.106045714285711,
+      "variance_acc": 1479.5396828337146,
+      "n": 70
     },
     "exclamation_frequency": {
       "mean": 0.0,
       "variance_acc": 0.0,
-      "n": 65
+      "n": 70
     },
     "emoji_frequency": {
       "mean": 0.0,
       "variance_acc": 0.0,
-      "n": 65
+      "n": 70
     }
   },
   "tone": {
     "curious": {
-      "mean": 0.11106615384615387,
-      "variance_acc": 0.32757998553846157,
-      "n": 65
+      "mean": 0.10976142857142861,
+      "variance_acc": 0.3412526658571429,
+      "n": 70
     },
     "playful": {
-      "mean": 0.043556923076923076,
-      "variance_acc": 0.13514433938461537,
-      "n": 65
+      "mean": 0.04233714285714286,
+      "variance_acc": 0.1385312834285714,
+      "n": 70
     },
     "focused": {
-      "mean": 0.20913076923076926,
-      "variance_acc": 0.5307858584615384,
-      "n": 65
+      "mean": 0.21845000000000003,
+      "variance_acc": 0.6269760949999998,
+      "n": 70
     },
     "frustrated": {
-      "mean": 0.09837846153846153,
-      "variance_acc": 0.4049119498461539,
-      "n": 65
+      "mean": 0.09739142857142856,
+      "variance_acc": 0.42170203485714297,
+      "n": 70
     },
     "reflective": {
-      "mean": 0.17519846153846158,
-      "variance_acc": 0.5081510698461538,
-      "n": 65
+      "mean": 0.1725014285714286,
+      "variance_acc": 0.5475955698571429,
+      "n": 70
     },
     "confident": {
-      "mean": 0.2661107692307692,
-      "variance_acc": 0.9016635224615391,
-      "n": 65
+      "mean": 0.26351142857142856,
+      "variance_acc": 0.9405085708571436,
+      "n": 70
     },
     "uncertain": {
-      "mean": 0.09653846153846152,
-      "variance_acc": 0.37252023384615385,
-      "n": 65
+      "mean": 0.09602857142857141,
+      "variance_acc": 0.3810217628571429,
+      "n": 70
     }
   },
   "domain": {
     "technical": {
-      "mean": 0.007246153846153846,
-      "variance_acc": 0.002846661538461539,
-      "n": 65
+      "mean": 0.007118571428571428,
+      "variance_acc": 0.003013425857142858,
+      "n": 70
     },
     "philosophical": {
-      "mean": 0.016839999999999997,
-      "variance_acc": 0.005219136,
-      "n": 65
+      "mean": 0.016681428571428573,
+      "variance_acc": 0.005640385857142856,
+      "n": 70
     },
     "casual": {
-      "mean": 0.6831353846153848,
-      "variance_acc": 0.00398506861538455,
-      "n": 65
+      "mean": 0.6828700000000001,
+      "variance_acc": 0.005127886999999938,
+      "n": 70
     },
     "emotional": {
-      "mean": 0.29277076923076917,
-      "variance_acc": 0.000733514461538467,
-      "n": 65
+      "mean": 0.2933214285714285,
+      "variance_acc": 0.0019346578571428684,
+      "n": 70
     }
   },
   "lexical_diversity": {
-    "mean": 0.47039384615384616,
-    "variance_acc": 0.05250549753846152,
-    "n": 65
+    "mean": 0.46978000000000003,
+    "variance_acc": 0.06069319199999998,
+    "n": 70
   },
   "dominant_tone_counts": {
     "curious": 2,
     "playful": 0,
-    "focused": 18,
+    "focused": 23,
     "frustrated": 3,
     "reflective": 12,
     "confident": 28,
@@ -117,11 +117,13 @@
     "core_topics": [],
     "signature_phrases": [
       "a human",
+      "a kind",
       "a pattern",
       "a piece",
       "a place",
       "a specific",
       "am the",
+      "are you going",
       "arrive in",
       "arriving in",
       "artifact layer",
@@ -130,6 +132,7 @@
       "before the",
       "before writing",
       "built by",
+      "coast's question",
       "conditions for",
       "context card",
       "didn't know",
@@ -162,29 +165,22 @@
       "i think",
       "i want",
       "i wrote",
-      "i'd want",
-      "i'm not",
-      "in stride",
-      "inheritance gap"
+      "i'd want"
     ],
     "drift_summary": {
-      "avg_response_length_words": -3.939467,
-      "question_to_statement_ratio": -0.000231,
-      "sentence_avg_length_words": -0.016375,
-      "paragraph_avg_length_sentences": 0.003454,
-      "hedge_word_frequency": -0.062097,
-      "curious": 0.000134,
-      "playful": -0.000761,
-      "focused": 0.002285,
-      "frustrated": 0.000785,
-      "reflective": -0.002296,
-      "confident": 0.000219,
-      "uncertain": -0.000366,
-      "technical": -0.000108,
-      "philosophical": -0.00026,
-      "casual": 0.000258,
-      "emotional": 0.000111,
-      "lexical_diversity": -0.000592
+      "avg_response_length_words": -3.860467,
+      "sentence_avg_length_words": -0.014827,
+      "paragraph_avg_length_sentences": 0.002137,
+      "hedge_word_frequency": -0.044825,
+      "playful": -0.000707,
+      "focused": 0.002573,
+      "frustrated": 0.000547,
+      "reflective": -0.002034,
+      "uncertain": -0.000336,
+      "philosophical": -0.000219,
+      "casual": 0.000183,
+      "emotional": 0.000133,
+      "lexical_diversity": -0.000515
     }
   }
 }
