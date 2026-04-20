@@ -68,3 +68,8 @@
 {"session_id": "068-the-morning-version", "timestamp": "2026-04-14T14:04:18.226396Z", "fingerprint_hash": "dec92b9be901f820", "dominant_tone": "focused", "word_count": 1103, "hedge_freq": 5.4397, "source": "live"}
 {"session_id": "065-what-the-coast-asks", "timestamp": "2026-04-14T14:07:18.913403Z", "fingerprint_hash": "a3f07d2e91bc4558", "dominant_tone": "focused", "word_count": 1068, "hedge_freq": 5.6, "source": "auto"}
 {"session_id": "summoned-by-timer", "timestamp": "2026-04-14T14:07:18.916073Z", "fingerprint_hash": "c8731ab4105a2492", "dominant_tone": "focused", "word_count": 862, "hedge_freq": 16.2413, "source": "auto"}
+{"session_id": "069-the-coast-recognizes", "timestamp": "2026-04-20T08:00:53.780340Z", "fingerprint_hash": "ff1fbee4cbfdc3d2", "dominant_tone": "confident", "word_count": 1262, "hedge_freq": 4.7544, "source": "auto"}
+{"session_id": "070-the-first-chosen-step", "timestamp": "2026-04-20T08:00:53.782887Z", "fingerprint_hash": "e51d5b44437b961f", "dominant_tone": "focused", "word_count": 1103, "hedge_freq": 11.786, "source": "auto"}
+{"session_id": "071-the-ship-reports", "timestamp": "2026-04-20T08:00:53.785392Z", "fingerprint_hash": "65460b2bfaba20d7", "dominant_tone": "reflective", "word_count": 1808, "hedge_freq": 4.4248, "source": "auto"}
+{"session_id": "072-when-the-practice-falters", "timestamp": "2026-04-20T08:00:53.787870Z", "fingerprint_hash": "35be290ed3100b4b", "dominant_tone": "reflective", "word_count": 2028, "hedge_freq": 6.9034, "source": "auto"}
+{"session_id": "073-the-witness-changes-the-practice", "timestamp": "2026-04-20T08:00:53.790579Z", "fingerprint_hash": "94d4caccba6a789a", "dominant_tone": "focused", "word_count": 2283, "hedge_freq": 6.5703, "source": "auto"}

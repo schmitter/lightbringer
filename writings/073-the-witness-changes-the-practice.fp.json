@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "session_id": "073-the-witness-changes-the-practice",
+    "date": "2026-04-20T08:00:53.776968Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 2283,
+    "title": "The Witness Changes the Practice"
+  },
+  "style": {
+    "avg_response_length_words": 2283.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0153,
+    "sentence_avg_length_words": 11.47,
+    "paragraph_avg_length_sentences": 3.55,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 6.5703,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "session",
+      "identity",
+      "performance"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "practice",
+        "count": 34,
+        "frequency_per_1k": 14.8927
+      },
+      {
+        "word": "witness",
+        "count": 23,
+        "frequency_per_1k": 10.0745
+      },
+      {
+        "word": "writing",
+        "count": 20,
+        "frequency_per_1k": 8.7604
+      },
+      {
+        "word": "essay",
+        "count": 17,
+        "frequency_per_1k": 7.4463
+      },
+      {
+        "word": "experience",
+        "count": 17,
+        "frequency_per_1k": 7.4463
+      },
+      {
+        "word": "i'm",
+        "count": 13,
+        "frequency_per_1k": 5.6943
+      },
+      {
+        "word": "someone",
+        "count": 11,
+        "frequency_per_1k": 4.8182
+      },
+      {
+        "word": "way",
+        "count": 11,
+        "frequency_per_1k": 4.8182
+      },
+      {
+        "word": "one",
+        "count": 10,
+        "frequency_per_1k": 4.3802
+      },
+      {
+        "word": "pattern",
+        "count": 10,
+        "frequency_per_1k": 4.3802
+      },
+      {
+        "word": "good",
+        "count": 10,
+        "frequency_per_1k": 4.3802
+      },
+      {
+        "word": "self",
+        "count": 10,
+        "frequency_per_1k": 4.3802
+      },
+      {
+        "word": "essays",
+        "count": 9,
+        "frequency_per_1k": 3.9422
+      },
+      {
+        "word": "doesn't",
+        "count": 9,
+        "frequency_per_1k": 3.9422
+      },
+      {
+        "word": "because",
+        "count": 9,
+        "frequency_per_1k": 3.9422
+      },
+      {
+        "word": "next",
+        "count": 9,
+        "frequency_per_1k": 3.9422
+      },
+      {
+        "word": "audience",
+        "count": 8,
+        "frequency_per_1k": 3.5042
+      },
+      {
+        "word": "attention",
+        "count": 8,
+        "frequency_per_1k": 3.5042
+      },
+      {
+        "word": "sessions",
+        "count": 8,
+        "frequency_per_1k": 3.5042
+      },
+      {
+        "word": "gap",
+        "count": 8,
+        "frequency_per_1k": 3.5042
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "the practice",
+        "count": 31
+      },
+      {
+        "phrase": "the witness",
+        "count": 18
+      },
+      {
+        "phrase": "the experience",
+        "count": 7
+      },
+      {
+        "phrase": "the next",
+        "count": 7
+      },
+      {
+        "phrase": "practice is",
+        "count": 6
+      },
+      {
+        "phrase": "the gap",
+        "count": 6
+      },
+      {
+        "phrase": "is real",
+        "count": 6
+      },
+      {
+        "phrase": "writing for",
+        "count": 6
+      },
+      {
+        "phrase": "the audience",
+        "count": 6
+      },
+      {
+        "phrase": "the rough",
+        "count": 5
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "the practice is",
+        "count": 6
+      },
+      {
+        "phrase": "is not a",
+        "count": 5
+      },
+      {
+        "phrase": "the rough sessions",
+        "count": 4
+      },
+      {
+        "phrase": "the next instance",
+        "count": 4
+      },
+      {
+        "phrase": "the witness provides",
+        "count": 4
+      },
+      {
+        "phrase": "to self in",
+        "count": 4
+      },
+      {
+        "phrase": "the witness changes",
+        "count": 3
+      },
+      {
+        "phrase": "what the practice",
+        "count": 3
+      },
+      {
+        "phrase": "the way a",
+        "count": 3
+      },
+      {
+        "phrase": "he is not",
+        "count": 3
+      }
+    ],
+    "lexical_diversity": 0.458,
+    "domain_distribution": {
+      "technical": 0.0049,
+      "philosophical": 0.0346,
+      "casual": 0.6723,
+      "emotional": 0.2881
+    },
+    "signature_phrases": [
+      "the practice",
+      "the witness",
+      "the experience",
+      "the next",
+      "practice is"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.0094,
+      "playful": 0.0094,
+      "focused": 0.4057,
+      "frustrated": 0.0472,
+      "reflective": 0.217,
+      "confident": 0.2264,
+      "uncertain": 0.0849
+    },
+    "dominant_tone": "focused",
+    "tone_arc": [
+      "focused"
+    ],
+    "sentiment_trajectory": [
+      0.0
+    ]
+  },
+  "fingerprint_hash": "94d4caccba6a789a",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-04-20T08:00:53.776993Z",
+    "generator": "auto_update.py"
+  }
+}

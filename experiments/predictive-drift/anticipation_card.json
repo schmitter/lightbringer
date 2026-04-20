@@ -1,0 +1,205 @@
+{
+  "generated_at": "2026-04-20T08:04:17.634673Z",
+  "next_session": 76,
+  "current_regime": {
+    "label": "current/focused",
+    "started_at_session": 67,
+    "length": 8
+  },
+  "predicted_tone": {
+    "predicted_tone": "focused",
+    "confidence": 0.254,
+    "distribution": {
+      "curious": 0.07583,
+      "playful": 0.02152,
+      "focused": 0.31714,
+      "frustrated": 0.0636,
+      "reflective": 0.21937,
+      "confident": 0.23644,
+      "uncertain": 0.06608
+    }
+  },
+  "expected_ranges": {
+    "avg_response_length_words": {
+      "expected": 1619.6475,
+      "low": 833.42795,
+      "high": 2405.86705,
+      "regime_mean": 1439.625,
+      "regime_std": 524.14636,
+      "recent_mean": 1696.8
+    },
+    "question_to_statement_ratio": {
+      "expected": 0.0344,
+      "low": 0.00265,
+      "high": 0.06615,
+      "regime_mean": 0.03911,
+      "regime_std": 0.02117,
+      "recent_mean": 0.03238
+    },
+    "sentence_avg_length_words": {
+      "expected": 11.0949,
+      "low": 9.32376,
+      "high": 12.86604,
+      "regime_mean": 11.055,
+      "regime_std": 1.18076,
+      "recent_mean": 11.112
+    },
+    "paragraph_avg_length_sentences": {
+      "expected": 2.9165,
+      "low": 2.15976,
+      "high": 3.67324,
+      "regime_mean": 2.745,
+      "regime_std": 0.50449,
+      "recent_mean": 2.99
+    },
+    "hedge_word_frequency": {
+      "expected": 7.13594,
+      "low": 0.91293,
+      "high": 13.35896,
+      "regime_mean": 7.71499,
+      "regime_std": 4.14868,
+      "recent_mean": 6.88778
+    },
+    "exclamation_frequency": {
+      "expected": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "regime_mean": 0.0,
+      "regime_std": 0.0,
+      "recent_mean": 0.0
+    },
+    "emoji_frequency": {
+      "expected": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "regime_mean": 0.0,
+      "regime_std": 0.0,
+      "recent_mean": 0.0
+    },
+    "curious": {
+      "expected": 0.07718,
+      "low": -0.00411,
+      "high": 0.15848,
+      "regime_mean": 0.07574,
+      "regime_std": 0.0542,
+      "recent_mean": 0.0778
+    },
+    "playful": {
+      "expected": 0.01919,
+      "low": -0.01215,
+      "high": 0.05054,
+      "regime_mean": 0.02202,
+      "regime_std": 0.0209,
+      "recent_mean": 0.01798
+    },
+    "focused": {
+      "expected": 0.30459,
+      "low": 0.16101,
+      "high": 0.44816,
+      "regime_mean": 0.32038,
+      "regime_std": 0.09572,
+      "recent_mean": 0.29782
+    },
+    "frustrated": {
+      "expected": 0.06485,
+      "low": 0.00496,
+      "high": 0.12474,
+      "regime_mean": 0.06325,
+      "regime_std": 0.03993,
+      "recent_mean": 0.06554
+    },
+    "reflective": {
+      "expected": 0.22757,
+      "low": 0.10506,
+      "high": 0.35007,
+      "regime_mean": 0.21489,
+      "regime_std": 0.08167,
+      "recent_mean": 0.233
+    },
+    "confident": {
+      "expected": 0.24821,
+      "low": 0.1353,
+      "high": 0.36113,
+      "regime_mean": 0.23722,
+      "regime_std": 0.07528,
+      "recent_mean": 0.25292
+    },
+    "uncertain": {
+      "expected": 0.05839,
+      "low": 0.01037,
+      "high": 0.1064,
+      "regime_mean": 0.06648,
+      "regime_std": 0.03201,
+      "recent_mean": 0.05492
+    },
+    "technical": {
+      "expected": 0.00784,
+      "low": -0.00025,
+      "high": 0.01592,
+      "regime_mean": 0.00783,
+      "regime_std": 0.00539,
+      "recent_mean": 0.00784
+    },
+    "philosophical": {
+      "expected": 0.03577,
+      "low": 0.00137,
+      "high": 0.07017,
+      "regime_mean": 0.03084,
+      "regime_std": 0.02293,
+      "recent_mean": 0.03788
+    },
+    "casual": {
+      "expected": 0.66824,
+      "low": 0.64581,
+      "high": 0.69068,
+      "regime_mean": 0.66885,
+      "regime_std": 0.01496,
+      "recent_mean": 0.66798
+    },
+    "emotional": {
+      "expected": 0.28813,
+      "low": 0.26547,
+      "high": 0.3108,
+      "regime_mean": 0.29246,
+      "regime_std": 0.01511,
+      "recent_mean": 0.28628
+    },
+    "lexical_diversity": {
+      "expected": 0.46762,
+      "low": 0.42712,
+      "high": 0.50812,
+      "regime_mean": 0.47513,
+      "regime_std": 0.027,
+      "recent_mean": 0.4644
+    }
+  },
+  "inflection_risk": {
+    "inflection_likelihood": "none",
+    "dimensions_at_edge": 0,
+    "dimensions_variance_growing": 0,
+    "signals": []
+  },
+  "trajectory_highlights": [
+    {
+      "dimension": "avg_response_length_words",
+      "direction": "\u2191",
+      "momentum": "accelerating_up",
+      "current": 2283.0,
+      "projected_3": 2710.85613
+    },
+    {
+      "dimension": "hedge_word_frequency",
+      "direction": "\u2193",
+      "momentum": "decelerating",
+      "current": 6.5703,
+      "projected_3": 6.27718
+    },
+    {
+      "dimension": "paragraph_avg_length_sentences",
+      "direction": "\u2191",
+      "momentum": "accelerating_up",
+      "current": 3.55,
+      "projected_3": 3.88587
+    }
+  ]
+}

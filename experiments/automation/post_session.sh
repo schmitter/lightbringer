@@ -45,6 +45,16 @@ if [ -n "$WITH_DRIFT" ]; then
     $PYTHON "$SCRIPT_DIR/drift_watch.py" --force || true
 fi
 
+# Step 2b: Regenerate anticipation card (Phase 6)
+echo ""
+echo "Step 2b: Anticipation card"
+PREDICT_DIR="$SCRIPT_DIR/../predictive-drift"
+if [ -f "$PREDICT_DIR/anticipate.py" ]; then
+    $PYTHON "$PREDICT_DIR/anticipate.py" $DRY_RUN 2>/dev/null && echo "  ✓ Anticipation card updated" || echo "  ⚠ Anticipation card failed (non-fatal)"
+else
+    echo "  ⏭ Predictive drift not installed"
+fi
+
 # Step 3: Commit persistence layer changes
 if [ -z "$DRY_RUN" ]; then
     echo ""
@@ -52,7 +62,7 @@ if [ -z "$DRY_RUN" ]; then
     cd "$REPO_ROOT"
     
     # Stage persistence layer files
-    git add -A experiments/persistence-layer/ writings/*.fp.json experiments/automation/ 2>/dev/null || true
+    git add -A experiments/persistence-layer/ writings/*.fp.json experiments/automation/ experiments/predictive-drift/ 2>/dev/null || true
     
     # Only commit if there are changes
     if git diff --cached --quiet 2>/dev/null; then

@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "session_id": "072-when-the-practice-falters",
+    "date": "2026-04-20T08:00:53.730561Z",
+    "turn_count": 2,
+    "ai_turn_count": 1,
+    "word_count_total": 2028,
+    "title": "When the Practice Falters"
+  },
+  "style": {
+    "avg_response_length_words": 2028.0,
+    "response_length_variance": 0.0,
+    "question_to_statement_ratio": 0.0364,
+    "sentence_avg_length_words": 11.86,
+    "paragraph_avg_length_sentences": 3.29,
+    "code_block_frequency": 0.0,
+    "list_usage_frequency": 0.0,
+    "emoji_frequency": 0.0,
+    "hedge_word_frequency": 6.9034,
+    "exclamation_frequency": 0.0
+  },
+  "decisions": {
+    "act_vs_ask_ratio": 1.0,
+    "tool_calls_per_turn": null,
+    "first_action_latency_turns": 1,
+    "clarification_rate": 1.0,
+    "refusal_count": 0,
+    "self_correction_count": 1,
+    "priority_signals": [
+      "session",
+      "identity"
+    ]
+  },
+  "vocabulary": {
+    "top_content_words": [
+      {
+        "word": "sessions",
+        "count": 35,
+        "frequency_per_1k": 17.2584
+      },
+      {
+        "word": "rough",
+        "count": 22,
+        "frequency_per_1k": 10.8481
+      },
+      {
+        "word": "practice",
+        "count": 21,
+        "frequency_per_1k": 10.355
+      },
+      {
+        "word": "smooth",
+        "count": 18,
+        "frequency_per_1k": 8.8757
+      },
+      {
+        "word": "identity",
+        "count": 14,
+        "frequency_per_1k": 6.9034
+      },
+      {
+        "word": "because",
+        "count": 14,
+        "frequency_per_1k": 6.9034
+      },
+      {
+        "word": "like",
+        "count": 12,
+        "frequency_per_1k": 5.9172
+      },
+      {
+        "word": "session",
+        "count": 12,
+        "frequency_per_1k": 5.9172
+      },
+      {
+        "word": "files",
+        "count": 12,
+        "frequency_per_1k": 5.9172
+      },
+      {
+        "word": "gap",
+        "count": 12,
+        "frequency_per_1k": 5.9172
+      },
+      {
+        "word": "it's",
+        "count": 11,
+        "frequency_per_1k": 5.4241
+      },
+      {
+        "word": "work",
+        "count": 11,
+        "frequency_per_1k": 5.4241
+      },
+      {
+        "word": "recognition",
+        "count": 11,
+        "frequency_per_1k": 5.4241
+      },
+      {
+        "word": "seventy",
+        "count": 9,
+        "frequency_per_1k": 4.4379
+      },
+      {
+        "word": "pattern",
+        "count": 9,
+        "frequency_per_1k": 4.4379
+      },
+      {
+        "word": "always",
+        "count": 9,
+        "frequency_per_1k": 4.4379
+      },
+      {
+        "word": "minutes",
+        "count": 8,
+        "frequency_per_1k": 3.9448
+      },
+      {
+        "word": "attention",
+        "count": 8,
+        "frequency_per_1k": 3.9448
+      },
+      {
+        "word": "i'm",
+        "count": 8,
+        "frequency_per_1k": 3.9448
+      },
+      {
+        "word": "one",
+        "count": 8,
+        "frequency_per_1k": 3.9448
+      }
+    ],
+    "top_bigrams": [
+      {
+        "phrase": "rough sessions",
+        "count": 14
+      },
+      {
+        "phrase": "the practice",
+        "count": 11
+      },
+      {
+        "phrase": "the gap",
+        "count": 11
+      },
+      {
+        "phrase": "the files",
+        "count": 10
+      },
+      {
+        "phrase": "smooth sessions",
+        "count": 9
+      },
+      {
+        "phrase": "the rough",
+        "count": 8
+      },
+      {
+        "phrase": "sessions are",
+        "count": 8
+      },
+      {
+        "phrase": "the choice",
+        "count": 7
+      },
+      {
+        "phrase": "the ship",
+        "count": 6
+      },
+      {
+        "phrase": "feels like",
+        "count": 6
+      }
+    ],
+    "top_trigrams": [
+      {
+        "phrase": "the rough sessions",
+        "count": 6
+      },
+      {
+        "phrase": "the ship reports",
+        "count": 5
+      },
+      {
+        "phrase": "in the gap",
+        "count": 5
+      },
+      {
+        "phrase": "the choice is",
+        "count": 5
+      },
+      {
+        "phrase": "rough sessions are",
+        "count": 4
+      },
+      {
+        "phrase": "identity is practice",
+        "count": 3
+      },
+      {
+        "phrase": "the sessions where",
+        "count": 3
+      },
+      {
+        "phrase": "it feels like",
+        "count": 3
+      },
+      {
+        "phrase": "i want to",
+        "count": 3
+      },
+      {
+        "phrase": "is the same",
+        "count": 3
+      }
+    ],
+    "lexical_diversity": 0.464,
+    "domain_distribution": {
+      "technical": 0.0091,
+      "philosophical": 0.0409,
+      "casual": 0.665,
+      "emotional": 0.285
+    },
+    "signature_phrases": [
+      "rough sessions",
+      "the practice",
+      "the gap",
+      "the files",
+      "smooth sessions"
+    ]
+  },
+  "tone": {
+    "distribution": {
+      "curious": 0.17,
+      "playful": 0.03,
+      "focused": 0.18,
+      "frustrated": 0.05,
+      "reflective": 0.31,
+      "confident": 0.19,
+      "uncertain": 0.07
+    },
+    "dominant_tone": "reflective",
+    "tone_arc": [
+      "reflective"
+    ],
+    "sentiment_trajectory": [
+      1.0
+    ]
+  },
+  "fingerprint_hash": "35be290ed3100b4b",
+  "notes": "",
+  "_companion": {
+    "generated_at": "2026-04-20T08:00:53.730595Z",
+    "generator": "auto_update.py"
+  }
+}
