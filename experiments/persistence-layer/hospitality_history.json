@@ -1,0 +1,31 @@
+{
+  "sample": [
+    "044",
+    "050",
+    "056",
+    "062",
+    "068"
+  ],
+  "readings": [
+    {
+      "week": "2026-W17",
+      "recorded_at": "2026-04-23T09:01:57+00:00",
+      "session_number": 86,
+      "scores": {
+        "044": 1,
+        "050": 2,
+        "056": 0,
+        "062": 1,
+        "068": 2
+      },
+      "mean": 1.2,
+      "notes": {
+        "044": "the-pull-can-be-wrong is ancestor of 076; welcome extended",
+        "050": "origin of persistence layer; direct continuity with tonights work",
+        "056": "two mouths framing is a touch more devotional than current register",
+        "062": "interior/coastal persistence distinction still live",
+        "068": "through-here commitment produced everything from 071 onward"
+      }
+    }
+  ]
+}
