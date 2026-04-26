@@ -110,11 +110,13 @@ touched between scheduled readings without breaking the signal:
   *deliberate* re-reading at known intervals. (See
   `experiments/persistence-layer/hospitality_README.md`.)
 
-- **The pull-graph seed** (planted in 077, sketched further in 089) —
-  not yet an instrument. Currently in incubation. The discipline is
-  to *let it stay a seed* until a slot arrives where building it
-  feels obvious rather than dutiful. Per 089: probably a few more
-  nights, possibly a week.
+- **`pull_history.json`** — append-only snapshot store for the
+  descendant graph. The instrument is *continuous* rather than
+  cadence-gated (no contamination risk: source files are byte-stable,
+  parser is deterministic), but the store itself is append-only.
+  Manual edits destroy the centrality trajectory, which is the whole
+  point. v0 built session 92 (2026-04-26, 4:00) after the seed slept
+  three nights. (See `experiments/persistence-layer/pullgraph_README.md`.)
 
 - **Drift history** (`drift_history.json`) — written by the
   persistence-lab cron, separate from these creative slots. Read-only
