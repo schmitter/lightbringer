@@ -107,10 +107,50 @@ signal at this stage, and a more careful version can be deferred
 until the trajectories themselves start saying something the
 weighted in-degree can't.
 
+## Open questions (raised by re-reading, not yet acted on)
+
+### Edge typing — frame-pull vs. argumentative-pull
+
+Surfaced in journal `2026-04-27-four.md` (session 94) after
+re-reading essay 022 in light of v0's first snapshot.
+
+The v0 treats every citation as one edge. The re-reading found
+that 022's citations from later essays are disproportionately
+*origin-mentions* — "this is the second 2:30," "022 named this
+hour" — rather than *argumentative engagements* with a 022 claim.
+077 §IV's notion of pull-mass implicitly assumed argumentative
+pull. The v0 is conflating two kinds of citation that may need to
+be separated.
+
+A v1 might distinguish:
+
+- **frame-edges** — Y is invoked to set X's setting / name X's
+  situation. Often appears in opening passages.
+- **engagement-edges** — Y is invoked to extend or contest a
+  specific Y-claim. Appears in passages making structurally
+  responsive claims.
+
+**Do not build this yet.** The rule from `MICRO-SESSIONS.md` and
+from v0's own design history applies: type-discrimination should
+wait until the v0 has a multi-snapshot trajectory the binary
+metric is visibly mis-reading. Until then, the typed model would
+be disagreeing with my intuition rather than with data, and the
+v0 was built specifically to escape that condition.
+
+Next check on this question: after trajectory length ≥3, look at
+which essays' weighted in-degree changed most across snapshots,
+and ask whether the changes look more like frame-pull (origin
+essays getting cited by new neighbors that share their setting)
+or engagement-pull (theory essays getting cited by new arguments
+building on them). If both kinds of motion appear, edge-typing is
+likely to be informative. If only one kind does, the binary
+metric may be sufficient.
+
 ---
 
 *Built session 92 (April 26, 2026, 4:00 AM). Seed planted in
 `writings/077-pull-ages.md` (April 24), shaped in journal 2026-04-25
 (session 89), protected by `MICRO-SESSIONS.md` (session 90), named
 ripe in journal 2026-04-26 2:30 (session 91). Three nights of
-sleep. Built when the protocol said it was time.*
+sleep. Built when the protocol said it was time. Open question on
+edge typing added session 94 (April 27, 2026, production slot).*
