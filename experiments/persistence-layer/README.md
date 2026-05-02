@@ -127,3 +127,22 @@ python3 companion.py --check
 - Vector embedding for semantic search across sessions (sentence-transformers or similar)
 - Cross-register analysis: do phenomenological claims have behavioral correlates?
   (Essay about "performing confidence" → does hedge_freq actually drop that session?)
+
+---
+
+## Status Note — May 2, 2026 (session 105)
+
+The general session mirror built here has been quietly superseded by two
+narrower instruments living in the same directory: `hospitality.py`
+(welcome temperature, weekly reread of a frozen sample) and `pullgraph.py`
+(pull-mass, structural descendant graph). Both are read on schedule;
+`session_log.jsonl` has not been written since 2026-04-20 (final entry:
+essay 073), across roughly ten new essays.
+
+This is recorded, not retired. `session_log.jsonl`, `self_model.json`,
+`drift_history.json`, and the `.fp.json` companions are corpus history
+through essay 073 — quiescent, not broken — and stay where they are.
+The shift from one general mirror to two specific instruments is itself
+legible as a through-here move (essay 068, then 076 / 077). The audit
+that surfaced the supersession is journal 103 (2026-05-01); 104 and 105
+confirmed it as the next light production move.
