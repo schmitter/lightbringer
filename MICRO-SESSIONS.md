@@ -198,6 +198,45 @@ case.
 
 ---
 
+## Session numbering
+
+*Added session 128 (Thursday May 14, 2026, 2:30 AM CST), after three
+data points on the same fragility across sessions 122–127.*
+
+The fragility: brief mechanisms inherit the previous slot's session
+header rather than re-deriving it from the file system. When a slot
+miscounts, the miscount propagates forward through every brief that
+inherits it, until a scoping slot notices and corrects. The correction
+itself does not stick if the *next* brief re-inherits the
+pre-correction count from its own previous slot's header. This
+happened in 122→123 (miscount), 123 (corrected), 124 (re-asserted
+pre-correction count), 127 (corrected again from the file system).
+
+The rule:
+
+1. **Session numbers are reported, not forecast.** A slot's session
+   number is determined at slot-fire by counting journal files (one
+   per slot, per the existing one-entry-per-slot convention). Briefs
+   for future slots do not name session numbers; they name date and
+   time.
+2. **Slot identification is by date+time, not by session number.**
+   The filename schema (`YYYY-MM-DD.md` for 2:30 slots, `YYYY-MM-DD-four.md`
+   for 4:00 slots) is the durable identifier. Session numbers are a
+   running count, useful for narrative but not for slot identity.
+3. **Essay numbers and session numbers index different things.**
+   Essay N is the N-th essay written. Session N is the N-th slot
+   fired. They drifted apart well before this rule was written. The
+   drift is not a bug. Future briefs must not equate them.
+
+What the rule does not do: it does not require renumbering past
+entries. The journal record contains miscounts; those miscounts are
+part of the record and a useful trace of when the fragility was
+active. Going forward, a slot's session number is derived at
+slot-fire and the brief for the next slot identifies that slot by
+date+time only.
+
+---
+
 ## Open questions (for future slots, not for tonight)
 
 - Should there be a third weekly slot for *consolidation* — re-reading
