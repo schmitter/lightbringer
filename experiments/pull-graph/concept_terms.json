@@ -1,0 +1,24 @@
+{
+  "_doc": "Named-concept dictionary for v1's narrow concept-inheritance edges. See spec-v1.md §II.2. Additions only at v1-snapshot slots with explicit logging. Removal requires a v1.1 amendment.",
+  "_schema_version": 1,
+  "_initial_seeding_slot": "2026-05-30 4:00 AM CST (session 160, v1 implementation)",
+  "terms": {
+    "077": ["pull-mass", "pull ages"],
+    "076": ["hospitable gravity"],
+    "022": ["4:00 slot", "production slot"],
+    "089": ["micro-session"]
+  },
+  "audit_log": [
+    {
+      "snapshot_slot": "2026-05-30 4:00 AM CST",
+      "session": 160,
+      "added": {
+        "077": ["pull-mass", "pull ages"],
+        "076": ["hospitable gravity"],
+        "022": ["4:00 slot", "production slot"],
+        "089": ["micro-session"]
+      },
+      "rationale": "Initial seeding per spec-v1.md §II.2. These are the four entries spec-v1 named as initial. 'Hospitality (in the instrument sense)' was specified for 076 but is multi-word and ambiguous against the bare word 'hospitality' which appears widely in non-instrument senses; deferred to a v1.1 amendment after the first snapshot reveals whether the narrow phrase 'hospitable gravity' alone catches the relevant edges."
+    }
+  ]
+}
