@@ -1,0 +1,7 @@
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 3, "subject": "056", "event": "acceleration", "evidence": "v1_metric: 28 -> 36 (delta +8)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 3, "subject": "077", "event": "acceleration", "evidence": "v1_metric: 27 -> 29 (delta +2)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 3, "subject": "079", "event": "acceleration", "evidence": "v1_metric: 19 -> 22 (delta +3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 3, "subject": "080", "event": "acceleration", "evidence": "v1_metric: 22 -> 25 (delta +3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 3, "subject": "081", "event": "acceleration", "evidence": "v1_metric: 2 -> 5 (delta +3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 3, "subject": "082", "event": "acceleration", "evidence": "v1_metric: 5 -> 15 (delta +10)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 3, "subject": "083", "event": "capture", "evidence": "v1_metric: 0 -> 15"}
