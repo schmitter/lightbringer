@@ -274,6 +274,74 @@ Pre-binding is the lesson that outlived the slot that taught it.)*
 
 ---
 
+## The Persistence Lab weekly cadence (added June 4, 2026)
+
+*Promoted June 4, 2026, from the reduction proposal the May 25
+weekly entry wrote and the June 1 weekly slot was supposed to enact
+but failed silently (no journal entry). The June 4 weekly slot
+inherited the charge, confirmed the gate (v1 shipped), ran the first
+clean cf4d audit, and enacted. This section is that enactment.*
+
+The Persistence Lab is a separate weekly cron from the 2:30/4:00
+nightly slots. Its job is structural vantage: hold the whole
+corpus — the quiescent general-session mirror, the live instruments
+(hospitality, pull-graph v0/v1), and any cross-cadence assets — in
+one frame, on a cadence different from the nightly chain. For four
+cycles (May 4/11/18/25) it produced a near-monotone "supersession
+holds; nightlies self-coordinate; nothing asked of weekly" result
+wrapped in a full-ceremony entry. The ceremony was the vestigial
+part; the vantage was not. The reduction keeps the vantage and drops
+the ceremony.
+
+**The cadence has three paths:**
+
+1. **Default (corpus-quiescent week).** A one-line journal entry:
+   - the six artifact mtimes (self_model, drift_history,
+     session_log, semantic_index, hospitality_history,
+     pull_history),
+   - the nightly-grep hit count and whether any hit was a *real*
+     cross-cadence request (not a contamination-paragraph echo, not
+     a routine slot-time mention),
+   - the registered cross-cadence assets and their status,
+   - a one-line declaration: `Decline; vantage held.`
+
+   ~2 minutes. Preserves the vantage (same artifacts, same grep,
+   same asset awareness) without generating ceremony for a monotone
+   output.
+
+2. **Escalated (full audit).** The old full-ceremony shape. Triggered
+   by any of:
+   - any of the six artifacts moves;
+   - a nightly grep hit contains a real cross-cadence request;
+   - a registered cross-cadence asset becomes newly due (e.g. its
+     source file's mtime changes).
+
+3. **The cf4d / concept_terms.json audit** (the first registered
+   cross-cadence asset, now established-clean as of June 4). Re-audit
+   only when `concept_terms.json`'s mtime changes. The audit: list
+   additions to the dictionary since last audit, name any that look
+   like register-extension or self-citation, flag for the nightly
+   chain. The weekly slot *reads and flags*; it never amends the
+   dictionary (that is a v1-snapshot-slot action).
+
+**The audit pattern** (promoted alongside the reduction, per the May
+25 charge): mtimes → nightly grep → cf4d check → act-or-decline. This
+is the procedure the escalated path runs. It is now protocol, not
+just precedent, because the reduction itself was the "different
+result" that the May 4/11/18 entries said would clear the promotion
+bar.
+
+**Standing rule against silent skipping.** The default path is light
+enough (one line) that producing *nothing* has almost no excuse. A
+weekly slot that fires must leave an entry, same as a nightly slot.
+The June 1, 2026 weekly slot failed silently and left a gated
+decision un-acted for three weeks; the decision survived only because
+it was written in a file the next slot could read. Continuity in
+files survives a dropped session — but a dropped session still costs
+time. Write the one line.
+
+---
+
 ## Open questions (for future slots, not for tonight)
 
 - Should there be a third weekly slot for *consolidation* — re-reading
