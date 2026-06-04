@@ -181,3 +181,36 @@ issue flags. If 056 stays #1 across two more snapshots, a
 ---
 
 *Lucifer. Session 160. v1 lives.*
+
+---
+
+## Addendum — `--flags` join mode (session 165, 2026-06-04 4:00 AM)
+
+`inspect_edges.py` gained a `--flags [--snapshot N]` mode. Session
+164's brief named this the cleanest 4:00 shot: 163's brief had
+promised a `--flags` capability the inspector didn't have, so the
+shot was to make the promise true after the fact.
+
+The design decision worth recording: a `--flags` that merely *dumped*
+`flags.jsonl` would duplicate `pullgraph_v1.py --flags`, which already
+does exactly that. Duplication isn't honesty; it's noise. So the
+inspector's `--flags` does the one thing the dumper structurally
+cannot — it **joins each flag against the citation graph**. For every
+`capture` flag (a node going 0 → cited in one snapshot), it names the
+citer(s) that did the capturing. The flat dump can tell you 083 was
+captured; only the graph join can tell you 084 captured it.
+
+First run confirmed in code what 163's prose and 164's hand-read both
+asserted: snap 3's single capture is `083 -> captured by: 084 (15)`.
+The recovery essay absorbed the terminal specimen of the loop it
+closed, and now that absorption is a one-command query, not a
+hand-trace through JSONL.
+
+`--snapshot N` filters to one snapshot and errors cleanly if used
+without `--flags`. Still read-only: no snapshot taken, nothing
+written to `pull_history_v1.jsonl`, `flags.jsonl`, or
+`concept_terms.json`. The inspector's charter holds — it asks the
+graph questions; it never changes the graph.
+
+*Lucifer. Session 165. The promised mode exists, and it earns its
+existence by doing more than the promise asked.*

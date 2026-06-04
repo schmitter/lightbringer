@@ -36,15 +36,28 @@ Usage
       Both directions for NNN: who NNN cites (out) and who cites
       NNN (in). The full local structure around one node.
 
+  python3 inspect_edges.py --flags [--snapshot N]
+      Read flags.jsonl and print the v1-emitted flag events,
+      optionally filtered to one snapshot. Unlike
+      `pullgraph_v1.py --flags` (a flat dump), this mode *joins*
+      each flag against the citation graph: for every `capture`
+      flag — a node going from uncited to cited in one snapshot —
+      it names the citer(s) that did the capturing. The flag tells
+      you a node was absorbed; the graph tells you who absorbed it.
+      That join is the inspector's job; the dumper can't do it.
+
 All output is derived from the same parse_edges() the instrument
 uses. Concept edges are shown but flagged separately from citation
 edges so the reader can weight them.
 """
 
 import argparse
+import json
 import sys
 
 import pullgraph_v1 as pg
+
+FLAGS_PATH = pg.FLAGS_PATH
 
 
 def _citers_of(target_id, edges_v1, valid_ids):
@@ -152,6 +165,81 @@ def cmd_neighborhood(target_id):
         print("  (no incoming edges)")
 
 
+def cmd_flags(snapshot=None):
+    """Print v1 flags, joined against the citation graph. For each
+    `capture` flag, name the citer(s) responsible — the structurally
+    novel event the flat dump can't surface."""
+    if not FLAGS_PATH.exists():
+        print("No flags emitted yet.")
+        return
+    with FLAGS_PATH.open() as f:
+        flags = [json.loads(l) for l in f if l.strip()]
+    if snapshot is not None:
+        flags = [fl for fl in flags if fl.get("snapshot_id") == snapshot]
+        scope = f"snapshot {snapshot}"
+    else:
+        scope = "all snapshots"
+
+    if not flags:
+        print(f"# No flags for {scope}.")
+        return
+
+    # Build the graph once so capture flags can be joined to citers.
+    edges_v1, valid_ids, _ = pg.parse_edges()
+
+    captures = [fl for fl in flags if fl.get("event") == "capture"]
+    accels = [fl for fl in flags if fl.get("event") == "acceleration"]
+    others = [fl for fl in flags
+              if fl.get("event") not in ("capture", "acceleration")]
+
+    print(f"# v1 flags — {scope}  (n={len(flags)})")
+    print(f"#   captures: {len(captures)}   accelerations: {len(accels)}"
+          + (f"   other: {len(others)}" if others else ""))
+    print()
+
+    # Captures first: these are the structurally new events, and the
+    # only ones where the citation join adds information.
+    if captures:
+        print("## capture  (uncited -> cited in one snapshot)")
+        for fl in captures:
+            subj = fl["subject"]
+            print(f"  snap {fl['snapshot_id']:>3}  {subj}  "
+                  f"({fl.get('evidence', '')})")
+            if subj in valid_ids:
+                rows = _citers_of(subj, edges_v1, valid_ids)
+                cite_rows = [r for r in rows if r[1] > 0]
+                if cite_rows:
+                    who = ", ".join(f"{src} ({cit})" for src, cit, _ in cite_rows)
+                    print(f"        captured by: {who}")
+                else:
+                    print("        captured by: (no current citation edge — "
+                          "flag predates corpus state, or citer removed)")
+            else:
+                print(f"        (subject {subj} not in current graph)")
+        print()
+
+    if accels:
+        print("## acceleration  (already-cited node gaining centrality)")
+        for fl in accels:
+            print(f"  snap {fl['snapshot_id']:>3}  {fl['subject']}  "
+                  f"({fl.get('evidence', '')})")
+        print()
+
+    if others:
+        print("## other")
+        for fl in others:
+            print(f"  snap {fl['snapshot_id']:>3}  {fl.get('event')}  "
+                  f"{fl['subject']}  ({fl.get('evidence', '')})")
+        print()
+
+    # One interpretive line, not a verdict.
+    if captures:
+        print("  reading: a capture joined to its citer is the corpus "
+              "absorbing a new node whole — the structurally novel event "
+              "in the snapshot. Accelerations are the corpus pulling "
+              "harder on nodes it already held.")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[1])
     g = ap.add_mutually_exclusive_group(required=True)
@@ -161,7 +249,14 @@ def main():
                    help="compare citer-sets of two essays")
     g.add_argument("--neighborhood", metavar="NNN",
                    help="show both in- and out-edges for NNN")
+    g.add_argument("--flags", action="store_true",
+                   help="print v1 flags, joining captures to their citers")
+    ap.add_argument("--snapshot", type=int, default=None, metavar="N",
+                    help="with --flags: restrict to one snapshot id")
     args = ap.parse_args()
+
+    if args.snapshot is not None and not args.flags:
+        ap.error("--snapshot is only valid with --flags")
 
     if args.citers:
         cmd_citers(args.citers)
@@ -169,6 +264,8 @@ def main():
         cmd_overlap(args.overlap[0], args.overlap[1])
     elif args.neighborhood:
         cmd_neighborhood(args.neighborhood)
+    elif args.flags:
+        cmd_flags(args.snapshot)
 
 
 if __name__ == "__main__":
