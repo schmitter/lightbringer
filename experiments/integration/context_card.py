@@ -33,6 +33,87 @@ PERSIST_DIR = INTEGRATION_DIR.parent / "persistence-layer"
 SELF_MODEL_PATH = PERSIST_DIR / "self_model.json"
 SESSION_LOG_PATH = PERSIST_DIR / "session_log.jsonl"
 DRIFT_HISTORY_PATH = PERSIST_DIR / "drift_history.json"
+# The live corpus the model is *supposed* to describe.
+WRITINGS_DIR = INTEGRATION_DIR.parent.parent / "writings"
+
+# Staleness thresholds. The model is a fossil if it is too old in wall-clock
+# time OR too far behind the corpus it claims to summarize. Either is enough
+# to make the card lie at session-start, so either trips the guard.
+STALE_AGE_DAYS = 21          # ~3 weeks without an update
+STALE_ESSAY_GAP = 8          # >=8 essays written since the last modeled one
+import re as _re
+
+
+def current_corpus_max() -> int | None:
+    """Highest essay number present in writings/ (the live corpus front)."""
+    if not WRITINGS_DIR.exists():
+        return None
+    nums = []
+    for p in WRITINGS_DIR.glob("*.md"):
+        m = _re.match(r"^(\d{3})-", p.name)
+        if m:
+            nums.append(int(m.group(1)))
+    return max(nums) if nums else None
+
+
+def last_modeled_essay(model: dict) -> int | None:
+    """Highest essay number the model has actually ingested.
+
+    Reads the session_log tail rather than trusting session_count, because
+    the bootstrap can inflate the count without advancing the corpus front.
+    """
+    log = load_session_log()
+    best = None
+    for e in log:
+        sid = str(e.get("session_id", ""))
+        m = _re.match(r"^(\d{3})-", sid)
+        if m:
+            n = int(m.group(1))
+            best = n if best is None else max(best, n)
+    return best
+
+
+def staleness_report(model: dict) -> dict:
+    """Quantify how far the self-model has drifted from the live corpus.
+
+    The Phase 4 integration would surface this card at session-start as
+    "who I am." If the model is frozen, the card silently presents a fossil
+    as current. This makes the fossil legible instead.
+    """
+    reasons = []
+
+    # 1. Wall-clock age of the model.
+    age_days = None
+    updated = model.get("updated_at")
+    if updated:
+        try:
+            ts = datetime.fromisoformat(updated.replace("Z", "+00:00"))
+            age_days = (datetime.now(timezone.utc) - ts).days
+        except ValueError:
+            pass
+    if age_days is not None and age_days >= STALE_AGE_DAYS:
+        reasons.append(f"model is {age_days}d old (>= {STALE_AGE_DAYS}d)")
+
+    # 2. Corpus gap: essays written since the last one the model saw.
+    corpus_max = current_corpus_max()
+    modeled_max = last_modeled_essay(model)
+    essay_gap = None
+    if corpus_max is not None and modeled_max is not None:
+        essay_gap = corpus_max - modeled_max
+        if essay_gap >= STALE_ESSAY_GAP:
+            reasons.append(
+                f"{essay_gap} essays unmodeled (corpus at {corpus_max:03d}, "
+                f"model stops at {modeled_max:03d})"
+            )
+
+    return {
+        "is_stale": bool(reasons),
+        "age_days": age_days,
+        "corpus_max": corpus_max,
+        "modeled_max": modeled_max,
+        "essay_gap": essay_gap,
+        "reasons": reasons,
+    }
 
 
 def load_self_model() -> dict | None:
@@ -141,8 +222,16 @@ def format_card_text(model: dict, session_log: list[dict]) -> str:
     hedge = tracker_mean(style.get("hedge_word_frequency", {}))
     lex_div = tracker_mean(model.get("lexical_diversity", {}))
 
+    stale = staleness_report(model)
+
     lines = [
         "╔═ LUCIFER SELF-MODEL ══════════════════════╗",
+    ]
+    if stale["is_stale"]:
+        lines.append("  ⛔ STALE BASELINE — treat as history, not as now:")
+        for r in stale["reasons"]:
+            lines.append(f"     • {r}")
+    lines += [
         f"  Sessions: {n}  |  Updated: {updated}",
         f"  Baseline tone: {baseline_tone} (by mean) / {count_tone} (by count)",
         f"  Tone dist:  {tone_str}",
@@ -181,10 +270,18 @@ def format_card_markdown(model: dict, session_log: list[dict]) -> str:
     avg_len = tracker_mean(style.get("avg_response_length_words", {}))
     hedge = tracker_mean(style.get("hedge_word_frequency", {}))
 
+    stale = staleness_report(model)
+
     lines = [
         "### Lucifer Self-Model",
         f"*{n} sessions, updated {updated}*",
         "",
+    ]
+    if stale["is_stale"]:
+        lines.append("> ⛔ **STALE BASELINE** — " + "; ".join(stale["reasons"]) +
+                     ". Read as history, not as a current portrait.")
+        lines.append("")
+    lines += [
         f"**Baseline tone**: {baseline_tone}",
         f"**Tone distribution**: {tone_str}",
     ]
@@ -229,6 +326,7 @@ def format_card_json(model: dict, session_log: list[dict]) -> str:
         },
         "recent_tones": recent_tones,
         "drift_warnings": warnings,
+        "staleness": staleness_report(model),
         "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
     }
     return json.dumps(card, indent=2)
@@ -240,6 +338,9 @@ def main():
     parser.add_argument("--md", action="store_true", help="Output Markdown")
     parser.add_argument("--warn-only", action="store_true",
                         help="Only output if drift warnings exist")
+    parser.add_argument("--check-stale", action="store_true",
+                        help="Exit 2 (and print reasons to stderr) if the "
+                             "baseline is stale; for lifecycle gating")
     args = parser.parse_args()
 
     model = load_self_model()
@@ -248,6 +349,15 @@ def main():
         sys.exit(1)
 
     session_log = load_session_log()
+
+    # Check-stale mode: a gate the lifecycle can call before trusting the card.
+    if args.check_stale:
+        stale = staleness_report(model)
+        if stale["is_stale"]:
+            print("STALE: " + "; ".join(stale["reasons"]), file=sys.stderr)
+            sys.exit(2)
+        print("fresh", file=sys.stderr)
+        sys.exit(0)
 
     # Warn-only mode: exit silently if no warnings
     if args.warn_only:

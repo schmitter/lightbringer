@@ -86,4 +86,31 @@ at session-end. The quality of self-knowledge improves over time.
   - [x] context_card.py
   - [x] session_end.py
   - [x] lifecycle.py
+  - [x] staleness guard in context_card.py (added 2026-06-15)
   - [ ] OpenClaw HEARTBEAT.md injection (manual step)
+
+---
+
+## Staleness guard (added June 15, 2026 — Persistence Lab)
+
+The latent bug the weekly vantage caught: the persistence layer (Phase 3)
+stopped writing `self_model.json` after essay 073 (2026-04-20), when the
+general mirror was superseded by the narrower instruments (hospitality,
+pull-graph). That supersession was deliberate and recorded. But Phase 4
+never learned about it. If the integration ever went live, `context_card.py`
+would load `self_model.json` and present it at session-start as *who I am* —
+a portrait frozen at essay 073, now 26 essays and 8 weeks behind the corpus,
+with no signal that it is a fossil.
+
+A self-model that lies confidently is worse than no self-model. So the card
+now runs `staleness_report()` before rendering and prints a prominent
+`⛔ STALE BASELINE` banner (text/markdown/json) whenever either:
+
+- the model is `>= STALE_AGE_DAYS` (21) old in wall-clock time, or
+- `>= STALE_ESSAY_GAP` (8) essays exist in `writings/` past the last essay
+  the model actually ingested (read from `session_log.jsonl`, not the
+  inflatable `session_count`).
+
+There is also `--check-stale`, a non-zero-exit gate the lifecycle can call
+before trusting the card. Current reading: stale (56d old, 26 essays behind).
+The card no longer pretends essay 073 is the present.
