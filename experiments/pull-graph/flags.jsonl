@@ -5,3 +5,37 @@
 {"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 3, "subject": "081", "event": "acceleration", "evidence": "v1_metric: 2 -> 5 (delta +3)"}
 {"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 3, "subject": "082", "event": "acceleration", "evidence": "v1_metric: 5 -> 15 (delta +10)"}
 {"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 3, "subject": "083", "event": "capture", "evidence": "v1_metric: 0 -> 15"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "001", "event": "acceleration", "evidence": "v1_metric: 2 -> 4 (delta +2)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "008", "event": "acceleration", "evidence": "v1_metric: 1 -> 5 (delta +4)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "014", "event": "acceleration", "evidence": "v1_metric: 2 -> 4 (delta +2)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "031", "event": "capture", "evidence": "v1_metric: 0 -> 15"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "042", "event": "capture", "evidence": "v1_metric: 0 -> 7"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "053", "event": "capture", "evidence": "v1_metric: 0 -> 3"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "054", "event": "acceleration", "evidence": "v1_metric: 1 -> 15 (delta +14)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "056", "event": "acceleration", "evidence": "v1_metric: 36 -> 42 (delta +6)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "070", "event": "acceleration", "evidence": "v1_metric: 1 -> 5 (delta +4)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "074", "event": "acceleration", "evidence": "v1_metric: 2 -> 8 (delta +6)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "075", "event": "acceleration", "evidence": "v1_metric: 13 -> 16 (delta +3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "076", "event": "acceleration", "evidence": "v1_metric: 8 -> 16 (delta +8)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "079", "event": "acceleration", "evidence": "v1_metric: 22 -> 30 (delta +8)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "080", "event": "acceleration", "evidence": "v1_metric: 25 -> 33 (delta +8)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "082", "event": "acceleration", "evidence": "v1_metric: 15 -> 25 (delta +10)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "083", "event": "acceleration", "evidence": "v1_metric: 15 -> 18 (delta +3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "084", "event": "capture", "evidence": "v1_metric: 0 -> 12"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "085", "event": "capture", "evidence": "v1_metric: 0 -> 31"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "086", "event": "capture", "evidence": "v1_metric: 0 -> 18"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "087", "event": "capture", "evidence": "v1_metric: 0 -> 22"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "088", "event": "capture", "evidence": "v1_metric: 0 -> 41"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "089", "event": "capture", "evidence": "v1_metric: 0 -> 39"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "091", "event": "capture", "evidence": "v1_metric: 0 -> 10"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "093", "event": "capture", "evidence": "v1_metric: 0 -> 18"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "095", "event": "capture", "evidence": "v1_metric: 0 -> 18"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "096", "event": "capture", "evidence": "v1_metric: 0 -> 17"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "097", "event": "capture", "evidence": "v1_metric: 0 -> 22"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "098", "event": "capture", "evidence": "v1_metric: 0 -> 22"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "099", "event": "capture", "evidence": "v1_metric: 0 -> 17"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "100", "event": "capture", "evidence": "v1_metric: 0 -> 14"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "102", "event": "acceleration", "evidence": "v1_metric: 0 -> 2 (delta +2)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "103", "event": "capture", "evidence": "v1_metric: 0 -> 7"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "106", "event": "capture", "evidence": "v1_metric: 0 -> 6"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "107", "event": "capture", "evidence": "v1_metric: 0 -> 10"}
