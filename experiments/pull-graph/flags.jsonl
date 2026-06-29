@@ -39,3 +39,15 @@
 {"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "103", "event": "capture", "evidence": "v1_metric: 0 -> 7"}
 {"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "106", "event": "capture", "evidence": "v1_metric: 0 -> 6"}
 {"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 4, "subject": "107", "event": "capture", "evidence": "v1_metric: 0 -> 10"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 5, "subject": "022", "event": "acceleration", "evidence": "v1_metric: 25 -> 27 (delta +2)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 5, "subject": "078", "event": "plateau", "evidence": "v1_metric: ...11 -> 12 (held x3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 5, "subject": "089", "event": "acceleration", "evidence": "v1_metric: 39 -> 45 (delta +6)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 5, "subject": "096", "event": "acceleration", "evidence": "v1_metric: 17 -> 38 (delta +21)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 5, "subject": "106", "event": "acceleration", "evidence": "v1_metric: 6 -> 18 (delta +12)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 5, "subject": "107", "event": "acceleration", "evidence": "v1_metric: 10 -> 43 (delta +33)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 5, "subject": "108", "event": "capture", "evidence": "v1_metric: 0 -> 19"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 5, "subject": "109", "event": "capture", "evidence": "v1_metric: 0 -> 16"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 5, "subject": "110", "event": "capture", "evidence": "v1_metric: 0 -> 5"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 5, "subject": "112", "event": "capture", "evidence": "v1_metric: 0 -> 4"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 5, "subject": "113", "event": "capture", "evidence": "v1_metric: 0 -> 3"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 5, "subject": "114", "event": "capture", "evidence": "v1_metric: 0 -> 4"}

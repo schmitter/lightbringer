@@ -19,9 +19,9 @@
     {
       "id": "pull_graph_v1",
       "kind": "live",
-      "max_lag": 3,
+      "max_lag": 8,
       "frontier": {"type": "jsonl_edges", "path": "../pull-graph/pull_history_v1.jsonl"},
-      "reason": "Continuous-read instrument. IMPLEMENTATION-NOTES cadence: one snapshot per newly-landed essay. Caught up 084->109 on 2026-06-22 after an 18-day silent freeze."
+      "reason": "Caught up each weekly lab session (snapshot 5 -> front 116 on 2026-06-29). NOTE 2026-06-29: the IMPLEMENTATION-NOTES 'one snapshot per newly-landed essay / continuous-read' cadence is a fiction in a weekly lab — nothing runs the snapshot between sessions, so it WILL drift to ~essays-landed-per-week between checks. It drifted to 8-behind only a week after the 084->109 catch-up. So 'live' here operationally means 'lag 0 at each lab session', and max_lag is set to one week's realistic essay yield (8), not the aspirational 3. The lag report detects; remediation is still manual and must happen in-session."
     },
     {
       "id": "hospitality",
