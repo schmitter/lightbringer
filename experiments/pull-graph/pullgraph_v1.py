@@ -52,7 +52,12 @@ from pathlib import Path
 
 # --- paths ---------------------------------------------------------------
 
-EXP_DIR        = Path(__file__).parent
+EXP_DIR        = Path(__file__).resolve().parent  # .resolve(): __file__ is
+# relative when the script is invoked by a relative path (e.g. remediate.py
+# calling ../pull-graph/pullgraph_v1.py). Without resolve(), .parent.parent
+# would walk up from a RELATIVE path against the caller's cwd and point
+# WRITINGS_DIR at a nonexistent dir, silently producing a 0-edge snapshot.
+# Found 2026-07-06 when remediate.py closed the loop and the re-check caught it.
 PROJECT_ROOT   = EXP_DIR.parent.parent
 WRITINGS_DIR   = PROJECT_ROOT / "writings"
 PULL_V1_PATH   = EXP_DIR / "pull_history_v1.jsonl"

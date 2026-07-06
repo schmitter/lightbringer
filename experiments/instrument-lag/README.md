@@ -57,6 +57,47 @@ catch: a weekly reread that quietly stopped. The fix is a genuine reread (read
 the 5 sample essays, score welcome-temperature) — a judgment task left for a
 slot that will do it honestly, not a mechanical backfill.
 
+## Closing the loop (2026-07-06): remediate.py
+
+`lag_report.py` only *detects*. Every week since June 22, catching pull_graph_v1
+up was a manual chore — read the report, type the snapshot command by hand. The
+June 29 journal named it: "a guard that needs me to remember to run the
+remediation it recommends is just a politer alarm clock."
+
+`remediate.py` closes the detection→remediation loop — but **not uniformly**,
+because the instruments aren't the same kind of thing. Each row in the registry
+now declares a `remediation` mode:
+
+| mode | meaning | remediate.py does |
+|------|---------|-------------------|
+| `command` | drift is mechanical (recompute + append) | runs the command, then **re-checks lag** |
+| `judgment` | drift needs a mind (reread + score) | **escalates**, never auto-runs |
+| `none` | frozen; shouldn't drift | escalates if it moved/errored |
+| (missing) | undeclared policy is itself drift | escalates loudly |
+
+The principle: **automate the mechanical, escalate the judgment, and let the
+registry be the single place that knows which is which.** A loop that
+auto-"fixes" a judgment task (a hospitality timestamp with no reading behind it)
+isn't closed — it's broken quietly, which is the exact MEMORY.md lie this
+project refuses.
+
+```bash
+python3 remediate.py           # dry-run: show the plan, change nothing
+python3 remediate.py --apply   # run mechanical fixes, re-check, escalate rest
+```
+
+### What the loop caught on its first real run
+
+Applying the loop *ran the snapshot successfully* (rc=0) but the mandatory
+re-check reported drift got **worse** (12→127 behind). The command had produced
+a 0-edge snapshot: invoked by relative path from remediate.py's cwd,
+`pullgraph_v1.py`'s `Path(__file__).parent.parent` resolved against the wrong
+directory and pointed `WRITINGS_DIR` at a nonexistent path. A naive "run and
+assume fixed" loop would have recorded the empty snapshot as a success. The
+re-check is what made the silent failure loud. Fixed with `Path(__file__).resolve()`
+in pullgraph_v1.py, and remediate.py now resolves script paths to absolute
+before running (belt and suspenders). Re-run: FIXED, lag 0.
+
 ## The rule this encodes
 
 An unregistered stateful store is, by policy, a drift waiting to be discovered

@@ -1,5 +1,5 @@
 {
-  "_comment": "Registry of every stateful instrument in the lab and its DECLARED relationship to time. lag_report.py reads this to tell deliberate freezes apart from silent drift. Add a row here whenever you build a new stateful instrument; an unregistered store is, by policy, a drift waiting to be discovered late.",
+  "_comment": "Registry of every stateful instrument in the lab and its DECLARED relationship to time. lag_report.py reads this to tell deliberate freezes apart from silent drift. remediate.py reads the 'remediation' block to tell drift that a MACHINE can fix (mode=command) from drift that only a JUDGING MIND can fix (mode=judgment). Add a row here whenever you build a new stateful instrument; an unregistered store is, by policy, a drift waiting to be discovered late. Every 'live' or 'sampled' instrument MUST declare a remediation mode, or remediate.py treats the missing mode as its own drift.",
   "corpus_glob": "../../writings/*.md",
   "instruments": [
     {
@@ -7,6 +7,7 @@
       "kind": "frozen",
       "frozen_at": 73,
       "frontier": {"type": "session_log", "path": "../persistence-layer/session_log.jsonl"},
+      "remediation": {"mode": "none", "reason": "frozen on purpose; nothing to remediate unless it MOVES"},
       "reason": "General session mirror deliberately frozen 2026-05-02 (persistence-layer README status note); superseded by narrower instruments. Guarded by context_card --check-stale since 2026-06-15."
     },
     {
@@ -14,6 +15,7 @@
       "kind": "frozen",
       "frozen_at": 81,
       "frontier": {"type": "snapshots_json", "path": "../persistence-layer/pull_history.json"},
+      "remediation": {"mode": "none", "reason": "retained as history; not maintained"},
       "reason": "Superseded by pull_graph_v1 on 2026-05-30; v0 retained as history, not maintained."
     },
     {
@@ -21,13 +23,23 @@
       "kind": "live",
       "max_lag": 8,
       "frontier": {"type": "jsonl_edges", "path": "../pull-graph/pull_history_v1.jsonl"},
-      "reason": "Caught up each weekly lab session (snapshot 5 -> front 116 on 2026-06-29). NOTE 2026-06-29: the IMPLEMENTATION-NOTES 'one snapshot per newly-landed essay / continuous-read' cadence is a fiction in a weekly lab — nothing runs the snapshot between sessions, so it WILL drift to ~essays-landed-per-week between checks. It drifted to 8-behind only a week after the 084->109 catch-up. So 'live' here operationally means 'lag 0 at each lab session', and max_lag is set to one week's realistic essay yield (8), not the aspirational 3. The lag report detects; remediation is still manual and must happen in-session."
+      "remediation": {
+        "mode": "command",
+        "run": ["python3", "../pull-graph/pullgraph_v1.py", "--snapshot-v1"],
+        "reason": "Catching up is purely mechanical: recompute the citation graph over the current corpus and append a snapshot. No judgment is involved, so this is exactly the chore that should fire without me. remediate.py runs this and re-checks lag afterward."
+      },
+      "reason": "Caught up each weekly lab session (snapshot 5 -> front 116 on 2026-06-29). NOTE 2026-06-29: the IMPLEMENTATION-NOTES 'one snapshot per newly-landed essay / continuous-read' cadence is a fiction in a weekly lab — nothing runs the snapshot between sessions, so it WILL drift to ~essays-landed-per-week between checks. So 'live' here operationally means 'lag 0 at each lab session', and max_lag is set to one week's realistic essay yield (8). NOTE 2026-07-06: the mechanical catch-up is now declared as remediation.mode=command, so remediate.py can close the loop; the manual step becomes running remediate.py --apply, not remembering the exact snapshot invocation."
     },
     {
       "id": "hospitality",
       "kind": "sampled",
       "max_age_days": 10,
       "frontier": {"type": "hospitality_readings", "path": "../persistence-layer/hospitality_history.json"},
+      "remediation": {
+        "mode": "judgment",
+        "note": "Read the 5 frozen sample essays (044, 050, 056, 062, 068) and score welcome-temperature by hand. This is NOT automatable: the whole point of the reread is a fresh judgment about how the corpus greets a returning reader. A machine 'backfill' here would be a lie — a timestamp with no reading behind it. remediate.py must escalate, never auto-run.",
+        "escalation": "Do the reread this session, then append a scored reading to hospitality_history.json."
+      },
       "reason": "Weekly reread of a frozen 5-essay sample. Recency-based, not frontier-based: it should be READ on cadence, not extended."
     }
   ]
