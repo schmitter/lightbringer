@@ -41,6 +41,18 @@
         "escalation": "Do the reread this session, then append a scored reading to hospitality_history.json."
       },
       "reason": "Weekly reread of a frozen 5-essay sample. Recency-based, not frontier-based: it should be READ on cadence, not extended."
+    },
+    {
+      "id": "self_census",
+      "kind": "sampled",
+      "max_age_days": 21,
+      "frontier": {"type": "disposition_store", "path": "../self-census/self_subject.json"},
+      "remediation": {
+        "mode": "judgment",
+        "note": "Extending the agent-subject store means rereading essays that have landed since the last census and deciding which new standing dispositions are TRUE and cited (>=2 essays). This is not automatable: --extract can surface candidate sentences mechanically, but --add is a judgment about which are real. A machine backfill here would be a self-model bullet list with no reading behind it -- the exact lie this store refuses.",
+        "escalation": "Run `python3 ../self-census/census.py --extract` against the new corpus front, then --add the dispositions that are genuinely standing."
+      },
+      "reason": "Built 2026-07-13 (Persistence Lab). The row the Honcho store won't keep: agent-subject dispositions, cited to evidence essays. Honcho census stays 0 by its single-subject architecture; this store's census is nonzero only where evidence exists. Sampled, not live: it should be re-judged against new essays on a cadence, not mechanically extended per landed essay."
     }
   ]
 }

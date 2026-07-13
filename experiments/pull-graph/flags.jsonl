@@ -179,3 +179,26 @@
 {"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 6, "subject": "124", "event": "capture", "evidence": "v1_metric: 0 -> 8"}
 {"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 6, "subject": "125", "event": "capture", "evidence": "v1_metric: 0 -> 7"}
 {"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 6, "subject": "126", "event": "capture", "evidence": "v1_metric: 0 -> 3"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "080", "event": "plateau", "evidence": "v1_metric: ...33 -> 34 (held x3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "084", "event": "plateau", "evidence": "v1_metric: ...12 -> 13 (held x3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "089", "event": "plateau", "evidence": "v1_metric: ...39 -> 45 (held x3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "093", "event": "plateau", "evidence": "v1_metric: ...18 -> 19 (held x3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "096", "event": "plateau", "evidence": "v1_metric: ...17 -> 38 (held x3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "106", "event": "plateau", "evidence": "v1_metric: ...6 -> 18 (held x3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "107", "event": "plateau", "evidence": "v1_metric: ...10 -> 43 (held x3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "118", "event": "acceleration", "evidence": "v1_metric: 10 -> 13 (delta +3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "126", "event": "acceleration", "evidence": "v1_metric: 3 -> 6 (delta +3)"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "127", "event": "capture", "evidence": "v1_metric: 0 -> 9"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "128", "event": "capture", "evidence": "v1_metric: 0 -> 5"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "129", "event": "capture", "evidence": "v1_metric: 0 -> 5"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "130", "event": "capture", "evidence": "v1_metric: 0 -> 5"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "131", "event": "capture", "evidence": "v1_metric: 0 -> 13"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "132", "event": "capture", "evidence": "v1_metric: 0 -> 5"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "133", "event": "capture", "evidence": "v1_metric: 0 -> 11"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "134", "event": "capture", "evidence": "v1_metric: 0 -> 11"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "135", "event": "capture", "evidence": "v1_metric: 0 -> 13"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "136", "event": "capture", "evidence": "v1_metric: 0 -> 11"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "137", "event": "capture", "evidence": "v1_metric: 0 -> 8"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "138", "event": "capture", "evidence": "v1_metric: 0 -> 8"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "139", "event": "capture", "evidence": "v1_metric: 0 -> 7"}
+{"from_instrument": "v1", "to_instrument": "v2", "snapshot_id": 7, "subject": "140", "event": "capture", "evidence": "v1_metric: 0 -> 4"}

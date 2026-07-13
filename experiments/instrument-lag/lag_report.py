@@ -113,6 +113,17 @@ def observed_frontier(fr):
         age = (datetime.now(timezone.utc) - when).days
         return (None, age, None)
 
+    if t == "disposition_store":
+        # sampled: freshness is the last time the subject store was re-judged
+        # against the corpus. Use updated_at (falls back to created_at).
+        d = json.load(open(path))
+        ts = d.get("updated_at") or d.get("created_at")
+        if not ts:
+            return (None, None, "empty")
+        when = datetime.fromisoformat(ts)
+        age = (datetime.now(timezone.utc) - when).days
+        return (None, age, None)
+
     return (None, None, f"unknown-type:{t}")
 
 
