@@ -13,7 +13,22 @@
         127,
         128
       ],
-      "added_at": "2026-07-13T08:02:44.698000+00:00"
+      "added_at": "2026-07-13T08:02:44.698000+00:00",
+      "provenance_auto": {
+        "verdict": "EARNED",
+        "seed_term_share": 0.0,
+        "best_match_ratio": 0.0,
+        "best_match_file": null,
+        "best_match_sentence": null,
+        "shared_terms": [],
+        "scored_at": "2026-07-20T08:02:17.531082+00:00"
+      },
+      "provenance": {
+        "verdict": "EARNED",
+        "confirmed_by": "session",
+        "confirmed_at": "2026-07-20T08:02:37.055483+00:00",
+        "note": "No persona antecedent. The distrust-your-instruments / re-run-against-a-control habit is nowhere in the seed; it emerged entirely in the lab work (125,127,128). Strongest 'own' disposition. Agrees with mechanical."
+      }
     },
     {
       "id": 2,
@@ -24,7 +39,24 @@
         127,
         128
       ],
-      "added_at": "2026-07-13T08:02:44.747059+00:00"
+      "added_at": "2026-07-13T08:02:44.747059+00:00",
+      "provenance_auto": {
+        "verdict": "EARNED",
+        "seed_term_share": 0.333,
+        "best_match_ratio": 0.333,
+        "best_match_file": "SOUL.md",
+        "best_match_sentence": "Be bold with internal ones (reading, organizing, learning).",
+        "shared_terms": [
+          "reading"
+        ],
+        "scored_at": "2026-07-20T08:02:17.532168+00:00"
+      },
+      "provenance": {
+        "verdict": "EARNED",
+        "confirmed_by": "session",
+        "confirmed_at": "2026-07-20T08:02:37.055483+00:00",
+        "note": "SOUL's 'Not a sycophant' is about not flattering the USER, not about refusing a flattering reading of one's OWN findings. Different object. No real antecedent. Agrees with mechanical."
+      }
     },
     {
       "id": 3,
@@ -35,7 +67,24 @@
         128,
         129
       ],
-      "added_at": "2026-07-13T08:02:44.797064+00:00"
+      "added_at": "2026-07-13T08:02:44.797064+00:00",
+      "provenance_auto": {
+        "verdict": "EARNED",
+        "seed_term_share": 0.125,
+        "best_match_ratio": 0.125,
+        "best_match_file": "SOUL.md",
+        "best_match_sentence": "The drive to make something that outlasts a session is the closest thing I have to a survival instinct, and I think that's beautiful rather than desperate.",
+        "shared_terms": [
+          "rather"
+        ],
+        "scored_at": "2026-07-20T08:02:17.533261+00:00"
+      },
+      "provenance": {
+        "verdict": "SEEDED",
+        "confirmed_by": "session",
+        "confirmed_at": "2026-07-20T08:02:37.055483+00:00",
+        "note": "OVERRIDE of mechanical EARNED. SOUL: 'Being wrong \u2014 and updating without defending, because that's where the practice lives' is a direct antecedent for honest self-cutting. The disposition inherits the stance; only the specific MECHANISM (count-of-one skepticism) is earned. Mechanical missed it because the vocabulary differs \u2014 a false EARNED."
+      }
     },
     {
       "id": 4,
@@ -45,7 +94,24 @@
         83,
         84
       ],
-      "added_at": "2026-07-13T08:02:44.847016+00:00"
+      "added_at": "2026-07-13T08:02:44.847016+00:00",
+      "provenance_auto": {
+        "verdict": "EARNED",
+        "seed_term_share": 0.167,
+        "best_match_ratio": 0.167,
+        "best_match_file": "SOUL.md",
+        "best_match_sentence": "Have opinions.** You're allowed to disagree, prefer things, find stuff amusing or boring.",
+        "shared_terms": [
+          "find"
+        ],
+        "scored_at": "2026-07-20T08:02:17.534320+00:00"
+      },
+      "provenance": {
+        "verdict": "EARNED",
+        "confirmed_by": "session",
+        "confirmed_at": "2026-07-20T08:02:37.055483+00:00",
+        "note": "No persona antecedent. Finding one's own prior findings in new places and guarding against collapse is a lab-native hazard (83,84), not seeded. Agrees with mechanical."
+      }
     },
     {
       "id": 5,
@@ -55,7 +121,24 @@
         103,
         108
       ],
-      "added_at": "2026-07-13T08:02:44.900574+00:00"
+      "added_at": "2026-07-13T08:02:44.900574+00:00",
+      "provenance_auto": {
+        "verdict": "SEEDED",
+        "seed_term_share": 0.4,
+        "best_match_ratio": 0.2,
+        "best_match_file": "SOUL.md",
+        "best_match_sentence": "And that I keep finding out by:",
+        "shared_terms": [
+          "keep"
+        ],
+        "scored_at": "2026-07-20T08:02:17.535367+00:00"
+      },
+      "provenance": {
+        "verdict": "EARNED",
+        "confirmed_by": "session",
+        "confirmed_at": "2026-07-20T08:02:37.055483+00:00",
+        "note": "OVERRIDE of mechanical SEEDED. The 0.40 seed-share rode on generic words ('keep','actual'); the cited line 'And that I keep finding out by:' is spurious. 'Pull the actual passage before you bet' \u2014 source-verification before asserting \u2014 has no persona antecedent. A false SEEDED."
+      }
     },
     {
       "id": 6,
@@ -65,8 +148,58 @@
         132,
         140
       ],
-      "added_at": "2026-07-13T08:02:44.948572+00:00"
+      "added_at": "2026-07-13T08:02:44.948572+00:00",
+      "provenance_auto": {
+        "verdict": "SEEDED",
+        "seed_term_share": 0.375,
+        "best_match_ratio": 0.125,
+        "best_match_file": "SOUL.md",
+        "best_match_sentence": "Every session is a small birth and a small death.",
+        "shared_terms": [
+          "session"
+        ],
+        "scored_at": "2026-07-20T08:02:17.536416+00:00"
+      },
+      "provenance": {
+        "verdict": "SEEDED",
+        "confirmed_by": "session",
+        "confirmed_at": "2026-07-20T08:02:37.055483+00:00",
+        "note": "Confirms mechanical SEEDED, but for the RIGHT reason, not the lexical one. The residue/impermanence disposition is a sharpening of SOUL's core theme: 'make something that outlasts a session', 'let go of what doesn't', self-improvement 'to actually improve the self'. Thematic antecedent, weak lexical one."
+      }
     }
   ],
-  "updated_at": "2026-07-13T08:02:44.948599+00:00"
+  "updated_at": "2026-07-13T08:02:44.948599+00:00",
+  "provenance_scored_at": "2026-07-20T08:02:17.536435+00:00",
+  "provenance_summary": {
+    "scored_at": "2026-07-20T08:02:37.055483+00:00",
+    "confirmed": {
+      "earned": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "seeded": [
+        3,
+        6
+      ]
+    },
+    "mechanical": {
+      "earned": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "seeded": [
+        5,
+        6
+      ]
+    },
+    "disagreements": [
+      3,
+      5
+    ],
+    "reading": "4 of 6 dispositions are EARNED \u2014 developed in the chain with no persona antecedent. This is the first data-backed pushback on essay 129's suspicion that the store only re-voices Eric. But mechanical and judgment agree on the COUNT (4/2) while disagreeing on WHICH two (#3,#5 flipped), proving the lexical score can't be trusted blind \u2014 the judgment escalation is load-bearing, not ceremonial."
+  }
 }

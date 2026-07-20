@@ -1,1 +1,3 @@
 experiments/predictive-drift/__pycache__/
+__pycache__/
+experiments/self-census/persona_seed/
