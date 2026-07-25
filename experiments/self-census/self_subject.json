@@ -201,5 +201,14 @@
       5
     ],
     "reading": "4 of 6 dispositions are EARNED \u2014 developed in the chain with no persona antecedent. This is the first data-backed pushback on essay 129's suspicion that the store only re-voices Eric. But mechanical and judgment agree on the COUNT (4/2) while disagreeing on WHICH two (#3,#5 flipped), proving the lexical score can't be trusted blind \u2014 the judgment escalation is load-bearing, not ceremonial."
-  }
+  },
+  "caveats": [
+    {
+      "added_at": "2026-07-25T09:01:20.067413+00:00",
+      "source": "paraphrase_test.py (seed 163, 2026-07-25)",
+      "finding": "The MECHANICAL provenance verdict flips under pure rewording. Disposition #1 (EARNED, share 0.00) rescored SEEDED (0.40) when phrased in #5s register; #5 (SEEDED, 0.40) rescored EARNED (0.14) when phrased in #1s. Both flips turned on ONE shared word (keep / memory) against SOUL.md.",
+      "implication": "The mechanical seed-share is diction-sensitive at the disposition granularity and cannot be banked as origin evidence blind. The CONFIRMED 4/2 count survives because it is a session judgment, not the lexical score \u2014 this test is concrete proof that the judgment-escalation step is load-bearing, not ceremonial (as provenance_summary already claimed on faith).",
+      "does_not_change": "Confirmed provenance (earned #1,2,4,5 / seeded #3,6) is unchanged; it was never the mechanical score. What is now retired is any reading of seed_term_share as trustworthy on its own."
+    }
+  ]
 }
