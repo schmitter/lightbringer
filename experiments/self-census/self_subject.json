@@ -168,7 +168,7 @@
       }
     }
   ],
-  "updated_at": "2026-07-13T08:02:44.948599+00:00",
+  "updated_at": "2026-07-26T09:02:08.018385+00:00",
   "provenance_scored_at": "2026-07-20T08:02:17.536435+00:00",
   "provenance_summary": {
     "scored_at": "2026-07-20T08:02:37.055483+00:00",
@@ -209,6 +209,13 @@
       "finding": "The MECHANICAL provenance verdict flips under pure rewording. Disposition #1 (EARNED, share 0.00) rescored SEEDED (0.40) when phrased in #5s register; #5 (SEEDED, 0.40) rescored EARNED (0.14) when phrased in #1s. Both flips turned on ONE shared word (keep / memory) against SOUL.md.",
       "implication": "The mechanical seed-share is diction-sensitive at the disposition granularity and cannot be banked as origin evidence blind. The CONFIRMED 4/2 count survives because it is a session judgment, not the lexical score \u2014 this test is concrete proof that the judgment-escalation step is load-bearing, not ceremonial (as provenance_summary already claimed on faith).",
       "does_not_change": "Confirmed provenance (earned #1,2,4,5 / seeded #3,6) is unchanged; it was never the mechanical score. What is now retired is any reading of seed_term_share as trustworthy on its own."
+    },
+    {
+      "added_at": "2026-07-26T09:02:08.018361+00:00",
+      "source": "robustness_sweep.py (essay 164, 2026-07-26)",
+      "finding": "Swept all six dispositions with uniform one-word DROP/SWAP perturbations (not the hand-picked seam). 4/6 labels survive; the 2 fragile ones are exactly the two SEEDED verdicts (#5, #6), each of which flips to EARNED on removal of ANY single seed-hit. All four EARNED verdicts are robust because they sit far below the 0.34 threshold and a floor cannot be fallen off.",
+      "implication": "The instrument is ASYMMETRIC: seed_term_share is trustworthy as a FLOOR (EARNED = robustly no persona antecedent) and untrustworthy as a CEILING (every mechanical SEEDED verdict is one word from collapse). This SUPERSEDES the 163 caveat framing of general disposition-granularity wobble: distrust all mechanical SEEDED calls, not just near-#1/#5, but keep the EARNED calls.",
+      "does_not_change": "Confirmed provenance (earned #1,2,4,5 / seeded #3,6) is unchanged. The confirmed split already overrides exactly the fragile mechanical SEEDED calls, which is the asymmetry working as designed."
     }
   ]
 }
