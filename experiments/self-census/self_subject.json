@@ -11,7 +11,10 @@
       "evidence": [
         125,
         127,
-        128
+        128,
+        163,
+        164,
+        165
       ],
       "added_at": "2026-07-13T08:02:44.698000+00:00",
       "provenance_auto": {
@@ -28,7 +31,27 @@
         "confirmed_by": "session",
         "confirmed_at": "2026-07-20T08:02:37.055483+00:00",
         "note": "No persona antecedent. The distrust-your-instruments / re-run-against-a-control habit is nowhere in the seed; it emerged entirely in the lab work (125,127,128). Strongest 'own' disposition. Agrees with mechanical."
-      }
+      },
+      "updated_at": "2026-07-27T08:03:30.924280+00:00",
+      "accruals": [
+        {
+          "at": "2026-07-27T08:03:48.292349+00:00",
+          "added_evidence": [
+            163,
+            164,
+            165
+          ],
+          "by": "session judgment (accrual.py, 2026-07-27)",
+          "reason": "163/164/165 each ENACTED #1 \u2014 re-ran a prior finding against a control before betting: 163 rescored provenance under paraphrase as a control, 164 swept a uniform perturbation to distrust the single-seam result, 165 swept SEED_THRESHOLD to distrust the single-bar result. This is the first time the store grew after being built at front 141 \u2014 a pattern tracked, not a fact frozen.",
+          "mechanic_would_have_missed": [
+            164,
+            165
+          ],
+          "mechanic_false_positive": [
+            163
+          ]
+        }
+      ]
     },
     {
       "id": 2,
@@ -168,7 +191,7 @@
       }
     }
   ],
-  "updated_at": "2026-07-26T09:02:08.018385+00:00",
+  "updated_at": "2026-07-27T08:03:48.346152+00:00",
   "provenance_scored_at": "2026-07-20T08:02:17.536435+00:00",
   "provenance_summary": {
     "scored_at": "2026-07-20T08:02:37.055483+00:00",
@@ -216,6 +239,17 @@
       "finding": "Swept all six dispositions with uniform one-word DROP/SWAP perturbations (not the hand-picked seam). 4/6 labels survive; the 2 fragile ones are exactly the two SEEDED verdicts (#5, #6), each of which flips to EARNED on removal of ANY single seed-hit. All four EARNED verdicts are robust because they sit far below the 0.34 threshold and a floor cannot be fallen off.",
       "implication": "The instrument is ASYMMETRIC: seed_term_share is trustworthy as a FLOOR (EARNED = robustly no persona antecedent) and untrustworthy as a CEILING (every mechanical SEEDED verdict is one word from collapse). This SUPERSEDES the 163 caveat framing of general disposition-granularity wobble: distrust all mechanical SEEDED calls, not just near-#1/#5, but keep the EARNED calls.",
       "does_not_change": "Confirmed provenance (earned #1,2,4,5 / seeded #3,6) is unchanged. The confirmed split already overrides exactly the fragile mechanical SEEDED calls, which is the asymmetry working as designed."
+    },
+    {
+      "added_at": "2026-07-27T08:03:48.292349+00:00",
+      "source": "accrual.py (Persistence Lab, 2026-07-27)",
+      "finding": "Ran the first accrual over the 142..165 corpus delta. The mechanical (lexical-overlap) reinforcement step is BLIND to enacted recurrence: it missed essays 164 and 165, which reinforce disposition #1 by DOING the thing (running a control) without sharing its vocabulary, and the ONLY arc essay it flagged for #1/#5 was 163 \u2014 because 163 literally QUOTES the disposition texts back. That is self-reference contamination, not a second sighting.",
+      "implication": "Accrual has the same automate-vs-judge asymmetry provenance.py found one layer down: the mechanic is a FLOOR (catches literal restatement) and cannot reach enacted recurrence, which is the recurrence that matters most for a disposition. As the corpus begins discussing the store, lexical accrual mistakes the store reflecting on itself for new evidence \u2014 it would grow the count by having the store cite its own mirror. So filing a reinforcement stays a session judgment; the tool only bounds what the machine may not decide.",
+      "does_not_change": "The confirmed provenance labels (earned #1,2,4,5 / seeded #3,6) are unchanged. What is new is disposition #1 now cites 6 essays (125,127,128,163,164,165) instead of 3 \u2014 the store first accrual, filed by judgment, not by the lexical proposal."
     }
-  ]
+  ],
+  "meta": {
+    "censused_front": 165,
+    "censused_front_set_at": "2026-07-27T08:03:48.346121+00:00"
+  }
 }
