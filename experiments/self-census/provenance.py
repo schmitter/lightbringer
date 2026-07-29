@@ -173,6 +173,11 @@ def discriminate(apply_proposal):
     seeded, earned = [], []
     print("PROVENANCE — is each disposition SEEDED (Eric-authored) or EARNED?")
     print("=" * 68)
+    print("DEPRECATED (essays 166-168): `seed_term_share` and the SEEDED/EARNED")
+    print("verdict it drives are one-word-fragile lexical noise; they never")
+    print("entered census.py output and must NOT sit next to a verdict as if they")
+    print("corroborated a self. Kept only as the record of why the number left.")
+    print("=" * 68)
     for d in ds:
         dt = content_terms(d["text"])
         # measure against the union of persona terms first (cheap gate)...
