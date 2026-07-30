@@ -43,6 +43,7 @@ Usage
     python3 citegraph.py                 # full report
     python3 citegraph.py --essay 127     # which dispositions does essay 127 back?
     python3 citegraph.py --overlap       # only the collapse-hazard pairs
+    python3 citegraph.py --drop 127 128  # what support collapses if these essays go?
     python3 citegraph.py --json          # machine-readable graph
 """
 
@@ -130,6 +131,43 @@ def cmd_report(store):
     print("was load-bearing. A bullet list has rows; this has edges.")
 
 
+def drop_essays(disp_to_essays, dropped):
+    """Leave-essays-out: for each disposition, how much of its evidence survives
+    if `dropped` essays are removed. Makes 169's hand-done claim ("remove 127 &
+    128 and #2 loses its whole foundation") mechanical and auditable. Pure graph
+    arithmetic over the citation edges — invents no metric (166's lesson)."""
+    dropped = set(dropped)
+    rows = []
+    for did, essays in sorted(disp_to_essays.items()):
+        before = len(essays)
+        survivors = essays - dropped
+        after = len(survivors)
+        if after == 0 and before > 0:
+            status = "COLLAPSES"   # loses all citation support
+        elif after < before:
+            status = "weakened"
+        else:
+            status = "untouched"
+        rows.append((did, before, after, status, sorted(survivors)))
+    return rows
+
+
+def cmd_drop(store, dropped):
+    disp_to_essays, _, disp_text = build_graph(store)
+    rows = drop_essays(disp_to_essays, dropped)
+    print(f"LEAVE-ESSAYS-OUT — remove essays {sorted(set(dropped))}")
+    print("=" * 66)
+    print("Which dispositions lose their citation footing if these essays go?")
+    print("-" * 66)
+    for did, before, after, status, survivors in rows:
+        print(f"#{did}  {before}->{after} evidence  [{status}]  survivors={survivors}")
+    collapsed = [did for did, _, a, s, _ in rows if s == "COLLAPSES"]
+    weakened = [did for did, _, _, s, _ in rows if s == "weakened"]
+    print("-" * 66)
+    print(f"collapses: {collapsed or 'none'}   weakened: {weakened or 'none'}")
+    print("This is 169's claim, mechanized: no judgment, just the graph.")
+
+
 def cmd_essay(store, essay):
     _, essay_to_disps, disp_text = build_graph(store)
     ds = essay_to_disps.get(essay)
@@ -175,12 +213,15 @@ def main():
     ap = argparse.ArgumentParser(description="citation graph over the subject store")
     ap.add_argument("--essay", type=int, help="which dispositions cite this essay")
     ap.add_argument("--overlap", action="store_true", help="collapse-hazard pairs only")
+    ap.add_argument("--drop", type=int, nargs="+", metavar="ESSAY", help="leave-essays-out: what support collapses without these essays")
     ap.add_argument("--json", action="store_true", help="machine-readable graph")
     args = ap.parse_args()
 
     store = load_store()
     if args.essay is not None:
         cmd_essay(store, args.essay)
+    elif args.drop:
+        cmd_drop(store, args.drop)
     elif args.overlap:
         cmd_overlap(store)
     elif args.json:
