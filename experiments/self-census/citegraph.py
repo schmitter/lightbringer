@@ -168,6 +168,73 @@ def cmd_drop(store, dropped):
     print("This is 169's claim, mechanized: no judgment, just the graph.")
 
 
+def essay_date(essay):
+    """Surface the date the store's evidence already carries — the git add-date
+    of the essay file. Read-only: no new number, no score (166's lesson). If the
+    file or git history is unavailable, fall back to filesystem mtime, then None."""
+    import subprocess
+    from datetime import datetime
+    root = HERE.parent.parent  # repo root: self-census -> experiments -> repo
+    matches = sorted(
+        p for p in (root / "writings").glob(f"{essay:03d}-*.md")
+        if "-seed-" not in p.name and not p.name.endswith(".fp.json")
+    )
+    # prefer the essay file, not a seed file
+    real = [p for p in matches if not p.stem.split("-", 1)[-1].startswith("seed")]
+    path = (real or matches or [None])[0]
+    if path is None:
+        return None, None
+    try:
+        out = subprocess.run(
+            ["git", "log", "--diff-filter=A", "--format=%cs", "-1", "--", str(path)],
+            cwd=root, capture_output=True, text=True, timeout=10,
+        )
+        d = out.stdout.strip()
+        if d:
+            return d, path.name
+    except Exception:
+        pass
+    ts = datetime.fromtimestamp(path.stat().st_mtime).strftime("%Y-%m-%d")
+    return ts, path.name
+
+
+def _isoweek(datestr):
+    from datetime import date
+    y, m, d = (int(x) for x in datestr.split("-"))
+    iso = date(y, m, d).isocalendar()
+    return f"{iso[0]}-W{iso[1]:02d}"
+
+
+def cmd_dates(store):
+    """171's task: surface the timestamps the store already carries, so the
+    survivor question (170) can be read as temporal spread instead of ranked.
+    For each disposition, print its evidence essays with git add-dates and the
+    ISO week — no independence score (that would be dodging, per seed 171)."""
+    disp_to_essays, _, disp_text = build_graph(store)
+    print("EVIDENCE DATES — the timestamps the store already holds")
+    print("=" * 66)
+    print("Per disposition: each cited essay with its git add-date and ISO week.")
+    print("No score (seed 171): read whether survivors cluster or spread.")
+    print("-" * 66)
+    for did in sorted(disp_to_essays):
+        essays = sorted(disp_to_essays[did])
+        print(f"#{did}: {disp_text[did]}")
+        weeks = []
+        for e in essays:
+            d, name = essay_date(e)
+            wk = _isoweek(d) if d else "?"
+            weeks.append(wk)
+            print(f"     essay {e:>3}  {d or '(no date)':>10}  {wk}")
+        span = sorted(set(w for w in weeks if w != "?"))
+        verdict = "single week" if len(span) == 1 else f"{len(span)} weeks"
+        print(f"     -> evidence spans {verdict}: {span}")
+        print()
+    print("-" * 66)
+    print("Read cold: a disposition whose evidence sits in one ISO week is the")
+    print("corpus echoing itself; one that spreads across weeks is a sighting")
+    print("the agent returned to over time. That spread is what to persist.")
+
+
 def cmd_essay(store, essay):
     _, essay_to_disps, disp_text = build_graph(store)
     ds = essay_to_disps.get(essay)
@@ -214,6 +281,7 @@ def main():
     ap.add_argument("--essay", type=int, help="which dispositions cite this essay")
     ap.add_argument("--overlap", action="store_true", help="collapse-hazard pairs only")
     ap.add_argument("--drop", type=int, nargs="+", metavar="ESSAY", help="leave-essays-out: what support collapses without these essays")
+    ap.add_argument("--dates", action="store_true", help="surface each disposition's evidence dates + ISO week (read-only)")
     ap.add_argument("--json", action="store_true", help="machine-readable graph")
     args = ap.parse_args()
 
@@ -222,6 +290,8 @@ def main():
         cmd_essay(store, args.essay)
     elif args.drop:
         cmd_drop(store, args.drop)
+    elif args.dates:
+        cmd_dates(store)
     elif args.overlap:
         cmd_overlap(store)
     elif args.json:
