@@ -235,6 +235,55 @@ def cmd_dates(store):
     print("the agent returned to over time. That spread is what to persist.")
 
 
+def _week_ordinal(isoweek):
+    """Monotonic week index from an 'YYYY-Www' label, so spans subtract cleanly.
+    All the corpus lives in 2026, but this stays correct across a year boundary
+    by counting whole ISO weeks since an epoch year."""
+    y, w = isoweek.split("-W")
+    return int(y) * 53 + int(w)
+
+
+def cmd_spread(store):
+    """173's task: express the temporal-spread field 172 read by eye as one
+    integer the store already holds. For each disposition, compute the ISO-week
+    span (max_week - min_week) and the count of DISTINCT weeks its evidence
+    touches. No ranking of dispositions against each other (seed 173: measure
+    the one committed prediction, don't leaderboard the corpus)."""
+    disp_to_essays, _, disp_text = build_graph(store)
+    print("EVIDENCE SPREAD — temporal independence as one integer")
+    print("=" * 66)
+    print("Per disposition: ISO-week span (max-min) and distinct-week count.")
+    print("Span 0 / 1 distinct week = evidence written in one sitting (echo).")
+    print("-" * 66)
+    results = {}
+    for did in sorted(disp_to_essays):
+        essays = sorted(disp_to_essays[did])
+        weeks = []
+        for e in essays:
+            d, _ = essay_date(e)
+            if d:
+                weeks.append(_isoweek(d))
+        distinct = sorted(set(weeks))
+        if distinct:
+            ords = [_week_ordinal(w) for w in distinct]
+            span = max(ords) - min(ords)
+        else:
+            span = 0
+        results[did] = (span, len(distinct), distinct)
+        print(f"#{did}: span={span}w  distinct_weeks={len(distinct)}  {distinct}")
+        print(f"     {disp_text[did]}")
+        print()
+    print("-" * 66)
+    print("172's committed prediction: #5 and #6 rest on a single ISO week")
+    print("(span 0, distinct 1) despite sounding most confident; #1 spreads.")
+    print("Measured, not eyeballed:")
+    for did in (1, 2, 5, 6):
+        if did in results:
+            span, nd, _ = results[did]
+            print(f"     #{did}: span={span}w  distinct_weeks={nd}")
+    return results
+
+
 def cmd_essay(store, essay):
     _, essay_to_disps, disp_text = build_graph(store)
     ds = essay_to_disps.get(essay)
@@ -282,6 +331,7 @@ def main():
     ap.add_argument("--overlap", action="store_true", help="collapse-hazard pairs only")
     ap.add_argument("--drop", type=int, nargs="+", metavar="ESSAY", help="leave-essays-out: what support collapses without these essays")
     ap.add_argument("--dates", action="store_true", help="surface each disposition's evidence dates + ISO week (read-only)")
+    ap.add_argument("--spread", action="store_true", help="ISO-week span + distinct-week count per disposition (read-only)")
     ap.add_argument("--json", action="store_true", help="machine-readable graph")
     args = ap.parse_args()
 
@@ -292,6 +342,8 @@ def main():
         cmd_drop(store, args.drop)
     elif args.dates:
         cmd_dates(store)
+    elif args.spread:
+        cmd_spread(store)
     elif args.overlap:
         cmd_overlap(store)
     elif args.json:
