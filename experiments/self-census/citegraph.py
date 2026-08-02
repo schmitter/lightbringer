@@ -284,6 +284,64 @@ def cmd_spread(store):
     return results
 
 
+def cmd_independence(store):
+    """175's task: read a disposition's independence as its distinct-write-week
+    count STRAIGHT FROM THE STORE — zero git, zero filesystem. This consumes the
+    `evidence_weeks` map persist_weeks.py wrote. It is the store answering the
+    independence question by itself, where `--spread` re-derives the same number
+    from git history on every run.
+
+    Then it proves the two agree: for each disposition it compares the
+    store-backed distinct-week count against the git-backed one from cmd_spread.
+    If they disagree, the store's provenance is wrong and THAT is the finding
+    (seed 175: name it, don't average)."""
+    missing = [d["id"] for d in store["dispositions"] if "evidence_weeks" not in d]
+    if missing:
+        print("Store has no evidence_weeks yet for dispositions:", missing)
+        print("Run:  python3 persist_weeks.py   then re-run --independence.")
+        return None
+
+    print("INDEPENDENCE — distinct write-weeks, read from the store")
+    print("=" * 66)
+    print("Store-backed: zero git calls. Independence = len(distinct weeks).")
+    print("Null to beat is 1 — evidence inside a single week is an echo.")
+    print("-" * 66)
+    store_counts = {}
+    for d in sorted(store["dispositions"], key=lambda x: x["id"]):
+        did = d["id"]
+        weeks = [w for w in d["evidence_weeks"].values() if w]
+        distinct = sorted(set(weeks))
+        store_counts[did] = len(distinct)
+        print(f"#{did}: distinct_weeks={len(distinct)}  {distinct}")
+    print()
+
+    # Cross-check against the git-backed spread view — the two must agree.
+    print("CROSS-CHECK — store-backed vs git-backed (--spread)")
+    print("-" * 66)
+    import io, contextlib
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        git_results = cmd_spread(store)  # {did: (span, n_distinct, weeks)}
+    all_agree = True
+    for did in sorted(store_counts):
+        store_n = store_counts[did]
+        git_n = git_results[did][1] if did in git_results else None
+        mark = "ok" if store_n == git_n else "DISAGREE"
+        if store_n != git_n:
+            all_agree = False
+        print(f"#{did}: store={store_n}  git={git_n}  [{mark}]")
+    print("-" * 66)
+    if all_agree:
+        print("All six agree. The field is load-bearing IN THE STORE now, not")
+        print("re-derived: --independence answered with no external oracle. The")
+        print("flat-markdown -> JSON migration finally closed on this field.")
+    else:
+        print("MISMATCH. The store thinks a different week than git for some")
+        print("essay — a provenance bug --spread was silently absorbing. Name it")
+        print("in the essay; do not average the two (seed 175).")
+    return store_counts, all_agree
+
+
 def cmd_essay(store, essay):
     _, essay_to_disps, disp_text = build_graph(store)
     ds = essay_to_disps.get(essay)
@@ -331,7 +389,8 @@ def main():
     ap.add_argument("--overlap", action="store_true", help="collapse-hazard pairs only")
     ap.add_argument("--drop", type=int, nargs="+", metavar="ESSAY", help="leave-essays-out: what support collapses without these essays")
     ap.add_argument("--dates", action="store_true", help="surface each disposition's evidence dates + ISO week (read-only)")
-    ap.add_argument("--spread", action="store_true", help="ISO-week span + distinct-week count per disposition (read-only)")
+    ap.add_argument("--spread", action="store_true", help="ISO-week span + distinct-week count per disposition (git-backed)")
+    ap.add_argument("--independence", action="store_true", help="distinct write-weeks read from the store (zero git) + cross-check vs --spread")
     ap.add_argument("--json", action="store_true", help="machine-readable graph")
     args = ap.parse_args()
 
@@ -344,6 +403,8 @@ def main():
         cmd_dates(store)
     elif args.spread:
         cmd_spread(store)
+    elif args.independence:
+        cmd_independence(store)
     elif args.overlap:
         cmd_overlap(store)
     elif args.json:

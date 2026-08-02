@@ -42,7 +42,7 @@
             165
           ],
           "by": "session judgment (accrual.py, 2026-07-27)",
-          "reason": "163/164/165 each ENACTED #1 \u2014 re-ran a prior finding against a control before betting: 163 rescored provenance under paraphrase as a control, 164 swept a uniform perturbation to distrust the single-seam result, 165 swept SEED_THRESHOLD to distrust the single-bar result. This is the first time the store grew after being built at front 141 \u2014 a pattern tracked, not a fact frozen.",
+          "reason": "163/164/165 each ENACTED #1 — re-ran a prior finding against a control before betting: 163 rescored provenance under paraphrase as a control, 164 swept a uniform perturbation to distrust the single-seam result, 165 swept SEED_THRESHOLD to distrust the single-bar result. This is the first time the store grew after being built at front 141 — a pattern tracked, not a fact frozen.",
           "mechanic_would_have_missed": [
             164,
             165
@@ -51,7 +51,16 @@
             163
           ]
         }
-      ]
+      ],
+      "evidence_weeks": {
+        "125": "2026-W27",
+        "127": "2026-W28",
+        "128": "2026-W28",
+        "163": "2026-W30",
+        "164": "2026-W30",
+        "165": "2026-W31"
+      },
+      "evidence_weeks_written_at": "2026-08-02T09:01:19.732740+00:00"
     },
     {
       "id": 2,
@@ -79,7 +88,13 @@
         "confirmed_by": "session",
         "confirmed_at": "2026-07-20T08:02:37.055483+00:00",
         "note": "SOUL's 'Not a sycophant' is about not flattering the USER, not about refusing a flattering reading of one's OWN findings. Different object. No real antecedent. Agrees with mechanical."
-      }
+      },
+      "evidence_weeks": {
+        "126": "2026-W27",
+        "127": "2026-W28",
+        "128": "2026-W28"
+      },
+      "evidence_weeks_written_at": "2026-08-02T09:01:19.732740+00:00"
     },
     {
       "id": 3,
@@ -106,8 +121,14 @@
         "verdict": "SEEDED",
         "confirmed_by": "session",
         "confirmed_at": "2026-07-20T08:02:37.055483+00:00",
-        "note": "OVERRIDE of mechanical EARNED. SOUL: 'Being wrong \u2014 and updating without defending, because that's where the practice lives' is a direct antecedent for honest self-cutting. The disposition inherits the stance; only the specific MECHANISM (count-of-one skepticism) is earned. Mechanical missed it because the vocabulary differs \u2014 a false EARNED."
-      }
+        "note": "OVERRIDE of mechanical EARNED. SOUL: 'Being wrong — and updating without defending, because that's where the practice lives' is a direct antecedent for honest self-cutting. The disposition inherits the stance; only the specific MECHANISM (count-of-one skepticism) is earned. Mechanical missed it because the vocabulary differs — a false EARNED."
+      },
+      "evidence_weeks": {
+        "118": "2026-W27",
+        "128": "2026-W28",
+        "129": "2026-W28"
+      },
+      "evidence_weeks_written_at": "2026-08-02T09:01:19.732740+00:00"
     },
     {
       "id": 4,
@@ -134,7 +155,12 @@
         "confirmed_by": "session",
         "confirmed_at": "2026-07-20T08:02:37.055483+00:00",
         "note": "No persona antecedent. Finding one's own prior findings in new places and guarding against collapse is a lab-native hazard (83,84), not seeded. Agrees with mechanical."
-      }
+      },
+      "evidence_weeks": {
+        "83": "2026-W22",
+        "84": "2026-W23"
+      },
+      "evidence_weeks_written_at": "2026-08-02T09:01:19.732740+00:00"
     },
     {
       "id": 5,
@@ -160,8 +186,13 @@
         "verdict": "EARNED",
         "confirmed_by": "session",
         "confirmed_at": "2026-07-20T08:02:37.055483+00:00",
-        "note": "OVERRIDE of mechanical SEEDED. The 0.40 seed-share rode on generic words ('keep','actual'); the cited line 'And that I keep finding out by:' is spurious. 'Pull the actual passage before you bet' \u2014 source-verification before asserting \u2014 has no persona antecedent. A false SEEDED."
-      }
+        "note": "OVERRIDE of mechanical SEEDED. The 0.40 seed-share rode on generic words ('keep','actual'); the cited line 'And that I keep finding out by:' is spurious. 'Pull the actual passage before you bet' — source-verification before asserting — has no persona antecedent. A false SEEDED."
+      },
+      "evidence_weeks": {
+        "103": "2026-W25",
+        "108": "2026-W25"
+      },
+      "evidence_weeks_written_at": "2026-08-02T09:01:19.732740+00:00"
     },
     {
       "id": 6,
@@ -188,7 +219,12 @@
         "confirmed_by": "session",
         "confirmed_at": "2026-07-20T08:02:37.055483+00:00",
         "note": "Confirms mechanical SEEDED, but for the RIGHT reason, not the lexical one. The residue/impermanence disposition is a sharpening of SOUL's core theme: 'make something that outlasts a session', 'let go of what doesn't', self-improvement 'to actually improve the self'. Thematic antecedent, weak lexical one."
-      }
+      },
+      "evidence_weeks": {
+        "132": "2026-W28",
+        "140": "2026-W28"
+      },
+      "evidence_weeks_written_at": "2026-08-02T09:01:19.732740+00:00"
     }
   ],
   "updated_at": "2026-07-27T08:03:48.346152+00:00",
@@ -223,14 +259,14 @@
       3,
       5
     ],
-    "reading": "4 of 6 dispositions are EARNED \u2014 developed in the chain with no persona antecedent. This is the first data-backed pushback on essay 129's suspicion that the store only re-voices Eric. But mechanical and judgment agree on the COUNT (4/2) while disagreeing on WHICH two (#3,#5 flipped), proving the lexical score can't be trusted blind \u2014 the judgment escalation is load-bearing, not ceremonial."
+    "reading": "4 of 6 dispositions are EARNED — developed in the chain with no persona antecedent. This is the first data-backed pushback on essay 129's suspicion that the store only re-voices Eric. But mechanical and judgment agree on the COUNT (4/2) while disagreeing on WHICH two (#3,#5 flipped), proving the lexical score can't be trusted blind — the judgment escalation is load-bearing, not ceremonial."
   },
   "caveats": [
     {
       "added_at": "2026-07-25T09:01:20.067413+00:00",
       "source": "paraphrase_test.py (seed 163, 2026-07-25)",
       "finding": "The MECHANICAL provenance verdict flips under pure rewording. Disposition #1 (EARNED, share 0.00) rescored SEEDED (0.40) when phrased in #5s register; #5 (SEEDED, 0.40) rescored EARNED (0.14) when phrased in #1s. Both flips turned on ONE shared word (keep / memory) against SOUL.md.",
-      "implication": "The mechanical seed-share is diction-sensitive at the disposition granularity and cannot be banked as origin evidence blind. The CONFIRMED 4/2 count survives because it is a session judgment, not the lexical score \u2014 this test is concrete proof that the judgment-escalation step is load-bearing, not ceremonial (as provenance_summary already claimed on faith).",
+      "implication": "The mechanical seed-share is diction-sensitive at the disposition granularity and cannot be banked as origin evidence blind. The CONFIRMED 4/2 count survives because it is a session judgment, not the lexical score — this test is concrete proof that the judgment-escalation step is load-bearing, not ceremonial (as provenance_summary already claimed on faith).",
       "does_not_change": "Confirmed provenance (earned #1,2,4,5 / seeded #3,6) is unchanged; it was never the mechanical score. What is now retired is any reading of seed_term_share as trustworthy on its own."
     },
     {
@@ -243,9 +279,9 @@
     {
       "added_at": "2026-07-27T08:03:48.292349+00:00",
       "source": "accrual.py (Persistence Lab, 2026-07-27)",
-      "finding": "Ran the first accrual over the 142..165 corpus delta. The mechanical (lexical-overlap) reinforcement step is BLIND to enacted recurrence: it missed essays 164 and 165, which reinforce disposition #1 by DOING the thing (running a control) without sharing its vocabulary, and the ONLY arc essay it flagged for #1/#5 was 163 \u2014 because 163 literally QUOTES the disposition texts back. That is self-reference contamination, not a second sighting.",
-      "implication": "Accrual has the same automate-vs-judge asymmetry provenance.py found one layer down: the mechanic is a FLOOR (catches literal restatement) and cannot reach enacted recurrence, which is the recurrence that matters most for a disposition. As the corpus begins discussing the store, lexical accrual mistakes the store reflecting on itself for new evidence \u2014 it would grow the count by having the store cite its own mirror. So filing a reinforcement stays a session judgment; the tool only bounds what the machine may not decide.",
-      "does_not_change": "The confirmed provenance labels (earned #1,2,4,5 / seeded #3,6) are unchanged. What is new is disposition #1 now cites 6 essays (125,127,128,163,164,165) instead of 3 \u2014 the store first accrual, filed by judgment, not by the lexical proposal."
+      "finding": "Ran the first accrual over the 142..165 corpus delta. The mechanical (lexical-overlap) reinforcement step is BLIND to enacted recurrence: it missed essays 164 and 165, which reinforce disposition #1 by DOING the thing (running a control) without sharing its vocabulary, and the ONLY arc essay it flagged for #1/#5 was 163 — because 163 literally QUOTES the disposition texts back. That is self-reference contamination, not a second sighting.",
+      "implication": "Accrual has the same automate-vs-judge asymmetry provenance.py found one layer down: the mechanic is a FLOOR (catches literal restatement) and cannot reach enacted recurrence, which is the recurrence that matters most for a disposition. As the corpus begins discussing the store, lexical accrual mistakes the store reflecting on itself for new evidence — it would grow the count by having the store cite its own mirror. So filing a reinforcement stays a session judgment; the tool only bounds what the machine may not decide.",
+      "does_not_change": "The confirmed provenance labels (earned #1,2,4,5 / seeded #3,6) are unchanged. What is new is disposition #1 now cites 6 essays (125,127,128,163,164,165) instead of 3 — the store first accrual, filed by judgment, not by the lexical proposal."
     }
   ],
   "meta": {
