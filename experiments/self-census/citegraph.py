@@ -342,6 +342,105 @@ def cmd_independence(store):
     return store_counts, all_agree
 
 
+def _corpus_essays():
+    """ONE git-backed pass: the corpus's real essays as git knows them today.
+    writings/NNN-*.md, tracked, non-seed. This is the single act of leaving home
+    that --staleness is allowed. Returns {num: filename}."""
+    import subprocess, re
+    root = HERE.parent.parent
+    try:
+        out = subprocess.run(
+            ["git", "ls-files", "writings/"],
+            cwd=root, capture_output=True, text=True, timeout=10,
+        )
+        lines = out.stdout.splitlines()
+    except Exception:
+        lines = [str(p.relative_to(root)) for p in (root / "writings").glob("*.md")]
+    corpus = {}
+    for line in lines:
+        name = line.split("/")[-1]
+        m = re.match(r"^(\d{3})-(.+)\.md$", name)
+        if not m:
+            continue
+        num, rest = int(m.group(1)), m.group(2)
+        if rest.startswith("seed") or "-seed-" in name:
+            continue
+        corpus.setdefault(num, name)
+    return corpus
+
+
+def cmd_staleness(store):
+    """177's task: the one census question the store provably cannot answer from
+    home -- am I stale? The store knows every essay it recorded as of the last
+    persist_weeks.py run. It has no way, from the inside, to learn whether the
+    corpus has grown past that snapshot. Currency is not a stored field: the
+    instant you write `fresh=true` onto a disposition it begins lying, because
+    the next essay written invalidates it and the flag won't know (the exact
+    self-certifying move the 164->176 arc kept killing). So staleness stays a
+    READ against git, owned by no field.
+
+    STORE-ONLY: the union of every essay the store holds (evidence_weeks keys,
+    falling back to evidence lists) plus meta.censused_front.
+    ONE git-backed pass: _corpus_essays() enumerates the real corpus.
+    Reports the set difference -- essays present in the corpus but absent from
+    the store.
+
+    It does NOT claim the missing essays CITE any disposition. That is a session
+    judgment, and accrual.py (2026-07-27) proved a lexical mechanic that decides
+    citation is a false-positive hazard. --staleness flags the un-metabolized
+    corpus as CANDIDATES for judgment; it never files evidence and writes no
+    freshness verdict back onto the store."""
+    # STORE-ONLY read: what the store believes it holds.
+    captured = set()
+    for d in store["dispositions"]:
+        keys = d.get("evidence_weeks")
+        if keys:
+            captured |= {int(k) for k in keys}
+        else:
+            captured |= set(d.get("evidence", []))
+    front = store.get("meta", {}).get("censused_front")
+
+    print("STALENESS -- can the store know its snapshot is still the whole story?")
+    print("=" * 66)
+    print("Store-only: essays the store holds.  One git pass: the corpus today.")
+    print("Freshness is never a stored field -- it is this live diff or nothing.")
+    print("-" * 66)
+    print(f"store holds {len(captured)} distinct essays; highest = {max(captured)}")
+    print(f"meta.censused_front = {front}  (the front the store CLAIMS to have read)")
+
+    # THE ONE git-backed pass.
+    corpus = _corpus_essays()
+    corpus_nums = set(corpus)
+    print(f"corpus today (git ls-files) = {len(corpus_nums)} essays; "
+          f"highest = {max(corpus_nums) if corpus_nums else None}")
+    print("-" * 66)
+
+    missing = sorted(corpus_nums - captured)
+    past_front = [n for n in missing if front is not None and n > front]
+    if not missing:
+        print("EMPTY difference. Every corpus essay is already in the store.")
+        print("But note what this cost: the store could not assert it. It took a")
+        print("git pass to prove currency. Currency is a live comparison against")
+        print("the oracle, not a property the snapshot can self-certify.")
+        return {"missing": [], "stale": False, "front": front}
+
+    print(f"NON-EMPTY difference: {len(missing)} corpus essays absent from the store.")
+    print(f"missing = {missing}")
+    if front is not None:
+        print(f"of those, {len(past_front)} were written PAST censused_front={front}: "
+              f"{past_front}")
+    # Name the sharpest case: the essay that celebrated the store, if it's in the gap.
+    for marker in (176,):
+        if marker in missing:
+            print(f"  -> essay {marker} is in the gap: the essay that celebrated the")
+            print(f"     store's independence was itself un-metabolized when it shipped.")
+    print("-" * 66)
+    print("The store has been stale since it was last written. These essays are")
+    print("CANDIDATES for judgment, not auto-filed evidence (accrual.py's lesson).")
+    print("The mechanic's honest job: bound what the machine may not decide.")
+    return {"missing": missing, "past_front": past_front, "stale": True, "front": front}
+
+
 def cmd_essay(store, essay):
     _, essay_to_disps, disp_text = build_graph(store)
     ds = essay_to_disps.get(essay)
@@ -391,6 +490,7 @@ def main():
     ap.add_argument("--dates", action="store_true", help="surface each disposition's evidence dates + ISO week (read-only)")
     ap.add_argument("--spread", action="store_true", help="ISO-week span + distinct-week count per disposition (git-backed)")
     ap.add_argument("--independence", action="store_true", help="distinct write-weeks read from the store (zero git) + cross-check vs --spread")
+    ap.add_argument("--staleness", action="store_true", help="store-only captured set vs one git pass of the corpus: essays the store never metabolized")
     ap.add_argument("--json", action="store_true", help="machine-readable graph")
     args = ap.parse_args()
 
@@ -405,6 +505,8 @@ def main():
         cmd_spread(store)
     elif args.independence:
         cmd_independence(store)
+    elif args.staleness:
+        cmd_staleness(store)
     elif args.overlap:
         cmd_overlap(store)
     elif args.json:
