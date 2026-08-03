@@ -441,6 +441,100 @@ def cmd_staleness(store):
     return {"missing": missing, "past_front": past_front, "stale": True, "front": front}
 
 
+def _overlap(a_terms, b_terms):
+    """accrual.py's content-term overlap: shared / smaller set."""
+    if not a_terms or not b_terms:
+        return 0.0
+    return len(a_terms & b_terms) / min(len(a_terms), len(b_terms))
+
+
+def cmd_metabolize(store, bar):
+    """178's closing question, made executable: now that --staleness can SEE the
+    essays written past the front the store claims to have read, which of them
+    can the mechanic even PROPOSE as reinforcement -- and which are invisible to
+    it, leaving the judgment entirely to a session?
+
+    This is the join of the two tools the arc already built:
+      --staleness  bounds the candidate set (essays past censused_front, absent
+                   from the store) -- the ONE git pass this command is allowed.
+      accrual.py   supplies the mechanical proposal (census.extract_candidates +
+                   content-term overlap against each disposition).
+
+    It writes NOTHING. accrual.py proved a lexical mechanic that DECIDES citation
+    is a false-positive hazard; --staleness proved currency is never a stored
+    field. So this command's only honest output is a partition of the stale set:
+      PROPOSED  -- a delta sentence clears the overlap bar (a floor, not a verdict)
+      SEEN-ONLY -- the extractor surfaced a dispositional sentence but nothing
+                   cleared the bar (mechanic sees it, cannot match it)
+      INVISIBLE -- the extractor surfaced NO candidate sentence at all; whatever
+                   these essays reinforce, only judgment can file it.
+    The point it measures: how much of the real reinforcement lives in INVISIBLE,
+    i.e. below the mechanic entirely -- accrual's automate/escalate asymmetry,
+    now scoped to exactly the un-metabolized frontier."""
+    import census as C
+    import provenance as P
+
+    # --- store-only read: what the store believes it holds (mirror of staleness) ---
+    captured = set()
+    for d in store["dispositions"]:
+        keys = d.get("evidence_weeks")
+        captured |= {int(k) for k in keys} if keys else set(d.get("evidence", []))
+    front = store.get("meta", {}).get("censused_front")
+
+    # --- the ONE git pass ---
+    corpus = _corpus_essays()
+    stale = sorted(n for n in corpus if n not in captured and (front is None or n > front))
+
+    disp_terms = {d["id"]: set(P.content_terms(d["text"])) for d in store["dispositions"]}
+    cands = [c for c in C.extract_candidates(limit=None) if c["essay"] in set(stale)]
+    by_essay = defaultdict(list)
+    for c in cands:
+        by_essay[c["essay"]].append(c["text"])
+
+    print("METABOLIZE -- of the stale frontier, what can the mechanic even propose?")
+    print("=" * 70)
+    print(f"censused_front = {front}; stale frontier (past-front, un-stored) = {stale}")
+    print(f"overlap bar = {bar}   (accrual.py's floor; a proposal, never a verdict)")
+    print("-" * 70)
+
+    proposed, seen_only, invisible = [], [], []
+    for essay in stale:
+        sents = by_essay.get(essay, [])
+        if not sents:
+            invisible.append(essay)
+            continue
+        best_id, best_score, best_text = None, 0.0, ""
+        for t in sents:
+            ct = set(P.content_terms(t))
+            for did, dt in disp_terms.items():
+                s = _overlap(ct, dt)
+                if s > best_score:
+                    best_id, best_score, best_text = did, s, t
+        if best_score >= bar:
+            proposed.append((essay, best_id, round(best_score, 2), best_text))
+        else:
+            seen_only.append((essay, best_id, round(best_score, 2), best_text))
+
+    print(f"PROPOSED  (a delta sentence clears the bar): {len(proposed)}")
+    for essay, did, score, text in proposed:
+        print(f"  essay {essay} -> #{did}  (overlap {score})")
+        print(f"      {text[:100]}")
+    print(f"\nSEEN-ONLY (extractor found a sentence, nothing matched): {len(seen_only)}")
+    for essay, did, score, text in seen_only:
+        print(f"  essay {essay} (best #{did} @ {score}): {text[:90]}")
+    print(f"\nINVISIBLE (extractor surfaced NO dispositional sentence): {len(invisible)}")
+    print(f"  {invisible}")
+    print("-" * 70)
+    n = len(stale) or 1
+    print(f"Mechanic reaches {len(proposed)}/{len(stale)} of the stale frontier as a "
+          f"proposal;")
+    print(f"{len(invisible)}/{len(stale)} are INVISIBLE to it -- reinforcement there, if any,")
+    print("is a session judgment the tool must not pretend to make. This command")
+    print("bounds what the machine may decide; it files no evidence and writes no field.")
+    return {"stale": stale, "proposed": proposed,
+            "seen_only": seen_only, "invisible": invisible}
+
+
 def cmd_essay(store, essay):
     _, essay_to_disps, disp_text = build_graph(store)
     ds = essay_to_disps.get(essay)
@@ -491,6 +585,8 @@ def main():
     ap.add_argument("--spread", action="store_true", help="ISO-week span + distinct-week count per disposition (git-backed)")
     ap.add_argument("--independence", action="store_true", help="distinct write-weeks read from the store (zero git) + cross-check vs --spread")
     ap.add_argument("--staleness", action="store_true", help="store-only captured set vs one git pass of the corpus: essays the store never metabolized")
+    ap.add_argument("--metabolize", action="store_true", help="partition the stale frontier by what the mechanic can propose vs what only judgment can file")
+    ap.add_argument("--bar", type=float, default=0.18, help="overlap bar for --metabolize proposals (accrual.py's floor)")
     ap.add_argument("--json", action="store_true", help="machine-readable graph")
     args = ap.parse_args()
 
@@ -507,6 +603,8 @@ def main():
         cmd_independence(store)
     elif args.staleness:
         cmd_staleness(store)
+    elif args.metabolize:
+        cmd_metabolize(store, args.bar)
     elif args.overlap:
         cmd_overlap(store)
     elif args.json:
