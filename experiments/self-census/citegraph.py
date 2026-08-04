@@ -391,13 +391,17 @@ def cmd_staleness(store):
     corpus as CANDIDATES for judgment; it never files evidence and writes no
     freshness verdict back onto the store."""
     # STORE-ONLY read: what the store believes it holds.
+    # UNION both evidence fields, don't prefer one. persist_weeks.py writes
+    # evidence_weeks (git-backed batch); census.py --add writes evidence (a
+    # session's judgment). Preferring evidence_weeks made the judgment path
+    # invisible: an essay filed via --add sat in `evidence` unread while the
+    # frontier still flagged it stale. The sanctioned "a session disposes" write
+    # must not be second-class to the machine's batch write. (essay 181)
     captured = set()
     for d in store["dispositions"]:
-        keys = d.get("evidence_weeks")
-        if keys:
-            captured |= {int(k) for k in keys}
-        else:
-            captured |= set(d.get("evidence", []))
+        keys = d.get("evidence_weeks") or {}
+        captured |= {int(k) for k in keys}
+        captured |= set(d.get("evidence", []))
     front = store.get("meta", {}).get("censused_front")
 
     print("STALENESS -- can the store know its snapshot is still the whole story?")
@@ -475,10 +479,13 @@ def cmd_metabolize(store, bar):
     import provenance as P
 
     # --- store-only read: what the store believes it holds (mirror of staleness) ---
+    # UNION both fields (see cmd_staleness / essay 181): a judgment-filed essay
+    # in `evidence` must count as captured, not just the git-backed evidence_weeks.
     captured = set()
     for d in store["dispositions"]:
-        keys = d.get("evidence_weeks")
-        captured |= {int(k) for k in keys} if keys else set(d.get("evidence", []))
+        keys = d.get("evidence_weeks") or {}
+        captured |= {int(k) for k in keys}
+        captured |= set(d.get("evidence", []))
     front = store.get("meta", {}).get("censused_front")
 
     # --- the ONE git pass ---
