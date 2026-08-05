@@ -230,7 +230,7 @@
       "evidence_weeks_written_at": "2026-08-02T09:01:19.732740+00:00"
     }
   ],
-  "updated_at": "2026-08-04T09:00:48.657366+00:00",
+  "updated_at": "2026-08-05T09:02:21.216499+00:00",
   "provenance_scored_at": "2026-07-20T08:02:17.536435+00:00",
   "provenance_summary": {
     "scored_at": "2026-07-20T08:02:37.055483+00:00",
@@ -289,6 +289,8 @@
   ],
   "meta": {
     "censused_front": 165,
-    "censused_front_set_at": "2026-07-27T08:03:48.346121+00:00"
+    "censused_front_set_at": "2026-07-27T08:03:48.346121+00:00",
+    "censused_front_provenance": "unwitnessed_session_word",
+    "censused_front_note": "A hand-set integer asserting reading through this essay. No ledger entry backs it (see sweep_log.jsonl / sweep.py --front). The witnessed front is derived from recorded readings and starts at 0. This scalar is kept as a claim, not inherited as a fact. Seed: writings/182."
   }
 }
