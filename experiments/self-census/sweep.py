@@ -60,6 +60,19 @@ HERE = Path(__file__).resolve().parent
 WRITINGS_DIR = HERE.parent.parent / "writings"
 STORE = HERE / "self_subject.json"
 LEDGER = HERE / "sweep_log.jsonl"
+AUDIT_LEDGER = HERE / "audit_log.jsonl"
+
+# Small stopword set so the verdict turns on content, not grammar. If two
+# dispositions only share "the/and/that", they share nothing about the essay.
+STOPWORDS = {
+    "the", "and", "that", "this", "with", "for", "was", "were", "are", "but",
+    "not", "its", "it", "is", "of", "to", "in", "on", "at", "as", "an", "a",
+    "by", "or", "be", "has", "had", "have", "can", "could", "would", "only",
+    "one", "two", "which", "what", "who", "whom", "whose", "why", "how",
+    "then", "than", "from", "into", "about", "a", "i", "you", "it", "they",
+    "read", "reading", "essay", "slot", "seed", "full", "line", "session",
+    "tool", "built", "build", "names", "name", "both", "branches", "branch",
+}
 
 
 def now_iso():
@@ -107,6 +120,43 @@ def append_ledger(row):
 
 def covered_set():
     return {row["essay"] for row in read_ledger()}
+
+
+def read_audit_ledger():
+    if not AUDIT_LEDGER.exists():
+        return []
+    rows = []
+    for line in AUDIT_LEDGER.read_text().splitlines():
+        line = line.strip()
+        if line:
+            rows.append(json.loads(line))
+    return rows
+
+
+def append_audit(row):
+    with AUDIT_LEDGER.open("a") as f:
+        f.write(json.dumps(row) + "\n")
+
+
+def content_terms(text):
+    """Lowercased content words of length >= 3, minus stopwords."""
+    words = re.findall(r"[a-zA-Z]+", (text or "").lower())
+    return {w for w in words if len(w) >= 3 and w not in STOPWORDS}
+
+
+def title_terms(filename):
+    """Content terms telegraphed by the filename/title itself. Agreement that
+    lives entirely here proves nothing about reading — the title told both
+    sessions what to say."""
+    stem = re.sub(r"\.md$", "", filename)
+    stem = re.sub(r"^\d+[-]?", "", stem)
+    stem = stem.replace("seed-", "").replace("-", " ")
+    return content_terms(stem)
+
+
+def stored_row_for(n):
+    rows = [r for r in read_ledger() if r["essay"] == n]
+    return rows[-1] if rows else None
 
 
 def derive_front():
@@ -188,6 +238,124 @@ def cmd_audit(args):
         print(f"      read_at={r['read_at']}\n")
 
 
+def cmd_audit_blind(args):
+    """Give --audit teeth (seed 184). A later session re-disposes essay N BLIND
+    (the tool never shows the stored line first), then the pair is scored:
+
+      corroborated  : the two readings share content the TITLE did not telegraph
+      title_echo    : they agree, but only on terms the filename already gave them
+      divergent     : they share no content terms at all
+
+    title_echo and divergent are the collapse 184 pre-committed as branch 2: a
+    second signature next to the first is still just two claims. Only
+    'corroborated' is a shadow of the act of reading, and even that rests on an
+    unenforceable claim — that the session stayed blind. The forbidden move
+    (184, and every slot since 164): the stored disposition is NEVER revealed
+    before the blind one is committed."""
+    n = args.audit
+    blind = (args.blind_disp or "").strip()
+    stored = stored_row_for(n)
+    if stored is None:
+        print(f"No recorded reading of #{n} to audit. Record one with --read {n} "
+              "--disp \"...\" first, or audit an essay that has a ledger row.")
+        sys.exit(1)
+    if not blind:
+        # The teeth AND the guard: refuse to run without a blind line, and do
+        # NOT print the stored disposition. Showing the answer before asking the
+        # question is corroboration theater.
+        print(f"AUDIT PROTOCOL for #{n} ({stored['file']}) — blind re-disposition required.")
+        print("-" * 64)
+        print("1. Read the essay NOW, without reading sweep_log.jsonl or this row.")
+        print("2. Re-run with --blind-disp \"<your one-line reading>\".")
+        print("3. Attest --integrity clean ONLY if you did not see the stored line")
+        print("   this session; otherwise --integrity compromised.")
+        print("The stored disposition is deliberately withheld until your blind")
+        print("line is committed. That withholding is the whole point.")
+        sys.exit(2)
+    integrity = args.integrity or "clean"
+    # Score BEFORE revealing, so the code path cannot be tempted to peek.
+    st = content_terms(stored["disposition"])
+    bt = content_terms(blind)
+    tt = title_terms(stored["file"])
+    shared = st & bt
+    shared_nontitle = shared - tt
+    shared_title = shared & tt
+    if not shared:
+        verdict = "divergent"
+        reading = ("No shared content terms. Two honest readings of a dense essay "
+                   "can legitimately differ, so divergence is not evidence of a bad "
+                   "row — it is the absence of a witness, recorded as data.")
+    elif shared_nontitle:
+        verdict = "corroborated"
+        reading = ("Shared content the title did not telegraph. Two sessions that "
+                   "did not collude converged on the same reading — the closest a "
+                   "solitary act ever gets to a witness, and it arrives late.")
+    else:
+        verdict = "title_echo"
+        reading = ("Agreement lives entirely in terms the filename already gave "
+                   "both sessions. This proves nothing about reading; a second "
+                   "signature next to the first is still two claims, not a fact.")
+    audit_row = {
+        "essay": n,
+        "file": stored["file"],
+        "blind_disposition": blind,
+        "stored_disposition": stored["disposition"],
+        "verdict": verdict,
+        "shared_terms": sorted(shared),
+        "shared_nontitle_terms": sorted(shared_nontitle),
+        "shared_title_terms": sorted(shared_title),
+        "blind_integrity": integrity,
+        "integrity_note": (
+            "Blindness is attested, not enforced: the tool withholds the stored "
+            "line, but cannot stop a session from reading sweep_log.jsonl. The "
+            "unverifiable act moved up a level, from 'did you read?' to 'did you "
+            "stay blind?' — the store still cannot bottom out in proof."
+        ),
+        "audited_at": now_iso(),
+    }
+    append_audit(audit_row)
+    print(f"AUDIT #{n} ({stored['file']}) — verdict: {verdict.upper()} "
+          f"[integrity: {integrity}]")
+    print("-" * 64)
+    print(f"blind  : {blind}")
+    print(f"stored : {stored['disposition']}")
+    print(f"shared (non-title) : {sorted(shared_nontitle) or '(none)'}")
+    print(f"shared (title only): {sorted(shared_title) or '(none)'}")
+    print("-" * 64)
+    print(reading)
+    if integrity != "clean":
+        print("\nNOTE: integrity is not clean. This audit's corroboration cannot")
+        print("count — the session admits it may have seen the stored line. The")
+        print("verdict is kept as data, flagged, not banked.")
+
+
+def cmd_audit_status(args):
+    rows = read_audit_ledger()
+    if not rows:
+        print("No blind audits recorded. --audit has teeth but has never bitten.")
+        return
+    counts = {}
+    for r in rows:
+        key = r["verdict"]
+        if r.get("blind_integrity") != "clean":
+            key += "/compromised"
+        counts[key] = counts.get(key, 0) + 1
+    print(f"# Blind-audit ledger — {len(rows)} audit(s)")
+    for r in sorted(rows, key=lambda x: x["audited_at"]):
+        flag = "" if r.get("blind_integrity") == "clean" else " (integrity: "+r['blind_integrity']+")"
+        print(f"[{r['essay']:>3}] {r['verdict'].upper()}{flag} "
+              f"shared_nontitle={r.get('shared_nontitle_terms')}")
+    print("-" * 58)
+    for k in sorted(counts):
+        print(f"  {k}: {counts[k]}")
+    clean_corrob = sum(1 for r in rows
+                       if r["verdict"] == "corroborated"
+                       and r.get("blind_integrity") == "clean")
+    print("-" * 58)
+    print(f"Rows a non-colluding session corroborated blind: {clean_corrob}")
+    print("Everything else is a claim the audit could not turn into a witness.")
+
+
 def cmd_flag_inherited(args):
     """Stamp the inherited scalar as a session's word, not a derived fact."""
     store = load_store()
@@ -212,7 +380,11 @@ def main():
     ap.add_argument("--read", type=int, metavar="N", help="record a witnessed reading of essay N")
     ap.add_argument("--disp", metavar="TEXT", help="this session's one-line disposition of essay N")
     ap.add_argument("--front", action="store_true", help="derive witnessed front; report inherited claim")
-    ap.add_argument("--audit", action="store_true", help="print the ledger for a later session to check")
+    ap.add_argument("--dump", action="store_true", help="print the raw ledger (WARNING: reading it compromises a later blind audit)")
+    ap.add_argument("--audit", type=int, metavar="N", help="blind-audit essay N: requires --blind-disp, never reveals stored line first")
+    ap.add_argument("--blind-disp", metavar="TEXT", help="the blind re-disposition of essay N (write it BEFORE seeing the stored one)")
+    ap.add_argument("--integrity", choices=["clean", "compromised"], help="attest whether you stayed blind to the stored line this session")
+    ap.add_argument("--audit-status", action="store_true", help="summarize the blind-audit ledger")
     ap.add_argument("--flag-inherited", action="store_true", help="stamp the hand-set scalar as a claim")
     args = ap.parse_args()
 
@@ -220,7 +392,11 @@ def main():
         cmd_read(args)
     elif args.front:
         cmd_front(args)
-    elif args.audit:
+    elif args.audit is not None:
+        cmd_audit_blind(args)
+    elif args.audit_status:
+        cmd_audit_status(args)
+    elif args.dump:
         cmd_audit(args)
     elif args.flag_inherited:
         cmd_flag_inherited(args)
