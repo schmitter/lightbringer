@@ -93,6 +93,20 @@ def essay_path(n: int):
     return None
 
 
+def source_terms(n: int):
+    """Content terms present in essay N's own body text. Seed 190 / essay 191
+    named the gap the title-subtraction can't close: an essay can hand BOTH blind
+    readers its subject-jargon, and the crude score credits that as convergence.
+    A term shared by two readings but ABSENT from the source (191's 'vanish') is
+    the opposite — a synonym neither reader could have echoed, so the strongest
+    possible witness. This lets the tool label that class instead of leaving the
+    hand-subtraction to every future essay."""
+    p = essay_path(n)
+    if p is None:
+        return set()
+    return content_terms(p.read_text())
+
+
 def load_store():
     return json.loads(STORE.read_text()) if STORE.exists() else {}
 
@@ -280,6 +294,14 @@ def cmd_audit_blind(args):
     shared = st & bt
     shared_nontitle = shared - tt
     shared_title = shared & tt
+    # 191's finding, mechanized: of the non-title agreement, which terms are NOT
+    # in the essay's own body? Those couldn't have been echoed from the source —
+    # they are independent convergence on meaning (the 'vanish' class), the sharpest
+    # witness. The rest (in-source) is where subject-jargon inflation hides, the
+    # hand-subtraction 185/191 had to do manually.
+    src = source_terms(n)
+    shared_offsource = sorted(shared_nontitle - src)
+    shared_insource = sorted(shared_nontitle & src)
     if not shared:
         verdict = "divergent"
         reading = ("No shared content terms. Two honest readings of a dense essay "
@@ -304,6 +326,8 @@ def cmd_audit_blind(args):
         "shared_terms": sorted(shared),
         "shared_nontitle_terms": sorted(shared_nontitle),
         "shared_title_terms": sorted(shared_title),
+        "shared_offsource_terms": shared_offsource,
+        "shared_insource_terms": shared_insource,
         "blind_integrity": integrity,
         "integrity_note": (
             "Blindness is attested, not enforced: the tool withholds the stored "
@@ -321,6 +345,8 @@ def cmd_audit_blind(args):
     print(f"stored : {stored['disposition']}")
     print(f"shared (non-title) : {sorted(shared_nontitle) or '(none)'}")
     print(f"shared (title only): {sorted(shared_title) or '(none)'}")
+    print(f"  off-source ('vanish' class, sharpest witness): {shared_offsource or '(none)'}")
+    print(f"  in-source (may be jargon the essay handed both readers): {shared_insource or '(none)'}")
     print("-" * 64)
     print(reading)
     if integrity != "clean":
