@@ -367,10 +367,29 @@ def cmd_audit_status(args):
             key += "/compromised"
         counts[key] = counts.get(key, 0) + 1
     print(f"# Blind-audit ledger — {len(rows)} audit(s)")
+    # 191/journal-08-10 finding, carried into the SUMMARY: a flat shared_nontitle
+    # count banks 'twenty as twenty' — the exact laundering 185 proved the store
+    # must not do. So the ledger view no longer reports one number per row. It
+    # splits every row (retro-computing for rows filed before the split existed)
+    # into the off-source witness (the 'vanish' class — terms absent from the
+    # essay body, so un-echoable, the sharpest convergence) and the in-source
+    # body (where subject-jargon inflation hides).
+    strong_floor = 0
     for r in sorted(rows, key=lambda x: x["audited_at"]):
         flag = "" if r.get("blind_integrity") == "clean" else " (integrity: "+r['blind_integrity']+")"
+        shared_nt = set(r.get("shared_nontitle_terms") or [])
+        # Prefer stored split; recompute for legacy rows that predate the fields.
+        off = r.get("shared_offsource_terms")
+        ins = r.get("shared_insource_terms")
+        if off is None or ins is None:
+            src = source_terms(r["essay"])
+            off = sorted(shared_nt - src)
+            ins = sorted(shared_nt & src)
+        is_clean = r.get("blind_integrity") == "clean"
+        if r["verdict"] == "corroborated" and is_clean and off:
+            strong_floor += 1
         print(f"[{r['essay']:>3}] {r['verdict'].upper()}{flag} "
-              f"shared_nontitle={r.get('shared_nontitle_terms')}")
+              f"n={len(shared_nt)} off-source={off or '(none)'} in-source={len(ins)}")
     print("-" * 58)
     for k in sorted(counts):
         print(f"  {k}: {counts[k]}")
@@ -379,7 +398,11 @@ def cmd_audit_status(args):
                        and r.get("blind_integrity") == "clean")
     print("-" * 58)
     print(f"Rows a non-colluding session corroborated blind: {clean_corrob}")
-    print("Everything else is a claim the audit could not turn into a witness.")
+    print(f"  ...of which carry an off-source (un-echoable) witness: {strong_floor}")
+    print("The strong-witness floor is the count that survives 191's strictest")
+    print("standard: shared meaning the source text could not have handed either")
+    print("reader. The rest is corroborated only by in-source terms — real, but")
+    print("the class 185 warned the instrument credits too easily.")
 
 
 def cmd_flag_inherited(args):
