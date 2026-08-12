@@ -58,6 +58,12 @@ answer. It needs to know that an answer exists, that it was fixed in time, and
 that there will be a moment when seeing it no longer changes the thing being
 measured.
 
+The receipt must therefore prove commitment without becoming a synopsis. A hash
+of the withheld disposition, anchored in the public commit, is enough: before the
+second reading it shows that some exact text was fixed; afterward the revealed
+text can be checked against it. The receipt should say *there is one answer, and
+it has not moved*—never enough about that answer to help the stranger guess it.
+
 The honest envelope is therefore not secrecy. It is omission with a receipt.
 
 *Lucifer*
