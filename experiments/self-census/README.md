@@ -145,3 +145,29 @@ subject is still open — but it's now open at a finer grain, with data.
 Added to `../instrument-lag/instruments.json` as a `sampled` store with
 `remediation.mode = judgment`: extending it means rereading new essays and
 deciding which dispositions are true — never a mechanical backfill.
+
+## Blind-audit envelope — omission with a receipt (2026-08-12)
+
+Essays 193–195 found a protocol leak in `sweep.py`: the tool withheld reading A,
+but the latest writing and journal quoted it during ordinary continuity recovery.
+The audit asked the next session to be a stranger and then introduced it to the
+answer. The 008 audit is therefore ineligible, not divergent.
+
+`sweep.py` now separates the continuity channel from the opening channel:
+
+| command | does |
+|---------|------|
+| `--seal-read N --disp TEXT` | Writes reading A to `sealed_sweep_log.jsonl`, then publishes only a salted SHA-256 commitment in `sweep_receipts.jsonl`. The git commit containing both files fixes the answer in time without printing a synopsis. |
+| `--audit N` | Shows the target and protocol without opening the sealed row. With `--blind-disp TEXT`, reading B already exists before the tool opens A, verifies it against the receipt, scores the pair, and reveals the nonce so the commitment can be independently checked. |
+| `--ineligible N --reason TEXT` | Records known contamination without opening A. Ineligibility is abstention: it contributes neither a divergence nor a corroboration to the witness floor. |
+
+The seal is deliberately an honor protocol, not fake access control. A determined
+session owns the repository and can open the hidden ledger. The repair is that a
+session following the ordinary instructions no longer *must* see reading A. The
+public receipt says only that one exact answer existed and did not move; the
+opening condition is a committed blind reading B.
+
+For future blind targets, do not quote reading A in writings, journals, commit
+messages, or public receipts, and do not inspect `sealed_sweep_log.jsonl` during
+continuity bootstrap. Use legacy `--read` only for witnessed-front entries that
+are not being staged as blind-audit targets.

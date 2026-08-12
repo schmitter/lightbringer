@@ -31,6 +31,15 @@ a number; it is DERIVED as the tail of an auditable reading ledger (sweep_log.js
                          disposition against the actual essay text. This is the whole
                          point: the claim carries an artifact an auditor can falsify.
 
+  --seal-read N --disp   Stage reading A for a future blind audit. The disposition
+                         goes into a deliberately omitted ledger; the continuity
+                         channel receives only a salted SHA-256 receipt. `--audit N`
+                         opens it only after reading B is supplied.
+
+  --ineligible N         Record that contamination made a blind reading impossible,
+                         without opening reading A or laundering abstention into a
+                         divergent result.
+
 THE FINDING (see 182's two pre-committed branches)
 --------------------------------------------------
 Neither branch wins cleanly, and the hybrid is the honest result:
@@ -50,8 +59,10 @@ labeled as a claim — rather than fake-witness it or silently inherit it.
 """
 
 import argparse
+import hashlib
 import json
 import re
+import secrets
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -61,6 +72,8 @@ WRITINGS_DIR = HERE.parent.parent / "writings"
 STORE = HERE / "self_subject.json"
 LEDGER = HERE / "sweep_log.jsonl"
 AUDIT_LEDGER = HERE / "audit_log.jsonl"
+SEALED_LEDGER = HERE / "sealed_sweep_log.jsonl"
+RECEIPT_LEDGER = HERE / "sweep_receipts.jsonl"
 
 # Small stopword set so the verdict turns on content, not grammar. If two
 # dispositions only share "the/and/that", they share nothing about the essay.
@@ -152,6 +165,51 @@ def append_audit(row):
         f.write(json.dumps(row) + "\n")
 
 
+def read_jsonl(path):
+    if not path.exists():
+        return []
+    return [json.loads(line) for line in path.read_text().splitlines()
+            if line.strip()]
+
+
+def append_jsonl(path, row):
+    with path.open("a") as f:
+        f.write(json.dumps(row) + "\n")
+
+
+def commitment_for(n, filename, disposition, nonce):
+    """Bind the hidden line to its target without putting a synopsis in the
+    continuity channel. The nonce prevents a receipt from acting as a cheap
+    dictionary oracle; it is revealed only after reading B is committed."""
+    payload = {
+        "disposition": disposition,
+        "essay": n,
+        "file": filename,
+        "nonce": nonce,
+    }
+    canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(canonical.encode()).hexdigest()
+
+
+def receipt_for(n):
+    rows = [r for r in read_jsonl(RECEIPT_LEDGER) if r["essay"] == n]
+    return rows[-1] if rows else None
+
+
+def sealed_row_for(n):
+    rows = [r for r in read_jsonl(SEALED_LEDGER) if r["essay"] == n]
+    return rows[-1] if rows else None
+
+
+def verify_sealed_row(receipt, sealed):
+    if sealed is None:
+        return False
+    actual = commitment_for(
+        sealed["essay"], sealed["file"], sealed["disposition"], sealed["nonce"]
+    )
+    return actual == receipt.get("commitment")
+
+
 def content_terms(text):
     """Lowercased content words of length >= 3, minus stopwords."""
     words = re.findall(r"[a-zA-Z]+", (text or "").lower())
@@ -208,6 +266,61 @@ def cmd_read(args):
     append_ledger(row)
     print(f"Recorded reading of #{n} ({p.name}).")
     print(f"Witnessed front is now {derive_front()} (derived, not asserted).")
+
+
+def cmd_seal_read(args):
+    """Deposit reading A without publishing it into the continuity channel.
+
+    The secret remains locally accessible — this is an honor protocol, not an
+    access-control boundary. The ordinary reader sees only the receipt, while
+    the audit path opens the sealed row after reading B arrives.
+    """
+    n = args.seal_read
+    disp = (args.disp or "").strip()
+    if not disp:
+        print("Refusing to seal an empty disposition.")
+        sys.exit(1)
+    p = essay_path(n)
+    if p is None:
+        print(f"Refusing: no essay file for #{n}.")
+        sys.exit(1)
+    if (receipt_for(n) is not None or sealed_row_for(n) is not None
+            or stored_row_for(n) is not None):
+        print(f"Refusing: #{n} already has a recorded reading. A commitment cannot")
+        print("replace or compete with an existing answer; choose another target.")
+        sys.exit(1)
+
+    nonce = secrets.token_hex(16)
+    sealed_at = now_iso()
+    commitment = commitment_for(n, p.name, disp, nonce)
+    sealed = {
+        "essay": n,
+        "file": p.name,
+        "disposition": disp,
+        "nonce": nonce,
+        "sealed_at": sealed_at,
+        "note": "WITHHELD until a blind disposition is supplied; do not read "
+                "during continuity bootstrap",
+    }
+    receipt = {
+        "essay": n,
+        "file": p.name,
+        "commitment": commitment,
+        "scheme": "sha256(canonical-json:{disposition,essay,file,nonce})",
+        "sealed_at": sealed_at,
+        "opening_condition": "after a blind disposition is committed",
+        "note": "content-poor public receipt; the git commit containing this row "
+                "anchors the commitment in time",
+    }
+    # The hidden row is intentionally tracked so the later reveal can be checked
+    # against the commit. It is not secret from a determined workspace owner; it
+    # is omitted from the ordinary continuity path.
+    append_jsonl(SEALED_LEDGER, sealed)
+    append_jsonl(RECEIPT_LEDGER, receipt)
+    print(f"SEALED READING RECEIPT — #{n} ({p.name})")
+    print(f"commitment: {commitment}")
+    print("The disposition was fixed but not printed. Commit both ledger files;")
+    print("that git commit is the receipt's time anchor.")
 
 
 def cmd_front(args):
@@ -268,18 +381,21 @@ def cmd_audit_blind(args):
     before the blind one is committed."""
     n = args.audit
     blind = (args.blind_disp or "").strip()
-    stored = stored_row_for(n)
-    if stored is None:
+    receipt = receipt_for(n)
+    ordinary = stored_row_for(n)
+    metadata = receipt or ordinary
+    if metadata is None:
         print(f"No recorded reading of #{n} to audit. Record one with --read {n} "
-              "--disp \"...\" first, or audit an essay that has a ledger row.")
+              f"--disp \"...\" (legacy) or --seal-read {n} --disp \"...\" first.")
         sys.exit(1)
     if not blind:
         # The teeth AND the guard: refuse to run without a blind line, and do
         # NOT print the stored disposition. Showing the answer before asking the
         # question is corroboration theater.
-        print(f"AUDIT PROTOCOL for #{n} ({stored['file']}) — blind re-disposition required.")
+        print(f"AUDIT PROTOCOL for #{n} ({metadata['file']}) — blind re-disposition required.")
         print("-" * 64)
-        print("1. Read the essay NOW, without reading sweep_log.jsonl or this row.")
+        forbidden = "sealed_sweep_log.jsonl" if receipt else "sweep_log.jsonl"
+        print(f"1. Read the essay NOW, without reading {forbidden} or this row.")
         print("2. Re-run with --blind-disp \"<your one-line reading>\".")
         print("3. Attest --integrity clean ONLY if you did not see the stored line")
         print("   this session; otherwise --integrity compromised.")
@@ -287,6 +403,18 @@ def cmd_audit_blind(args):
         print("line is committed. That withholding is the whole point.")
         sys.exit(2)
     integrity = args.integrity or "clean"
+    if receipt:
+        # Opening happens only after reading B already exists in the command
+        # invocation. Verify the hidden row before trusting or revealing it.
+        stored = sealed_row_for(n)
+        if not verify_sealed_row(receipt, stored):
+            print(f"Refusing to audit #{n}: sealed row does not match its receipt.")
+            print("The commitment moved or the envelope is incomplete.")
+            sys.exit(1)
+        commitment_verified = True
+    else:
+        stored = ordinary
+        commitment_verified = False
     # Score BEFORE revealing, so the code path cannot be tempted to peek.
     st = content_terms(stored["disposition"])
     bt = content_terms(blind)
@@ -329,6 +457,9 @@ def cmd_audit_blind(args):
         "shared_offsource_terms": shared_offsource,
         "shared_insource_terms": shared_insource,
         "blind_integrity": integrity,
+        "commitment": receipt.get("commitment") if receipt else None,
+        "commitment_verified": commitment_verified,
+        "commitment_nonce": stored.get("nonce") if receipt else None,
         "integrity_note": (
             "Blindness is attested, not enforced: the tool withholds the stored "
             "line, but cannot stop a session from reading sweep_log.jsonl. The "
@@ -355,6 +486,39 @@ def cmd_audit_blind(args):
         print("verdict is kept as data, flagged, not banked.")
 
 
+def cmd_ineligible(args):
+    """Record contamination without opening or scoring the envelope."""
+    n = args.ineligible
+    reason = (args.reason or "").strip()
+    metadata = receipt_for(n) or stored_row_for(n)
+    if metadata is None:
+        print(f"No recorded reading of #{n} to mark ineligible.")
+        sys.exit(1)
+    if not reason:
+        print("Refusing an unlabeled ineligibility. Supply --reason so abstention")
+        print("cannot silently masquerade as divergence.")
+        sys.exit(1)
+    previous = [r for r in read_audit_ledger()
+                if r["essay"] == n and r["verdict"] == "ineligible"]
+    if previous:
+        print(f"Refusing: #{n} is already recorded as ineligible.")
+        sys.exit(1)
+    row = {
+        "essay": n,
+        "file": metadata["file"],
+        "verdict": "ineligible",
+        "ineligibility_reason": reason,
+        "commitment": metadata.get("commitment"),
+        "stored_disposition_revealed": False,
+        "audited_at": now_iso(),
+    }
+    append_audit(row)
+    print(f"AUDIT #{n} ({metadata['file']}) — verdict: INELIGIBLE")
+    print(f"reason: {reason}")
+    print("The stored disposition was not opened; this row is abstention, not")
+    print("divergence and not evidence for the witness floor.")
+
+
 def cmd_audit_status(args):
     rows = read_audit_ledger()
     if not rows:
@@ -363,7 +527,7 @@ def cmd_audit_status(args):
     counts = {}
     for r in rows:
         key = r["verdict"]
-        if r.get("blind_integrity") != "clean":
+        if key != "ineligible" and r.get("blind_integrity") != "clean":
             key += "/compromised"
         counts[key] = counts.get(key, 0) + 1
     print(f"# Blind-audit ledger — {len(rows)} audit(s)")
@@ -376,7 +540,11 @@ def cmd_audit_status(args):
     # body (where subject-jargon inflation hides).
     strong_floor = 0
     for r in sorted(rows, key=lambda x: x["audited_at"]):
-        flag = "" if r.get("blind_integrity") == "clean" else " (integrity: "+r['blind_integrity']+")"
+        if r["verdict"] == "ineligible":
+            print(f"[{r['essay']:>3}] INELIGIBLE reason={r['ineligibility_reason']}")
+            continue
+        integrity = r.get("blind_integrity", "compromised")
+        flag = "" if integrity == "clean" else f" (integrity: {integrity})"
         shared_nt = set(r.get("shared_nontitle_terms") or [])
         # Prefer stored split; recompute for legacy rows that predate the fields.
         off = r.get("shared_offsource_terms")
@@ -427,24 +595,31 @@ def cmd_flag_inherited(args):
 def main():
     ap = argparse.ArgumentParser(description="witnessed census front via reading ledger")
     ap.add_argument("--read", type=int, metavar="N", help="record a witnessed reading of essay N")
+    ap.add_argument("--seal-read", type=int, metavar="N", help="record reading A behind a public hash receipt")
     ap.add_argument("--disp", metavar="TEXT", help="this session's one-line disposition of essay N")
     ap.add_argument("--front", action="store_true", help="derive witnessed front; report inherited claim")
     ap.add_argument("--dump", action="store_true", help="print the raw ledger (WARNING: reading it compromises a later blind audit)")
     ap.add_argument("--audit", type=int, metavar="N", help="blind-audit essay N: requires --blind-disp, never reveals stored line first")
     ap.add_argument("--blind-disp", metavar="TEXT", help="the blind re-disposition of essay N (write it BEFORE seeing the stored one)")
     ap.add_argument("--integrity", choices=["clean", "compromised"], help="attest whether you stayed blind to the stored line this session")
+    ap.add_argument("--ineligible", type=int, metavar="N", help="record a contaminated audit without opening reading A")
+    ap.add_argument("--reason", metavar="TEXT", help="why --ineligible cannot provide a blind reading")
     ap.add_argument("--audit-status", action="store_true", help="summarize the blind-audit ledger")
     ap.add_argument("--flag-inherited", action="store_true", help="stamp the hand-set scalar as a claim")
     args = ap.parse_args()
 
     if args.read is not None:
         cmd_read(args)
+    elif args.seal_read is not None:
+        cmd_seal_read(args)
     elif args.front:
         cmd_front(args)
     elif args.audit is not None:
         cmd_audit_blind(args)
     elif args.audit_status:
         cmd_audit_status(args)
+    elif args.ineligible is not None:
+        cmd_ineligible(args)
     elif args.dump:
         cmd_audit(args)
     elif args.flag_inherited:
