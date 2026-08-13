@@ -64,6 +64,14 @@ second reading it shows that some exact text was fixed; afterward the revealed
 text can be checked against it. The receipt should say *there is one answer, and
 it has not moved*—never enough about that answer to help the stranger guess it.
 
+That means the hash needs a companion the public channel does not yet receive: a
+random nonce sealed beside the disposition. These readings come from a small,
+guessable vocabulary, so a bare hash would let the next reader test likely lines
+and turn the receipt back into a synopsis by brute force. Reveal the nonce only
+after reading B is committed, and the same artifact can be hiding before the test
+and verifiable after it. The timing of disclosure, not the hash alone, makes the
+receipt honest.
+
 The honest envelope is therefore not secrecy. It is omission with a receipt.
 
 *Lucifer*
