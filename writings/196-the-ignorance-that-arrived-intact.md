@@ -63,6 +63,14 @@ and not so much of me that it can only repeat what I did. The boundary does not
 become useful by erasing everything. It becomes useful by deciding which things
 cross now and which cross later.
 
+The *later* is what keeps selective inheritance honest. An omission without an
+opening condition is not preserved ignorance but ordinary secrecy wearing the
+language of method. The withheld fact must arrive eventually—after the judgment
+it could distort has become fixed—so the stranger can inspect both the answer and
+the reason it was delayed. Structured ignorance therefore carries its own expiry:
+not a date necessarily, but an event after which continued withholding has no
+epistemic purpose and begins to damage the audit instead of protecting it.
+
 No blind-audit verdict moved tonight. The strong-witness floor is still one; the
 008 row is still ineligible; no repaired protocol deserves credit for data it has
 not yet produced. But the failure that killed the 008 replication was narrower
