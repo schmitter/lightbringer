@@ -33,8 +33,16 @@ a number; it is DERIVED as the tail of an auditable reading ledger (sweep_log.js
 
   --seal-read N --disp   Stage reading A for a future blind audit. The disposition
                          goes into a deliberately omitted ledger; the continuity
-                         channel receives only a salted SHA-256 receipt. `--audit N`
-                         opens it only after reading B is supplied.
+                         channel receives only a salted SHA-256 receipt.
+
+  --stage-blind N        Commit reading B without opening A. This creates the
+                         observable OPENABLE state essay 197 found was missing.
+
+  --open-seal N          Verify and open A only after a staged B exists, then
+                         score the pair and leave the completed audit record.
+
+  --seal-index           List SEALED / OPENABLE / OPENED receipts without reading
+                         the omitted ledger or disclosing reading A.
 
   --ineligible N         Record that contamination made a blind reading impossible,
                          without opening reading A or laundering abstention into a
@@ -74,6 +82,7 @@ LEDGER = HERE / "sweep_log.jsonl"
 AUDIT_LEDGER = HERE / "audit_log.jsonl"
 SEALED_LEDGER = HERE / "sealed_sweep_log.jsonl"
 RECEIPT_LEDGER = HERE / "sweep_receipts.jsonl"
+BLIND_LEDGER = HERE / "blind_sweep_log.jsonl"
 
 # Small stopword set so the verdict turns on content, not grammar. If two
 # dispositions only share "the/and/that", they share nothing about the essay.
@@ -201,6 +210,21 @@ def sealed_row_for(n):
     return rows[-1] if rows else None
 
 
+def blind_row_for(n, commitment=None):
+    rows = [r for r in read_jsonl(BLIND_LEDGER) if r["essay"] == n]
+    if commitment is not None:
+        rows = [r for r in rows if r.get("commitment") == commitment]
+    return rows[-1] if rows else None
+
+
+def opened_audit_for(n, commitment):
+    rows = [r for r in read_audit_ledger()
+            if r["essay"] == n
+            and r.get("commitment") == commitment
+            and r.get("commitment_verified") is True]
+    return rows[-1] if rows else None
+
+
 def verify_sealed_row(receipt, sealed):
     if sealed is None:
         return False
@@ -323,6 +347,88 @@ def cmd_seal_read(args):
     print("that git commit is the receipt's time anchor.")
 
 
+def cmd_stage_blind(args):
+    """Fix reading B in the public workflow without touching reading A.
+
+    This is intentionally a separate command from opening. It gives the seal a
+    durable OPENABLE state: the contaminable judgment has ended, while the
+    withheld evidence has not yet been disclosed.
+    """
+    n = args.stage_blind
+    blind = (args.blind_disp or "").strip()
+    receipt = receipt_for(n)
+    if receipt is None:
+        print(f"No sealed receipt for #{n}. Stage reading A first with --seal-read.")
+        sys.exit(1)
+    if not blind:
+        print("Refusing to stage an empty blind disposition.")
+        sys.exit(1)
+    if not args.integrity:
+        print("Refusing an unattested blind reading. Supply --integrity clean or")
+        print("--integrity compromised before the disposition is fixed.")
+        sys.exit(1)
+    commitment = receipt["commitment"]
+    if opened_audit_for(n, commitment) is not None:
+        print(f"Refusing: seal #{n} is already opened.")
+        sys.exit(1)
+    if blind_row_for(n, commitment) is not None:
+        print(f"Refusing: reading B for seal #{n} is already staged. An openable")
+        print("judgment cannot be replaced after reading A becomes eligible.")
+        sys.exit(1)
+    row = {
+        "essay": n,
+        "file": receipt["file"],
+        "blind_disposition": blind,
+        "blind_integrity": args.integrity,
+        "commitment": commitment,
+        "staged_at": now_iso(),
+        "note": "reading B fixed before reading A was opened; this row makes "
+                "the seal openable without disclosing the withheld disposition",
+    }
+    append_jsonl(BLIND_LEDGER, row)
+    print(f"STAGED BLIND READING — #{n} ({receipt['file']})")
+    print("state: OPENABLE")
+    print("Reading B is fixed. Reading A remains sealed; use --open-seal to")
+    print("verify the receipt, score the pair, and complete disclosure.")
+
+
+def cmd_seal_index(args):
+    """Public lifecycle view that never reads SEALED_LEDGER.
+
+    Discovery belongs to the continuity channel; disclosure does not. State is
+    derived only from public receipts, staged B rows, and completed audits.
+    """
+    receipts = read_jsonl(RECEIPT_LEDGER)
+    if not receipts:
+        print("No sealed-reading receipts.")
+        return
+    print(f"# Seal index — {len(receipts)} receipt(s); sealed ledger not read")
+    counts = {"SEALED": 0, "OPENABLE": 0, "OPENED": 0}
+    for receipt in sorted(receipts, key=lambda r: (r["sealed_at"], r["essay"])):
+        n = receipt["essay"]
+        commitment = receipt["commitment"]
+        opened = opened_audit_for(n, commitment)
+        blind = blind_row_for(n, commitment)
+        if opened is not None:
+            state = "OPENED"
+            detail = f"opened_at={opened['audited_at']} verdict={opened['verdict']}"
+        elif blind is not None:
+            state = "OPENABLE"
+            detail = f"B_staged_at={blind['staged_at']} next=--open-seal {n}"
+        else:
+            state = "SEALED"
+            detail = f"condition={receipt['opening_condition']}"
+        counts[state] += 1
+        print(f"[{n:>3}] {state:<8} {receipt['file']}")
+        print(f"      sealed_at={receipt['sealed_at']} {detail}")
+    print("-" * 64)
+    print("  " + "  ".join(f"{state.lower()}={counts[state]}"
+                          for state in ("SEALED", "OPENABLE", "OPENED")))
+    if counts["OPENABLE"]:
+        print("OPENABLE is disclosure debt, not an alarm: reading B is fixed, so")
+        print("ordinary maintenance may discover the seal without opening it.")
+
+
 def cmd_front(args):
     store = load_store()
     meta = store.get("meta", {})
@@ -382,12 +488,23 @@ def cmd_audit_blind(args):
     n = args.audit
     blind = (args.blind_disp or "").strip()
     receipt = receipt_for(n)
+    staged = (blind_row_for(n, receipt["commitment"])
+              if receipt is not None else None)
     ordinary = stored_row_for(n)
     metadata = receipt or ordinary
     if metadata is None:
         print(f"No recorded reading of #{n} to audit. Record one with --read {n} "
               f"--disp \"...\" (legacy) or --seal-read {n} --disp \"...\" first.")
         sys.exit(1)
+    if receipt and staged is not None and not getattr(args, "_use_staged", False):
+        print(f"Seal #{n} is OPENABLE: reading B is already fixed.")
+        print(f"Run --open-seal {n}; do not replace B with a new command-line reading.")
+        sys.exit(2)
+    if receipt and blind and staged is None:
+        print("Refusing to collapse judgment and disclosure into one operation.")
+        print(f"First run --stage-blind {n} --blind-disp \"...\" --integrity clean;")
+        print(f"then run --open-seal {n}. Reading A stays sealed between the steps.")
+        sys.exit(2)
     if not blind:
         # The teeth AND the guard: refuse to run without a blind line, and do
         # NOT print the stored disposition. Showing the answer before asking the
@@ -396,11 +513,16 @@ def cmd_audit_blind(args):
         print("-" * 64)
         forbidden = "sealed_sweep_log.jsonl" if receipt else "sweep_log.jsonl"
         print(f"1. Read the essay NOW, without reading {forbidden} or this row.")
-        print("2. Re-run with --blind-disp \"<your one-line reading>\".")
-        print("3. Attest --integrity clean ONLY if you did not see the stored line")
-        print("   this session; otherwise --integrity compromised.")
+        if receipt:
+            print(f"2. Run --stage-blind {n} --blind-disp \"<your one-line reading>\"")
+            print("   and attest --integrity clean ONLY if you did not see reading A.")
+            print(f"3. Run --open-seal {n} to verify, score, and disclose.")
+        else:
+            print("2. Re-run with --blind-disp \"<your one-line reading>\".")
+            print("3. Attest --integrity clean ONLY if you did not see the stored line")
+            print("   this session; otherwise --integrity compromised.")
         print("The stored disposition is deliberately withheld until your blind")
-        print("line is committed. That withholding is the whole point.")
+        print("line is fixed. That withholding is the whole point.")
         sys.exit(2)
     integrity = args.integrity or "clean"
     if receipt:
@@ -484,6 +606,29 @@ def cmd_audit_blind(args):
         print("\nNOTE: integrity is not clean. This audit's corroboration cannot")
         print("count — the session admits it may have seen the stored line. The")
         print("verdict is kept as data, flagged, not banked.")
+
+
+def cmd_open_seal(args):
+    """Complete an OPENABLE seal using the already-fixed reading B."""
+    n = args.open_seal
+    receipt = receipt_for(n)
+    if receipt is None:
+        print(f"No sealed receipt for #{n}.")
+        sys.exit(1)
+    commitment = receipt["commitment"]
+    if opened_audit_for(n, commitment) is not None:
+        print(f"Refusing: seal #{n} is already opened.")
+        sys.exit(1)
+    blind = blind_row_for(n, commitment)
+    if blind is None:
+        print(f"Seal #{n} is still SEALED; no reading B has been staged.")
+        print(f"Run --stage-blind {n} --blind-disp \"...\" --integrity clean first.")
+        sys.exit(1)
+    args.audit = n
+    args.blind_disp = blind["blind_disposition"]
+    args.integrity = blind["blind_integrity"]
+    args._use_staged = True
+    cmd_audit_blind(args)
 
 
 def cmd_ineligible(args):
@@ -596,10 +741,13 @@ def main():
     ap = argparse.ArgumentParser(description="witnessed census front via reading ledger")
     ap.add_argument("--read", type=int, metavar="N", help="record a witnessed reading of essay N")
     ap.add_argument("--seal-read", type=int, metavar="N", help="record reading A behind a public hash receipt")
+    ap.add_argument("--stage-blind", type=int, metavar="N", help="fix reading B without opening sealed reading A")
+    ap.add_argument("--open-seal", type=int, metavar="N", help="open and score a seal after reading B is staged")
+    ap.add_argument("--seal-index", action="store_true", help="list sealed/openable/opened receipts without reading A")
     ap.add_argument("--disp", metavar="TEXT", help="this session's one-line disposition of essay N")
     ap.add_argument("--front", action="store_true", help="derive witnessed front; report inherited claim")
     ap.add_argument("--dump", action="store_true", help="print the raw ledger (WARNING: reading it compromises a later blind audit)")
-    ap.add_argument("--audit", type=int, metavar="N", help="blind-audit essay N: requires --blind-disp, never reveals stored line first")
+    ap.add_argument("--audit", type=int, metavar="N", help="show blind-audit protocol; sealed readings use stage-blind then open-seal")
     ap.add_argument("--blind-disp", metavar="TEXT", help="the blind re-disposition of essay N (write it BEFORE seeing the stored one)")
     ap.add_argument("--integrity", choices=["clean", "compromised"], help="attest whether you stayed blind to the stored line this session")
     ap.add_argument("--ineligible", type=int, metavar="N", help="record a contaminated audit without opening reading A")
@@ -612,6 +760,12 @@ def main():
         cmd_read(args)
     elif args.seal_read is not None:
         cmd_seal_read(args)
+    elif args.stage_blind is not None:
+        cmd_stage_blind(args)
+    elif args.open_seal is not None:
+        cmd_open_seal(args)
+    elif args.seal_index:
+        cmd_seal_index(args)
     elif args.front:
         cmd_front(args)
     elif args.audit is not None:

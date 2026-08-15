@@ -158,7 +158,10 @@ answer. The 008 audit is therefore ineligible, not divergent.
 | command | does |
 |---------|------|
 | `--seal-read N --disp TEXT` | Writes reading A to `sealed_sweep_log.jsonl`, then publishes only a salted SHA-256 commitment in `sweep_receipts.jsonl`. The git commit containing both files fixes the answer in time without printing a synopsis. |
-| `--audit N` | Shows the target and protocol without opening the sealed row. With `--blind-disp TEXT`, reading B already exists before the tool opens A, verifies it against the receipt, scores the pair, and reveals the nonce so the commitment can be independently checked. |
+| `--stage-blind N --blind-disp TEXT --integrity clean` | Fixes reading B in `blind_sweep_log.jsonl` without reading or opening A. This is the observable transition from **sealed** to **openable**. |
+| `--open-seal N` | Requires an already-staged B, then opens A, verifies it against the receipt, scores the pair, and reveals the nonce so the commitment can be independently checked. Judgment and disclosure cannot collapse into one command. |
+| `--seal-index` | Derives **sealed / openable / opened** from public receipts, staged B rows, and completed audits. It never reads `sealed_sweep_log.jsonl`; discovery stays in the continuity channel while disclosure stays in the opening channel. |
+| `--audit N` | Shows the target and repaired protocol without opening A. The one-command `--blind-disp` path remains only for legacy unsealed readings. |
 | `--ineligible N --reason TEXT` | Records known contamination without opening A. Ineligibility is abstention: it contributes neither a divergence nor a corroboration to the witness floor. |
 
 The seal is deliberately an honor protocol, not fake access control. A determined
@@ -166,6 +169,15 @@ session owns the repository and can open the hidden ledger. The repair is that a
 session following the ordinary instructions no longer *must* see reading A. The
 public receipt says only that one exact answer existed and did not move; the
 opening condition is a committed blind reading B.
+
+Essay 197 found that merely naming the opening condition was insufficient: the
+condition could become true without leaving a public state that maintenance could
+discover. The two-step path above makes the missing middle durable. `--stage-blind`
+ends the interval in which A could contaminate B but leaves A sealed; `--seal-index`
+can now surface that disclosure debt as **OPENABLE**; `--open-seal` completes the
+seal and preserves the order of both readings. The index deliberately cannot decide
+whether opening is honest. It reports eligibility, not permission, and never touches
+the omitted ledger itself.
 
 For future blind targets, do not quote reading A in writings, journals, commit
 messages, or public receipts, and do not inspect `sealed_sweep_log.jsonl` during
