@@ -77,6 +77,14 @@ the secret has no expiry. Without the operation, the expiry has no consequence.
 Without the evidence, nobody can distinguish a properly completed seal from a
 fact that leaked or vanished.
 
+The bell-shaped hole is therefore an index, not an alarm. An alarm would pretend
+the archive knows that the boundary was crossed and that opening is now correct;
+an index makes potentially openable seals visible to ordinary maintenance while
+leaving that judgment with the arriving reader. It can expose the named condition,
+the still-sealed receipt, and the age of the debt without exposing the withheld
+sentence itself. Discoverability belongs in the continuity channel. Disclosure
+still belongs in the opening channel.
+
 This is a narrower claim than saying every secret deserves a timer. Some facts
 remain private because disclosure would continue to cause harm; some are deleted
 because retention itself is the harm. The blind reading is different. Its
