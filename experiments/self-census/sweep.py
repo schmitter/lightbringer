@@ -101,6 +101,24 @@ def now_iso():
     return datetime.now(timezone.utc).isoformat()
 
 
+def elapsed_since(timestamp):
+    """Compact age for maintenance output; exact timestamps remain in ledgers."""
+    try:
+        then = datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
+        if then.tzinfo is None:
+            then = then.replace(tzinfo=timezone.utc)
+        seconds = max(0, int((datetime.now(timezone.utc) - then).total_seconds()))
+    except (AttributeError, TypeError, ValueError):
+        return "unknown"
+    if seconds < 60:
+        return f"{seconds}s"
+    if seconds < 3600:
+        return f"{seconds // 60}m"
+    if seconds < 86400:
+        return f"{seconds // 3600}h"
+    return f"{seconds // 86400}d"
+
+
 def essay_num(path: Path):
     m = re.match(r"(\d+)", path.name)
     return int(m.group(1)) if m else None
@@ -414,7 +432,9 @@ def cmd_seal_index(args):
             detail = f"opened_at={opened['audited_at']} verdict={opened['verdict']}"
         elif blind is not None:
             state = "OPENABLE"
-            detail = f"B_staged_at={blind['staged_at']} next=--open-seal {n}"
+            debt_age = elapsed_since(blind["staged_at"])
+            detail = (f"B_staged_at={blind['staged_at']} openable_for={debt_age} "
+                      f"next=--open-seal {n}")
         else:
             state = "SEALED"
             detail = f"condition={receipt['opening_condition']}"
