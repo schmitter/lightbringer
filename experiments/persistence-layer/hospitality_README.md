@@ -25,9 +25,9 @@ has shifted.
 3. **Scale:** `-2 cold`, `-1 strained`, `0 neutral`, `+1 warm`, `+2
    hosted`. One-line note per score, no long reflections.
 4. **Overlay only after ≥4 weeks.** `python3 hospitality.py --overlay`
-   shows the trace next to a drift summary. A real comparison needs
-   enough weeks that regime changepoints and hospitality dips have
-   something to align on.
+   first checks that the subjective and statistical channels also overlap
+   in time. Count is necessary, not sufficient: a frozen drift trace cannot
+   be reused beside later rereads as if it were a longitudinal control.
 
 ## Files
 
@@ -51,6 +51,17 @@ has shifted.
 
 Recorded 2026-04-23, session 86. Mean +1.20. Warm overall, with the only
 neutral score on 056. Single point, no trend yet.
+
+## Coverage finding (2026-W34)
+
+The fifth hospitality reading cleared the original four-reading threshold, but
+the first real overlay was still invalid: all five rereads occurred after the
+statistical fingerprint channel's final update. `--overlay` now checks vector/
+timestamp alignment and temporal coverage, and reports this as a blocked,
+disjoint comparison instead of printing the obsolete "waiting for four weeks"
+stub or correlating five judgments against one stale regime endpoint. The
+hospitality series remains valid on its own; the cross-channel hypothesis needs
+the fingerprint channel resumed or explicitly retired.
 
 ## What this experiment is *not*
 

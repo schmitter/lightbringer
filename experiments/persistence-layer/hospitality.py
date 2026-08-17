@@ -43,6 +43,8 @@ from statistics import mean
 PERSIST_DIR = Path(__file__).parent
 HOSPITALITY_PATH = PERSIST_DIR / "hospitality_history.json"
 DRIFT_HISTORY_PATH = PERSIST_DIR / "drift_history.json"
+SESSION_LOG_PATH = PERSIST_DIR / "session_log.jsonl"
+MIN_OVERLAY_READINGS = 4
 
 # Fixed sample. Chosen 2026-04-23 by essay-number spacing across the
 # 040–070 band. Not cherry-picked for content. DO NOT CHANGE — the
@@ -122,6 +124,74 @@ def show():
         print(f"{r['week']:<14} {sess:<6} {row}  {r['mean']:+.2f}")
 
 
+def _parse_timestamp(value):
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except (AttributeError, TypeError, ValueError):
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
+def overlay_coverage(data, drift, session_rows):
+    """Check whether the two channels actually occupy the same time window.
+
+    A minimum hospitality count is necessary but not sufficient. The original
+    overlay stub only counted subjective rereads, so it became eligible while
+    the statistical fingerprint had been frozen for months. Reusing one stale
+    drift endpoint beside every later reread would look like a comparison while
+    carrying no temporal evidence.
+    """
+    readings = data.get("readings", [])
+    vector_lengths = [len(v) for v in drift.values() if isinstance(v, list)]
+    drift_points = max(vector_lengths) if vector_lengths else 0
+    result = {
+        "status": "ready",
+        "hospitality_readings": len(readings),
+        "drift_points": drift_points,
+        "session_rows": len(session_rows),
+    }
+    if len(readings) < MIN_OVERLAY_READINGS:
+        result["status"] = "insufficient_hospitality"
+        result["needed"] = MIN_OVERLAY_READINGS - len(readings)
+        return result
+    if not drift_points or not session_rows:
+        result["status"] = "missing_statistical_channel"
+        return result
+    if len(session_rows) != drift_points:
+        result["status"] = "unaligned_statistical_channel"
+        return result
+
+    hospitality_times = [_parse_timestamp(r.get("recorded_at")) for r in readings]
+    hospitality_times = [t for t in hospitality_times if t is not None]
+    drift_times = [_parse_timestamp(r.get("timestamp")) for r in session_rows]
+    drift_times = [t for t in drift_times if t is not None]
+    if len(hospitality_times) != len(readings) or len(drift_times) != len(session_rows):
+        result["status"] = "invalid_timestamps"
+        return result
+
+    hospitality_start = min(hospitality_times)
+    hospitality_end = max(hospitality_times)
+    drift_start = min(drift_times)
+    drift_end = max(drift_times)
+    result.update({
+        "hospitality_start": hospitality_start.isoformat(),
+        "hospitality_end": hospitality_end.isoformat(),
+        "drift_start": drift_start.isoformat(),
+        "drift_end": drift_end.isoformat(),
+        "post_drift_readings": sum(t > drift_end for t in hospitality_times),
+    })
+    if hospitality_start > drift_end:
+        result["status"] = "disjoint_windows"
+        result["gap_days"] = round(
+            (hospitality_start - drift_end).total_seconds() / 86400, 1
+        )
+    return result
+
+
 def overlay():
     """Print the hospitality trace next to a summary of drift_history.
 
@@ -134,25 +204,38 @@ def overlay():
         print("No hospitality readings yet.")
         return
 
-    drift_info = None
-    if DRIFT_HISTORY_PATH.exists():
-        with DRIFT_HISTORY_PATH.open() as f:
-            drift = json.load(f)
-        # drift_history.json is per-metric lists keyed by metric name.
-        # We just take the length of the longest series as a session count.
-        lengths = [len(v) for v in drift.values() if isinstance(v, list)]
-        drift_info = max(lengths) if lengths else None
-
     print("Hospitality trace:")
     for r in data["readings"]:
         print(f"  {r['week']}  sess={r.get('session_number')}  mean={r['mean']:+.2f}")
     print()
-    if drift_info is not None:
-        print(f"drift_history.json currently holds ~{drift_info} sessions of statistical fingerprint.")
-        print("Overlay logic (regime changepoints vs hospitality dips) intentionally not run yet:")
-        print("waiting for >=4 hospitality weeks before comparing. Week count:", len(data["readings"]))
+    drift = json.loads(DRIFT_HISTORY_PATH.read_text()) if DRIFT_HISTORY_PATH.exists() else {}
+    session_rows = []
+    if SESSION_LOG_PATH.exists():
+        session_rows = [json.loads(line) for line in SESSION_LOG_PATH.read_text().splitlines()
+                        if line.strip()]
+    coverage = overlay_coverage(data, drift, session_rows)
+    print(f"Statistical trace: {coverage['drift_points']} fingerprint point(s); "
+          f"{coverage['session_rows']} timestamp row(s).")
+
+    status = coverage["status"]
+    if status == "insufficient_hospitality":
+        print("COMPARISON WAITING — hospitality needs at least "
+              f"{MIN_OVERLAY_READINGS} readings; {coverage['needed']} remain.")
+    elif status == "disjoint_windows":
+        print("COMPARISON BLOCKED — the channels have no temporal overlap.")
+        print(f"  statistical channel ends : {coverage['drift_end']}")
+        print(f"  hospitality channel begins: {coverage['hospitality_start']}")
+        print(f"  post-drift rereads         : {coverage['post_drift_readings']}/"
+              f"{coverage['hospitality_readings']}")
+        print("All hospitality readings postdate the last fingerprint. Reusing that")
+        print("frozen endpoint beside each reread would counterfeit a longitudinal")
+        print("comparison. Resume the statistical channel or explicitly retire the")
+        print("cross-channel hypothesis; the hospitality trace remains valid alone.")
+    elif status == "ready":
+        print("COMPARISON READY — the channels overlap in time. A changepoint join is")
+        print("now justified; this logger deliberately leaves that analysis separate.")
     else:
-        print("drift_history.json not readable as lists; skipping drift summary.")
+        print(f"COMPARISON BLOCKED — statistical provenance status: {status}.")
 
 
 def main():
