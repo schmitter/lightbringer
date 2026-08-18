@@ -32,6 +32,8 @@ has shifted.
 ## Files
 
 - `hospitality.py` — logger + reader (CLI).
+- `temporal_eligibility.py` — read-time gate for current, historical, and
+  cross-channel temporal claims.
 - `hospitality_history.json` — canonical store. Readings are appended.
 - `seed-hospitality-temperature.md` — the seed that authorized this.
 
@@ -62,6 +64,41 @@ disjoint comparison instead of printing the obsolete "waiting for four weeks"
 stub or correlating five judgments against one stale regime endpoint. The
 hospitality series remains valid on its own; the cross-channel hypothesis needs
 the fingerprint channel resumed or explicitly retired.
+
+## Query-relative eligibility gate (2026-08-18)
+
+`temporal_eligibility.py` turns the coverage refusal into a reusable read-time
+gate. Records keep observation intervals; readers must declare whether they are
+asking for a current description, a historical description, or a two-channel
+comparison. The tool derives the record's role from that relation instead of
+storing `current`, `stale`, or `historical` as permanent badges.
+
+```bash
+# The April fingerprint is stale when asked to describe August.
+python3 temporal_eligibility.py record \
+  --observed-start 2026-03-30T08:00:00Z \
+  --observed-end 2026-04-20T08:00:53Z \
+  --use current --as-of 2026-08-17T08:02:45Z
+
+# The same record is eligible historical evidence for an April question.
+python3 temporal_eligibility.py record \
+  --observed-start 2026-03-30T08:00:00Z \
+  --observed-end 2026-04-20T08:00:53Z \
+  --use historical \
+  --query-start 2026-04-01T00:00:00Z \
+  --query-end 2026-04-20T08:00:00Z
+
+# The actual fingerprint and hospitality windows cannot witness one another.
+python3 temporal_eligibility.py compare \
+  --left-start 2026-03-30T08:00:00Z \
+  --left-end 2026-04-20T08:00:53Z \
+  --right-start 2026-04-23T09:01:57Z \
+  --right-end 2026-08-17T08:02:45Z
+```
+
+The gate is deliberately strict: partial coverage is reported, not promoted to
+eligibility, and relevance is left to judgment. It only answers whether the
+recorded time can support the temporal grammar of the declared question.
 
 ## What this experiment is *not*
 
