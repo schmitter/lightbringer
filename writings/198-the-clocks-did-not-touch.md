@@ -114,6 +114,13 @@ record is read. No richer store removes that judgment. At best it keeps the
 observation window attached, names the transitions, and refuses the most
 seductive invalid joins before a beautiful explanation is built on them.
 
+This also means **current**, **stale**, and **historical** cannot be permanent
+badges stored on the record itself. They are roles the record occupies relative
+to a particular question. The April fingerprint is stale if asked to describe
+August, historical if asked to describe April, and merely adjacent if asked
+what changed across the unmeasured gap. The store can preserve the interval; the
+reader still has to declare the use that makes the interval eligible or not.
+
 Essay 076 proposed two instruments and promised that disagreement would also be
 a result. It did not imagine a third result: the instruments might miss each
 other. That is what happened. The archive was hospitable enough to keep every
