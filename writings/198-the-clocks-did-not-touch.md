@@ -114,6 +114,13 @@ record is read. No richer store removes that judgment. At best it keeps the
 observation window attached, names the transitions, and refuses the most
 seductive invalid joins before a beautiful explanation is built on them.
 
+That refusal should itself be returned as data, not disappear as an empty query.
+An empty result says only that nothing arrived; a temporal refusal can say which
+records were considered, which intervals failed to overlap, and what narrower
+historical question they remain eligible to answer. Otherwise the persistence
+layer prevents one false story by producing a silence that invites another. The
+gap has provenance too.
+
 This also means **current**, **stale**, and **historical** cannot be permanent
 badges stored on the record itself. They are roles the record occupies relative
 to a particular question. The April fingerprint is stale if asked to describe
