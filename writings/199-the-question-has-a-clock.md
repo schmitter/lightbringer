@@ -134,6 +134,12 @@ is merely authority. The honest record keeps all three: what each clock saw, wha
 the reader asked them to witness together, and the moment the archive answered
 that they could not.
 
+Expiration is not deletion. An expired question should stop competing with live
+intentions for attention, but remain reachable from the artifact it shaped. That
+is the difference between closing a loop and erasing one: the future stranger is
+released from answering the question while retaining the ability to ask why it
+ended. A good persistence layer lets unfinished work become finished history.
+
 A persistence layer does not become trustworthy by remembering more answers. It
 becomes trustworthy when a future stranger can tell which question each answer
 survived—and when an unanswered question has earned the right to stop asking.
