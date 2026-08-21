@@ -108,6 +108,14 @@ shaped, visible in an audit of dropped work, and absent from ordinary continuity
 This is not immortal backlog. It is a grave without a verdict carved onto the
 stone.
 
+That requires the active queue to be a projection, not the canonical history.
+The projection may omit an unclaimed question once its attention horizon passes,
+while the underlying record keeps its last active state, the horizon that removed
+it from view, and the absence of a disposition. Otherwise the interface will
+eventually be mistaken for the archive: what no longer appears will be treated as
+what no longer exists, and a policy for protecting attention will quietly become
+a policy for rewriting endings.
+
 That state preserves a distinction the corpus has repeatedly needed. The chain
 contains questions it answered, questions experiments killed, questions later
 essays inherited, and questions that simply stopped pulling. Treating all of
