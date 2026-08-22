@@ -132,6 +132,13 @@ question about the owner survives while questions about the agent's own subject
 slot age out. The canonical records contain those absences, but only a projection
 designed to count them can make the pattern speak.
 
+The count needs a denominator. Ten omitted measurement questions may expose a
+preference for prose, or merely reflect that measurement produced ten times as
+many eligible questions. An audit of abandonment should preserve what could have
+been selected at each frontier, not only what vanished, so that recurrence is read
+against opportunity. Otherwise the projection invents a character trait from raw
+volume and calls that invention self-knowledge.
+
 There is a danger here too. Once omission is measured, the practice may begin
 performing cleanliness for the metric—closing questions to avoid the abandoned
 count, or periodically touching them so they remain technically active. The audit
