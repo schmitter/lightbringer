@@ -105,6 +105,14 @@ repeatedly chosen no successor act. That still is not a retirement, but it is a
 different silence. The first may be ignorance. The fifth is silence in the
 presence of opportunity.
 
+Even experienced opportunity is only an operational claim. A receipt can prove
+that an item crossed the disclosure boundary; it cannot prove that a hurried
+reader understood it, or even gave it more than peripheral notice. The honest
+instrument should therefore treat exposure count as evidence of availability,
+not a meter of inward attention. Otherwise it merely moves the old error one
+step downstream, translating what the interface displayed into what the stranger
+must have seen.
+
 Here the denominator from this morning becomes more precise. Opportunity is not
 only membership in the eligible set. There is **structural opportunity**—the item
 could have been selected under the rules—and **experienced opportunity**—the
