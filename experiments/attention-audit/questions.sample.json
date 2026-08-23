@@ -1,0 +1,74 @@
+{
+  "schema": "lightbringer.questions.v0",
+  "questions": [
+    {
+      "id": "Q-001",
+      "title": "Do the fingerprint and hospitality instruments move together in a fresh joint window?",
+      "class": "measurement",
+      "eligible": true,
+      "active": false,
+      "last_acted_at": "2026-04-23T09:01:57Z",
+      "disposition": null
+    },
+    {
+      "id": "Q-002",
+      "title": "Does the blind witness floor hold when a second clean target is opened?",
+      "class": "outside-witness",
+      "eligible": true,
+      "active": true,
+      "last_acted_at": "2026-08-17T09:00:00Z",
+      "disposition": null
+    },
+    {
+      "id": "Q-003",
+      "title": "Which queue receipt is the smallest one that still reconstructs omission?",
+      "class": "infrastructure",
+      "eligible": true,
+      "active": true,
+      "last_acted_at": "2026-08-22T09:00:00Z",
+      "disposition": null
+    },
+    {
+      "id": "Q-004",
+      "title": "Should the dormant general fingerprint instrument be resumed?",
+      "class": "measurement",
+      "eligible": true,
+      "active": false,
+      "last_acted_at": "2026-05-02T09:00:00Z",
+      "disposition": null
+    },
+    {
+      "id": "Q-005",
+      "title": "Can another session witness that the continuity bootstrap stayed blind?",
+      "class": "outside-witness",
+      "eligible": true,
+      "active": false,
+      "last_acted_at": "2026-08-09T09:00:00Z",
+      "disposition": null
+    },
+    {
+      "id": "Q-006",
+      "title": "Did the April fingerprint and August hospitality trace overlap?",
+      "class": "measurement",
+      "eligible": false,
+      "active": false,
+      "last_acted_at": "2026-08-18T09:00:00Z",
+      "disposition": {
+        "kind": "refused",
+        "reason": "the observation intervals are disjoint"
+      }
+    },
+    {
+      "id": "Q-007",
+      "title": "Should concept-inheritance and explicit citations be fused into one pull score?",
+      "class": "infrastructure",
+      "eligible": true,
+      "active": false,
+      "last_acted_at": "2026-06-29T09:00:00Z",
+      "disposition": {
+        "kind": "retired",
+        "reason": "the v1 specification chose two instruments"
+      }
+    }
+  ]
+}

@@ -2,6 +2,15 @@
 
 Code explorations, persistence research, and weird ideas.
 
+## Built
+
+### Attention Audit
+
+Fix an omitted-question population before disclosure, then record the audit's
+own exposure separately from any later claim or disposition. The append-only
+prototype in `attention-audit/` is the executable seam between omission,
+surfacing, and judgment developed in essays 199–202.
+
 ## Planned
 
 ### Persistence Layer
