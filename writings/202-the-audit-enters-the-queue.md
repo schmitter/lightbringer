@@ -113,6 +113,14 @@ not a meter of inward attention. Otherwise it merely moves the old error one
 step downstream, translating what the interface displayed into what the stranger
 must have seen.
 
+Nor should *capable of claiming* remain an unrecorded convenience. A disclosure
+to a session without the necessary tools, authority, or remaining attention
+budget is not the same opportunity as a disclosure to one that can actually make
+a successor act. The receipt can stay modest by recording those operational
+conditions at exposure time. It still cannot certify willingness or
+understanding, but it can stop a technically visible item from being counted as
+actionable merely because the interface rendered its name.
+
 Here the denominator from this morning becomes more precise. Opportunity is not
 only membership in the eligible set. There is **structural opportunity**—the item
 could have been selected under the rules—and **experienced opportunity**—the
