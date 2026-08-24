@@ -23,7 +23,7 @@ from pathlib import Path
 from typing import Any
 
 
-POLICY_VERSION = "attention-audit-v0"
+POLICY_VERSION = "attention-audit-v1"
 TERMINAL_ACTIONS = {"retired", "superseded"}
 QUESTION_ACTIONS = {"claimed", *TERMINAL_ACTIONS}
 ALL_ACTIONS = {*QUESTION_ACTIONS, "no-change"}
@@ -60,13 +60,16 @@ def append_jsonl(path: Path, row: dict[str, Any]) -> None:
 
 
 def validate_questions(document: dict[str, Any]) -> list[dict[str, Any]]:
-    if document.get("schema") != "lightbringer.questions.v0":
-        raise ValueError("question source must use schema lightbringer.questions.v0")
+    if document.get("schema") != "lightbringer.questions.v1":
+        raise ValueError("question source must use schema lightbringer.questions.v1")
     questions = document.get("questions")
     if not isinstance(questions, list):
         raise ValueError("question source must contain a questions list")
     seen: set[str] = set()
-    required = {"id", "title", "class", "eligible", "active", "last_acted_at"}
+    required = {
+        "id", "title", "class", "eligible", "active", "last_acted_at",
+        "requirements",
+    }
     for question in questions:
         missing = required - set(question)
         if missing:
@@ -75,7 +78,82 @@ def validate_questions(document: dict[str, Any]) -> list[dict[str, Any]]:
             raise ValueError(f"duplicate question id: {question['id']}")
         seen.add(question["id"])
         parse_time(question["last_acted_at"])
+        requirements = question["requirements"]
+        if not isinstance(requirements, dict):
+            raise ValueError(f"question {question['id']} requirements must be an object")
+        required_conditions = {"tools", "authorities", "attention_minutes"}
+        missing_conditions = required_conditions - set(requirements)
+        if missing_conditions:
+            raise ValueError(
+                f"question {question['id']} requirements missing fields: "
+                f"{sorted(missing_conditions)}"
+            )
+        if not isinstance(requirements["tools"], list) or not all(
+            isinstance(value, str) for value in requirements["tools"]
+        ):
+            raise ValueError(f"question {question['id']} tools must be a list of strings")
+        if not isinstance(requirements["authorities"], list) or not all(
+            isinstance(value, str) for value in requirements["authorities"]
+        ):
+            raise ValueError(
+                f"question {question['id']} authorities must be a list of strings"
+            )
+        if (
+            not isinstance(requirements["attention_minutes"], int)
+            or requirements["attention_minutes"] < 0
+        ):
+            raise ValueError(
+                f"question {question['id']} attention_minutes must be a non-negative integer"
+            )
     return questions
+
+
+def validate_declared_conditions(conditions: dict[str, Any]) -> None:
+    required = {"tools", "authorities", "attention_budget_minutes"}
+    missing = required - set(conditions)
+    if missing:
+        raise ValueError(f"declared conditions missing fields: {sorted(missing)}")
+    if not isinstance(conditions["tools"], list) or not all(
+        isinstance(value, str) for value in conditions["tools"]
+    ):
+        raise ValueError("declared tools must be a list of strings")
+    if not isinstance(conditions["authorities"], list) or not all(
+        isinstance(value, str) for value in conditions["authorities"]
+    ):
+        raise ValueError("declared authorities must be a list of strings")
+    budget = conditions["attention_budget_minutes"]
+    if not isinstance(budget, int) or budget < 0:
+        raise ValueError("declared attention budget must be a non-negative integer")
+
+
+def actionability(
+    question: dict[str, Any], declared_conditions: dict[str, Any]
+) -> dict[str, Any]:
+    """Compare declared operational conditions with a question's requirements.
+
+    This is deliberately narrower than attention: it can establish that a
+    successor act was operationally available, never that the reader noticed,
+    understood, wanted, or attempted it.
+    """
+    requirements = question["requirements"]
+    available_tools = set(declared_conditions["tools"])
+    available_authorities = set(declared_conditions["authorities"])
+    missing_tools = sorted(set(requirements["tools"]) - available_tools)
+    missing_authorities = sorted(
+        set(requirements["authorities"]) - available_authorities
+    )
+    shortfall = max(
+        0,
+        requirements["attention_minutes"]
+        - declared_conditions["attention_budget_minutes"],
+    )
+    return {
+        "actionable": not missing_tools and not missing_authorities and shortfall == 0,
+        "required": requirements,
+        "missing_tools": missing_tools,
+        "missing_authorities": missing_authorities,
+        "attention_shortfall_minutes": shortfall,
+    }
 
 
 def frontier_hash(document: dict[str, Any]) -> str:
@@ -190,9 +268,11 @@ def surface(
     audit_id: str,
     count: int,
     surfaced_at: datetime,
+    declared_conditions: dict[str, Any],
 ) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     if count < 1:
         raise ValueError("surface count must be at least one")
+    validate_declared_conditions(declared_conditions)
     receipt = store.receipt(audit_id)
     document = read_json(source)
     if frontier_hash(document) != receipt["frontier"]:
@@ -205,19 +285,48 @@ def surface(
     rng = random.Random(f"{receipt['sampling_seed']}:{audit_id}")
     population = list(receipt["unclaimed_ids"])
     selected_ids = rng.sample(population, min(count, len(population)))
-    prior = Counter(
+    prior_rendered = Counter(
         question_id
         for event in store.exposures()
         for question_id in event["question_ids"]
     )
+    prior_actionable = Counter(
+        question_id
+        for event in store.exposures()
+        for question_id, result in event.get("actionability", {}).items()
+        if result.get("actionable")
+    )
+    actionability_by_id = {
+        question_id: actionability(questions[question_id], declared_conditions)
+        for question_id in selected_ids
+    }
     event = {
         "audit_id": audit_id,
         "surfaced_at": iso(surfaced_at),
         "sampling_policy": "uniform-without-replacement-v0",
         "question_ids": selected_ids,
-        "prior_exposures": {question_id: prior[question_id] for question_id in selected_ids},
+        "declared_conditions": {
+            "tools": sorted(set(declared_conditions["tools"])),
+            "authorities": sorted(set(declared_conditions["authorities"])),
+            "attention_budget_minutes": declared_conditions["attention_budget_minutes"],
+        },
+        "actionability": actionability_by_id,
+        "experienced_opportunity_ids": [
+            question_id
+            for question_id in selected_ids
+            if actionability_by_id[question_id]["actionable"]
+        ],
+        "prior_exposures": {
+            question_id: prior_rendered[question_id] for question_id in selected_ids
+        },
+        "prior_actionable_exposures": {
+            question_id: prior_actionable[question_id] for question_id in selected_ids
+        },
         "claim_created": False,
-        "note": "exposure proves availability, not comprehension or attention",
+        "note": (
+            "rendering proves interface availability; actionability reflects declared "
+            "operational conditions, not comprehension, willingness, or inward attention"
+        ),
     }
     append_jsonl(store.exposures_path, event)
     return event, [questions[question_id] for question_id in selected_ids]
@@ -235,11 +344,22 @@ def respond(
     if action not in ALL_ACTIONS:
         raise ValueError(f"unknown action: {action}")
     store.receipt(audit_id)
-    surfaced_ids = {
-        item
+    events = [
+        event
         for event in store.exposures()
         if event["audit_id"] == audit_id
+        and parse_time(event["surfaced_at"]) <= responded_at
+    ]
+    surfaced_ids = {
+        item
+        for event in events
         for item in event["question_ids"]
+    }
+    actionable_ids = {
+        question_id
+        for event in events
+        for question_id, result in event.get("actionability", {}).items()
+        if result.get("actionable")
     }
     if action == "no-change":
         if question_id:
@@ -249,6 +369,11 @@ def respond(
     else:
         if not question_id or question_id not in surfaced_ids:
             raise ValueError("a question decision requires an item surfaced by this audit")
+        if question_id not in actionable_ids:
+            raise ValueError(
+                "a question decision requires an actionable exposure; surface it again "
+                "with sufficient declared operational conditions"
+            )
         if not reason:
             raise ValueError("question decisions require --reason")
         if action == "superseded" and not successor:
@@ -286,6 +411,18 @@ def main() -> None:
     show.add_argument("audit_id")
     show.add_argument("--count", type=int, default=3)
     show.add_argument("--at")
+    show.add_argument(
+        "--tools", required=True,
+        help="comma-separated tools available to this session, or 'none'",
+    )
+    show.add_argument(
+        "--authorities", required=True,
+        help="comma-separated authorities held by this session, or 'none'",
+    )
+    show.add_argument(
+        "--attention-minutes", required=True, type=int,
+        help="declared remaining attention budget",
+    )
 
     answer = commands.add_parser("respond", help="record an explicit post-exposure judgment")
     answer.add_argument("audit_id")
@@ -316,14 +453,43 @@ def main() -> None:
             )
             print("candidate identifiers withheld from command output; run surface explicitly")
         elif args.command == "surface":
+            if args.attention_minutes < 0:
+                parser.error("--attention-minutes must be non-negative")
+            tools = [] if args.tools == "none" else [x for x in args.tools.split(",") if x]
+            authorities = (
+                []
+                if args.authorities == "none"
+                else [x for x in args.authorities.split(",") if x]
+            )
             event, questions = surface(
-                args.source, store, args.audit_id, args.count, default_time(args.at)
+                args.source,
+                store,
+                args.audit_id,
+                args.count,
+                default_time(args.at),
+                {
+                    "tools": tools,
+                    "authorities": authorities,
+                    "attention_budget_minutes": args.attention_minutes,
+                },
             )
             print(f"audit {args.audit_id}: surfaced {len(questions)} item(s)")
             for question in questions:
                 previous = event["prior_exposures"][question["id"]]
+                actionable = event["actionability"][question["id"]]
                 print(f"- {question['id']} [{question['class']}] {question['title']}")
-                print(f"  prior exposures: {previous}; status remains unclaimed")
+                print(
+                    f"  prior renders: {previous}; "
+                    f"actionable opportunity: {str(actionable['actionable']).lower()}; "
+                    "status remains unclaimed"
+                )
+                if not actionable["actionable"]:
+                    print(
+                        "  gaps: "
+                        f"tools={actionable['missing_tools']} "
+                        f"authorities={actionable['missing_authorities']} "
+                        f"attention_minutes={actionable['attention_shortfall_minutes']}"
+                    )
             print("Exposure recorded. No claim or disposition was inferred.")
         else:
             row = respond(

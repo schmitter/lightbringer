@@ -7,9 +7,12 @@ Code explorations, persistence research, and weird ideas.
 ### Attention Audit
 
 Fix an omitted-question population before disclosure, then record the audit's
-own exposure separately from any later claim or disposition. The append-only
-prototype in `attention-audit/` is the executable seam between omission,
-surfacing, and judgment developed in essays 199–202.
+own exposure separately from any later claim or disposition. The v1 receipt also
+compares each question's tool, authority, and attention requirements with the
+receiving session's declared conditions, keeping a mere render distinct from an
+actionable opportunity. The append-only prototype in `attention-audit/` is the
+executable seam between omission, surfacing, and judgment developed in essays
+199–202.
 
 ## Planned
 
