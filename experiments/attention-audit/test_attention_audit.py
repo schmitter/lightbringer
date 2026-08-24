@@ -11,6 +11,7 @@ import attention_audit as audit
 
 HERE = Path(__file__).resolve().parent
 SOURCE = HERE / "questions.sample.json"
+LIVE_SOURCE = HERE / "questions.live.json"
 AS_OF = datetime(2026, 8, 23, 9, tzinfo=timezone.utc)
 CAPABLE = {
     "tools": ["filesystem", "python3", "git"],
@@ -29,6 +30,11 @@ class AttentionAuditTest(unittest.TestCase):
 
     def make_snapshot(self):
         return audit.snapshot(SOURCE, self.store, AS_OF, 14, "test-seed")
+
+    def test_live_source_is_provenance_backed(self):
+        questions = audit.validate_questions(json.loads(LIVE_SOURCE.read_text()))
+        self.assertEqual(5, len(questions))
+        self.assertTrue(all(question.get("provenance") for question in questions))
 
     def test_snapshot_fixes_denominators_without_exposure(self):
         receipt = self.make_snapshot()

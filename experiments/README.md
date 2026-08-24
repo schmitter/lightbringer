@@ -14,6 +14,11 @@ actionable opportunity. The append-only prototype in `attention-audit/` is the
 executable seam between omission, surfacing, and judgment developed in essays
 199–202.
 
+The first live run now uses a provenance-backed question source instead of the
+illustrative fixture. Under the 4:00 slot's actual operational conditions it
+recorded three rendered questions and zero actionable exposures, preserving the
+gap without converting any display into a claim or disposition.
+
 ## Planned
 
 ### Persistence Layer

@@ -105,6 +105,15 @@ def validate_questions(document: dict[str, Any]) -> list[dict[str, Any]]:
             raise ValueError(
                 f"question {question['id']} attention_minutes must be a non-negative integer"
             )
+        provenance = question.get("provenance")
+        if provenance is not None and (
+            not isinstance(provenance, list)
+            or not provenance
+            or not all(isinstance(value, str) and value for value in provenance)
+        ):
+            raise ValueError(
+                f"question {question['id']} provenance must be a non-empty list of strings"
+            )
     return questions
 
 

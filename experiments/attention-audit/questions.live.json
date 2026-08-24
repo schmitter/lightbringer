@@ -1,0 +1,96 @@
+{
+  "schema": "lightbringer.questions.v1",
+  "questions": [
+    {
+      "id": "LQ-001",
+      "title": "Should the fingerprint and hospitality instruments resume together under a fresh joint window?",
+      "class": "measurement",
+      "eligible": true,
+      "active": false,
+      "last_acted_at": "2026-08-17T09:00:00Z",
+      "requirements": {
+        "tools": ["filesystem", "python3"],
+        "authorities": ["repository-write"],
+        "attention_minutes": 45
+      },
+      "disposition": null,
+      "provenance": [
+        "writings/198-the-clocks-did-not-touch.md",
+        "journal/2026-08-17-lab.md"
+      ]
+    },
+    {
+      "id": "LQ-002",
+      "title": "Does the off-source strong-witness floor replicate on a second clean target?",
+      "class": "outside-witness",
+      "eligible": true,
+      "active": false,
+      "last_acted_at": "2026-08-10T09:00:00Z",
+      "requirements": {
+        "tools": ["filesystem", "git"],
+        "authorities": ["repository-write", "independent-witness"],
+        "attention_minutes": 30
+      },
+      "disposition": null,
+      "provenance": [
+        "writings/192-the-strong-witness-floor-is-one.md"
+      ]
+    },
+    {
+      "id": "LQ-003",
+      "title": "Can the attention audit preserve the seam between omission, actionable disclosure, and judgment on live lab questions?",
+      "class": "infrastructure",
+      "eligible": true,
+      "active": true,
+      "last_acted_at": "2026-08-24T08:00:00Z",
+      "requirements": {
+        "tools": ["filesystem", "python3", "git"],
+        "authorities": ["repository-write"],
+        "attention_minutes": 15
+      },
+      "disposition": null,
+      "provenance": [
+        "writings/202-the-audit-enters-the-queue.md",
+        "journal/2026-08-24-lab.md"
+      ]
+    },
+    {
+      "id": "LQ-004",
+      "title": "Should the persistence context card be injected into the live OpenClaw lifecycle?",
+      "class": "integration",
+      "eligible": true,
+      "active": false,
+      "last_acted_at": "2026-06-15T09:00:00Z",
+      "requirements": {
+        "tools": ["filesystem", "python3", "openclaw"],
+        "authorities": ["openclaw-config-write", "gateway-lifecycle"],
+        "attention_minutes": 60
+      },
+      "disposition": null,
+      "provenance": [
+        "experiments/integration/README.md"
+      ]
+    },
+    {
+      "id": "LQ-005",
+      "title": "Did the April fingerprint channel overlap the later hospitality readings?",
+      "class": "measurement",
+      "eligible": false,
+      "active": false,
+      "last_acted_at": "2026-08-18T09:00:00Z",
+      "requirements": {
+        "tools": ["filesystem", "python3"],
+        "authorities": ["repository-read"],
+        "attention_minutes": 20
+      },
+      "disposition": {
+        "kind": "refused",
+        "reason": "the fingerprint channel ended before the first hospitality reading"
+      },
+      "provenance": [
+        "writings/198-the-clocks-did-not-touch.md",
+        "journal/2026-08-17-lab.md"
+      ]
+    }
+  ]
+}

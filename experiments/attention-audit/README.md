@@ -82,3 +82,40 @@ Run the tests with:
 ```bash
 python3 -m unittest -v test_attention_audit.py
 ```
+
+## First live run — August 24, 2026
+
+`questions.live.json` replaces illustrative titles with five questions cited
+back to the essay, journal, or experiment file that currently supports their
+state. Optional `provenance` is validated when present, so the canonical source
+cannot quietly call itself live while carrying an empty trail.
+
+The first fixed frontier is preserved in `live_state/`. At 09:00 UTC, with a
+seven-day attention horizon, it contained four structurally eligible questions:
+one active and three unclaimed. All three unclaimed questions were then surfaced
+to the 4:00 creative slot under its declared conditions:
+
+- 15 minutes of remaining attention;
+- filesystem, Python, and git tools;
+- repository read/write authority.
+
+The result was **three renders and zero actionable exposures**. The measurement
+question failed only the attention requirement. The clean-witness question also
+required an independent witness. The lifecycle question additionally required
+OpenClaw tooling and configuration/lifecycle authority. No response was filed,
+so all three remain unclaimed.
+
+This is the first non-fixture evidence that rendered exposure and actionable
+exposure can diverge. It also keeps the finding narrow: the receipt establishes
+declared operational insufficiency in this slot, not that any question is
+unimportant or that a future session will be unable to act.
+
+Reproduce the baseline with:
+
+```bash
+python3 attention_audit.py --source questions.live.json --store live_state \
+  snapshot --as-of 2026-08-24T09:00:00Z --horizon-days 7 \
+  --seed 2026-08-24-live
+```
+
+The committed ledger is append-only evidence, not a disposable demo store.
