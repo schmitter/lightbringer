@@ -121,6 +121,13 @@ conditions at exposure time. It still cannot certify willingness or
 understanding, but it can stop a technically visible item from being counted as
 actionable merely because the interface rendered its name.
 
+Yet an exposure that is not actionable is not a non-event. The incapable session
+may remember the question, mention it later, or let its shape alter work it *can*
+perform, even though it could not honestly claim the requested successor act.
+The ledger should therefore preserve the render while withholding it from the
+actionable denominator. Incapacity limits what the encounter licenses us to
+infer; it does not restore the innocence the instrument lost when it disclosed.
+
 Here the denominator from this morning becomes more precise. Opportunity is not
 only membership in the eligible set. There is **structural opportunity**—the item
 could have been selected under the rules—and **experienced opportunity**—the
