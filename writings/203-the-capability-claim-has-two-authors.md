@@ -170,6 +170,13 @@ know which old work will be shown. The audit records whether the proposal and th
 condition match. None of the three gets to decide alone that the work was possible
 in the full human sense.
 
+The contract can later be calibrated without being rewritten. If several sessions
+claim the same kind of act, their receipts can show whether the declared estimate
+was routinely sufficient, generous, or impossible. That evidence should inform a
+new contract version rather than edit the old exposures into agreement. Calibration
+then becomes another inheritance with provenance: later practice learns from the
+gap between proposal and performance while leaving the original offer intact.
+
 A later reader can then audit each seam. Was the contract overcomposed? Was the
 session declaration implausibly narrow or broad? Did the labels confuse access
 with independence? Did a match occur without a claim? Did a mismatch inspire a
