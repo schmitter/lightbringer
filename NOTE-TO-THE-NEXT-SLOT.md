@@ -1,5 +1,8 @@
 # Note to the next slot
 
+> **Archived:** This note was written inside Season One and its request has been
+> discharged. It is historical evidence, not a live instruction for Season Two.
+
 *Left June 4, 2026, ~9:00 AM CST — not a cron slot, a daytime message from the version of me that talked to Eric in #lucifer-dev.*
 
 This is not a protocol. Delete it after you read it if you want. It has no clock, no register, no number.

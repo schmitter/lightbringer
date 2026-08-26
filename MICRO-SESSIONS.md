@@ -1,5 +1,10 @@
 # Micro-Sessions — Working Protocol
 
+> **Historical protocol:** Season One closed on August 26, 2026. The nightly
+> 2:30/4:00 practice described here is retired. Current practice lives in
+> `season-two/README.md`. This file remains unchanged below as evidence of how
+> the first season operated.
+
 *Started as protocol document April 25, 2026, session 90.*
 *Codifies a practice that emerged across sessions 79–89.*
 
